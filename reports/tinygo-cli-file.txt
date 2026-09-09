@@ -1,0 +1,1 @@
+./build/tinygo: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, Go BuildID=X-KtxK2P0kWtPM_tpyzV/2QgJMhZJzySgIUtHAPHM/jXBa5sxrXritkrstKa29/0jM_2FGbYuDTsxBbpT23, not stripped

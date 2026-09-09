@@ -1,0 +1,19 @@
+{
+  "llvm-target": "p2",
+  "goos": "linux",
+  "goarch": "arm",
+  "build-tags": ["p2", "baremetal", "scheduler.none", "gc.none"],
+  "gc": "none",
+  "scheduler": "none",
+  "serial": "none",
+  "linker": "ld.lld",
+  "rtlib": "",
+  "libc": "",
+  "automatic-stack-size": false,
+  "default-stack-size": 2048,
+  "binary-format": "elf",
+  "linkerscript": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/tinygo/targets/p2.ld",
+  "extra-files": ["targets/p2_start.c"],
+  "cflags": ["-ffreestanding", "-fno-jump-tables", "-fno-unwind-tables", "-fno-asynchronous-unwind-tables"],
+  "ldflags": ["--gc-sections"]
+}

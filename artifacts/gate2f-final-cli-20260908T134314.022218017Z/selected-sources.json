@@ -1,0 +1,1736 @@
+{
+  "env": {
+    "CGO_ENABLED": "0",
+    "GOARCH": "arm",
+    "GOOS": "linux"
+  },
+  "foreign_isa_assembly_selected": [
+    {
+      "bytes": 1795,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/compare_arm.s",
+      "sha256": "4484132213dbab1f8577e0ffcc3c9ea6c1a5400e3253dc40b33480aff4b031e6"
+    },
+    {
+      "bytes": 917,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/count_arm.s",
+      "sha256": "a4613252bf137d817035b7b77ebcc5d9eafcaf564d91e620488882453b35c614"
+    },
+    {
+      "bytes": 1858,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/equal_arm.s",
+      "sha256": "58c8168bc04f74c9e29c766fca84b3ac5c344743f2b64452cc04030f670bf724"
+    },
+    {
+      "bytes": 951,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/indexbyte_arm.s",
+      "sha256": "d4219797a24bf500b20fc885108e5207b498ded46f9f85356ac02e3ea8c4aa0a"
+    },
+    {
+      "bytes": 5470,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic/atomic_arm.s",
+      "sha256": "a08a38fbeb82c7aed3c52e897895492d043e5d348b79647af8b1b5fbc29e77ab"
+    },
+    {
+      "bytes": 3191,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic/sys_linux_arm.s",
+      "sha256": "6d3898497f27f7597515a4ca9972b004f78101d8b3ddbdec672f7e6f9c734591"
+    },
+    {
+      "bytes": 696,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/syscall/asm_linux_arm.s",
+      "sha256": "07c9ed0148a609da7887549e091a36c09c7285ba973771f394ab0e80d2f78593"
+    },
+    {
+      "bytes": 30928,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/asm_arm.s",
+      "sha256": "0ad7947e9d194c2951fbdf2ac6f6b5686e08e6c7972c77faf450c7d2572bfe5f"
+    },
+    {
+      "bytes": 7282,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/duff_arm.s",
+      "sha256": "884b4378d7f384cef47692121b855a2163e79ce457c855feb279802d8dcf48c9"
+    },
+    {
+      "bytes": 2667,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/memclr_arm.s",
+      "sha256": "242f3ac105e8a162768d8ee01354e29f071bf2d7d332ebe3973bea4557781fb7"
+    },
+    {
+      "bytes": 6039,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/memmove_arm.s",
+      "sha256": "536430961a3cdd3f5c5f4b4f8b0799535efc1bf20a4da53f810f201720de5494"
+    },
+    {
+      "bytes": 1511,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/preempt_arm.s",
+      "sha256": "10f63ea91cb64be655c185b282112cc268c8b720e267436ec44ae8dac2614896"
+    },
+    {
+      "bytes": 1007,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/rt0_linux_arm.s",
+      "sha256": "ae6b9ea3a3ea1d8a0319d70e744b127d1125c55853ba2dc0d74c7075c0defa9a"
+    },
+    {
+      "bytes": 16976,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sys_linux_arm.s",
+      "sha256": "b33f401e32333028cdc822c04b523d5689450fade3e6846652ff2bc1aae3cae7"
+    },
+    {
+      "bytes": 3390,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/tls_arm.s",
+      "sha256": "602cbf618a1de907788212d3eb775e7893606182f97e713619ce67fb31f290de"
+    },
+    {
+      "bytes": 7233,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/vlop_arm.s",
+      "sha256": "2e06f40d0f94863ad648304b452fbd6568618342a665394f10bbe7ecc2a3bdd0"
+    },
+    {
+      "bytes": 529,
+      "field": "SFiles",
+      "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/sqrt_arm.s",
+      "sha256": "dc0c3521b90deaf8570a55f0cc01009da949aec2db3f4195e1f89959dce84baf"
+    }
+  ],
+  "go_command": [
+    "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/bin/go",
+    "list",
+    "-deps",
+    "-json",
+    "-tags=p2,baremetal,scheduler.none,gc.none",
+    "."
+  ],
+  "limitations": "This records Go package selection for the P2 target surrogate (GOARCH=arm). It does not prove TinyGo internal loader selection beyond its matching build tags; ELF/object provenance is recorded separately.",
+  "packages": [
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp/bootpkg",
+      "files": [
+        {
+          "bytes": 245,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp/bootpkg/bootpkg.go",
+          "sha256": "02bd81305186490b50368d330bfad51a4709311f31cf10a9883e04bde2793fb2"
+        }
+      ],
+      "import_path": "example.com/p2goapp/bootpkg",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/unsafe",
+      "files": [
+        {
+          "bytes": 10474,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/unsafe/unsafe.go",
+          "sha256": "41b3c716a643189163fb9749ea55f6eae5633b53df822c84747c15de99c1c297"
+        }
+      ],
+      "import_path": "unsafe",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goarch",
+      "files": [
+        {
+          "bytes": 2145,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goarch/goarch.go",
+          "sha256": "728c0b3fea1757bf0b300172dd3e11c03514c2abd555e418fb975e6b7ce113cc"
+        },
+        {
+          "bytes": 328,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goarch/goarch_arm.go",
+          "sha256": "d50a8ad12969e6770e8796f31beae3ad9d958a734a17cc964771e0b295b09247"
+        },
+        {
+          "bytes": 574,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goarch/zgoarch_arm.go",
+          "sha256": "9291cbd902b608e4234d5e2370bdd4239bc28e39f2306c91c5f87217bf6af156"
+        }
+      ],
+      "import_path": "internal/goarch",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/abi",
+      "files": [
+        {
+          "bytes": 4231,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/abi/abi.go",
+          "sha256": "9d627e433d4d30f7bc0d8995614c2eef2735c6f798a36d5c16e5583c637a60fe"
+        },
+        {
+          "bytes": 1347,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/abi/abi_generic.go",
+          "sha256": "03389860cc5149e3433709c68adc45792928e6cb882b347c892a26edd41f95d0"
+        },
+        {
+          "bytes": 603,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/abi/abi_test.s",
+          "sha256": "28a2adea62ff2469766d52f89bfe67674e388a9ecd7c41f04bf4be063517b8d8"
+        }
+      ],
+      "import_path": "internal/abi",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/cpu",
+      "files": [
+        {
+          "bytes": 6727,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/cpu/cpu.go",
+          "sha256": "68f24266966835fa2f156df5df99bd2a9145ecf3beff5cec36ce27746bf15aaa"
+        },
+        {
+          "bytes": 821,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/cpu/cpu_arm.go",
+          "sha256": "9c3535d3d7313392f417badca3fd97bd40f197378c87d183385138d54fde6915"
+        },
+        {
+          "bytes": 598,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/cpu/cpu_no_name.go",
+          "sha256": "5c0f1633eb6e086eb7e224860fdafcf3af109925d0aceb53b92f917cc7dd4ddc"
+        },
+        {
+          "bytes": 276,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/cpu/cpu.s",
+          "sha256": "39594514f3cb069cecfc6782f81385cbb3570a2ca1b0f3028db1dfa75fd5837e"
+        }
+      ],
+      "import_path": "internal/cpu",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg",
+      "files": [
+        {
+          "bytes": 3777,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/bytealg.go",
+          "sha256": "1b93b4d584367e93480e5f43f00e0dba6cfb560d053e27c1f7cd584db4a5c2a6"
+        },
+        {
+          "bytes": 624,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/compare_native.go",
+          "sha256": "dc892ec1bb34c85f0e78476af4087b5f96b4bac72d44f3af0ddfa674383cf312"
+        },
+        {
+          "bytes": 643,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/count_native.go",
+          "sha256": "ba052ed8dbcbf1db03f31f7b28433a68df0164ae97a72d347b2ba02da3d36900"
+        },
+        {
+          "bytes": 628,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/equal_generic.go",
+          "sha256": "d6c5c106505c972fab2400024c14e04aa7eee1f972826e3b56787ee09f169247"
+        },
+        {
+          "bytes": 789,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/equal_native.go",
+          "sha256": "1db4aa0b4f804a208dbe4e8894fe05949d72e9b4492ef9fcac517e00571fe02f"
+        },
+        {
+          "bytes": 901,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/index_generic.go",
+          "sha256": "3b5673e455245f94735301eaf7b3c22d869a1436c826418cea9448f129652c35"
+        },
+        {
+          "bytes": 415,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/indexbyte_native.go",
+          "sha256": "76656aa05450cdf6b2f2d95251da5d6fe33e475f8881e707b010b7981f8565f8"
+        },
+        {
+          "bytes": 1795,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/compare_arm.s",
+          "sha256": "4484132213dbab1f8577e0ffcc3c9ea6c1a5400e3253dc40b33480aff4b031e6"
+        },
+        {
+          "bytes": 917,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/count_arm.s",
+          "sha256": "a4613252bf137d817035b7b77ebcc5d9eafcaf564d91e620488882453b35c614"
+        },
+        {
+          "bytes": 1858,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/equal_arm.s",
+          "sha256": "58c8168bc04f74c9e29c766fca84b3ac5c344743f2b64452cc04030f670bf724"
+        },
+        {
+          "bytes": 951,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/bytealg/indexbyte_arm.s",
+          "sha256": "d4219797a24bf500b20fc885108e5207b498ded46f9f85356ac02e3ea8c4aa0a"
+        }
+      ],
+      "import_path": "internal/bytealg",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment",
+      "files": [
+        {
+          "bytes": 191,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/exp_fieldtrack_off.go",
+          "sha256": "5da284952e71fcc7dfe19cdcce4bb4b28b1f687b8e5fd5919ed49428729e4ec8"
+        },
+        {
+          "bytes": 219,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/exp_heapminimum512kib_off.go",
+          "sha256": "44f7c36466481e949a8f2dba8f8327ec7e1c5e44163990c964ec7293fe8c6d22"
+        },
+        {
+          "bytes": 200,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/exp_pacerredesign_on.go",
+          "sha256": "e9ee32c322a6f767f3b004d6d65c87ac3197f331c337385d0c34fdd0bfc43a6b"
+        },
+        {
+          "bytes": 215,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/exp_preemptibleloops_off.go",
+          "sha256": "84acb602bc70aac6418a9f74a6ecf5e209c18a82bcde9145982edb9667268e9b"
+        },
+        {
+          "bytes": 191,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/exp_regabiargs_off.go",
+          "sha256": "ef7e6208dd5ffc67186c31ce020dd7937b35a67c041a6fb1aae79a6ac39bdf0c"
+        },
+        {
+          "bytes": 203,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/exp_regabireflect_off.go",
+          "sha256": "7330145c75c4e70ed7f8cd69d9fa7073fbc03872e50a270f8ce1940c6d611eff"
+        },
+        {
+          "bytes": 207,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/exp_regabiwrappers_off.go",
+          "sha256": "6731792613993cff47de51f37cfd239eb79c482784c5ab7ffa87260d2fa6fecf"
+        },
+        {
+          "bytes": 219,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/exp_staticlockranking_off.go",
+          "sha256": "8557dfae8f2ce48b99ae2c4cfd74456dd65f72c6d6b27dba7a37fae408826e8e"
+        },
+        {
+          "bytes": 179,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/exp_unified_off.go",
+          "sha256": "d5ffbd12677bdd5ef061ac4a6a6eff4efe1ffd749c72a8ca8d74be5c233bf9c4"
+        },
+        {
+          "bytes": 3719,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goexperiment/flags.go",
+          "sha256": "d17ef74ab9ae30445c5ea337e38ee3075f976e25f70311cd2a61615bb265c546"
+        }
+      ],
+      "import_path": "internal/goexperiment",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goos",
+      "files": [
+        {
+          "bytes": 531,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goos/goos.go",
+          "sha256": "2ae0c5253a36ef37ff62337145277269fd007c7ff3f2f20e2d05ee642ecee23d"
+        },
+        {
+          "bytes": 446,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/internal/goos/zgoos_linux.go",
+          "sha256": "a515a85786d5826ed439cce6951499f491faeb1a5928c49a7f26e94eb5cf0f73"
+        }
+      ],
+      "import_path": "internal/goos",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic",
+      "files": [
+        {
+          "bytes": 4769,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic/atomic_arm.go",
+          "sha256": "a53cd37276c48d40b1c8e48341e9c8f0eda3f349af71fca35d2ab3ca8aa7c27c"
+        },
+        {
+          "bytes": 771,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic/doc.go",
+          "sha256": "9e0cfe8821fb34bd0511f55b7e269c6b74dc9956e5d2b2db367349d1aa7695b6"
+        },
+        {
+          "bytes": 1255,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic/stubs.go",
+          "sha256": "5dd8e4ce65dc4f6359ab8f18873dd1903f06d95a3fdcc5e184ffc2624a300e75"
+        },
+        {
+          "bytes": 10807,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic/types.go",
+          "sha256": "7ff35e79ba30cee88eb541f80616d44f31972901541436d4f40ed84c4b12b8ca"
+        },
+        {
+          "bytes": 246,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic/unaligned.go",
+          "sha256": "4c788293b984be07a34492f389d27b707b97016e8e5c6eef2b055f0e800d05e0"
+        },
+        {
+          "bytes": 5470,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic/atomic_arm.s",
+          "sha256": "a08a38fbeb82c7aed3c52e897895492d043e5d348b79647af8b1b5fbc29e77ab"
+        },
+        {
+          "bytes": 3191,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/atomic/sys_linux_arm.s",
+          "sha256": "6d3898497f27f7597515a4ca9972b004f78101d8b3ddbdec672f7e6f9c734591"
+        }
+      ],
+      "import_path": "runtime/internal/atomic",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/math",
+      "files": [
+        {
+          "bytes": 1082,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/math/math.go",
+          "sha256": "5d20a31c7edcaa878e11896e8cfe820be82bf65c15916bddc40c9eee415d4919"
+        }
+      ],
+      "import_path": "runtime/internal/math",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/sys",
+      "files": [
+        {
+          "bytes": 1347,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/sys/consts.go",
+          "sha256": "7458cf0fb3aeb77a6f9317151df670db779153a90b92d28c9f67489385c76f91"
+        },
+        {
+          "bytes": 2490,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/sys/intrinsics.go",
+          "sha256": "79bafa3dfd0c548d3559529011e80c98e68331d86d4fa4e55799f8544186d04f"
+        },
+        {
+          "bytes": 7238,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/sys/intrinsics_common.go",
+          "sha256": "7e90827d59eb4890db8c25db1f9d0ed1cf3bf00166a6682dc3aa04077412d11b"
+        },
+        {
+          "bytes": 283,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/sys/sys.go",
+          "sha256": "15c88e2f32c3e0cd3a04a273c89372b2382430a6093741dbd03122f7f38eadf2"
+        },
+        {
+          "bytes": 100,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/sys/zversion.go",
+          "sha256": "8816974d6529db506967989004b9024d127f5d3346d5ac08e6975e3edcc73e05"
+        }
+      ],
+      "import_path": "runtime/internal/sys",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/syscall",
+      "files": [
+        {
+          "bytes": 521,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/syscall/syscall_linux.go",
+          "sha256": "c3fbae5523ea7c946162eeefe56cdbaefa63e0daf43497be52f05949a05db80c"
+        },
+        {
+          "bytes": 696,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/internal/syscall/asm_linux_arm.s",
+          "sha256": "07c9ed0148a609da7887549e091a36c09c7285ba973771f394ab0e80d2f78593"
+        }
+      ],
+      "import_path": "runtime/internal/syscall",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime",
+      "files": [
+        {
+          "bytes": 9683,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/alg.go",
+          "sha256": "df3eca9d9eae65b1a44e706e496dfc116438a03173007a915a40129b6568b469"
+        },
+        {
+          "bytes": 657,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/asan0.go",
+          "sha256": "6e7313d6be1c2abb7d3ceffcfb68827c1d87a5b6a8278f49f6771738ff288a04"
+        },
+        {
+          "bytes": 2683,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/atomic_pointer.go",
+          "sha256": "ebb9669716b48580811679f41a56881975aebd830c4521aa5151dcfa3dbf005f"
+        },
+        {
+          "bytes": 2047,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/cgo.go",
+          "sha256": "fdd351b6cff7291c52b156b6a2d5cb483d07b62aec78786029ae4b4181d1d45a"
+        },
+        {
+          "bytes": 19569,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/cgocall.go",
+          "sha256": "deffa85b62c63f42e0c7764b76541d7823d30980a8b2f1b877fa6cbe4e836d71"
+        },
+        {
+          "bytes": 317,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/cgocallback.go",
+          "sha256": "82d38f6a32c4f8763af62ee77eb3aa6e8f52ba9c2077e7491b109e6530c2b067"
+        },
+        {
+          "bytes": 7010,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/cgocheck.go",
+          "sha256": "6052a9740c04b3480fbee80f470862bb3d91c209318fd7714552eb42158f0068"
+        },
+        {
+          "bytes": 24146,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/chan.go",
+          "sha256": "6e457cc5cb97b7a0bbc6a554726d3f8b34d8ca9c4890dd344c9dae8901ed1c99"
+        },
+        {
+          "bytes": 3367,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/checkptr.go",
+          "sha256": "0d7f62906b02a27d1d9ade9b4a060896b5c237c0bcd9b61b99ba65a2575e1619"
+        },
+        {
+          "bytes": 413,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/compiler.go",
+          "sha256": "9f146b613112444ed0c7bd4f29668136df54d2a9cd8399ded5908e88e9a23a77"
+        },
+        {
+          "bytes": 1629,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/complex.go",
+          "sha256": "acb03107a1de5df055c14f0fefe0a5c8e33ff6658445d10e1eb23e8e99e1d8ad"
+        },
+        {
+          "bytes": 810,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/cpuflags.go",
+          "sha256": "7c7ba8d53809c025a07149cc777cfb9de08750c3436ed13f84efcb4537cc90ff"
+        },
+        {
+          "bytes": 7002,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/cpuprof.go",
+          "sha256": "c8844284936520a88292a5bc3626a038487573c938c9fcc7d70c40a610d65a35"
+        },
+        {
+          "bytes": 3316,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/debug.go",
+          "sha256": "8ae05fcf3e803b951a26cd5b2b7f8cbc67f1d186bd8196472b0c66a45c6ef39d"
+        },
+        {
+          "bytes": 17909,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/debuglog.go",
+          "sha256": "ae7aee35a73633fa19c6ab601fa0b6264184d5283de6e6dde3ddefbd1f2a7f26"
+        },
+        {
+          "bytes": 357,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/debuglog_off.go",
+          "sha256": "d6f1471985dc31419f6946503028f9eac490db1f0e4cb26285a4a9509f3bf7a6"
+        },
+        {
+          "bytes": 4228,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/defs_linux_arm.go",
+          "sha256": "823fde526d7440e14144cd1a61ea7df848e7f7ae46f76731b2d0e2003c63b68a"
+        },
+        {
+          "bytes": 1906,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/env_posix.go",
+          "sha256": "5bc2608873efdf9a59eb853558d5a88876e9cd4597b872b4510c14b9a4e11ad5"
+        },
+        {
+          "bytes": 9431,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/error.go",
+          "sha256": "fa4ca34a60d3d37695db557e51c3d69ade14cd1bb3e9ad331754b64080aca7b1"
+        },
+        {
+          "bytes": 13173,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/extern.go",
+          "sha256": "777ffde2124524a305ed281b1c19e6157eb1d740f0cad853f30ae4789ca51a5f"
+        },
+        {
+          "bytes": 1249,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/fastlog2.go",
+          "sha256": "4e03110f81e7323d3924fda1b76e3522e0631cf3d107f5c29de8be0b124a14a2"
+        },
+        {
+          "bytes": 904,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/fastlog2table.go",
+          "sha256": "4729d9b0a9023b5c3b8e27d81943d692154499c6c3eec80a1663d47865eaa65c"
+        },
+        {
+          "bytes": 1382,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/float.go",
+          "sha256": "cd7712e8d9b6f513567eb30319c89ab57868156c299b866ac23b8d0ac1cc77cd"
+        },
+        {
+          "bytes": 1622,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/hash32.go",
+          "sha256": "d9028409b581d240b525a4a8d200cc4d399c03d145a22382fb275ae063f90ad8"
+        },
+        {
+          "bytes": 18235,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/heapdump.go",
+          "sha256": "fb71d182ee84ae381155ecfe6cc359b3546871f42eb054b57089fca7afce6b41"
+        },
+        {
+          "bytes": 6331,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/histogram.go",
+          "sha256": "36b65367dc33f897daa1eeb57d2f5151abbc6a175c7873aa779868b30bb2ef2e"
+        },
+        {
+          "bytes": 16036,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/iface.go",
+          "sha256": "0f8c2d1b2d9d6a2d137786bcabb3159a67e0a32d8dbdbe1ee7eaba32e547449b"
+        },
+        {
+          "bytes": 1809,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/lfstack.go",
+          "sha256": "3783bd381dd51a187b1e6e0df042de14eb36cde827e51252800e165457f5431f"
+        },
+        {
+          "bytes": 532,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/lfstack_32bit.go",
+          "sha256": "ad90989bda013b889e98f1a671e7ef71806fa041f05e50f98d195527bffe6d62"
+        },
+        {
+          "bytes": 5309,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/lock_futex.go",
+          "sha256": "17e61679452aaf219e7632b49c892abe6ede309dd1fabaaef8a5e152936ec12f"
+        },
+        {
+          "bytes": 12060,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/lockrank.go",
+          "sha256": "faf04c61b380b5dcbab5aef960f69c8c1a27df5981eab1ebe886f57b27230e99"
+        },
+        {
+          "bytes": 1159,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/lockrank_off.go",
+          "sha256": "34dcc666f67661a195548ea1055645ef8a82551c55015c557b3bcd06faabda75"
+        },
+        {
+          "bytes": 55805,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/malloc.go",
+          "sha256": "3dd64984366dfc86d6d2fc51cb31fa9df7c20434079d7b7e770eec9320cecd08"
+        },
+        {
+          "bytes": 44544,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/map.go",
+          "sha256": "3c8095bac62b8b4c2f09a8a240504397e8b35495c984fc38cd82fe388ae8ebd6"
+        },
+        {
+          "bytes": 13030,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/map_fast32.go",
+          "sha256": "be8bd0bdf45987e7f233ec62feb9b49c7d749acf9d0071eb95c5dbbbf82c6c37"
+        },
+        {
+          "bytes": 13216,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/map_fast64.go",
+          "sha256": "863fc43b7bb34d37cf6ec363e709af804b1322533ec7bb842c72339dc920b4e3"
+        },
+        {
+          "bytes": 14646,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/map_faststr.go",
+          "sha256": "15ab16e80960060a4010dc25cb3683a0de0a9367b5e45a98d09d0eaf666183dc"
+        },
+        {
+          "bytes": 12721,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mbarrier.go",
+          "sha256": "f5bab36df084a0bf5f59addd14df92f2653e941a7efb5d610b5ed2852094f5c4"
+        },
+        {
+          "bytes": 67627,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mbitmap.go",
+          "sha256": "c7ffa851ea7711a241a3a1ebceac169bdcf6869a026d8a9bde8b88a2ec46567c"
+        },
+        {
+          "bytes": 9099,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mcache.go",
+          "sha256": "7f9208b9cecec1e3612c48bb8f232628edb538e9250a5eb55bb478ab3aa6f9d5"
+        },
+        {
+          "bytes": 8092,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mcentral.go",
+          "sha256": "d1271bde19f922fc387e40b1ecdb6e3943d49fc99dc647c88f994b8bfbd03af6"
+        },
+        {
+          "bytes": 2877,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mcheckmark.go",
+          "sha256": "1f47d28e1eab0fc1fdb627bce3172846fa22d1b42773b8adfdce61d3b8526a3d"
+        },
+        {
+          "bytes": 6406,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mem_linux.go",
+          "sha256": "4e0382bd1b5ede54856ee221c5ee78830292cdb69b0a1390415e4ff99d2968d6"
+        },
+        {
+          "bytes": 18460,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/metrics.go",
+          "sha256": "e756dafb1c489e7083e8bee34804b2f7fb98f49a43c0dd07cbab8150cc7820e3"
+        },
+        {
+          "bytes": 15971,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mfinal.go",
+          "sha256": "8289379104ac3f1755c60ea74856c042f419803e90f2e2b2c9e9fb89d4f9eb0d"
+        },
+        {
+          "bytes": 3147,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mfixalloc.go",
+          "sha256": "ae90743dcd4c12b08bd55fc5504ef6b7f8d773b2024109d8390d15f6e9a0571a"
+        },
+        {
+          "bytes": 56439,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mgc.go",
+          "sha256": "f37c0e5b419d3ce07438d08f3c3369a086ac8b63dc43ab22c7def770c5568d70"
+        },
+        {
+          "bytes": 48513,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mgcmark.go",
+          "sha256": "f170b7960215ea6c93af5fcf4e3be9c0b4b0dc73b91ee8eab393ed75c2deaaba"
+        },
+        {
+          "bytes": 49501,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mgcpacer.go",
+          "sha256": "0c6c0c50ebba788d4a76c81b86638d33b5999fc2ab98b153503c699861fc601b"
+        },
+        {
+          "bytes": 38156,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mgcscavenge.go",
+          "sha256": "73e1f2b80517eb22e8ca975a518523f3cd05bc47d9dd80efba687aed5cd09412"
+        },
+        {
+          "bytes": 10831,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mgcstack.go",
+          "sha256": "55d7f039145425bc8da64968c6ffd37cfc69ed45de80a8102199298e790b5f13"
+        },
+        {
+          "bytes": 28310,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mgcsweep.go",
+          "sha256": "67835484e7b48345534ff2cef089a1fdf95b5828a873e277f9cbee9f0bff0c28"
+        },
+        {
+          "bytes": 13194,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mgcwork.go",
+          "sha256": "8fc01ad0f9f95befbc21ec3519df1a49a4a483b3e5952b147dd0f8dd0a507307"
+        },
+        {
+          "bytes": 68514,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mheap.go",
+          "sha256": "daeecfe1084f70d1f50cc3d91fd17067d8caf04d201eff8008305a8a056be4d8"
+        },
+        {
+          "bytes": 821,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mmap.go",
+          "sha256": "bd756569985d2e438c4ce871fe25b644393b73b555f33aa87cd4dd27662f5c21"
+        },
+        {
+          "bytes": 37864,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mpagealloc.go",
+          "sha256": "11fc16b3573c694a5f088cf3d78c43c9d5767db747f62511b20aeda73c8ad2f5"
+        },
+        {
+          "bytes": 3528,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mpagealloc_32bit.go",
+          "sha256": "058591f95a0db577c633275f31463560c7166a59212e8433c2cb760571f83430"
+        },
+        {
+          "bytes": 5593,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mpagecache.go",
+          "sha256": "aa1a749a9d2dcdb8d1d324b0ffa0e8d17c6a21f3d396f35f78880ee182896dc5"
+        },
+        {
+          "bytes": 12900,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mpallocbits.go",
+          "sha256": "9302ef64ad618a96ec2780162af0e70003b849c409bbb152cd99232ee5a4691e"
+        },
+        {
+          "bytes": 26966,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mprof.go",
+          "sha256": "f5b5b1f69546f28b7c38c839746ac807202666426c8b76c526e8d9b9f98e33b4"
+        },
+        {
+          "bytes": 12127,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mranges.go",
+          "sha256": "70677dbc7faf3bc4a26a08ae62f9cd2c1e10aa6092c074b4bfb69c46fb54233e"
+        },
+        {
+          "bytes": 725,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/msan0.go",
+          "sha256": "a53ed6335e7b05d189b422b3503d2421203362754eaa7b0b73c7bab4780fc2e4"
+        },
+        {
+          "bytes": 777,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/msize.go",
+          "sha256": "8f07781b6b8b3b517c7e315abd60bd0d65d829a57ef9302094429e8db5455c80"
+        },
+        {
+          "bytes": 12503,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mspanset.go",
+          "sha256": "92e4755c6f0f8dc33632c0f0de320320cdd9a241d392dc4e55e021cccd557fde"
+        },
+        {
+          "bytes": 31851,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mstats.go",
+          "sha256": "86b0624214cca51332a270ee19a5efed946ed62c4625cea35f6d4dbe3c40daf0"
+        },
+        {
+          "bytes": 9520,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/mwbbuf.go",
+          "sha256": "4835ac581cc3d2880759b2e5baa85fee0386ebd994a6e8492e8b3c05be4db020"
+        },
+        {
+          "bytes": 535,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/nbpipe_pipe2.go",
+          "sha256": "1fc221e2c7e4668ffa7c0604646b96cce6b85f31be2c3e4e5b5473d24eaf33af"
+        },
+        {
+          "bytes": 18767,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/netpoll.go",
+          "sha256": "cede4bb91130866b2a9adda4b1858739c7356ff10a6b91cdbe9b90d8b630fce7"
+        },
+        {
+          "bytes": 4264,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/netpoll_epoll.go",
+          "sha256": "de8e32a56363915c556b3532e1e6437672d7dd593c832a7b8fbfcc41fef1124b"
+        },
+        {
+          "bytes": 26798,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/os_linux.go",
+          "sha256": "2954fd50418d9560e8d2a8101a6666f0e631bbd8c6b194a2f00931148b4561fa"
+        },
+        {
+          "bytes": 1385,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/os_linux_arm.go",
+          "sha256": "3862fe395d713a95fefd267ff82e556f36168fbccd39aa25d4f5989e570d2e1e"
+        },
+        {
+          "bytes": 888,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/os_linux_generic.go",
+          "sha256": "5bb662421e04554736017f7cb7cd9e61228c743f92efbd4081ee044cc0f4231d"
+        },
+        {
+          "bytes": 437,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/os_nonopenbsd.go",
+          "sha256": "ee262ac265c43fa6826127530808e2b316bfb86bf3d226dbbebea428266f2b8c"
+        },
+        {
+          "bytes": 39193,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/panic.go",
+          "sha256": "de09848d281569dc67a1d4035c210d676c2a9e79f9d082ab1fe8198e4167a115"
+        },
+        {
+          "bytes": 4912,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/panic32.go",
+          "sha256": "522e8e7772422a05139e31c70ba3afc5b03fe52a5215e3ddd6267a9d8fbfd6f8"
+        },
+        {
+          "bytes": 4362,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/plugin.go",
+          "sha256": "531596ee5ddc2711f2b3de4afcbcee6bd9020a4a4fe7f3573de745af41320d8e"
+        },
+        {
+          "bytes": 15578,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/preempt.go",
+          "sha256": "3077d258665f7ea6e784a7008c45e241275a1cc4978241923f029c3fccfbddcd"
+        },
+        {
+          "bytes": 290,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/preempt_nonwindows.go",
+          "sha256": "4aae15044bdee656cbb361b9c06c9ab2f14b25d28c4ba6c407e27c225e7a6d2a"
+        },
+        {
+          "bytes": 6096,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/print.go",
+          "sha256": "3a91c055ecde6e1fbfe7407cd60883bfbcab4bad3332517211c58492b6e8305e"
+        },
+        {
+          "bytes": 177814,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/proc.go",
+          "sha256": "37bd67242218f145b9dca94cd0214213965461b223c7a1f8ecc0836b563984cd"
+        },
+        {
+          "bytes": 18698,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/profbuf.go",
+          "sha256": "5e8b86a4be96ce4d644183846c184974df884cd5d982a4d1d8752823c0a9c358"
+        },
+        {
+          "bytes": 1552,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/proflabel.go",
+          "sha256": "6bb06392421787bbb98e809868d4e1eeec13a0b27ee2698cf257e69fe851fc61"
+        },
+        {
+          "bytes": 2859,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/race0.go",
+          "sha256": "6d06b60b8a98715e95ef88f7d9d22e4c7c4bf1aa04d658ad8afa01141b58f908"
+        },
+        {
+          "bytes": 553,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/rdebug.go",
+          "sha256": "68fbf71cde4f46e9272e1b3b271f27b0ab2b4913072bb2ef3ad2e0b43e4ca584"
+        },
+        {
+          "bytes": 598,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/relax_stub.go",
+          "sha256": "c10620ad033c63adaf31bef21230e565574fefacf862b6e59d3072f0d8fd5d73"
+        },
+        {
+          "bytes": 1459,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/runtime.go",
+          "sha256": "cdee10ac772931624faf5f5404dd3a5db3776e4bd603a1023151534586e79a81"
+        },
+        {
+          "bytes": 13002,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/runtime1.go",
+          "sha256": "f5b6b039405ba7c2ef38a62e45881c746e2eb8d8bc9a46d60d255167eeaccb40"
+        },
+        {
+          "bytes": 43449,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/runtime2.go",
+          "sha256": "0f2bbd15e1af3540b22dda617cc7556d5e210ed39c28e6e540b4f90c09ce9b0a"
+        },
+        {
+          "bytes": 3615,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/rwmutex.go",
+          "sha256": "25f8c31fadb4b883cbe2f469a8f089104a29894c3c8e22a024401e9e04bae30a"
+        },
+        {
+          "bytes": 15195,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/select.go",
+          "sha256": "cb54b0265bff78bfa55747f6b478a9de2676c8467e3b2cb5ff92a87acab60cbb"
+        },
+        {
+          "bytes": 16463,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sema.go",
+          "sha256": "8f36b859925d5bc49dba6afc99bdd0b686a7c6d515e59c8a6fb61151b61d5fdd"
+        },
+        {
+          "bytes": 489,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sigaction.go",
+          "sha256": "a6f2ea7c731cd453372dec5529d882ea26d5f8fd29983c965cd74d52cb8218da"
+        },
+        {
+          "bytes": 2604,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/signal_arm.go",
+          "sha256": "ee3dfc8d5829ba49ecf41fb6bc63c51a0fee82f90f1582ef9e50520413aa0637"
+        },
+        {
+          "bytes": 2174,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/signal_linux_arm.go",
+          "sha256": "1b5463396d00d8064d4e9c3f70b0acf131d170bde5f9d746091e8084240fd70f"
+        },
+        {
+          "bytes": 42103,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/signal_unix.go",
+          "sha256": "5e4bfb72fd4d872bb196f7730f3732de5154509a145e99d68608e7dba6808f46"
+        },
+        {
+          "bytes": 7826,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sigqueue.go",
+          "sha256": "749693454ed624b69e24466b296e8970810c367e238345066884c42547cb28c8"
+        },
+        {
+          "bytes": 648,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sigqueue_note.go",
+          "sha256": "84a465db62b4f99d10ecf64310a081840d22727bc1c0a5203e5c4dba627d6a77"
+        },
+        {
+          "bytes": 3602,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sigtab_linux_generic.go",
+          "sha256": "0e618e00f7d446bc55e03083f76a276e481652603d10c96e7662e943d5101513"
+        },
+        {
+          "bytes": 9363,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sizeclasses.go",
+          "sha256": "f6165d882e33703a5e9e4fe6099b305e82bb00263574020ccc6b4d0b54249f80"
+        },
+        {
+          "bytes": 9669,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/slice.go",
+          "sha256": "316aa92d00f15d00c99029891b98bc53404345fb62a2150e433df5378e71b089"
+        },
+        {
+          "bytes": 11813,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/softfloat64.go",
+          "sha256": "94f52048c124deff27c7b4c0215eab39700b16cd9a3781e6453f7900a4eb2005"
+        },
+        {
+          "bytes": 44434,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/stack.go",
+          "sha256": "ae243b8bbd449f71c9bd2cda65ff918f75b372181dd3bdfe8a276f188f79bde5"
+        },
+        {
+          "bytes": 11418,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/string.go",
+          "sha256": "0b26630636ef233c6a5238f557ae3e2ac2a52c50b72dc26de7a69cc4cff8898e"
+        },
+        {
+          "bytes": 18763,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/stubs.go",
+          "sha256": "88be62e87babab1c02f1d9e3b2e98d61c337e4cbac9bc2dd303c75942864c350"
+        },
+        {
+          "bytes": 1157,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/stubs2.go",
+          "sha256": "827941b159681165b8648bbc2c3d9295b0d01b1ca5739bd5079518bb4ad7b6e3"
+        },
+        {
+          "bytes": 274,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/stubs3.go",
+          "sha256": "cca31b03d2fbfb0aadc25edbfd9a541f1323746c8f336e114b630f0a3660b605"
+        },
+        {
+          "bytes": 531,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/stubs_arm.go",
+          "sha256": "fb5c85146619b44319b06928832ebf6b3f0b3b1ce1ae1e8a8adfe9a0c37721cd"
+        },
+        {
+          "bytes": 647,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/stubs_linux.go",
+          "sha256": "dd0da5492a19c53a4e1fd983eb4e9075c8d6536c55b1d4d8eafa00609040360f"
+        },
+        {
+          "bytes": 36656,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/symtab.go",
+          "sha256": "32746d50a3d949d30e691f564068b7f0cb33064f62243ab9d828bea32beeb371"
+        },
+        {
+          "bytes": 521,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sys_arm.go",
+          "sha256": "43856abb25fd7b9a08314467112c9693c758ca5da8ff4525b6375f4d150e4ad9"
+        },
+        {
+          "bytes": 245,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sys_nonppc64x.go",
+          "sha256": "fa63b093b68b24b280878384269e4ef7c9791216991e616ab3537a1484c07947"
+        },
+        {
+          "bytes": 31531,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/time.go",
+          "sha256": "654a72a88e8583020ea114a7b5d38db050cae2312649487f07420c6a3aa9fc39"
+        },
+        {
+          "bytes": 709,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/time_nofake.go",
+          "sha256": "1b79d887b4a88a3124f43fc6257e8784e35a4aa1d0be0a0d1c709fa65faf8f84"
+        },
+        {
+          "bytes": 532,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/timestub.go",
+          "sha256": "1ab600a98d5017f727b18c710554be302607e6556282efcab3a7c4f601781233"
+        },
+        {
+          "bytes": 314,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/timestub2.go",
+          "sha256": "bd1341716234bc56ad1f1f9e3d90c417ddb72bf414953712cdcd98f66a17f886"
+        },
+        {
+          "bytes": 260,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/tls_stub.go",
+          "sha256": "1596177a6668e35fea9dadebfa93dbe057a601886081665107e32fcec5fab2cb"
+        },
+        {
+          "bytes": 40044,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/trace.go",
+          "sha256": "449630e25715a1de2baf3a0dcbb1dc378fa17b2383c068ba3a2a157d920db799"
+        },
+        {
+          "bytes": 49262,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/traceback.go",
+          "sha256": "f550325fc836f81ca87068115279fc5d34a50ac66f9fee28ed028ea19ae1f5af"
+        },
+        {
+          "bytes": 17686,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/type.go",
+          "sha256": "56a091a6aab6f9ff179b624c27ee424fa79525ee0095b1032fd7decc6baaa1b0"
+        },
+        {
+          "bytes": 742,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/typekind.go",
+          "sha256": "51a66a529b3ab1a477bacfca692a3c5997018d0ddd595b34204ef94ef8ade05d"
+        },
+        {
+          "bytes": 3467,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/utf8.go",
+          "sha256": "08e09814d245742077592fe53a434a630c3067273fa88321f893627dfad81a6f"
+        },
+        {
+          "bytes": 2827,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/vdso_elf32.go",
+          "sha256": "a9a9a3282b179f85f47323f040c2a677b69b04c55a012993af60ea49c0226bde"
+        },
+        {
+          "bytes": 7894,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/vdso_linux.go",
+          "sha256": "75fe62de5ca20ef2e23da09abad073fbf4ae51756e29569956f0ca8cc7008817"
+        },
+        {
+          "bytes": 669,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/vdso_linux_arm.go",
+          "sha256": "2c8b3361a445d8989bd7ca0aab4ab327f714e7b7e51173d7d066a091f25f8043"
+        },
+        {
+          "bytes": 6872,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/vlrt.go",
+          "sha256": "2e6d886ef31b332b9a6a04fc6a1505b70ff239b1a261036e335e7eea3acbb502"
+        },
+        {
+          "bytes": 291,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/write_err.go",
+          "sha256": "94da18e6cd237191ca682299f4394d21dc33a7af5989b28c6313500459610222"
+        },
+        {
+          "bytes": 278,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/asm.s",
+          "sha256": "75724aa85fe4e43f4c68abfac694e97037a5b09f249c99296fe4f3ba8f052dff"
+        },
+        {
+          "bytes": 30928,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/asm_arm.s",
+          "sha256": "0ad7947e9d194c2951fbdf2ac6f6b5686e08e6c7972c77faf450c7d2572bfe5f"
+        },
+        {
+          "bytes": 7282,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/duff_arm.s",
+          "sha256": "884b4378d7f384cef47692121b855a2163e79ce457c855feb279802d8dcf48c9"
+        },
+        {
+          "bytes": 2667,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/memclr_arm.s",
+          "sha256": "242f3ac105e8a162768d8ee01354e29f071bf2d7d332ebe3973bea4557781fb7"
+        },
+        {
+          "bytes": 6039,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/memmove_arm.s",
+          "sha256": "536430961a3cdd3f5c5f4b4f8b0799535efc1bf20a4da53f810f201720de5494"
+        },
+        {
+          "bytes": 1511,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/preempt_arm.s",
+          "sha256": "10f63ea91cb64be655c185b282112cc268c8b720e267436ec44ae8dac2614896"
+        },
+        {
+          "bytes": 1007,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/rt0_linux_arm.s",
+          "sha256": "ae6b9ea3a3ea1d8a0319d70e744b127d1125c55853ba2dc0d74c7075c0defa9a"
+        },
+        {
+          "bytes": 16976,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/sys_linux_arm.s",
+          "sha256": "b33f401e32333028cdc822c04b523d5689450fade3e6846652ff2bc1aae3cae7"
+        },
+        {
+          "bytes": 3390,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/tls_arm.s",
+          "sha256": "602cbf618a1de907788212d3eb775e7893606182f97e713619ce67fb31f290de"
+        },
+        {
+          "bytes": 7233,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/vlop_arm.s",
+          "sha256": "2e06f40d0f94863ad648304b452fbd6568618342a665394f10bbe7ecc2a3bdd0"
+        },
+        {
+          "bytes": 1023,
+          "field": "HFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/asm_ppc64x.h",
+          "sha256": "0b35255b282e992e26be02030d8bed8731e530ec0138f97ee20c67cf17b7de88"
+        },
+        {
+          "bytes": 2612,
+          "field": "HFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/funcdata.h",
+          "sha256": "bbdcb970aa7372c5de5afeeba150ef2198d59a44b843b3c6c65944eec56e6106"
+        },
+        {
+          "bytes": 366,
+          "field": "HFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/go_tls.h",
+          "sha256": "253985b0412d66fd6657b0fcfa54eef45d036c66a7cd00b0ac37a3da2166a4e1"
+        },
+        {
+          "bytes": 1560,
+          "field": "HFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/runtime/textflag.h",
+          "sha256": "6e8943974e93716175c3aa85c1ac8eb39cd87150e6e5c074f02e8f98e58bea43"
+        }
+      ],
+      "import_path": "runtime",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/bits",
+      "files": [
+        {
+          "bytes": 17909,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/bits/bits.go",
+          "sha256": "121d188fd775bf690d0237fa362cea0f8a3e4de67830b80632934571d7891c01"
+        },
+        {
+          "bytes": 398,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/bits/bits_errors.go",
+          "sha256": "5da8ee8b63c2324d0eed2a30f61d3ebc9481d4831a569be823f9ac989fd83ca7"
+        },
+        {
+          "bytes": 4791,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/bits/bits_tables.go",
+          "sha256": "c4cb4a05dab6d395d9d51720893a42f0a9d1cdf8a0c2383d87268e49acb73f7f"
+        }
+      ],
+      "import_path": "math/bits",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math",
+      "files": [
+        {
+          "bytes": 363,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/abs.go",
+          "sha256": "9c6e0e05869a13393de185b2df4571c52810ef3f15cce1542844627f2b09e21d"
+        },
+        {
+          "bytes": 1746,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/acosh.go",
+          "sha256": "9d162ccb3b48f3ffde74c888691c29c1ccfedebdec6cdbf5737d6ff78094fe11"
+        },
+        {
+          "bytes": 1109,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/asin.go",
+          "sha256": "2137d59b77d3a1801db0484026460f9ad5511f33f2c772e618a2e1eef323ccbb"
+        },
+        {
+          "bytes": 1965,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/asinh.go",
+          "sha256": "7afd74b3a9e7751a9d7d4eb1b7b209b89c4a8fc4bd623dd8e4d12ea6af4e4f12"
+        },
+        {
+          "bytes": 3106,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/atan.go",
+          "sha256": "6b60524c065b093d9ad7f4a555175bf6a2e8a3abbbd49f92ab24bd8b643ffdd7"
+        },
+        {
+          "bytes": 1557,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/atan2.go",
+          "sha256": "aa9029f3bcf26b45220f35d05a8d72552ceacd334e504481e7f32e9eaf0dc017"
+        },
+        {
+          "bytes": 2039,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/atanh.go",
+          "sha256": "b2cf7673569dd3216674fff669be43d2dcd1c8558633a973c2d413f4e9cce7b9"
+        },
+        {
+          "bytes": 1911,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/bits.go",
+          "sha256": "7ce9ae4edf25a4fb01a4622a8f45f140559511a265e8d2e27f6f65b62068feed"
+        },
+        {
+          "bytes": 2363,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/cbrt.go",
+          "sha256": "ea558ab0115bbd4e4176181ed5e5a723e85224dc714df3e740e1ebace3e1195f"
+        },
+        {
+          "bytes": 2391,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/const.go",
+          "sha256": "31a51c6e2625ca57a2f5928daab5d1a63b969709a29cb272fff797e2a31fc7aa"
+        },
+        {
+          "bytes": 378,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/copysign.go",
+          "sha256": "77b97f09e8480ef3dc7f646e43556ca5026b4f6c8cbcfcaf54b52a598d34135a"
+        },
+        {
+          "bytes": 1716,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/dim.go",
+          "sha256": "fd0089cbdf33fc3f8c2f36dcc7244650afb7e59d1c48ce7e67a6b67451cec3b8"
+        },
+        {
+          "bytes": 410,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/dim_noasm.go",
+          "sha256": "6443e140ff0507ff4436a2ed9d8bca1608677547fab5b784d430403ab6072963"
+        },
+        {
+          "bytes": 11779,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/erf.go",
+          "sha256": "0f527b769b6ca15aed62e01830afadc9a98e1d0dc76915b0caa42705c16df161"
+        },
+        {
+          "bytes": 3442,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/erfinv.go",
+          "sha256": "b9718a6bf4976c38efbf0b91485e879840e3a56309a180272aeede9ad10ae529"
+        },
+        {
+          "bytes": 5497,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/exp.go",
+          "sha256": "0db004d6e2c06aec7dc260f45717b166cffb2b67bc217aec77b6ad6efed488f9"
+        },
+        {
+          "bytes": 284,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/exp2_noasm.go",
+          "sha256": "8a037bde7dd6ed536dc2e6a2375dfc47de92ad6890920d1b10b4a951231fa888"
+        },
+        {
+          "bytes": 302,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/exp_noasm.go",
+          "sha256": "80d98066834cfe358d3c2e7fee40cf5039e098034e3bea8d950a617dbb11abcc"
+        },
+        {
+          "bytes": 8091,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/expm1.go",
+          "sha256": "dfd7becf5b98c48cdcd36613ff774f30e3f87b43dade1406d1fb67184a0095a1"
+        },
+        {
+          "bytes": 3355,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/floor.go",
+          "sha256": "0117d7d757fea8060b542598d76bb7e91429bf9f54aa15eeab752bd8b960350f"
+        },
+        {
+          "bytes": 531,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/floor_noasm.go",
+          "sha256": "a5280d23bf08a273cf0bb1392aebda347346b2c2b216915bf8dbc16a2ee461b8"
+        },
+        {
+          "bytes": 4565,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/fma.go",
+          "sha256": "2b7c1e8edc7c1b1e088f8f2800927a72c2e04dd82df91adeca60cc4491695309"
+        },
+        {
+          "bytes": 926,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/frexp.go",
+          "sha256": "15a1301d66d22b51e58e0f4000288104c84fc90b353d0f3fbfac1e5dd5100f0b"
+        },
+        {
+          "bytes": 5655,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/gamma.go",
+          "sha256": "e2451665195afec6e359d9deb301c9b87b9dd292df4470422251281c582967a4"
+        },
+        {
+          "bytes": 845,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/hypot.go",
+          "sha256": "d3e52e5423cd1ca52d700edddfbf1cff752c3f8de68fe6df30327d904c648068"
+        },
+        {
+          "bytes": 297,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/hypot_noasm.go",
+          "sha256": "ea186403dd7a55eb45513049920cc7663ebffe80588d43aa6081b2602005531a"
+        },
+        {
+          "bytes": 13925,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/j0.go",
+          "sha256": "0d86ddd4aa8777df2d789b5ebcaf93cbcbfdab9f460c2e16d389fde49971fbd7"
+        },
+        {
+          "bytes": 13617,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/j1.go",
+          "sha256": "ee9cdcfa0a894a91a2412ec6268d7e0c3b363c711722d2d06828ae89370e94ae"
+        },
+        {
+          "bytes": 7345,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/jn.go",
+          "sha256": "4a81ea37c3d26284ecaf4ad37c621424fb2c2106e708fc5b023b5a3c05a40d85"
+        },
+        {
+          "bytes": 1072,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/ldexp.go",
+          "sha256": "9db6a58772bf77a610ee1380358327f20f94d9e2dc4100d2630ff977f059c938"
+        },
+        {
+          "bytes": 11285,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/lgamma.go",
+          "sha256": "a70defeeb051f7548a2c3fbf7dc5dd18e5ff0f7d7d24bb27a825116436745da3"
+        },
+        {
+          "bytes": 3950,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/log.go",
+          "sha256": "0e690db3cccf86be434e3d9abdc9723e794e752290a778f5106ddde1123b3adf"
+        },
+        {
+          "bytes": 869,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/log10.go",
+          "sha256": "df187895b9aeb8e91dca46d51702bdad89c7b35072b10d95c70bc2a0d6ad4164"
+        },
+        {
+          "bytes": 6492,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/log1p.go",
+          "sha256": "da357e898b64682e22e7a849c126221e28929cd3aa3a6bd1d47ac4cbaa261371"
+        },
+        {
+          "bytes": 292,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/log_stub.go",
+          "sha256": "c945334a77924e23b19533d80e156e0286bbf55fe4e189f33a0866f9440f689b"
+        },
+        {
+          "bytes": 1014,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/logb.go",
+          "sha256": "412736a63552c6cf48acc659277ec0e12cc13e4818c671ed9052662f8a6a1c8c"
+        },
+        {
+          "bytes": 900,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/mod.go",
+          "sha256": "77633612c2e5326885ead9db205663517a3b9044e5543ea4d9ced4fc59423bb8"
+        },
+        {
+          "bytes": 910,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/modf.go",
+          "sha256": "0e07966c12b15e89ceaf7b5a4a6a0ee737dbd49124d92e118c0e667aec3a8c0d"
+        },
+        {
+          "bytes": 326,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/modf_noasm.go",
+          "sha256": "8f378c67590a1ddb59ede073c6328faf0852ba750f73358ce5c6180b2c6aaaab"
+        },
+        {
+          "bytes": 1233,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/nextafter.go",
+          "sha256": "d7c7c52349b9580a9875765d89a9bdcd23a786b1d83fd4456a5821aad0df9704"
+        },
+        {
+          "bytes": 3297,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/pow.go",
+          "sha256": "762fb5a3889064814d4844491d5d767fe89598607962d9c836cf6f66551c2e6e"
+        },
+        {
+          "bytes": 1266,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/pow10.go",
+          "sha256": "0d212830791a92a5811c517bd0d4c449c91b173612eb3934ef5739b27c7317cc"
+        },
+        {
+          "bytes": 2089,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/remainder.go",
+          "sha256": "0db6f774959a73d9ef97237f06c8f394f63eda9e54b83875f4493fd75b7ef6bc"
+        },
+        {
+          "bytes": 302,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/signbit.go",
+          "sha256": "f2a9103555eadab80b9d0ca293de87577fab5f3c4cdf0d817648afff480fa24d"
+        },
+        {
+          "bytes": 6499,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/sin.go",
+          "sha256": "f2a0fb4a159a5a9fe22b3326f012617cd2fb03b7dd137c7a7fef029306b0bd52"
+        },
+        {
+          "bytes": 1797,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/sincos.go",
+          "sha256": "1aa792a8edfadc2a62fedf40152332a76995d38b7e45818dbf88cb4cb96e3857"
+        },
+        {
+          "bytes": 1727,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/sinh.go",
+          "sha256": "d97d8cdf67d6f1bc1a8d9be8b7e6f971849bd22ac764f1f431446474121e7c01"
+        },
+        {
+          "bytes": 5017,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/sqrt.go",
+          "sha256": "1004f1530acbe3d2e081f2607824ba51934cc08fd64f9174839b1004349bdf7a"
+        },
+        {
+          "bytes": 341,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/sqrt_asm.go",
+          "sha256": "7d973b2c13192311d10920d419e9787fa8f02285d0115391f114adb37266c1d5"
+        },
+        {
+          "bytes": 2634,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/stubs.go",
+          "sha256": "191ed067c7368ec75c25d1f7298720e14bbe7280230aa4d6ae5f791a77452015"
+        },
+        {
+          "bytes": 3761,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/tan.go",
+          "sha256": "6f51de1c66475204887c434180d53d50fc10d6ea8efbff2b2ae7f92b67efb176"
+        },
+        {
+          "bytes": 2718,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/tanh.go",
+          "sha256": "4322e021e9602155762fa78502095c1890103310a21cc9605a55d138e3bd0e26"
+        },
+        {
+          "bytes": 3413,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/trig_reduce.go",
+          "sha256": "8f4e1b2269d48b23f36bda79044aa7b694f035a75890ddc0e909c897ac3c5f81"
+        },
+        {
+          "bytes": 1298,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/unsafe.go",
+          "sha256": "2f5efa6bba4c9b01402a159a2687607820c80b101c12b056a0a96c446946d8d1"
+        },
+        {
+          "bytes": 529,
+          "field": "SFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/src/math/sqrt_arm.s",
+          "sha256": "dc0c3521b90deaf8570a55f0cc01009da949aec2db3f4195e1f89959dce84baf"
+        }
+      ],
+      "import_path": "math",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10"
+    },
+    {
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp",
+      "files": [
+        {
+          "bytes": 2656,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp/core.go",
+          "sha256": "5f34ef8aad444b1d585f0ad6d60c6a60b13feaa3fe889503ae49bf06a26fa0ff"
+        },
+        {
+          "bytes": 2006,
+          "field": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp/main.go",
+          "sha256": "c134df0afb2989e971fcd5d5ed3968db4e564c9efd23ae6ed3fdcf46d0fd929c"
+        }
+      ],
+      "import_path": "example.com/p2goapp",
+      "root": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp"
+    }
+  ],
+  "schema": "p2-selected-go-sources-v1",
+  "selected_file_count": 250
+}

@@ -1,0 +1,34 @@
+{
+  "schema": 2,
+  "module_identity": {
+    "src/tinygo/go.mod": "e342af37369602cd8468e4b1a25ef6b558aff0f98b49fb8332426b9e022d9a21",
+    "src/tinygo/go.sum": "c285f999aea2aeba8ac85b83dfada9727afbdc7d7a44904188fc81b1519a3c58"
+  },
+  "patches": [
+    {
+      "name": "go-llvm",
+      "checkout": "src/go-llvm",
+      "patch": "patches/01-go-llvm-llvm14dev.patch",
+      "before_head": "fc868cbb5731eda2886115d93f83655a31fc4745",
+      "patch_sha256": "4a5025531a27ee76f96fcd6cd8d55c91c33ea9831b764690c78996f550a6f5b0",
+      "files": [{"path": "backports.cpp", "before_sha256": "1111a3f084bdddab515f9be92ffc7ad72ae3bdd0c51ffe62c3fc40eb917803d4", "after_sha256": "1df3c8224aaca2b0ea913587acf349eeda6808062d6567982e5a340a745bdab6"}],
+      "canonical_metadata": {"hunk_correction": "archived raw patch hunk header is old=11/new=8; parsed body is old=8/new=5"}
+    },
+    {
+      "name": "p2llvm",
+      "checkout": "src/p2llvm",
+      "patch": "patches/02-p2llvm-libc-time-O1.patch",
+      "before_head": "bdcefcce7860b2232c06f35726fea679a3a7309c",
+      "patch_sha256": "fbd744de254ab921a9d43216e2d2fecc2cbffbba097c0c2d5674ab816ae5c7ba",
+      "files": [{"path": "libc/time/CMakeLists.txt", "before_sha256": "97ce1cbe10955558591ee9d6a5f305c2ea2b67455b2344bf05cfcc91f31775d7", "after_sha256": "eac30c29e418c32a0cfbbf18bde8b2c28ac32c934da7ff3e589c3c00158b190d"}]
+    },
+    {
+      "name": "llvm",
+      "checkout": "src/llvm",
+      "patch": "patches/03-llvm-p2-asmprinter-visibility.patch",
+      "before_head": "72a9bb1ef2656d9953d1f41a8196d425ff2ab0b1",
+      "patch_sha256": "fc7143b8b18e8fc36feffba831ce2e5f7244901c6c9e143c27a81b9690c82515",
+      "files": [{"path": "llvm/lib/Target/P2/P2AsmPrinter.cpp", "before_sha256": "744c7fbe36208679ba3fad46fb42a9477b5564a92622d0a58cb2fff4c74ed971", "after_sha256": "d89ac5ad413e52ba834a60504c4b3166f1480335401835a3281161f0ad785408"}]
+    }
+  ]
+}

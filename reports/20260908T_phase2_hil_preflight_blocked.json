@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-08T11:57:58.830994+00:00",
+  "status": "BLOCKED_NO_SERIAL_DEVICE",
+  "required_port": "/dev/ttyUSB0",
+  "port_exists": false,
+  "serial_candidates": [],
+  "fd_owners": [],
+  "action_taken": "No loader or serial client started; no P2 reset/load occurred."
+}

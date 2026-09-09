@@ -1,0 +1,28 @@
+trying /dev/ttyUSB0...
+P2 version G found on serial port /dev/ttyUSB0
+Setting load mode to CHIP
+Setting clock_mode to 12427f8
+Loading fast loader for chip...
+Sending header
+Loading /work/propeller2/tinygo-p2-handoff/.work/out/firmware/c.elf - 167976 bytes
+chksum: d OK
+( Entering terminal mode.  Press Ctrl-] or Ctrl-Z to exit. )
+READY C 1
+R C 40d14b03 00000000 00000000
+R C a2a6340d 00000003 0000005f
+R C 23601284 00000000 ffffffdd
+R C e4a9ab5e fffffffe 00000000
+R C 0448c861 80000000 7fffffcd
+R C 7a87dbcc 00000000 00000000
+R C d14c1deb ffffffff 00000000
+R C 8c600ce7 99999999 34f1be89
+R C a9d8b24a ffffffff 55555554
+R C 2cfc7932 0000000a 00000084
+R C aa7f36d5 b9cb57e1 a612f62f
+R C c632d1e7 f72a1278 53b7a3aa
+R C e9faab42 4650aaff 9107520d
+R C 67a85cee eabc2a55 74a542bb
+R C 56aa7927 0ded127e b95b6e06
+R C a8ba1062 b5fc6847 10a8a4ad
+R C 7bac7caa 2b137909 cd76a46f
+R C 23cacdcf 776a6cfe 184e526e

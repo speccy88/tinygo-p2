@@ -1,0 +1,3 @@
+1ab708b1bc77a93c9c390434161d4942c2678eec06cb33f7c3dbcaa3356aa836  /opt/data/propeller2/tinygo-p2-handoff/.work/phase2/artifacts/gate2a-preserve-20260908T121552Z-go-init-main/p2goapp-phase2.elf
+dab586debfb38c43cac505142c04e5572b4df595d930525d1658b51a64062f85  /opt/data/propeller2/tinygo-p2-handoff/.work/phase2/artifacts/gate2a-preserve-20260908T121552Z-go-init-main/hil/hardware.json
+97aa94c5f8840c56615db3d1858a3a9e862bb7ebe65c07f5708e71e52bfd0fc5  /opt/data/propeller2/tinygo-p2-handoff/.work/phase2/artifacts/gate2a-preserve-20260908T121552Z-go-init-main/hil/terminal.raw

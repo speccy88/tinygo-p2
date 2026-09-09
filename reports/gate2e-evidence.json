@@ -1,0 +1,14 @@
+{
+  ".work/phase2/out/p2goapp-gate2e.elf": "132b9cf87bc521cf433e8b33e58d24544d0dde3dcf6e13592058b3b1a14416a8",
+  ".work/phase2/src/p2goapp/PROTOCOL.md": "76caa5e037469906be48b7e0a903f9de4259e967007da303fa2bdd61566847a4",
+  ".work/phase2/src/p2goapp/core.go": "5f34ef8aad444b1d585f0ad6d60c6a60b13feaa3fe889503ae49bf06a26fa0ff",
+  ".work/phase2/src/p2goapp/main.go": "c134df0afb2989e971fcd5d5ed3968db4e564c9efd23ae6ed3fdcf46d0fd929c",
+  ".work/phase2/src/tinygo/targets/p2_start.c": "1c1681af8e11fd516c3dadfae289dfd0ac83deaf8dd2e20d9bc3af9ce9fc17b8",
+  "allocation_negative": "PASS runtime.alloc unresolved under gc=none",
+  "goroutine_negative": "PASS attempted to start a goroutine without a scheduler",
+  "hil": "PASS 138/138 plus 4 malformed",
+  "hil_directory": ".work/phase2/hil/gate2e-fresh-ram-20260908T125801.065772Z",
+  "host_tests": "PASS",
+  "scope": "Gate2E-Go-owned-serial-challenge",
+  "tinygo": "tinygo version 0.23.0 linux/amd64 (using go version go1.18.10 and LLVM version 14.0.0git)"
+}

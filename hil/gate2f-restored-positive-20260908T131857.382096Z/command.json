@@ -1,0 +1,13 @@
+[
+  "/work/propeller2/tinygo-p2-handoff/.work/bin/loadp2",
+  "-p",
+  "/dev/ttyUSB0",
+  "-b",
+  "115200",
+  "-l",
+  "115200",
+  "-ZERO",
+  "-v",
+  "-t",
+  "/work/propeller2/tinygo-p2-handoff/.work/phase2/artifacts/gate2f-restored-20260908T131856.889558316Z/p2goapp-restored.elf"
+]

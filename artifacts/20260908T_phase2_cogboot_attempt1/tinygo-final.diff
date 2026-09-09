@@ -1,0 +1,91 @@
+diff --git a/builder/lld.cpp b/builder/lld.cpp
+index a03944c..0543a3e 100644
+--- a/builder/lld.cpp
++++ b/builder/lld.cpp
+@@ -8,22 +8,22 @@ extern "C" {
+ 
+ bool tinygo_link_elf(int argc, char **argv) {
+ 	std::vector<const char*> args(argv, argv + argc);
+-	return lld::elf::link(args, llvm::outs(), llvm::errs(), false, false);
++	return lld::elf::link(args, false, llvm::outs(), llvm::errs());
+ }
+ 
+ bool tinygo_link_macho(int argc, char **argv) {
+ 	std::vector<const char*> args(argv, argv + argc);
+-	return lld::macho::link(args, llvm::outs(), llvm::errs(), false, false);
++	return lld::macho::link(args, false, llvm::outs(), llvm::errs());
+ }
+ 
+ bool tinygo_link_mingw(int argc, char **argv) {
+ 	std::vector<const char*> args(argv, argv + argc);
+-	return lld::mingw::link(args, llvm::outs(), llvm::errs(), false, false);
++	return lld::mingw::link(args, false, llvm::outs(), llvm::errs());
+ }
+ 
+ bool tinygo_link_wasm(int argc, char **argv) {
+ 	std::vector<const char*> args(argv, argv + argc);
+-	return lld::wasm::link(args, llvm::outs(), llvm::errs(), false, false);
++	return lld::wasm::link(args, false, llvm::outs(), llvm::errs());
+ }
+ 
+ } // external "C"
+diff --git a/compileopts/config.go b/compileopts/config.go
+index b30e653..6fc11c9 100644
+--- a/compileopts/config.go
++++ b/compileopts/config.go
+@@ -187,9 +187,10 @@ func (c *Config) UseThinLTO() bool {
+ 		// wasm-ld doesn't seem to support ThinLTO yet.
+ 		return false
+ 	}
+-	if parts[0] == "avr" || parts[0] == "xtensa" {
+-		// These use external (GNU) linkers which might perhaps support ThinLTO
+-		// through a plugin, but it's too much hassle to set up.
++	if parts[0] == "avr" || parts[0] == "xtensa" || parts[0] == "p2" {
++		// These targets cannot use TinyGo's ThinLTO object path. In particular,
++		// the P2 LLVM14 fork's lld misclassifies a little-endian ThinLTO object
++		// (invalid e_shentsize 10240); emit the verified native P2 ELF object.
+ 		return false
+ 	}
+ 	if len(parts) >= 2 && strings.HasPrefix(parts[2], "macos") {
+diff --git a/go.mod b/go.mod
+index 84f7d9f..d6db131 100644
+--- a/go.mod
++++ b/go.mod
+@@ -17,3 +17,5 @@ require (
+ 	gopkg.in/yaml.v2 v2.4.0
+ 	tinygo.org/x/go-llvm v0.0.0-20220420140351-512c94c1e71f
+ )
++
++replace tinygo.org/x/go-llvm => ../go-llvm
+diff --git a/src/runtime/atomics_critical.go b/src/runtime/atomics_critical.go
+index 615426a..2e96d69 100644
+--- a/src/runtime/atomics_critical.go
++++ b/src/runtime/atomics_critical.go
+@@ -1,8 +1,13 @@
+-//go:build baremetal && !tinygo.wasm
+-// +build baremetal,!tinygo.wasm
++//go:build baremetal && !tinygo.wasm && !p2
++// +build baremetal,!tinygo.wasm,!p2
+ 
+ // Automatically generated file. DO NOT EDIT.
+ // This file implements standins for non-native atomics using critical sections.
++//
++// P2 is deliberately excluded. The P2 backend's RetCC supports scalar returns
++// only, while these helpers generate tuple returns (old,new). A P2 target must
++// either provide a real lock/interrupt implementation with a compatible ABI or
++// reject atomic use; it must not pretend that interrupt masking is a no-op.
+ 
+ package runtime
+ 
+diff --git a/src/runtime/baremetal.go b/src/runtime/baremetal.go
+index b91fdb2..e3508ae 100644
+--- a/src/runtime/baremetal.go
++++ b/src/runtime/baremetal.go
+@@ -1,5 +1,5 @@
+-//go:build baremetal
+-// +build baremetal
++//go:build baremetal && !p2
++// +build baremetal,!p2
+ 
+ package runtime
+ 

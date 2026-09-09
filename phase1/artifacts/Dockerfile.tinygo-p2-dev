@@ -1,0 +1,19 @@
+# Development-only image for the pinned TinyGo/P2 scalar experiment.
+# The existing minimal serial image and its Dockerfile remain untouched.
+FROM python:3.13-slim
+
+ARG SERIAL_GID=18
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+      ca-certificates clang cmake file git make ninja-build pkg-config \
+ && rm -rf /var/lib/apt/lists/* \
+ && groupadd --gid 10000 propeller \
+ && groupadd --gid "${SERIAL_GID}" serialaccess \
+ && useradd --uid 10000 --gid 10000 --groups serialaccess --create-home --shell /bin/sh propeller
+
+USER 10000:10000
+WORKDIR /work/propeller2/tinygo-p2-handoff
+ENV HOME=/home/propeller \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+CMD ["sleep", "infinity"]

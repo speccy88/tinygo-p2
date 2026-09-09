@@ -1,0 +1,655 @@
+File: /work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-phase2.elf
+Format: elf32-p2
+Arch: p2
+AddressSize: 32bit
+LoadName: <Not found>
+ElfHeader {
+  Ident {
+    Magic: (7F 45 4C 46)
+    Class: 32-bit (0x1)
+    DataEncoding: LittleEndian (0x1)
+    FileVersion: 1
+    OS/ABI: SystemV (0x0)
+    ABIVersion: 0
+    Unused: (00 00 00 00 00 00 00)
+  }
+  Type: Executable (0x2)
+  Machine: 0x12C
+  Version: 1
+  Entry: 0x0
+  ProgramHeaderOffset: 0x34
+  SectionHeaderOffset: 0x1918
+  Flags [ (0x0)
+  ]
+  HeaderSize: 52
+  ProgramHeaderEntrySize: 32
+  ProgramHeaderCount: 4
+  SectionHeaderEntrySize: 40
+  SectionHeaderCount: 11
+  StringTableSectionIndex: 9
+}
+Symbols [
+  Symbol {
+    Name:  (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: None (0x0)
+    Other: 0
+    Section: Undefined (0x0)
+  }
+  Symbol {
+    Name: main (1)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: File (0x4)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: runtime.runtimePanic (6)
+    Value: 0x98
+    Size: 48
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime$string.23 (27)
+    Value: 0x2D4
+    Size: 22
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: runtime.printstring (45)
+    Value: 0xC8
+    Size: 68
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime$string.24 (65)
+    Value: 0x2EA
+    Size: 23
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: runtime.printnl (83)
+    Value: 0x10C
+    Size: 28
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.abort (99)
+    Value: 0x128
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.putchar (113)
+    Value: 0x130
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.nilPanic (129)
+    Value: 0x138
+    Size: 4
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.run (146)
+    Value: 0x140
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.initAll (158)
+    Value: 0x148
+    Size: 40
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main.main (174)
+    Value: 0x1B4
+    Size: 168
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main$string.2 (184)
+    Value: 0x301
+    Size: 14
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main.nested (198)
+    Value: 0x170
+    Size: 68
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main$string.4 (210)
+    Value: 0x31C
+    Size: 10
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main$string.5 (224)
+    Value: 0x326
+    Size: 20
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main$string.3 (238)
+    Value: 0x30F
+    Size: 13
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: p2_start.c (252)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: File (0x4)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: p2_lock (263)
+    Value: 0x340
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: p2_halt (271)
+    Value: 0x2CC
+    Size: 8
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: raw_p2_uart_putc (279)
+    Value: 0x25C
+    Size: 40
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main (296)
+    Value: 0x13C
+    Size: 4
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: p2_lock_acquire (301)
+    Value: 0x284
+    Size: 44
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: p2_lock_release (317)
+    Value: 0x2B0
+    Size: 28
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: __entry (333)
+    Value: 0x0
+    Size: 152
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: _stack_bottom (341)
+    Value: 0x70000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+  Symbol {
+    Name: _bss_start (355)
+    Value: 0x340
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: _bss_end (366)
+    Value: 0x344
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: _data_start (375)
+    Value: 0x33A
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: HEAP_SIZE (387)
+    Value: 0xC000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: STACK_SIZE (397)
+    Value: 0xC000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: _heap_end (408)
+    Value: 0xC344
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .heap (0x5)
+  }
+  Symbol {
+    Name: _stack_top (418)
+    Value: 0x7C000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+  Symbol {
+    Name: _data_end (429)
+    Value: 0x33A
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _init_array_start (439)
+    Value: 0x33E
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _init_array_end (457)
+    Value: 0x33E
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _fini_array_start (473)
+    Value: 0x33E
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _fini_array_end (491)
+    Value: 0x33E
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _globals_start (507)
+    Value: 0x33A
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _globals_end (522)
+    Value: 0x344
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: _heap_start (535)
+    Value: 0x344
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .heap (0x5)
+  }
+  Symbol {
+    Name: __heap_start (547)
+    Value: 0x344
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .heap (0x5)
+  }
+  Symbol {
+    Name: __stack (560)
+    Value: 0x70000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+  Symbol {
+    Name: _end (568)
+    Value: 0x7C000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+]
+
+/work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-phase2.elf:	file format elf32-p2
+
+Disassembly of section .text:
+
+00000000 <__entry>:
+       0: 28 04 64 fd  			 setq #2
+       4: 61 a1 67 fc  			 wrlong r0, ptra++
+       8: 80 03 00 ff  			 augs #896
+       c: 00 a0 07 f6  			 mov r0, #0	
+      10: d0 f1 03 f6  			 mov ptra, r0	
+      14: 01 00 00 ff  			 augs #1
+      18: 40 a1 07 f6  			 mov r0, #320	
+      1c: 01 00 00 ff  			 augs #1
+      20: 44 a3 07 f6  			 mov r1, #324	
+      24: d1 a1 5b f2  			 cmps r0, r1	wcz
+      28: 0c 00 90 ad  		if_z	 jmp #12
+      2c: d0 01 48 fc  			 wrbyte #0, r0
+      30: 01 a0 07 f1  			 add r0, #1	
+      34: ec ff 9f fd  			 jmp #-20
+      38: 00 e0 65 fd  			 hubset #240
+      3c: 86 01 80 ff  			 augd #390
+      40: 1f 80 66 fd  			 waitx #320	
+      44: 03 80 80 ff  			 augd #32771
+      48: 00 e8 67 fd  			 hubset #500
+      4c: 86 01 80 ff  			 augd #390
+      50: 1f 80 66 fd  			 waitx #320	
+      54: 03 80 80 ff  			 augd #32771
+      58: 00 ee 67 fd  			 hubset #503
+      5c: 3e a0 07 f6  			 mov r0, #62	
+      60: 7c a2 07 f6  			 mov r1, #124	
+      64: 00 b6 02 ff  			 augs #177664
+      68: 07 a4 07 f6  			 mov r2, #7	
+      6c: 40 a0 63 fd  			 dirl r0	
+      70: d0 a3 03 fc  			 wrpin r1, r0
+      74: d0 a5 13 fc  			 wxpin r2, r0
+      78: 41 a0 63 fd  			 dirh r0	
+      7c: 04 a0 63 fd  			 locknew r0	
+      80: 01 00 00 ff  			 augs #1
+      84: 40 a3 07 f6  			 mov r1, #320	
+      88: d1 a1 63 fc  			 wrlong r0, r1
+      8c: 3c 01 c0 fd  			 calla #\main
+      90: 1f 02 64 fd  			 waitx #1	
+      94: f8 ff 9f fd  			 jmp #-8
+
+00000098 <runtime.runtimePanic>:
+      98: 28 02 64 fd  			 setq #1
+      9c: 61 a1 67 fc  			 wrlong r0, ptra++
+      a0: 01 00 00 ff  			 augs #1
+      a4: d4 a0 07 f6  			 mov r0, #212	
+      a8: 16 a2 07 f6  			 mov r1, #22	
+      ac: c8 00 c0 fd  			 calla #\runtime.printstring
+      b0: 01 00 00 ff  			 augs #1
+      b4: ea a0 07 f6  			 mov r0, #234	
+      b8: 17 a2 07 f6  			 mov r1, #23	
+      bc: c8 00 c0 fd  			 calla #\runtime.printstring
+      c0: 0c 01 c0 fd  			 calla #\runtime.printnl
+      c4: 28 01 c0 fd  			 calla #\runtime.abort
+
+000000c8 <runtime.printstring>:
+      c8: 61 a1 67 fc  			 wrlong r0, ptra++
+      cc: 28 02 64 fd  			 setq #1
+      d0: 61 a5 67 fc  			 wrlong r2, ptra++
+      d4: d0 a5 03 f6  			 mov r2, r0	
+      d8: 00 a6 07 f6  			 mov r3, #0	
+      dc: d1 a7 5b f2  			 cmps r3, r1	wcz
+      e0: 18 00 90 3d  		if_nc	 jmp #24
+      e4: d2 a1 03 f6  			 mov r0, r2	
+      e8: d3 a1 03 f1  			 add r0, r3	
+      ec: d0 a1 c3 fa  			 rdbyte r0, r0	
+      f0: 30 01 c0 fd  			 calla #\runtime.putchar
+      f4: 01 a6 07 f1  			 add r3, #1	
+      f8: e0 ff 9f fd  			 jmp #-32
+      fc: 28 02 64 fd  			 setq #1
+     100: 5f a5 07 fb  			 rdlong r2, --ptra	
+     104: 5f a1 07 fb  			 rdlong r0, --ptra	
+     108: 2e 00 64 fd  			 reta	
+
+0000010c <runtime.printnl>:
+     10c: 61 a1 67 fc  			 wrlong r0, ptra++
+     110: 0d a0 07 f6  			 mov r0, #13	
+     114: 30 01 c0 fd  			 calla #\runtime.putchar
+     118: 0a a0 07 f6  			 mov r0, #10	
+     11c: 30 01 c0 fd  			 calla #\runtime.putchar
+     120: 5f a1 07 fb  			 rdlong r0, --ptra	
+     124: 2e 00 64 fd  			 reta	
+
+00000128 <runtime.abort>:
+     128: cc 02 c0 fd  			 calla #\716
+     12c: f8 ff 9f fd  			 jmp #-8
+
+00000130 <runtime.putchar>:
+     130: 5c 02 c0 fd  			 calla #\604
+     134: 2e 00 64 fd  			 reta	
+
+00000138 <runtime.nilPanic>:
+     138: 98 00 c0 fd  			 calla #\runtime.runtimePanic
+
+0000013c <main>:
+     13c: 40 01 c0 fd  			 calla #\runtime.run
+
+00000140 <runtime.run>:
+     140: 48 01 c0 fd  			 calla #\runtime.initAll
+     144: b4 01 c0 fd  			 calla #\main.main
+
+00000148 <runtime.initAll>:
+     148: 28 02 64 fd  			 setq #1
+     14c: 61 a1 67 fc  			 wrlong r0, ptra++
+     150: 01 00 00 ff  			 augs #1
+     154: 01 a1 07 f6  			 mov r0, #257	
+     158: 0e a2 07 f6  			 mov r1, #14	
+     15c: c8 00 c0 fd  			 calla #\runtime.printstring
+     160: 0c 01 c0 fd  			 calla #\runtime.printnl
+     164: 28 02 64 fd  			 setq #1
+     168: 5f a1 07 fb  			 rdlong r0, --ptra	
+     16c: 2e 00 64 fd  			 reta	
+
+00000170 <main.nested>:
+     170: 28 02 64 fd  			 setq #1
+     174: 61 a1 67 fc  			 wrlong r0, ptra++
+     178: 01 a0 9f fb  			 tjnz r0, #1
+     17c: 30 00 90 fd  			 jmp #48
+     180: d0 a3 03 fb  			 rdlong r1, r0	
+     184: 40 a2 87 f1  			 sub r1, #64	
+     188: d0 a3 63 fc  			 wrlong r1, r0
+     18c: 04 a0 07 f1  			 add r0, #4	
+     190: d0 a3 03 fb  			 rdlong r1, r0	
+     194: 01 a2 07 f1  			 add r1, #1	
+     198: d0 a3 63 fc  			 wrlong r1, r0
+     19c: ff ff 7f ff  			 augs #8388607
+     1a0: c0 df 07 f6  			 mov r31, #448	
+     1a4: 28 02 64 fd  			 setq #1
+     1a8: 5f a1 07 fb  			 rdlong r0, --ptra	
+     1ac: 2e 00 64 fd  			 reta	
+     1b0: 38 01 c0 fd  			 calla #\runtime.nilPanic
+
+000001b4 <main.main>:
+     1b4: 28 04 64 fd  			 setq #2
+     1b8: 61 a1 67 fc  			 wrlong r0, ptra++
+     1bc: 08 f0 07 f1  			 add ptra, #8	
+     1c0: 00 a0 07 f6  			 mov r0, #0	
+     1c4: 00 a2 07 f6  			 mov r1, #0	
+     1c8: f8 ed 03 f6  			 mov pa, ptra	
+     1cc: 08 ec 87 f1  			 sub pa, #8	
+     1d0: 28 02 64 fd  			 setq #1
+     1d4: f6 a1 63 fc  			 wrlong r0, pa
+     1d8: f8 a1 03 f6  			 mov r0, ptra	
+     1dc: 08 a0 87 f1  			 sub r0, #8	
+     1e0: 70 01 c0 fd  			 calla #\main.nested
+     1e4: 00 a4 07 f6  			 mov r2, #0	
+     1e8: 01 a0 07 f6  			 mov r0, #1	
+     1ec: d2 a3 03 f6  			 mov r1, r2	
+     1f0: 0c a2 1f f2  			 cmp r1, #12	wcz
+     1f4: 0c 00 90 1d  	if_nc_and_nz	 jmp #12
+     1f8: d1 a5 03 f6  			 mov r2, r1	
+     1fc: 01 a4 07 f1  			 add r2, #1	
+     200: fa a1 9f fb  			 tjnz r0, #506
+     204: f8 a1 03 f6  			 mov r0, ptra	
+     208: 08 a0 87 f1  			 sub r0, #8	
+     20c: 0d a2 1f f2  			 cmp r1, #13	wcz
+     210: 34 00 90 cd  		if_c	 jmp #52
+     214: 3e a3 07 fb  			 rdlong r1, ptra[-2]	
+     218: d1 df 5b f2  			 cmps r31, r1	wcz
+     21c: 28 00 90 5d  		if_nz	 jmp #40
+     220: 04 a0 07 f1  			 add r0, #4	
+     224: d0 a1 03 fb  			 rdlong r0, r0	
+     228: 01 a0 5f f2  			 cmps r0, #1	wcz
+     22c: 18 00 90 5d  		if_nz	 jmp #24
+     230: 01 00 00 ff  			 augs #1
+     234: 1c a1 07 f6  			 mov r0, #284	
+     238: 0a a2 07 f6  			 mov r1, #10	
+     23c: c8 00 c0 fd  			 calla #\runtime.printstring
+     240: 0c 01 c0 fd  			 calla #\runtime.printnl
+     244: fc ff 9f fd  			 jmp #-4
+     248: 01 00 00 ff  			 augs #1
+     24c: 26 a1 07 f6  			 mov r0, #294	
+     250: 14 a2 07 f6  			 mov r1, #20	
+     254: c8 00 c0 fd  			 calla #\runtime.printstring
+     258: e4 ff 9f fd  			 jmp #-28
+
+0000025c <raw_p2_uart_putc>:
+     25c: 28 02 64 fd  			 setq #1
+     260: 61 a1 67 fc  			 wrlong r0, ptra++
+     264: 3e a2 07 f6  			 mov r1, #62	
+     268: d1 a1 23 fc  			 wypin r0, r1
+     26c: 40 a2 73 fd  			 testp r1	wc
+     270: 6c a0 63 fd  			 wrc r0
+     274: fd a1 97 fb  			 tjz r0, #509
+     278: 28 02 64 fd  			 setq #1
+     27c: 5f a1 07 fb  			 rdlong r0, --ptra	
+     280: 2e 00 64 fd  			 reta	
+
+00000284 <p2_lock_acquire>:
+     284: 28 02 64 fd  			 setq #1
+     288: 61 a1 67 fc  			 wrlong r0, ptra++
+     28c: 01 00 00 ff  			 augs #1
+     290: 40 a1 07 f6  			 mov r0, #320	
+     294: d0 a3 03 fb  			 rdlong r1, r0	
+     298: 06 a2 73 fd  			 locktry r1	wc
+     29c: 6c a2 63 fd  			 wrc r1
+     2a0: fc a3 97 fb  			 tjz r1, #508
+     2a4: 28 02 64 fd  			 setq #1
+     2a8: 5f a1 07 fb  			 rdlong r0, --ptra	
+     2ac: 2e 00 64 fd  			 reta	
+
+000002b0 <p2_lock_release>:
+     2b0: 61 a1 67 fc  			 wrlong r0, ptra++
+     2b4: 01 00 00 ff  			 augs #1
+     2b8: 40 a1 07 f6  			 mov r0, #320	
+     2bc: d0 a1 03 fb  			 rdlong r0, r0	
+     2c0: 07 a0 63 fd  			 lockrel r0	
+     2c4: 5f a1 07 fb  			 rdlong r0, --ptra	
+     2c8: 2e 00 64 fd  			 reta	
+
+000002cc <p2_halt>:
+     2cc: 1f 02 64 fd  			 waitx #1	
+     2d0: f8 ff 9f fd  			 jmp #-8
+3b7cacc5b6a21c484be71e966580b197eb75eaf479b953b67a3100e769dc8117  /work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-phase2.elf

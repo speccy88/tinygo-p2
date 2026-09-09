@@ -1,0 +1,227 @@
+{
+  "module": "tinygo.org/x/go-llvm",
+  "upstream_module_revision": "v0.0.0-20220420140351-512c94c1e71f",
+  "zip_sha256": "6a4e6412a32674fdea4ed6f16635118a4370d235bf28b8a42320b2a1a013f968",
+  "files": [
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/.github/workflows/test.yml",
+      "sha256": "fcca5596d89bf5b0957332dbeabd18c0ae95e0255b8d206b37cc348622eb6b4f",
+      "bytes": 3449
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/.gitignore",
+      "sha256": "3df637bb0cccfcc30d5606a3137fa5a546e46de69bc57ee96d1fc353cc00cb58",
+      "bytes": 26
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/IRBindings.cpp",
+      "sha256": "9926adc3457aaa3a36f03dfb24af068bf011b05ee8b11f1ef5adf482b238259b",
+      "bytes": 3452
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/IRBindings.h",
+      "sha256": "65460192231392fc6ab13b8b3f49f54bd42d2b3282a8e448a41f8136243c0147",
+      "bytes": 2091
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/InstrumentationBindings.cpp",
+      "sha256": "e1f20cf95eaaa6a1ba6375db20d122413e99c3339839abed2ac1184ffe82c30c",
+      "bytes": 1912
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/InstrumentationBindings.h",
+      "sha256": "a0077d1a43ff1101c64d533ae69bcd310febb265fd9100105daed814de1d97eb",
+      "bytes": 1331
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/LICENSE.txt",
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee",
+      "bytes": 15141
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/Makefile",
+      "sha256": "79dd099dd43d1f4128a0a0b4206efeb9dd2aaa830141552c2bd0d7ffcf9b07fa",
+      "bytes": 3023
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/README.markdown",
+      "sha256": "766ada32b6b8751fc25e14e085e49d2c42127d0666fa6435b90c93d909e4c726",
+      "bytes": 1302
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/SupportBindings.cpp",
+      "sha256": "da44311f1e1a48fd11157f7893380b1f1b43e95c1cb682abeb7b534a9649f8f4",
+      "bytes": 1008
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/SupportBindings.h",
+      "sha256": "a326a43b34b729f38c746de08b066f37c2c24b16fa12050287aefe772b2d76b0",
+      "bytes": 932
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/analysis.go",
+      "sha256": "5d9d4457e440411f124b3b870e8b182a1332b26598eb03eb7ee0a5c4e155a4cc",
+      "bytes": 2300
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/backports.cpp",
+      "sha256": "1111a3f084bdddab515f9be92ffc7ad72ae3bdd0c51ffe62c3fc40eb917803d4",
+      "bytes": 3399
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/backports.go",
+      "sha256": "8389d996562e404a296a53a83297f426098ee128c8612648ff6586f33db5f924",
+      "bytes": 560
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/backports.h",
+      "sha256": "79125857aa50c7ad8f80216400afd4989f1460f26f6e035b9d732ff534ee71b5",
+      "bytes": 1440
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/bitreader.go",
+      "sha256": "0781fbbdd95aa9bfe28ef5341102c6f9fb68b6a6c6671ae2b5435d726e024f81",
+      "bytes": 2108
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/bitwriter.go",
+      "sha256": "859003508fb312672f018e24c7aee0d2a6fa6df146c58c0dbb343ee5e16cdd2e",
+      "bytes": 1261
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/dibuilder.go",
+      "sha256": "481f59350d2748cfcea9c8734604e403a6593310a59e79c79b32e9138ecbcccc",
+      "bytes": 23834
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/executionengine.go",
+      "sha256": "26cc8e133bed0a9545b5648ec2de20f43e0c5e195dd930dedadad679f4e44c54",
+      "bytes": 5511
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/executionengine_test.go",
+      "sha256": "2b5cfe86d84a723c2c69be9205e68f84946ac1fb1eafa32b27d081f4909a7b12",
+      "bytes": 2855
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/go.mod",
+      "sha256": "b54788f02e4fa409d13c477da058420c3ac7012c85abd8c549fa188dee292fd3",
+      "bytes": 37
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/ir.go",
+      "sha256": "f83a748f16481662984163bf16e095436a9afddb493dab6ee7a1038a34beb149",
+      "bytes": 78583
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/ir_test.go",
+      "sha256": "fe014e3e96d2896d23642c7f96516b7a359988ee8ac4fe77344a28d10c9ed5c3",
+      "bytes": 3750
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/irreader.go",
+      "sha256": "5da8a727b59d18704e7da4d3174fad352d5dc3c39e7f7b8252dc78e0e9c5b19d",
+      "bytes": 1011
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/linker.go",
+      "sha256": "bd32ca2b8094a0ef58f896256019513b62de4024bd86c7c3e308b852c7bfbae2",
+      "bytes": 807
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/llvm_config_darwin_llvm11.go",
+      "sha256": "25564f36beb136a503e61622190322c38b3dfcee9fd26ae4cb436cea9dbf6dc6",
+      "bytes": 876
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/llvm_config_darwin_llvm12.go",
+      "sha256": "29793e07184172efa3b50b705cca4524f115c376b523c60e4e32b45b0e51c9bc",
+      "bytes": 876
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/llvm_config_darwin_llvm13.go",
+      "sha256": "0ce27b3230cf64844c1f2e0852859b04f57ddf3113948c05d56d4cb09f97b421",
+      "bytes": 897
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/llvm_config_linux_llvm11.go",
+      "sha256": "5d538db58539e9850335085d604502d7e982fcc2172bc12023be75a6ec6803b3",
+      "bytes": 398
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/llvm_config_linux_llvm12.go",
+      "sha256": "78b689c4b83424bf7d12b728a1ed4ca9fd30dade01ed3e550389b34a2be2fdd3",
+      "bytes": 398
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/llvm_config_linux_llvm13.go",
+      "sha256": "9a07f8d8fdb739c51755eefc9ac7c96642603c9ebee23ed23baa85fb6ae66db3",
+      "bytes": 438
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/llvm_config_linux_llvm14.go",
+      "sha256": "65f6bcdce349246a2dd3e3c98a8c484f9a0670b802167f1f38a4ec497c82914a",
+      "bytes": 666
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/llvm_dep.go",
+      "sha256": "df0f0abca38850c67ad05dc32c082e3edcd07211405860ec7da10b55994ba3d3",
+      "bytes": 595
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/llvm_test.go",
+      "sha256": "108ffcd56425548250565f37e21c5afb9bd18b7e81267268c539edeb77d81ad6",
+      "bytes": 217
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/string.go",
+      "sha256": "065afc9839de9d12d2b4b48498798a8befa9c35e4c796109788807f94ecb4962",
+      "bytes": 2562
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/string_test.go",
+      "sha256": "bc625c11154a4cd45477cb357d702955075fe7a645e04684ecffc9da2dd34b83",
+      "bytes": 853
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/support.go",
+      "sha256": "d264bf1126a39d60fbb10839e939c32ebe3be44a53e5489384156254aacd032b",
+      "bytes": 1557
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/target.go",
+      "sha256": "8518bb3105fe4f5a1576145f69b3be257b5193f12752b75079d467b09cd15693",
+      "bytes": 9925
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/transforms_coroutines.go",
+      "sha256": "42bbdfc665c746d0eba186d0bcb2aeda4991b31fbd895704ea3b81c028a27588",
+      "bytes": 897
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/transforms_instrumentation.go",
+      "sha256": "5a564ec9e1b110ff3b9be43c854b51ab49e8189727d93265f3aa05bb03c28b7f",
+      "bytes": 1337
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/transforms_ipo.go",
+      "sha256": "82c3c9b1b94fce1f0339f53400e13e0b2d912c23ab79e5318705598a9cbec072",
+      "bytes": 1687
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/transforms_pmbuilder.go",
+      "sha256": "fe4341c9d32df559088d7ebfcd59983a30409879d302c90004ecb0563132fdb2",
+      "bytes": 2166
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/transforms_scalar.go",
+      "sha256": "e1f528b2e880d841c3db28edd357926d0d3f170a7f41e28f232352f2c60b2462",
+      "bytes": 2713
+    },
+    {
+      "path": "tinygo.org/x/go-llvm@v0.0.0-20220420140351-512c94c1e71f/version.go",
+      "sha256": "c9ecbcbf9986880fe04fe110dc5095a229dc693ce327407c39cf98d8dbe41493",
+      "bytes": 611
+    }
+  ]
+}

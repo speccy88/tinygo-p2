@@ -1,0 +1,526 @@
+
+.work/phase2/artifacts/gate2f-final-cli-20260908T134314.022218017Z/linked-inputs/00-main.o:	file format elf32-p2
+
+Disassembly of section .text.runtime.lookupPanic:
+
+00000000 <runtime.lookupPanic>:
+       0:      			 setq #1
+       4:      			 wrlong r0, ptra++
+       8:      			 augs #0
+       c:      			 mov r0, #0	
+      10:      			 mov r1, #18	
+      14:      			 calla #\0
+
+Disassembly of section .text.runtime.runtimePanic:
+
+00000000 <runtime.runtimePanic>:
+       0:      			 setq #3
+       4:      			 wrlong r0, ptra++
+       8:      			 mov r2, r1	
+       c:      			 mov r3, r0	
+      10:      			 augs #0
+      14:      			 mov r0, #0	
+      18:      			 mov r1, #22	
+      1c:      			 calla #\0
+      20:      			 mov r0, r3	
+      24:      			 mov r1, r2	
+      28:      			 calla #\0
+      2c:      			 calla #\0
+      30:      			 calla #\0
+
+Disassembly of section .text.runtime.printstring:
+
+00000000 <runtime.printstring>:
+       0:      			 wrlong r0, ptra++
+       4:      			 setq #1
+       8:      			 wrlong r2, ptra++
+       c:      			 mov r2, r0	
+      10:      			 mov r3, #0	
+      14:      			 cmps r3, r1	wcz
+      18:      		if_nc	 jmp #24
+      1c:      			 mov r0, r2	
+      20:      			 add r0, r3	
+      24:      			 rdbyte r0, r0	
+      28:      			 calla #\0
+      2c:      			 add r3, #1	
+      30:      			 jmp #-32
+      34:      			 setq #1
+      38:      			 rdlong r2, --ptra	
+      3c:      			 rdlong r0, --ptra	
+      40:      			 reta	
+
+Disassembly of section .text.runtime.printnl:
+
+00000000 <runtime.printnl>:
+       0:      			 wrlong r0, ptra++
+       4:      			 mov r0, #13	
+       8:      			 calla #\0
+       c:      			 mov r0, #10	
+      10:      			 calla #\0
+      14:      			 rdlong r0, --ptra	
+      18:      			 reta	
+
+Disassembly of section .text.runtime.abort:
+
+00000000 <runtime.abort>:
+       0:      			 calla #\0
+       4:      			 jmp #-8
+
+Disassembly of section .text.runtime.putchar:
+
+00000000 <runtime.putchar>:
+       0:      			 calla #\0
+       4:      			 reta	
+
+Disassembly of section .text.runtime.nilPanic:
+
+00000000 <runtime.nilPanic>:
+       0:      			 setq #1
+       4:      			 wrlong r0, ptra++
+       8:      			 augs #0
+       c:      			 mov r0, #0	
+      10:      			 mov r1, #23	
+      14:      			 calla #\0
+
+Disassembly of section .text.main:
+
+00000000 <main>:
+       0:      			 calla #\0
+
+Disassembly of section .text.runtime.run:
+
+00000000 <runtime.run>:
+       0:      			 calla #\0
+       4:      			 calla #\0
+
+Disassembly of section .text.runtime.initAll:
+
+00000000 <runtime.initAll>:
+       0:      			 setq #3
+       4:      			 wrlong r0, ptra++
+       8:      			 augs #0
+       c:      			 mov r0, #0	
+      10:      			 mov r1, #21	
+      14:      			 calla #\0
+      18:      			 calla #\0
+      1c:      			 mov r1, #80	
+      20:      			 mov r0, r1	
+      24:      			 calla #\0
+      28:      			 mov r2, #50	
+      2c:      			 mov r0, r2	
+      30:      			 calla #\0
+      34:      			 mov r3, #32	
+      38:      			 mov r0, r3	
+      3c:      			 calla #\0
+      40:      			 mov r0, r1	
+      44:      			 calla #\0
+      48:      			 mov r0, #72	
+      4c:      			 calla #\0
+      50:      			 mov r0, #65	
+      54:      			 calla #\0
+      58:      			 mov r0, #83	
+      5c:      			 calla #\0
+      60:      			 mov r0, #69	
+      64:      			 calla #\0
+      68:      			 mov r0, r2	
+      6c:      			 calla #\0
+      70:      			 mov r0, r3	
+      74:      			 calla #\0
+      78:      			 mov r1, #73	
+      7c:      			 mov r0, r1	
+      80:      			 calla #\0
+      84:      			 mov r0, #78	
+      88:      			 calla #\0
+      8c:      			 mov r0, r1	
+      90:      			 calla #\0
+      94:      			 mov r0, #84	
+      98:      			 calla #\0
+      9c:      			 mov r0, #13	
+      a0:      			 calla #\0
+      a4:      			 mov r0, #10	
+      a8:      			 calla #\0
+      ac:      			 setq #3
+      b0:      			 rdlong r0, --ptra	
+      b4:      			 reta	
+
+Disassembly of section .text.main.writeText:
+
+00000000 <main.writeText>:
+       0:      			 wrlong r0, ptra++
+       4:      			 setq #1
+       8:      			 wrlong r2, ptra++
+       c:      			 mov r2, r0	
+      10:      			 mov r3, #0	
+      14:      			 cmps r3, r1	wcz
+      18:      		if_nc	 jmp #36
+      1c:      			 cmp r3, r1	wcz
+      20:      		if_c	 jmp #4
+      24:      			 jmp #40
+      28:      			 mov r0, r2	
+      2c:      			 add r0, r3	
+      30:      			 rdbyte r0, r0	
+      34:      			 calla #\0
+      38:      			 add r3, #1	
+      3c:      			 jmp #-44
+      40:      			 setq #1
+      44:      			 rdlong r2, --ptra	
+      48:      			 rdlong r0, --ptra	
+      4c:      			 reta	
+      50:      			 calla #\0
+
+Disassembly of section .text.main.foldWords:
+
+00000000 <main.foldWords>:
+       0:      			 setq #4
+       4:      			 wrlong r1, ptra++
+       8:      			 augs #0
+       c:      			 mov r1, #0	
+      10:      			 rdlong r2, r1	
+      14:      			 augs #0
+      18:      			 mov r1, #0	
+      1c:      			 rdlong r1, r1	
+      20:      			 xor r1, r2	
+      24:      			 mov r2, #0	
+      28:      			 augs #0
+      2c:      			 mov r3, #0	
+      30:      			 cmp r2, #4	wcz
+      34:      		if_c	 jmp #4
+      38:      			 jmp #48
+      3c:      			 mov r4, r2	
+      40:      			 add r4, r0	
+      44:      			 and r4, #3	
+      48:      			 shl r4, #2	
+      4c:      			 mov r5, r3	
+      50:      			 add r5, r4	
+      54:      			 rdlong r4, r5	
+      58:      			 rol r1, #3	
+      5c:      			 xor r4, r1	
+      60:      			 add r2, #1	
+      64:      			 mov r1, r4	
+      68:      			 jmp #-60
+      6c:      			 mov r31, r1	
+      70:      			 setq #4
+      74:      			 rdlong r1, --ptra	
+      78:      			 reta	
+
+Disassembly of section .text.main.mixChallenge:
+
+00000000 <main.mixChallenge>:
+       0:      			 setq #10
+       4:      			 wrlong r0, ptra++
+       8:      			 mov r3, r0	
+       c:      			 mov r0, r1	
+      10:      			 xor r0, r3	
+      14:      			 and r0, #3	
+      18:      			 shl r0, #2	
+      1c:      			 augs #0
+      20:      			 mov r5, #0	
+      24:      			 mov r4, r5	
+      28:      			 add r4, r0	
+      2c:      			 rdlong r0, r4	
+      30:      			 add r0, r3	
+      34:      			 calla #\0
+      38:      			 mov r4, r31	
+      3c:      			 augs #8388607
+      40:      			 cmps r3, #492	wcz
+      44:      	if_nc_and_nz	 jmp #192
+      48:      			 augs #8388607
+      4c:      			 xor r0, #493	
+      50:      			 mov r7, #0	
+      54:      			 augs #0
+      58:      			 mov r3, #0	
+      5c:      			 rdlong r6, r3	
+      60:      			 mov r8, r2	
+      64:      			 and r8, #15	
+      68:      			 cmp r7, r8	wcz
+      6c:      	if_nc_and_nz	 jmp #56
+      70:      			 mov r9, r6	
+      74:      			 add r9, r7	
+      78:      			 and r9, #3	
+      7c:      			 shl r9, #2	
+      80:      			 mov r10, r5	
+      84:      			 add r10, r9	
+      88:      			 rdlong r9, r10	
+      8c:      			 add r9, r4	
+      90:      			 rol r0, #5	
+      94:      			 xor r0, r4	
+      98:      			 xor r0, r7	
+      9c:      			 add r7, #1	
+      a0:      			 mov r4, r9	
+      a4:      			 jmp #-64
+      a8:      			 add r6, #1	
+      ac:      			 wrlong r6, r3
+      b0:      			 mov r3, r4	
+      b4:      			 xor r3, r0	
+      b8:      			 augs #0
+      bc:      			 mov r5, #0	
+      c0:      			 wrlong r3, r5
+      c4:      			 add r2, r1	
+      c8:      			 add r2, r0	
+      cc:      			 augs #0
+      d0:      			 mov r1, #0	
+      d4:      			 rdlong r3, r1	
+      d8:      			 add r2, r3	
+      dc:      			 wrlong r2, r1
+      e0:      			 augs #0
+      e4:      			 mov r1, #0	
+      e8:      			 rdlong r2, r1	
+      ec:      			 add r2, r0	
+      f0:      			 wrlong r2, r1
+      f4:      			 xor r2, r4	
+      f8:      			 mov r31, r2	
+      fc:      			 setq #10
+     100:      			 rdlong r0, --ptra	
+     104:      			 reta	
+     108:      			 augs #8388607
+     10c:      			 cmp r3, #494	wcz
+     110:      		if_c	 jmp #8
+     114:      			 add r0, r1	
+     118:      			 jmp #-204
+     11c:      			 augs #5427922
+     120:      			 xor r0, #421	
+     124:      			 jmp #-216
+
+Disassembly of section .text.main.parseHex8:
+
+00000000 <main.parseHex8>:
+       0:      			 setq #4
+       4:      			 wrlong r2, ptra++
+       8:      			 tjz r1, #42
+       c:      			 wrlong #0, r1
+      10:      			 mov r2, #0	
+      14:      			 augs #0
+      18:      			 mov r3, #0	
+      1c:      			 mov r4, r2	
+      20:      			 cmp r4, #7	wcz
+      24:      	if_nc_and_nz	 jmp #124
+      28:      			 mov r5, r4	
+      2c:      			 add r5, r0	
+      30:      			 mov r6, r3	
+      34:      			 add r6, r5	
+      38:      			 rdbyte r6, r6	
+      3c:      			 mov r5, r6	
+      40:      			 sub r5, #48	
+      44:      			 and r5, #255	
+      48:      			 cmp r5, #9	wcz
+      4c:      	if_nc_and_nz	 jmp #4
+      50:      			 jmp #52
+      54:      			 mov r5, r6	
+      58:      			 sub r5, #97	
+      5c:      			 and r5, #255	
+      60:      			 cmp r5, #5	wcz
+      64:      	if_nc_and_nz	 jmp #8
+      68:      			 add r5, #10	
+      6c:      			 jmp #24
+      70:      			 sub r6, #65	
+      74:      			 and r6, #255	
+      78:      			 cmp r6, #5	wcz
+      7c:      	if_nc_and_nz	 jmp #28
+      80:      			 add r6, #10	
+      84:      			 mov r5, r6	
+      88:      			 shl r2, #4	
+      8c:      			 or r5, r2	
+      90:      			 add r4, #1	
+      94:      			 mov r2, r5	
+      98:      			 jmp #-124
+      9c:      			 wrlong #1, r1
+      a0:      			 mov r2, #0	
+      a4:      			 mov r31, r2	
+      a8:      			 setq #4
+      ac:      			 rdlong r2, --ptra	
+      b0:      			 reta	
+      b4:      			 calla #\0
+
+Disassembly of section .text.main.writeHex:
+
+00000000 <main.writeHex>:
+       0:      			 setq #5
+       4:      			 wrlong r0, ptra++
+       8:      			 mov r1, r0	
+       c:      			 mov r2, #28	
+      10:      			 augs #0
+      14:      			 mov r3, #0	
+      18:      			 mov r4, r2	
+      1c:      			 mov r0, r1	
+      20:      			 shr r0, r4	
+      24:      			 and r0, #15	
+      28:      			 mov r5, r3	
+      2c:      			 add r5, r0	
+      30:      			 rdbyte r0, r5	
+      34:      			 calla #\0
+      38:      			 sub r2, #4	
+      3c:      			 tjnz r4, #502
+      40:      			 setq #5
+      44:      			 rdlong r0, --ptra	
+      48:      			 reta	
+
+Disassembly of section .text.main.main:
+
+00000000 <main.main>:
+       0:      			 setq #27
+       4:      			 wrlong r0, ptra++
+       8:      			 add ptra, #4	
+       c:      			 mov r0, #0	
+      10:      			 mov r13, #1	
+      14:      			 cmp r0, #12	wcz
+      18:      	if_nc_and_nz	 jmp #28
+      1c:      			 add r0, #1	
+      20:      			 tjnz r13, #508
+      24:      			 augs #0
+      28:      			 mov r0, #0	
+      2c:      			 mov r1, #22	
+      30:      			 calla #\0
+      34:      			 jmp #-4
+      38:      			 augs #0
+      3c:      			 mov r0, #0	
+      40:      			 mov r1, #13	
+      44:      			 calla #\0
+      48:      			 mov r14, #0	
+      4c:      			 augs #0
+      50:      			 mov r15, #0	
+      54:      			 mov r16, r15	
+      58:      			 add r16, #28	
+      5c:      			 mov r17, r15	
+      60:      			 add r17, #19	
+      64:      			 mov r18, r15	
+      68:      			 add r18, #10	
+      6c:      			 mov r19, r15	
+      70:      			 add r19, #1	
+      74:      			 mov r3, #2	
+      78:      			 mov r4, #11	
+      7c:      			 mov r5, #20	
+      80:      			 mov r6, #29	
+      84:      			 augs #0
+      88:      			 mov r20, #0	
+      8c:      			 augs #0
+      90:      			 mov r21, #0	
+      94:      			 augs #0
+      98:      			 mov r22, #0	
+      9c:      			 augs #0
+      a0:      			 mov r23, #0	
+      a4:      			 augs #0
+      a8:      			 mov r24, #0	
+      ac:      			 augs #0
+      b0:      			 mov r25, #0	
+      b4:      			 augs #0
+      b8:      			 mov r7, #0	
+      bc:      			 mov r8, #4	
+      c0:      			 mov r9, #32	
+      c4:      			 augs #0
+      c8:      			 mov r10, #0	
+      cc:      			 augs #0
+      d0:      			 mov r11, #0	
+      d4:      			 mov r0, r14	
+      d8:      			 mov r1, r13	
+      dc:      			 calla #\0
+      e0:      			 mov r2, r31	
+      e4:      			 and r2, #255	
+      e8:      			 cmps r2, #13	wcz
+      ec:      		if_z	 jmp #44
+      f0:      			 cmps r2, #10	wcz
+      f4:      		if_nz	 jmp #4
+      f8:      			 jmp #32
+      fc:      			 cmp r0, #63	wcz
+     100:      			 mov r1, r14	
+     104:      	if_nc_and_nz	 jmp #-44
+     108:      			 mov r1, r15	
+     10c:      			 add r1, r0	
+     110:      			 wrbyte r31, r1
+     114:      			 add r0, #1	
+     118:      			 jmp #-68
+     11c:      			 tjnz r1, #1
+     120:      			 jmp #332
+     124:      			 rdbyte r27, r15	
+     128:      			 rdbyte r1, r16	
+     12c:      			 rdbyte r2, r17	
+     130:      			 rdbyte r12, r18	
+     134:      			 rdbyte r26, r19	
+     138:      			 wrlong #0, ptra[-1]
+     13c:      			 cmps r0, #37	wcz
+     140:      		if_nz	 jmp #320
+     144:      			 and r27, #255	
+     148:      			 cmps r27, #67	wcz
+     14c:      		if_nz	 jmp #308
+     150:      			 and r26, #255	
+     154:      			 cmps r26, #32	wcz
+     158:      		if_nz	 jmp #296
+     15c:      			 and r12, #255	
+     160:      			 cmps r12, #32	wcz
+     164:      		if_nz	 jmp #284
+     168:      			 and r2, #255	
+     16c:      			 cmps r2, #32	wcz
+     170:      		if_nz	 jmp #272
+     174:      			 and r1, #255	
+     178:      			 cmps r1, #32	wcz
+     17c:      		if_nz	 jmp #260
+     180:      			 mov r1, ptra	
+     184:      			 sub r1, #4	
+     188:      			 mov r0, r3	
+     18c:      			 calla #\0
+     190:      			 mov r26, r31	
+     194:      			 rdlong r0, ptra[-1]	
+     198:      			 tjnz r0, #59
+     19c:      			 mov r1, ptra	
+     1a0:      			 sub r1, #4	
+     1a4:      			 mov r0, r4	
+     1a8:      			 calla #\0
+     1ac:      			 mov r2, r31	
+     1b0:      			 rdlong r0, ptra[-1]	
+     1b4:      			 tjnz r0, #52
+     1b8:      			 mov r1, ptra	
+     1bc:      			 sub r1, #4	
+     1c0:      			 mov r0, r5	
+     1c4:      			 calla #\0
+     1c8:      			 mov r12, r31	
+     1cc:      			 rdlong r0, ptra[-1]	
+     1d0:      			 tjnz r0, #45
+     1d4:      			 mov r1, ptra	
+     1d8:      			 sub r1, #4	
+     1dc:      			 mov r0, r6	
+     1e0:      			 calla #\0
+     1e4:      			 rdlong r0, ptra[-1]	
+     1e8:      			 tjz r0, #1
+     1ec:      			 jmp #152
+     1f0:      			 wrlong r26, r20
+     1f4:      			 mov r0, r2	
+     1f8:      			 mov r1, r12	
+     1fc:      			 mov r2, r31	
+     200:      			 calla #\0
+     204:      			 wrlong r31, r21
+     208:      			 rdlong r0, r22	
+     20c:      			 wrlong r0, r23
+     210:      			 rdlong r0, r24	
+     214:      			 wrlong r0, r25
+     218:      			 mov r0, r7	
+     21c:      			 mov r1, r8	
+     220:      			 calla #\0
+     224:      			 rdlong r0, r20	
+     228:      			 calla #\0
+     22c:      			 mov r0, r9	
+     230:      			 calla #\0
+     234:      			 rdlong r0, r21	
+     238:      			 calla #\0
+     23c:      			 mov r0, r9	
+     240:      			 calla #\0
+     244:      			 rdlong r0, r23	
+     248:      			 calla #\0
+     24c:      			 mov r0, r9	
+     250:      			 calla #\0
+     254:      			 rdlong r0, r25	
+     258:      			 calla #\0
+     25c:      			 mov r0, r10	
+     260:      			 mov r1, r3	
+     264:      			 calla #\0
+     268:      			 mov r0, r14	
+     26c:      			 jmp #-408
+     270:      			 mov r0, r11	
+     274:      			 mov r1, r4	
+     278:      			 calla #\0
+     27c:      			 mov r0, r14	
+     280:      			 jmp #-428
+     284:      			 wrlong #1, ptra[-1]
+     288:      			 mov r0, r11	
+     28c:      			 mov r1, r4	
+     290:      			 calla #\0
+     294:      			 mov r0, r14	
+     298:      			 jmp #-452

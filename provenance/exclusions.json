@@ -1,0 +1,3572 @@
+[
+  {
+    "archive": "phase2",
+    "path": "MANIFEST.sha256",
+    "bytes": 248983,
+    "sha256": "4c9c402f1600f799f3d3c87e15a8a0245344995b72618df92db9e3b962492f30",
+    "reason": "complete-archive manifest not valid for reduced source tree; retained under provenance/archive-MANIFEST.sha256"
+  },
+  {
+    "archive": "phase2",
+    "path": "artifacts/gate2f-final-cli-20260908T131523.000819240Z/build-full.log",
+    "bytes": 77,
+    "sha256": "d884c6930678418d8e7834015f129bf6bbc63969c4026149f731624b39e21250",
+    "reason": "generated log (including large provenance build fixture); restored from sealed archive for offline tests"
+  },
+  {
+    "archive": "phase2",
+    "path": "artifacts/gate2f-final-cli-20260908T131540.392502595Z/build-full.log",
+    "bytes": 3609372,
+    "sha256": "741328cb268aefdd57f51f4617954d439901cc5a9a7bd842d325a9ed03cb9abc",
+    "reason": "generated log (including large provenance build fixture); restored from sealed archive for offline tests"
+  },
+  {
+    "archive": "phase2",
+    "path": "artifacts/gate2f-final-cli-20260908T134314.022218017Z/build-full.log",
+    "bytes": 3609372,
+    "sha256": "38eab7c6873aacc3346c69d8cd8ab0d0b3e7ef344cea12f40b73019091fd3e59",
+    "reason": "generated log (including large provenance build fixture); restored from sealed archive for offline tests"
+  },
+  {
+    "archive": "phase2",
+    "path": "artifacts/gate2f-loader-trace-20260908T140446.301348854Z/build-full.log",
+    "bytes": 3609372,
+    "sha256": "50a53f70bedf9a4b6a20107bc76686d4057058edd9a29fc640d364e87d8c49c0",
+    "reason": "generated log (including large provenance build fixture); restored from sealed archive for offline tests"
+  },
+  {
+    "archive": "phase2",
+    "path": "artifacts/gate2f-mutation-20260908T131809.889528543Z/build.log",
+    "bytes": 335,
+    "sha256": "81bc833b5c7949f20d8ec6de031e821210a0f19a41f0b504a4493f7155254294",
+    "reason": "generated log (including large provenance build fixture); restored from sealed archive for offline tests"
+  },
+  {
+    "archive": "phase2",
+    "path": "artifacts/gate2f-panic-20260908T131933.458767181Z/build-full.log",
+    "bytes": 3531896,
+    "sha256": "8ba9e746c790bfeb3a50b3a09545cdc9d11dff9420073a9103146f4322b65b65",
+    "reason": "generated log (including large provenance build fixture); restored from sealed archive for offline tests"
+  },
+  {
+    "archive": "phase2",
+    "path": "artifacts/gate2f-restored-20260908T131856.889558316Z/build.log",
+    "bytes": 335,
+    "sha256": "45cecd622c4136082c7f7a93afc40a92524828257fb969fe692c53b32cebdf64",
+    "reason": "generated log (including large provenance build fixture); restored from sealed archive for offline tests"
+  },
+  {
+    "archive": "phase2",
+    "path": "baseline/AGENTS.md",
+    "bytes": 4993,
+    "sha256": "024bff361b5547e73ffcd51ba72abda1258d02b169f6766bc18e9ade9e273ad8",
+    "reason": "agent instructions or nested Git/cache internals; retained only inside sealed archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "baseline/CODEX_PROMPT.md",
+    "bytes": 3331,
+    "sha256": "283ed27ca2dfdc1c8f8d3248a474dbd4a037511669fdadda4e3c6919b98ae275",
+    "reason": "agent instructions or nested Git/cache internals; retained only inside sealed archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T120700_phase2_c_baseline_hil.log",
+    "bytes": 565,
+    "sha256": "058751f664f3eddff1eef0210061d71da7f6768ab3226d33d295da538a6d0faa",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T120700_phase2_cli_importinit.build.log",
+    "bytes": 13,
+    "sha256": "d23c0f05910f10fee0717ccf63308e3d6232d1f7f5d24209ee85af30e16a5a4b",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T120700_phase2_cli_importinit.env.log",
+    "bytes": 431,
+    "sha256": "e88370fa78677ffc8edb40814bbb65a14dd05e7cf06ed01233615a6e4f80b7ba",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T120700_phase2_go_init_main_hil.log",
+    "bytes": 232,
+    "sha256": "4f01044e1429395f74389fdff44a5ca2c1ab5bf855163c80232c84b9a49f0fae",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T120700_phase2_go_init_main_hil_retry.log",
+    "bytes": 1302,
+    "sha256": "4c73225c5bf705100b0558ffe9dbcc67aeddf492e72abf39d2d280538ec61c5e",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T121200_phase2_clockfix_rebuild.log",
+    "bytes": 137,
+    "sha256": "131f077f192e30e421e71e8c03c965c278819fdaa92ae6a69d8d31438938d454",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T121200_phase2_go_init_main_clockfix_hil.log",
+    "bytes": 1302,
+    "sha256": "e1458a7768357ce0b83481743723f7f9c97f3658f8393b72f679ab6360300fdf",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T121500_phase2_evidence_and_serial_release.log",
+    "bytes": 140,
+    "sha256": "85936f490ca2275d16fefdef5e4b2f76dea2f5661363280a1a46ea645ecc3e31",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T121500_phase2_go_init_main_uartwait_hil.log",
+    "bytes": 1348,
+    "sha256": "dab586debfb38c43cac505142c04e5572b4df595d930525d1658b51a64062f85",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130000_gate2a_patch_review.log",
+    "bytes": 1451,
+    "sha256": "fb1b8831aa94c5ac40aafc5834c723d64311c4e95eae671def055154d0b44ed7",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130000_gate2a_replay_review.log",
+    "bytes": 586,
+    "sha256": "85dee7fbede6b0593e2f21f00ae1c2fcabfa655827e61125107bfd94932ddf75",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130100_gate2a_patch_application.log",
+    "bytes": 1509,
+    "sha256": "549c23c34e5a33ca1359dac1abbac5fce51d234b6a8633d6c7ad9bf405dc22c6",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130100_gate2a_patch_review.log",
+    "bytes": 642,
+    "sha256": "caa35c9bb0b6e6d8d500666020818e693eec7bf5b0e09d3b4a077ecfaa0beb56",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130300_gate2a_scalar_warm_build.log",
+    "bytes": 97,
+    "sha256": "74b34e0bb12336176cbc9e04e8d6d457a06b059f5541e5e8e3ee24cbbf9d758a",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130300_gate2a_unchanged_host.log",
+    "bytes": 119,
+    "sha256": "b96219342128d615dede29f70983aaff82b90d5a902f34e06404433873b420b1",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130500_gate2a_scalar_warm_build.log",
+    "bytes": 2210,
+    "sha256": "9ceb9b0815adbfea78072473649b11623e87618773cd6b10dddee4707c28a2e9",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130500_gate2a_unchanged_host.log",
+    "bytes": 3427,
+    "sha256": "b1671850e31992dcb486bffd76a46874984f83fea38f5f8c41383fd208b86140",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130700_gate2a_scalar_warm_build.log",
+    "bytes": 2278,
+    "sha256": "4cd8d32f5ada57c19505b09049453f3aaa5ba73f8c93236ef3fb04e56f42f7c9",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T130900_gate2a_scalar_short_physical.log",
+    "bytes": 2465,
+    "sha256": "ad41baf49c65c2454a35d5fd1d728125f8ca7fa4b2fd6ea8ee6eeac0e9af4841",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T131100_gate2a_production_patch_application.log",
+    "bytes": 1497,
+    "sha256": "d5b7618b63a3a27a1f93b89bd31f728b2ec7c30fae2d6ad10eb2af8a60b75af8",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cli_elf_after_aggregate_fix.log",
+    "bytes": 71,
+    "sha256": "b3a0fbb1d08a177958c885019f9022dc5cc002b0cd96edec05c28c29e95af2cc",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cli_elf_direct_entry.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cli_elf_linkname_stringonly.log",
+    "bytes": 392,
+    "sha256": "f9f85512d9152cd9bb9266c0c4075bc9226ce024e5efe11df4d825edf435e351",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cli_elf_no_strip.log",
+    "bytes": 132,
+    "sha256": "dc8b417563df4ca85adbc025970780e2f0aaa8d26165485391fec5b816c984a8",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cli_elf_stack_bottom.log",
+    "bytes": 15902,
+    "sha256": "262fde0ec747a07445b4873dbbda9c6547837643e88cda3e7c991bbb30dae2d3",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cli_elf_with_clang_headers.log",
+    "bytes": 671,
+    "sha256": "b9309794528978e351ed2d771dfa03c0e38136ae0f418763d5d98955b12a8863",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cli_ir_diagnostic.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cli_object_after_aggregate_fix.log",
+    "bytes": 2312,
+    "sha256": "13cb145b31e33820097f924a7f2c8365d7d8898a6be97823e938bef8e955b510",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cli_object_after_real_lock.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cogboot_attempt1_cli_build.log",
+    "bytes": 189,
+    "sha256": "c1927831199f71083e45c01e942fb0593b72be5df54ce1325d9392eba6d7fd0d",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cogboot_attempt2_cli_build.log",
+    "bytes": 137,
+    "sha256": "68bb5e71acb08249a71ad274f7f75de237ec519bcdb7d06a29a740c9277355f7",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cogboot_attempt3_cli_build.log",
+    "bytes": 212,
+    "sha256": "81b6d7bbec31c8691ad630561de24186a32ad4eabcddccc47bc72e49175c734a",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cogboot_attempt4_cli_build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/20260908T_phase2_cogboot_attempt5_initrtlib.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/compiler-package-build.log",
+    "bytes": 68,
+    "sha256": "68a6c19edc0d1f8e8f49f21d1e0ed4e871ced1173b3c191fdc2f93048b51e280",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-app-gotest-preverify.log",
+    "bytes": 81,
+    "sha256": "c5242e6bf33b3364a095d48195ff131a43987788f8b5ccfb683471828c7893e6",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-app-gotest-preverify2.log",
+    "bytes": 81,
+    "sha256": "c5242e6bf33b3364a095d48195ff131a43987788f8b5ccfb683471828c7893e6",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-patches-preverify.log",
+    "bytes": 100,
+    "sha256": "3866e0499e8e4a9b7b46eb133fcd7ab4feb35a3658c525dcc6a1c950f5dbae7e",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-patches-preverify2.log",
+    "bytes": 100,
+    "sha256": "9dfdf07ebdd7c562d11f329c63538cd3514a1e739399b87ac6fc108e3a56afea",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify2-results.log",
+    "bytes": 47,
+    "sha256": "f93e1acb9159622bf05ca3915a49915f27f49cf3461a3ba92f7b0abf8e7d3403",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/fresh-cli-and-app.log",
+    "bytes": 3610880,
+    "sha256": "3c77fe1ffbfa15f825434de2678363a7ddb5a93705182a72bb5353296921ea91",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/go-app-tests.log",
+    "bytes": 81,
+    "sha256": "c5242e6bf33b3364a095d48195ff131a43987788f8b5ccfb683471828c7893e6",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/patch-guard.log",
+    "bytes": 100,
+    "sha256": "3866e0499e8e4a9b7b46eb133fcd7ab4feb35a3658c525dcc6a1c950f5dbae7e",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/phase1-host-regression.log",
+    "bytes": 3397,
+    "sha256": "8453c261b27b7824c45d67fe4a5ee904ab92c2d93c5a37799d71f60722206d89",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/physical-record-replay-1.log",
+    "bytes": 566,
+    "sha256": "d5c1f3701336173aad1a03ecbc8c9fd4994ec697ec786f4dfc2ad64a93d2540d",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/physical-record-replay-2.log",
+    "bytes": 565,
+    "sha256": "f2b42379e1a55924bbdaa36417d0af72f69d4ad78aa5c192148cfaab0f96bbdb",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/physical-record-replay-3.log",
+    "bytes": 565,
+    "sha256": "754de485eb4ef18c01651a35a36ae85a7d151a44b24ad2c83c24b511c8a9c405",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/receipt.json",
+    "bytes": 118797,
+    "sha256": "948d1a0e271c80bcbc1fe401863833067fd289fbf292c269e987a14aced06026",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/restore-guard.log",
+    "bytes": 606,
+    "sha256": "2f512864a9b697d8be8202129e0debfbc58cd2c3dfa5f5543dbf2c6d0566f26c",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/review-utilities.log",
+    "bytes": 715,
+    "sha256": "2a82253ebb1698c6bad18890caae5eb0eaa0129522504bb3473ce45ffb8077be",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/test_verify_gate2e_record.log",
+    "bytes": 456,
+    "sha256": "6228e6a5a054fe6db12ebe7ce2b5f14943b62de3027f0f023dde1d796bdecc07",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-preverify3/test_verify_gate2f_controls.log",
+    "bytes": 538,
+    "sha256": "5ae3a60cd4e679f847dfe25dc1878a1f95a7ad7fe8cc41b9d7957363ae7097db",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-reproduce-preverify2.log",
+    "bytes": 1967,
+    "sha256": "0563e6d4af0332afce2a0a29c4a4f1168f0c7414db3d57bf81221085d3be9291",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-restore-preverify.log",
+    "bytes": 606,
+    "sha256": "81e889d342362b5c7ccecc45215f0906fcb5e6f9f7bcaefbf01df890ca364950",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-restore-preverify2.log",
+    "bytes": 606,
+    "sha256": "1d37d5c93e999abfe3d4346b882b359dbea9dcaffc25a55faf76a6a3cfd6ee7e",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-review-preverify.log",
+    "bytes": 3621,
+    "sha256": "3fb612cca1cc7a55f06b464d32e081ccb06e61652a4091a2879cc0223874dd71",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/extracted-review-preverify2.log",
+    "bytes": 3627,
+    "sha256": "5be074f743dfb56df0539fe9be50f92efc3038c1188f8e2b7f3e5492aa3752fb",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/fresh-cli-and-app.log",
+    "bytes": 3610881,
+    "sha256": "66662bfe1e3b7e955fe4984761fb163c0b85330708c0654dae8d442a7ffe6eb1",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/go-app-tests.log",
+    "bytes": 81,
+    "sha256": "c5242e6bf33b3364a095d48195ff131a43987788f8b5ccfb683471828c7893e6",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/patch-guard.log",
+    "bytes": 100,
+    "sha256": "7905c01bb0bc61fd3db9d4f3bba84b38314a4054e68c10cd0de5a4e008a3d1d1",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/phase1-host-regression.log",
+    "bytes": 3397,
+    "sha256": "77bbe46f67e6fab1d675d54cb2feb82245dc30c3529fdc07f62e6f412ad7e60f",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/physical-record-replay-1.log",
+    "bytes": 566,
+    "sha256": "053d89c059004851946c8f745f70a366bd7132a72977e229b295dc48e4800f12",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/physical-record-replay-2.log",
+    "bytes": 565,
+    "sha256": "5c868858d911c0b5fc822ac55a4a379046fbc627aae3701fa9ea2b133137b922",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/physical-record-replay-3.log",
+    "bytes": 565,
+    "sha256": "c1db5e92f8577d5538ed61fd5545f331132ba3435c009d1dc18cb37826728473",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/receipt.json",
+    "bytes": 119585,
+    "sha256": "1c2793e521ebc580a732ae2960f1048925ed0e34031c24d413bb132779f84cd4",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/restore-guard.log",
+    "bytes": 606,
+    "sha256": "190e5a2033e81ba74f61984ff5bf3a5b8ba96db25b870f145e81f9b5d8f31c2d",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/review-utilities.log",
+    "bytes": 715,
+    "sha256": "f991a0ba3012f4a9b229ccead70f7ad3e1f9d149c88ee435085d2a09f199ca9b",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/test_verify_gate2e_record.log",
+    "bytes": 456,
+    "sha256": "e398bd2a7198806b3c02a20acd7f7beb39d266c3f869e8dd53641ebbc295f92e",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/final-candidate-run6/test_verify_gate2f_controls.log",
+    "bytes": 538,
+    "sha256": "4d752b071504e4da7051da4666c09e8edb3eda28c5ea17d88f6cadb53e173a93",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/gate2e-cli-build-verifyir-printir.log",
+    "bytes": 3609034,
+    "sha256": "c1775bbe82a98723484018ccac9490721eaf8b22b2dd4b9a5ec565cc0ccf61d5",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/gate2e-cli-build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/gate2e-fresh-ram-hil-retry.log",
+    "bytes": 502,
+    "sha256": "b3bdec48b5493a53190f19f2030aff47d7eb24752422ee3d8215cdf9db95ba4e",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/gate2e-fresh-ram-hil.log",
+    "bytes": 519,
+    "sha256": "5f6fd326df537a1e023539d073a232821c51e2895126cebcbfc25b83b2fbec79",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/gate2e-gofmt-check.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/gate2e-host-go-test.log",
+    "bytes": 81,
+    "sha256": "c5242e6bf33b3364a095d48195ff131a43987788f8b5ccfb683471828c7893e6",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/gate2e-negative-allocation.log",
+    "bytes": 309,
+    "sha256": "f82a5bad42a9f649937e323997dc67073150d9e36cf2c5557a713e01cb04764c",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/gate2e-negative-goroutine.log",
+    "bytes": 64,
+    "sha256": "426dea390d7fa83a120b2cad8ee7bf030a56688e824c10974951133885c14392",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/gate2f-cli-help-20260908T131445.702936655Z.log",
+    "bytes": 1772,
+    "sha256": "b0a1642107eaa947cfef94e8cb8fd216dd8d0095c39c52f3fef09ca4f1ba5ebb",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-candidate-run6-extracted.log",
+    "bytes": 2771,
+    "sha256": "5b803ae8e694c914c6df24b831be9413a5b3c50df77a2e8c70074d8bf2114a01",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-candidate-run6-host-path-failure.log",
+    "bytes": 47,
+    "sha256": "2093dd8a86dcf8b7f7deb1dada4b66bb3c41393e2799555bf526d1d5be428797",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-candidate-run6-path-discovery.log",
+    "bytes": 241,
+    "sha256": "dbc0a779655655dc919958e511a8295997d1baada02e295bb86f1082da37713b",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-candidate-run6-receipt.json",
+    "bytes": 4662,
+    "sha256": "c2e8000dab1238f424325672ac55fb3a79f1b0df02dd7d58c14b8b3a5910881e",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-old-archive-failure-1788891532595626836.log",
+    "bytes": 2409,
+    "sha256": "97151d9985c6fa7697c5aa3ef2a7c8d1e981d3a53399493b090ecade68929148",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-run7-extracted.log",
+    "bytes": 2771,
+    "sha256": "3be6cf0878a78d46bf175b2e1d69a3a30b29294af7108ac5fe79f3da634adc10",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-run7-host-path-failure.log",
+    "bytes": 47,
+    "sha256": "2093dd8a86dcf8b7f7deb1dada4b66bb3c41393e2799555bf526d1d5be428797",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-run7-receipt.json",
+    "bytes": 4662,
+    "sha256": "d36e30c05a5823e35488a5ceb7bc89a010643f964feb53d2f6e939167ba19087",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-run8-candidate-extracted.log",
+    "bytes": 2771,
+    "sha256": "367dd5844f05cba51d6f8cc0012ce28cbfcbbfb1712c1430053221153fe2cb2a",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-run8-candidate-phase1-host.log",
+    "bytes": 3397,
+    "sha256": "90c4873d8ee942053e301c44d86b8b943dd02c9bcb80d577cec6c31c28c5fe85",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/independent-run8-candidate-receipt.json",
+    "bytes": 4642,
+    "sha256": "892bef3eb1f43cf8825e6ac4e5b8f7b48bddacf11360fd40eba30a2eb6c86a3f",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/llvm-missing-cli-libs-build.log",
+    "bytes": 476,
+    "sha256": "c480dbe35880c3072ec471973c254ffaef61cb473a2520b2d049b9e66e692fd9",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/p2-baremetal-elf-build.log",
+    "bytes": 2838,
+    "sha256": "a44ebecb32276821f358e02ef5f5ed48f2ebf9726b2cc842a236377711add8f0",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/p2-cli-elf-build.log",
+    "bytes": 183,
+    "sha256": "6b135ce91b9cfd6a21d863e7d1c8c2916d6baaacd93388bf863686a2d4d4570c",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/p2-cli-first-build.log",
+    "bytes": 130,
+    "sha256": "186faef628f584272bc03b40795cc2957e332b3e68382e40079915682669388a",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/p2-cli-fourth-build.log",
+    "bytes": 149,
+    "sha256": "7c1e19a45f18aac023e556c0758dcec518eb42780b14704d03d801a58a93981c",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/p2-cli-object-build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/p2-cli-second-build.log",
+    "bytes": 77,
+    "sha256": "f6536ea7f44ae407adc013844f1e0b08f7ad3b4a2e53c765ac9627df03cd3aaf",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/p2-cli-third-build.log",
+    "bytes": 70,
+    "sha256": "50ff4dd507b7d91ab97da74166cea5aa15cb34b1a58437f8a9466f400d2db734",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/p2-direct-link.log",
+    "bytes": 823,
+    "sha256": "833e427621e9b649ef1c239e1bb52d0e204583f4b8932b294999043a7d257e19",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/phase1-warm-host-test.log",
+    "bytes": 3427,
+    "sha256": "0d033bbaf3d84d9e9e2aefb7f7fd550fdd86b126831e8e9b9c47cb042bb476c3",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/phase2-unit-tests.log",
+    "bytes": 390,
+    "sha256": "ac7a2a6a4cf57c198b23bc51c80ef94ce1ab58a8ea6f24a617b4d97fe3edfca4",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/pinned-module-fetch.log",
+    "bytes": 26878,
+    "sha256": "cf385f20ea0ffd4742c0b99c7b2d4b2dca9a29be9a0c3ccab0eac56a3c2e3543",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/review-final-builder-20260908T134314.021150605Z.log",
+    "bytes": 3609474,
+    "sha256": "c4648cef5bbd08d7802bbdc336e2fe0b92f9496125e6150b616d3208132862bd",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/review-utility-tests-20260908T134143.log",
+    "bytes": 3489,
+    "sha256": "ef0c4931ca59728062654a09cc5dc76ce463be06593e47fad68c3de8f07379ee",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/review-utility-tests-20260908T134216.667998949Z.log",
+    "bytes": 577,
+    "sha256": "d647e13664e0376de8be80746787796bf4602a416c9ad17dda5f70cfb6b3d38b",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/review-utility-tests-20260908T134636.701239363Z.log",
+    "bytes": 3207,
+    "sha256": "d1c70401d3aed89cd205e87e35bd15257234f1be235995674074ed1419ec04f9",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/review-utility-tests-20260908T134712.739581209Z.log",
+    "bytes": 1925,
+    "sha256": "f4a466a406a59a164db6faabddc6d0336a6fe999fab7717114891e3cced146ba",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/review-utility-tests-20260908T134759.680779213Z.log",
+    "bytes": 715,
+    "sha256": "b73d449a00d0f130730ff9ea556585be20e9c0d113e1c33883e73710570d542a",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/fresh-cli-and-app.log",
+    "bytes": 3610876,
+    "sha256": "b8257fe97991ae7a820c59ac8a13db80cbcc17d7c1ef7930c0aebfbd01eacc44",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/go-app-tests.log",
+    "bytes": 81,
+    "sha256": "c5242e6bf33b3364a095d48195ff131a43987788f8b5ccfb683471828c7893e6",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/patch-guard.log",
+    "bytes": 100,
+    "sha256": "82f4cfde97b03043ae195dc60c5139dcda3fd66729ef2fccaf5fb3e0bf745734",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/phase1-host-regression.log",
+    "bytes": 3397,
+    "sha256": "65f967c4bf39701165bc196518467ccb1c5224c292a716ebe5943c56b8f5bd24",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/physical-record-replay-1.log",
+    "bytes": 566,
+    "sha256": "a25b99547e4351bb6c76589442ac1469d9cc7fcb0da942140520cc0d0c596e58",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/physical-record-replay-2.log",
+    "bytes": 565,
+    "sha256": "df4861932cd3781ecdf984b334d69bad97c9327dcf15fb2ae2058d187bb08862",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/physical-record-replay-3.log",
+    "bytes": 565,
+    "sha256": "7d0705496c2816f402b9aa06bc1568a6d36cef4dd3dbf08c78cd575bd0459038",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/receipt.json",
+    "bytes": 120768,
+    "sha256": "a45e0821a90b91f2bf76582c0680304b9994f635f5163efa592895c03e5e92b0",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/restore-guard.log",
+    "bytes": 606,
+    "sha256": "606e511db1307d676465bdcc4f21b217d150122a6a1364f8185c558b263e600e",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/review-utilities.log",
+    "bytes": 715,
+    "sha256": "f68b8021566eb4c312b75eaf6d2ac89ce8f76cc6e607ad79d879dc38b7a54959",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/test_verify_gate2e_record.log",
+    "bytes": 456,
+    "sha256": "e3dbd028a6ae368fe0fdb8187d55392e3df73d118f5a0a4fd347fbadd31dd009",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-candidate-all-suites/test_verify_gate2f_controls.log",
+    "bytes": 538,
+    "sha256": "5ae3a60cd4e679f847dfe25dc1878a1f95a7ad7fe8cc41b9d7957363ae7097db",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/run8-default-path-and-headers.json",
+    "bytes": 874,
+    "sha256": "156ee3838b67359433c935c40e72b8a525dfa283367f91f1152647c0b021fa15",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/tinygo-cli-build-offline.log",
+    "bytes": 1339,
+    "sha256": "b72df48309e1ffad2f52fe13c3c9d2d3071147e96a708d8c8016487c09514dc3",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/tinygo-cli-build.log",
+    "bytes": 3540,
+    "sha256": "be407bd7fce3af7c59e77fbf89ef43e7ad69fbe5fe1dc5a53be6bf9e8caedfc0",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "logs/tinygo-cli-version.log",
+    "bytes": 90,
+    "sha256": "70d5d4aa7bc0b2c279d07ff8c9c79c46cdb53e3fa5fc0905a8bb430f7714f41d",
+    "reason": "verbose generated/failure logs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/gate2a-scalar-regression/firmware/go.elf",
+    "bytes": 195320,
+    "sha256": "e474d1b9bfbf1b738060c682ad66395de0eec37803b0fc71ac8572caad618401",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/gate2a-scalar-regression/firmware/go.map",
+    "bytes": 138294,
+    "sha256": "cf866e6ba2aeb0bdd5a5a9798c2190a80dec3a2f03c37b5553bfc24619d88714",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/gate2a-scalar-regression/firmware/go.o",
+    "bytes": 2956,
+    "sha256": "7279654e29344ab472bec3e2798e8714c64dfb1dfe33d21a7d953a4c2539d0e0",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/gate2a-scalar-regression/probe/go.ll",
+    "bytes": 718,
+    "sha256": "55ea4def519b04251cdc4b7e55d7add849a31262b6c8e62a20fec5e459682a0c",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/gate2a-scalar-regression/probe/go.o",
+    "bytes": 452,
+    "sha256": "a616147e8ac1062e6d4de300a58d63f7a1687bd203f28a94d32f676989df05ed",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/gate2a-scalar-regression/probe/go.s",
+    "bytes": 548,
+    "sha256": "9b48cef1ee1701e7d7a29694565fb50692224932a6cede37b92a63a7a9000195",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/gate2a-scalar-regression/probe/probe.json",
+    "bytes": 741,
+    "sha256": "6b8db7047cf3b9e2d0162fb1f99672042475f6a76342d67bc3e2668f4adcf5c3",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/gate2a-scalar-regression/result.json",
+    "bytes": 1088,
+    "sha256": "d01efe1b587b1b8f7b4f1bc0c62bdb00e907f78c9542c76b79d6cde2c5d84a6b",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/p2goapp-after-aggregate-fix.o",
+    "bytes": 3860,
+    "sha256": "ceebf1d0f1ac41bab6355b9db4fe886de8ab060b2f6857f93ad46bf73e7a6927",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/p2goapp-diagnostic.ll",
+    "bytes": 149573,
+    "sha256": "3265676bfb473b43463162eda34149d5e87d3b54e8d630a207d648e34a4cad63",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/p2goapp-gate2e-verified.elf",
+    "bytes": 11640,
+    "sha256": "132b9cf87bc521cf433e8b33e58d24544d0dde3dcf6e13592058b3b1a14416a8",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/p2goapp-gate2e.elf",
+    "bytes": 11640,
+    "sha256": "132b9cf87bc521cf433e8b33e58d24544d0dde3dcf6e13592058b3b1a14416a8",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/p2goapp-phase2.elf",
+    "bytes": 9416,
+    "sha256": "1ab708b1bc77a93c9c390434161d4942c2678eec06cb33f7c3dbcaa3356aa836",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "out/p2goapp.o",
+    "bytes": 2916,
+    "sha256": "0deec90551beb7754c902c0474abddb79ff2118de819075a30f81b10ce605121",
+    "reason": "intermediate generated outputs; retained in release archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/FINAL_PROVENANCE_REVIEW.md",
+    "bytes": 8393,
+    "sha256": "41a922d1984ee7ee4737ba747747b4abded59cf96140508a2036da1cbdf2782f",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/FINAL_REPRODUCTION_AND_ARCHIVE.md",
+    "bytes": 6260,
+    "sha256": "bc1472d91002d31fceb283624471b878f188261a78c51fff7725cec774575f20",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/GATE2A_REPAIR_NOTES.md",
+    "bytes": 5440,
+    "sha256": "9da16d706290ca7f03af850a28b29ac261c34b99f5bc03e18311336bd6611cab",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/HERMES_PHASE2_PROMPT.md",
+    "bytes": 18010,
+    "sha256": "00ff1c028e11e2ed01d7af56fa6fdc859b7d14a1d74301b41a6dcd434d0f18f6",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/NEXT_FINAL_HARDWARE_GATES.md",
+    "bytes": 7539,
+    "sha256": "9475b715b383667104e5e033d3bc806eb8506afcfbba5234627ba4b45fa5de80",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/NEXT_GO_APP_MILESTONE.md",
+    "bytes": 4723,
+    "sha256": "e9c67cddf9c10568d4b9914b8e1058a159965549db04d9510bb72bd21c5b178e",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/NEXT_HARDWARE_MILESTONE.md",
+    "bytes": 5804,
+    "sha256": "4c282808205c6fb0c9bac3fa9417243c6f39060c9644cda0b14718182c876d7d",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/PACKAGE_FINAL_DELIVERABLE.md",
+    "bytes": 6484,
+    "sha256": "8da723dc37d1419291168f57f1c75341d5252baac3c7fec312d770cbb134c147",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/PARENT_MAIN_INIT_CORROBORATION.md",
+    "bytes": 2168,
+    "sha256": "a684a74c8ca1444e497aa4e680cf0ad9baa85add4f1628fab45f0fa9120a5e69",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/PHASE1_PARENT_ATTESTATION.txt",
+    "bytes": 1856,
+    "sha256": "99b40f0b65d58552d3a254f8da99c34808131bfc2fd34eff60dcebe479cd882e",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/PHASE1_PARENT_CHECKPOINT.json",
+    "bytes": 3572,
+    "sha256": "8cdc2f6277cffd332f19a30e0254386d92369dcb7d9ab154f2851ee12e5693d1",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/PROTOCOL_SPEC_DRAFT.md",
+    "bytes": 3150,
+    "sha256": "173adf9fb8636ec12087ea0a8714776a3cf10eed59abf784ffd9fd1e2874c3bb",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/RELIABILITY_TRANSITION_CHECKPOINT.md",
+    "bytes": 5694,
+    "sha256": "fc5e62b0bed5321261521bc4ceceec715a7c59c57748d7fc7d02e8e43833b83d",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/agent-traces/README.md",
+    "bytes": 457,
+    "sha256": "5a234571da4e3875450811c53f6cea3afbe32667dc26314242d96401a5a3bd7e",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/agent-traces/deleg_08a21f10.log",
+    "bytes": 36107,
+    "sha256": "3407fbd31bb9b0ed6798f0fa17cb182be5990dda8ac79f46ef679ea3f69c3af6",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/agent-traces/deleg_137d5fab.log",
+    "bytes": 34768,
+    "sha256": "997b6537e0b0827a371775a26bff363b143261088abdad0e1c65685a95284006",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/agent-traces/deleg_4f1910df.log",
+    "bytes": 42521,
+    "sha256": "483b88fc9d29d8029b6c2ca19ff176ca39668d780a91118d635e3182696b72bf",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/agent-traces/deleg_9fc675d7.log",
+    "bytes": 42122,
+    "sha256": "41ecbc75a655741d00aef4ec6a354d87f17d50b8a571440f58c32791fd428b62",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/agent-traces/deleg_bf459f4a.log",
+    "bytes": 46093,
+    "sha256": "d60fe8e6cc07f43dafe472c3be0a2e03e6c22a5940464a4913dccca42b7c2577",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/agent-traces/deleg_dd84f8ad.log",
+    "bytes": 37337,
+    "sha256": "11b1f7b32238fadfd1ffd4aee870d009f07bcf29fe9a4d659e6619fc02964dcc",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/agent-traces/index.json",
+    "bytes": 268,
+    "sha256": "9c8cd67c8f173c553c4203ebdec7fac0f865cb380c5b56cce71d2ebc32bcfd1f",
+    "reason": "agent session traces; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/gate2f-parent-control-tests.log",
+    "bytes": 550,
+    "sha256": "b78664a9d953e94a8f49c8322c4da0f05bb2299e6dea71491874798276bf7d28",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/patch-review-red.log",
+    "bytes": 2251,
+    "sha256": "b0cfa4dbe62adfdd08d3c95ac08ebbd2bc8bf9ff8dc03122ada96259b03e1f5a",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "parent-cache/replay-review-red.log",
+    "bytes": 1769,
+    "sha256": "34a6d888e834b50f276026d9556e1dcbac64941539070506ce98efadf06f35c7",
+    "reason": "agent handoff/session state or historical log; release archive only"
+  },
+  {
+    "archive": "phase2",
+    "path": "project/AGENTS.md",
+    "bytes": 4993,
+    "sha256": "024bff361b5547e73ffcd51ba72abda1258d02b169f6766bc18e9ade9e273ad8",
+    "reason": "agent instructions or nested Git/cache internals; retained only inside sealed archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "project/CODEX_PROMPT.md",
+    "bytes": 3331,
+    "sha256": "283ed27ca2dfdc1c8f8d3248a474dbd4a037511669fdadda4e3c6919b98ae275",
+    "reason": "agent instructions or nested Git/cache internals; retained only inside sealed archive"
+  },
+  {
+    "archive": "phase2",
+    "path": "reports/final-current-reproduction.log",
+    "bytes": 3609474,
+    "sha256": "296f4c94175bc72f069ac6a2a80c14fd8c5b0dfa527ae57139a57f872aa5eb40",
+    "reason": "generated log (including large provenance build fixture); restored from sealed archive for offline tests"
+  },
+  {
+    "archive": "phase2",
+    "path": "src/tinygo/build/tinygo",
+    "bytes": 67018352,
+    "sha256": "bd59d0d73e21ef45b312891a775f0df2486875479c051a91f1083ce465ed3358",
+    "reason": "generated 67 MB TinyGo compiler; clean rebuild required"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/bin/loadp2",
+    "bytes": 234176,
+    "sha256": "39640fe81ca18eb05b5675ed29cfd377af89b96b22058b08f0195918e7d64af0",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/evidence/SHA256.json",
+    "bytes": 18200,
+    "sha256": "7b0c32600386ef989fd555d4fee11697495243bd039e148decdcbfa5dfa7b447",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/evidence/llvm.diff",
+    "bytes": 734,
+    "sha256": "fc7143b8b18e8fc36feffba831ce2e5f7244901c6c9e143c27a81b9690c82515",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/evidence/llvm.status",
+    "bytes": 38,
+    "sha256": "f30e8e72382fc13ec56a410f24b27f343572e20e923d3cd47a01fba0a11ce072",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/evidence/loadp2.diff",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/evidence/loadp2.status",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/evidence/p2llvm.diff",
+    "bytes": 741,
+    "sha256": "fbd744de254ab921a9d43216e2d2fecc2cbffbba097c0c2d5674ab816ae5c7ba",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/evidence/p2llvm.status",
+    "bytes": 27,
+    "sha256": "aa467e91e68df7706a2ac8f82aceaacf0d1c85b13a08c414dd2f0a8901195ef7",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/evidence/tinygo.diff",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/evidence/tinygo.status",
+    "bytes": 31,
+    "sha256": "41897cb49eae6aa014302566b1f9140b8cabce6a51a39648d13d68d3b3061c0a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093432.765342Z-c/command.json",
+    "bytes": 218,
+    "sha256": "4a09ced807a72e3242583b7febcbbd638767da412b43f0d0896c05d40cfd4a17",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093432.765342Z-c/hardware.json",
+    "bytes": 662,
+    "sha256": "e51adcca4e896138b1ec9ff2063f0983c26a139f0f1f7d139632935a91c78f08",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093432.765342Z-c/responses.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093432.765342Z-c/terminal.raw",
+    "bytes": 406,
+    "sha256": "de9cc54ec4859e6ee80de07c982d68763f5135a18a2550ee054147c067d55357",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093432.765342Z-c/transport.json",
+    "bytes": 204,
+    "sha256": "caa5f7ca24db4dcd083ed0abf5147e15967e3a0f691baae35d92903b2c8c0f85",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093432.765342Z-c/vectors.json",
+    "bytes": 15939,
+    "sha256": "68582a5721b9584efe3932a6bab181c835387f3bc7e48809f31a8def7a73ff8a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093634.076970Z-c/command.json",
+    "bytes": 218,
+    "sha256": "4a09ced807a72e3242583b7febcbbd638767da412b43f0d0896c05d40cfd4a17",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093634.076970Z-c/hardware.json",
+    "bytes": 567,
+    "sha256": "36ac736a4862f79c72a3f8187de8ee949fcc22f98f5cc496cc0ab9badd6960d0",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093634.076970Z-c/responses.jsonl",
+    "bytes": 9467,
+    "sha256": "a4bbc519095b5539035780df7d3f8377fc43270db4fc61ee1c362e1b458f505a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093634.076970Z-c/terminal.raw",
+    "bytes": 4896,
+    "sha256": "42075febb8f95b45886888edd6cefe90c1f00b6870a696834982d10ad881acad",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093634.076970Z-c/transport.json",
+    "bytes": 109,
+    "sha256": "09b4d8dfa3d438184a839da743a8cf3f033979707a8d30ba1fed0246de774acb",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093634.076970Z-c/vectors.json",
+    "bytes": 15942,
+    "sha256": "bbe6515fdbf2b932ac095f6a10a0cfb2728093ec864247875130812e1fa67a41",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093712.908896Z-go/command.json",
+    "bytes": 219,
+    "sha256": "a030e950cb514008d756eddf9f0d9cf6cc85d93ff685289294fa24b5ec08d549",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093712.908896Z-go/hardware.json",
+    "bytes": 569,
+    "sha256": "b1da3bb24c4cc12b4a9e72d20959915ffdd26827a447a47bdd44c45d83a28d16",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093712.908896Z-go/responses.jsonl",
+    "bytes": 9448,
+    "sha256": "126c1642f44c257e6261e892fbde1b92248eb705765ea4314524dc92d654fe43",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093712.908896Z-go/terminal.raw",
+    "bytes": 4898,
+    "sha256": "0df8e9ef3409a71bd4eaad77fad1a89776f8fb3af2e4dd4a8c545debb8927c92",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093712.908896Z-go/transport.json",
+    "bytes": 109,
+    "sha256": "5832b145743a0a1713b717a3ad6ada2f1d5c909576ec9de88067677532c73e64",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093712.908896Z-go/vectors.json",
+    "bytes": 15932,
+    "sha256": "082348e49eb987be91f992355e1f2ef5fce100498535a1752a4078f61dadedbb",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093731.143417Z-go/command.json",
+    "bytes": 219,
+    "sha256": "a030e950cb514008d756eddf9f0d9cf6cc85d93ff685289294fa24b5ec08d549",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093731.143417Z-go/hardware.json",
+    "bytes": 569,
+    "sha256": "e9fb2030ab60aefdce643400fdc1550113c9440061d9248ebda659896fe361d2",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093731.143417Z-go/responses.jsonl",
+    "bytes": 9459,
+    "sha256": "28c8895e211396eb632b2befacc313f9bfe815a9d048ab579e53c9870ec71672",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093731.143417Z-go/terminal.raw",
+    "bytes": 4898,
+    "sha256": "0c223a22141579039e849da307fde0e5863c14195059c523bc334c20c0d2833d",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093731.143417Z-go/transport.json",
+    "bytes": 109,
+    "sha256": "5832b145743a0a1713b717a3ad6ada2f1d5c909576ec9de88067677532c73e64",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093731.143417Z-go/vectors.json",
+    "bytes": 15945,
+    "sha256": "db44137836fd560626261af3558d5657a75b6bd381a9d1a2d648f54399244795",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093749.378480Z-go/command.json",
+    "bytes": 219,
+    "sha256": "a030e950cb514008d756eddf9f0d9cf6cc85d93ff685289294fa24b5ec08d549",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093749.378480Z-go/hardware.json",
+    "bytes": 569,
+    "sha256": "fc7e908095fadd115cdc85121b2632ea351416220f5ff3add23400d485a2fc9d",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093749.378480Z-go/responses.jsonl",
+    "bytes": 9464,
+    "sha256": "f86f496487f664441b0e905ad2e27eae5bb20943359a82744c500439b2899363",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093749.378480Z-go/terminal.raw",
+    "bytes": 4898,
+    "sha256": "32135b28f5e2965f7f0cc72df8976da639e8145a9471af5b4d0234f2e5ad8973",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093749.378480Z-go/transport.json",
+    "bytes": 109,
+    "sha256": "5832b145743a0a1713b717a3ad6ada2f1d5c909576ec9de88067677532c73e64",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093749.378480Z-go/vectors.json",
+    "bytes": 15939,
+    "sha256": "527447c7ce9c733b5e376f440752e88fe7f177d8c70225e5a86c24e626595ee0",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093854.338600Z-go/command.json",
+    "bytes": 219,
+    "sha256": "a030e950cb514008d756eddf9f0d9cf6cc85d93ff685289294fa24b5ec08d549",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093854.338600Z-go/hardware.json",
+    "bytes": 673,
+    "sha256": "ad4da63a840566f377b0140e17e22df19f3a4d47d9aedb6065fd30596acb5242",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093854.338600Z-go/responses.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093854.338600Z-go/terminal.raw",
+    "bytes": 377,
+    "sha256": "c8789476682d578393af2d947bd79bcafca4f4a7840471f2e92bc8bef635c556",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093854.338600Z-go/transport.json",
+    "bytes": 213,
+    "sha256": "42e6e11714992813bad8c3ba1c2054722984d93a735400187a2a5391fbb28ea0",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093854.338600Z-go/vectors.json",
+    "bytes": 15935,
+    "sha256": "58f0680e448b0c8c581bbc17c90fadd4996f06b017f71f1cba79148c25cc1449",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093933.148141Z-go/command.json",
+    "bytes": 219,
+    "sha256": "a030e950cb514008d756eddf9f0d9cf6cc85d93ff685289294fa24b5ec08d549",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093933.148141Z-go/hardware.json",
+    "bytes": 569,
+    "sha256": "9bdf5edc0959acd10e294d0d6ad23e5c6356beae30ba80d8264eacc2d9806f16",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093933.148141Z-go/responses.jsonl",
+    "bytes": 9468,
+    "sha256": "0350be3baa14cefa43d228648e0ecb2b4ff67501a11d839913759ea16f9d5386",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093933.148141Z-go/terminal.raw",
+    "bytes": 4898,
+    "sha256": "6933aa69dc9717a979fa6df940a93c28deca3febba34a581b024dc00614ec50b",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093933.148141Z-go/transport.json",
+    "bytes": 109,
+    "sha256": "5832b145743a0a1713b717a3ad6ada2f1d5c909576ec9de88067677532c73e64",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T093933.148141Z-go/vectors.json",
+    "bytes": 15956,
+    "sha256": "c685e950a930c3b2ddac55b9a6c35cd2f48392d8e2cf82b2956016b42f1b3f18",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094845.445103Z-c/command.json",
+    "bytes": 218,
+    "sha256": "4a09ced807a72e3242583b7febcbbd638767da412b43f0d0896c05d40cfd4a17",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094845.445103Z-c/hardware.json",
+    "bytes": 567,
+    "sha256": "483428b6f0e5e46e456c06b611a2f490f5d74f7d6b964dd8435b39fa6fc91774",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094845.445103Z-c/responses.jsonl",
+    "bytes": 9455,
+    "sha256": "b467dc5b06e4a8ce166f7c509469c75c8a7b48f27a3276ec09dd2cd1f54d167a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094845.445103Z-c/terminal.raw",
+    "bytes": 4896,
+    "sha256": "e263ab7e72431256ab21ff6334d3569f95c149a688be6a9144bab23588cce025",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094845.445103Z-c/transport.json",
+    "bytes": 109,
+    "sha256": "09b4d8dfa3d438184a839da743a8cf3f033979707a8d30ba1fed0246de774acb",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094845.445103Z-c/vectors.json",
+    "bytes": 15938,
+    "sha256": "75387a9e9d822ed549813835b72faf0683544c54df2cec6f6f3b69f6f2b4ee32",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094908.091010Z-go/command.json",
+    "bytes": 219,
+    "sha256": "a030e950cb514008d756eddf9f0d9cf6cc85d93ff685289294fa24b5ec08d549",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094908.091010Z-go/hardware.json",
+    "bytes": 569,
+    "sha256": "ec5450ee65eefd4580a61bf6df7a787916ef8731109c555d4319ceeda6557e5f",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094908.091010Z-go/responses.jsonl",
+    "bytes": 9479,
+    "sha256": "b4d90e3418b1190be0d4b9ec53df8d467a519c99e4424e83a56994f6bec45bd8",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094908.091010Z-go/terminal.raw",
+    "bytes": 4898,
+    "sha256": "27ac42fd9799832bc1cf374d956739321ef58fbcd7af84926d873e90f0217843",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094908.091010Z-go/transport.json",
+    "bytes": 109,
+    "sha256": "5832b145743a0a1713b717a3ad6ada2f1d5c909576ec9de88067677532c73e64",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094908.091010Z-go/vectors.json",
+    "bytes": 15966,
+    "sha256": "be68ed4ea3015d2dabdc22e67ed93bc13ed85640a6f14a66d13d9d6ee703ff45",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094957.806127Z-c/command.json",
+    "bytes": 218,
+    "sha256": "4a09ced807a72e3242583b7febcbbd638767da412b43f0d0896c05d40cfd4a17",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094957.806127Z-c/hardware.json",
+    "bytes": 567,
+    "sha256": "6c056be5eb9b9d8e3f34a24719bd843fcd7186772977d996de20e1b76d03cd01",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094957.806127Z-c/responses.jsonl",
+    "bytes": 9464,
+    "sha256": "045b78b28046565da0cf0677f0740fbc9c2d654bb18358366994cf1b2f54dac5",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094957.806127Z-c/terminal.raw",
+    "bytes": 4896,
+    "sha256": "93ef8e726c41976d25fa93b7f6e33455295a6b7a07e501d208902aeca31ba44a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094957.806127Z-c/transport.json",
+    "bytes": 109,
+    "sha256": "09b4d8dfa3d438184a839da743a8cf3f033979707a8d30ba1fed0246de774acb",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T094957.806127Z-c/vectors.json",
+    "bytes": 15943,
+    "sha256": "845985c6f198452371c7157ff0ad2a1cedd67c6b9ccba6b8fa069b4a30887f23",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095016.006774Z-go/command.json",
+    "bytes": 219,
+    "sha256": "a030e950cb514008d756eddf9f0d9cf6cc85d93ff685289294fa24b5ec08d549",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095016.006774Z-go/hardware.json",
+    "bytes": 569,
+    "sha256": "74eb0433d36f12c77f401bd6b8f7c1b38e7ab0ad07502356da8a0ff10b0acc02",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095016.006774Z-go/responses.jsonl",
+    "bytes": 9456,
+    "sha256": "7e6579843316c15357375739dd322a837274a1d641296151d70f352efb5ed58e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095016.006774Z-go/terminal.raw",
+    "bytes": 4898,
+    "sha256": "e6c7a43aff8aec4df0dc29a0438b17d1c737bbf76872220ae87a9b4220e614a0",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095016.006774Z-go/transport.json",
+    "bytes": 109,
+    "sha256": "5832b145743a0a1713b717a3ad6ada2f1d5c909576ec9de88067677532c73e64",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095016.006774Z-go/vectors.json",
+    "bytes": 15930,
+    "sha256": "01f615062a2d2a2c9d474bea18ea5389a28c07faef93b9569628515aac9206a7",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095655.498663Z-go/command.json",
+    "bytes": 219,
+    "sha256": "a030e950cb514008d756eddf9f0d9cf6cc85d93ff685289294fa24b5ec08d549",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095655.498663Z-go/hardware.json",
+    "bytes": 569,
+    "sha256": "14549a0457f20d6b87d6efb0f44a4cc80b0a70c78cf1ce0624ca445dae90efac",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095655.498663Z-go/responses.jsonl",
+    "bytes": 9470,
+    "sha256": "c85198095549105cd7093ff1f621893ef58a36303d923f3ab503dacfa4e02c1c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095655.498663Z-go/terminal.raw",
+    "bytes": 4898,
+    "sha256": "a9b73077b564486a440c98bbbafbf5c9cee6ef3bf70ff99c2db070f5684b8994",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095655.498663Z-go/transport.json",
+    "bytes": 109,
+    "sha256": "5832b145743a0a1713b717a3ad6ada2f1d5c909576ec9de88067677532c73e64",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/hil/20260908T095655.498663Z-go/vectors.json",
+    "bytes": 15947,
+    "sha256": "3d8afa83c18a5159744aad537e105aa9c0d47192c8ea77e086bf287d3800ce76",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T034907.json",
+    "bytes": 198,
+    "sha256": "9c0cecadebcbc7a34ccaf1cec4adb4e3932b9543ce02da6c2d9d09ff41b439c4",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T034907.log",
+    "bytes": 118,
+    "sha256": "f4af06f1200040fea6f4666063235984cc7399b1264e49e0c61d68b241f61e3e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T034910.json",
+    "bytes": 198,
+    "sha256": "7c479c5fa0bf0a22c86aa390eeec3f7e03f053e37ec671a5cd2c33ecb7c38cf4",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T034910.log",
+    "bytes": 112,
+    "sha256": "535847fc876915c07fc05abf12f9cb3d87c9648b5e39c2732c3460ea8aa89770",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T034911.json",
+    "bytes": 196,
+    "sha256": "83e658112992181630b2ae429ac4b916038a63342c462a085255adc4b0084e7c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T034911.log",
+    "bytes": 122,
+    "sha256": "fd50848f00a9156763b5cb54c1c35c75e6ff12eadddc031063ff9b52d0d35566",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T035016.json",
+    "bytes": 154,
+    "sha256": "31cdb6148781b9100e127a31bdb1a41a70f8ca2a998795fa3a28803c1f4d1d4f",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T035016.log",
+    "bytes": 49,
+    "sha256": "4d284223f8153f31239a16a09b49a71f3c7302fd8212cf89d57e910326e48335",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T035023.json",
+    "bytes": 156,
+    "sha256": "1f69d1750a795e376646dec6da20a2a8cc8af51a2939d8066e8137616b5a731e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T035023.log",
+    "bytes": 49,
+    "sha256": "1a0df2a7470700bee1c738f5db60c75bce79542a520a6bbbf7ea1423d0bc8d48",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T035307.740293Z-configure-llvm.json",
+    "bytes": 986,
+    "sha256": "39229e67c5f4a3fa91498d5ac1c75c5d43ea02abf81f76e3665527b123aea368",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T035307.740293Z-configure-llvm.log",
+    "bytes": 14041,
+    "sha256": "66464e323458a9237289cc1b6e5da9e86fe9e3a39158c829fa8450fbc57e2379",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T035322.160279Z-build-llvm.json",
+    "bytes": 431,
+    "sha256": "ae9b658154a438dda78d484482442bfb73a885cbd6a74f0b273da70cec41bc3a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T035322.160279Z-build-llvm.log",
+    "bytes": 335454,
+    "sha256": "a1d4a8df176f95aa77c41ad69a7909641c4851cdbb17951a61e55ec21591b0f7",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T051818.427473Z-configure-llvm.json",
+    "bytes": 986,
+    "sha256": "39229e67c5f4a3fa91498d5ac1c75c5d43ea02abf81f76e3665527b123aea368",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T051818.427473Z-configure-llvm.log",
+    "bytes": 2679,
+    "sha256": "62a4c8685f46060e54fa25d891cd65824b283983ec333f993a06d6d6968bbfcb",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T051820.777806Z-build-llvm.json",
+    "bytes": 431,
+    "sha256": "8a3521b7ce84f1619cb74572e515f87bfd72001ac0153847e966a724794ef0dd",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T051820.777806Z-build-llvm.log",
+    "bytes": 19972,
+    "sha256": "93b62a0c1194b574d52c7c474692454a782f91409ceccf6949e6c402add1ba72",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052539.056897Z-c-backend-control.json",
+    "bytes": 396,
+    "sha256": "00489fd2952c927e6d6b45837a95c675cf9ada2c547241ba36f9e536fd7b8b30",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052539.056897Z-c-backend-control.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052548.959779Z-tinygo-p2-proof.json",
+    "bytes": 346,
+    "sha256": "cc5af158abe6dd269d3900ee80e8d6263cf7ae2d17a8acddafe8f7d0e27159c8",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052548.959779Z-tinygo-p2-proof.log",
+    "bytes": 635,
+    "sha256": "8f4060114e4bbbcbe044b2775b965dbf496484023d0cab98e082bf8f5b42f6c4",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052714.137011Z-tinygo-p2-proof.json",
+    "bytes": 346,
+    "sha256": "e9334b89d6acdd1b65937e705d017d950e3dfca19ef24fa4acb35c9b8d01317b",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052714.137011Z-tinygo-p2-proof.log",
+    "bytes": 225,
+    "sha256": "98fd5513e894cb355976e4870308d6053f74fde9d66acb0c6196e21e2bca85c4",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052858.628459Z-tinygo-p2-proof.json",
+    "bytes": 346,
+    "sha256": "e9334b89d6acdd1b65937e705d017d950e3dfca19ef24fa4acb35c9b8d01317b",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052858.628459Z-tinygo-p2-proof.log",
+    "bytes": 331,
+    "sha256": "3cb2c22fefe4c9d4622f384f75b42679f931d954331a185726dd1d8806c01b00",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052954.448359Z-tinygo-p2-proof.json",
+    "bytes": 346,
+    "sha256": "20fb1d7b1a1febcf5706bd1587d8e7d0514e8b3c06e1311bd66e13dea0e4795c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T052954.448359Z-tinygo-p2-proof.log",
+    "bytes": 119,
+    "sha256": "8068b0d8d3c087afb49503cb3904f73464c273370a75a290ae2c75d6a3b8dc96",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T053013.909323Z-tinygo-p2-proof.json",
+    "bytes": 346,
+    "sha256": "20fb1d7b1a1febcf5706bd1587d8e7d0514e8b3c06e1311bd66e13dea0e4795c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T053013.909323Z-tinygo-p2-proof.log",
+    "bytes": 119,
+    "sha256": "8068b0d8d3c087afb49503cb3904f73464c273370a75a290ae2c75d6a3b8dc96",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T053015.273394Z-configure-libp2.json",
+    "bytes": 339,
+    "sha256": "9f6865d09f314578e9a1caa1f2095c0d55d036746e850790440c67777c5f825b",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T053015.273394Z-configure-libp2.log",
+    "bytes": 753,
+    "sha256": "431b4ba9ea2489c22bd30e85c7c00184469b19f9ec90cc2bdbc3d94ec83fead4",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T053015.641598Z-build-libp2.json",
+    "bytes": 203,
+    "sha256": "bee2f6ff0ec8fbb510ee9faf3325dbc8b92abd8093d2e8e183d624f753908bef",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T053015.641598Z-build-libp2.log",
+    "bytes": 973,
+    "sha256": "68e81c07efbc15e39364bafb3e940dddd8d05713bcd76c606e0fc7c309169e50",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092119.058313Z-configure-libp2.json",
+    "bytes": 355,
+    "sha256": "5b43bb3bc446d71fe7fe10bfd2d493279fa9c84e63f12cbec326e298a77279b7",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092119.058313Z-configure-libp2.log",
+    "bytes": 627,
+    "sha256": "f8842418262f9a5cc291f8ac1587593ff66f468659a7b03f4f6dc0813a24b485",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092204.116019Z-configure-libp2.json",
+    "bytes": 355,
+    "sha256": "5b43bb3bc446d71fe7fe10bfd2d493279fa9c84e63f12cbec326e298a77279b7",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092204.116019Z-configure-libp2.log",
+    "bytes": 209,
+    "sha256": "81a3e87ff01bb568bd62c65099e60b5858fee619e190b6e09e67e8f44468c94e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092204.610139Z-build-loadp2.json",
+    "bytes": 163,
+    "sha256": "2292a7ccd70f80fba7230702197bfeb57cc33c70e692656de164f1a984d21e69",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092204.610139Z-build-loadp2.log",
+    "bytes": 268,
+    "sha256": "ee62a060a029107ba8ddeae8c38230b131efde1737b74e6e7d87f5576932b095",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092229.039182Z-configure-libp2.json",
+    "bytes": 364,
+    "sha256": "df82facdfac314f011df653f64c24c3321828f91b8c090e2d253e6e5325bcd01",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092229.039182Z-configure-libp2.log",
+    "bytes": 765,
+    "sha256": "6e30d02297a5f20fa28c4810e44556ac00aaac60209ba2241e35cc34efc56e35",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092231.028541Z-build-libp2.json",
+    "bytes": 211,
+    "sha256": "bde49446a85fdc8fe2fc0a50c6922a948b5cea5769b9b03c3fc441f2eecc0b96",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092231.028541Z-build-libp2.log",
+    "bytes": 4161,
+    "sha256": "68464c7afbdc0f5d68057e44cea879a66f90c24f0dbb9d2829e87b837b772ff2",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092239.612439Z-configure-libc.json",
+    "bytes": 362,
+    "sha256": "af2eb4f14bb4762f16c475cc36c6eb87d27d02a3990501b16f0685c7b1cd161c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092239.612439Z-configure-libc.log",
+    "bytes": 764,
+    "sha256": "8c3f869d4ab253a6f3f8fb3d194afc4f4e82a479dd06227f7f96fcf0ce292049",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092242.013120Z-build-libc.json",
+    "bytes": 210,
+    "sha256": "49d4814e580038815f4fa26cbc116af0fb5a2a5681532998346474a5defc7662",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092242.013120Z-build-libc.log",
+    "bytes": 27220,
+    "sha256": "7a8be0bf54b0c73fd0fa5206bda3de35e8592030b334fa8ff37aecf86f090d62",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092415.634126Z-configure-libp2.json",
+    "bytes": 364,
+    "sha256": "df82facdfac314f011df653f64c24c3321828f91b8c090e2d253e6e5325bcd01",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092415.634126Z-configure-libp2.log",
+    "bytes": 147,
+    "sha256": "5416408aac6de222fea69d362ace6016e7d89f762fff698868b27f99a2466bf9",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092415.838195Z-build-libp2.json",
+    "bytes": 211,
+    "sha256": "bde49446a85fdc8fe2fc0a50c6922a948b5cea5769b9b03c3fc441f2eecc0b96",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092415.838195Z-build-libp2.log",
+    "bytes": 115,
+    "sha256": "08300982ac2d9320c57f6bdf1a9cbe8e4973c9724eb32aa61308aef4d279f48e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092416.325859Z-configure-libc.json",
+    "bytes": 362,
+    "sha256": "af2eb4f14bb4762f16c475cc36c6eb87d27d02a3990501b16f0685c7b1cd161c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092416.325859Z-configure-libc.log",
+    "bytes": 146,
+    "sha256": "c5cc1a44d7aaeb1d47b54560bd741090cf07d891c665b20b4da26940460158d2",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092416.529127Z-build-libc.json",
+    "bytes": 210,
+    "sha256": "b6f23ad7329b36780117fb6cdf29b091f6e434068c9c01959c7275f004dea8bd",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092416.529127Z-build-libc.log",
+    "bytes": 231,
+    "sha256": "4d6ef29c8bee4e298a6a0639f2c66c26b7c5405d768da9a00610401549331914",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092425.739142Z-compile-c-harness.json",
+    "bytes": 606,
+    "sha256": "ce807d2d3052ea967555871a4a8a9f9a82364721f09c4d060f656534196b215c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092425.739142Z-compile-c-harness.log",
+    "bytes": 4243,
+    "sha256": "7b4f63882e07b1d522b43c3120730abf58f4cb9f781748a945860747b9606fcd",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092426.407768Z-compile-go-harness.json",
+    "bytes": 589,
+    "sha256": "536f8c450bfb8ff467b484537000a3a4c10cc04ea40be00dd4be67434dfee9a6",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092426.407768Z-compile-go-harness.log",
+    "bytes": 4243,
+    "sha256": "7b4f63882e07b1d522b43c3120730abf58f4cb9f781748a945860747b9606fcd",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092446.042624Z-compile-c-harness.json",
+    "bytes": 608,
+    "sha256": "99f4f0f68c49677bb3509e901eb141e8db813e0a789c55eede7d68099dbd6aab",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092446.042624Z-compile-c-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092446.346052Z-link-c-firmware.json",
+    "bytes": 681,
+    "sha256": "76fa23a2f15a009aae1178ca32d1619738baa294667d54be4724056cbe18fc95",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092446.346052Z-link-c-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092447.443307Z-compile-go-harness.json",
+    "bytes": 591,
+    "sha256": "3e78a35895092062f77f6936b5c974a57d0c47583babaf5b448f898ca9522012",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092447.443307Z-compile-go-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092447.640590Z-link-go-firmware.json",
+    "bytes": 751,
+    "sha256": "31fe9c046193f800f851ba9b59ba8741f173e5aebf87c32a3f97a2ebad77bdbe",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T092447.640590Z-link-go-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093431.735630Z-compile-c-harness.json",
+    "bytes": 588,
+    "sha256": "6e2d8d3fb273ca4e167f3467ef15c0de01533ed0a73b4daa2fbd4205fb74cc22",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093431.735630Z-compile-c-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093431.792499Z-link-c-firmware.json",
+    "bytes": 649,
+    "sha256": "548b50b23e4e428af023f276ba3961ff9e5f98b6524b12927400adcacf23df2a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093431.792499Z-link-c-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093432.196132Z-compile-go-harness.json",
+    "bytes": 571,
+    "sha256": "25c3d2eb69597426f93c1018bd943e89ecaf2a4a1a83a995ae862ffbb1d7b404",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093432.196132Z-compile-go-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093432.252025Z-link-go-firmware.json",
+    "bytes": 715,
+    "sha256": "b391780fc8e2ac1286cb646d737279563ebaff1788aaa5c5723c449a8a4aae56",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093432.252025Z-link-go-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093627.898577Z-compile-c-harness.json",
+    "bytes": 588,
+    "sha256": "6e2d8d3fb273ca4e167f3467ef15c0de01533ed0a73b4daa2fbd4205fb74cc22",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093627.898577Z-compile-c-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093627.960416Z-link-c-firmware.json",
+    "bytes": 649,
+    "sha256": "548b50b23e4e428af023f276ba3961ff9e5f98b6524b12927400adcacf23df2a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093627.960416Z-link-c-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093712.365036Z-compile-go-harness.json",
+    "bytes": 571,
+    "sha256": "25c3d2eb69597426f93c1018bd943e89ecaf2a4a1a83a995ae862ffbb1d7b404",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093712.365036Z-compile-go-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093712.420567Z-link-go-firmware.json",
+    "bytes": 715,
+    "sha256": "b391780fc8e2ac1286cb646d737279563ebaff1788aaa5c5723c449a8a4aae56",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093712.420567Z-link-go-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093852.213478Z-tinygo-p2-proof.json",
+    "bytes": 346,
+    "sha256": "20fb1d7b1a1febcf5706bd1587d8e7d0514e8b3c06e1311bd66e13dea0e4795c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093852.213478Z-tinygo-p2-proof.log",
+    "bytes": 119,
+    "sha256": "d9086373285b3414575727d724ac04bbc784ceb8cb126d5d56bc070871ed5580",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093853.787352Z-compile-go-harness.json",
+    "bytes": 571,
+    "sha256": "25c3d2eb69597426f93c1018bd943e89ecaf2a4a1a83a995ae862ffbb1d7b404",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093853.787352Z-compile-go-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093853.863710Z-link-go-firmware.json",
+    "bytes": 715,
+    "sha256": "b391780fc8e2ac1286cb646d737279563ebaff1788aaa5c5723c449a8a4aae56",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093853.863710Z-link-go-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093931.228443Z-tinygo-p2-proof.json",
+    "bytes": 346,
+    "sha256": "20fb1d7b1a1febcf5706bd1587d8e7d0514e8b3c06e1311bd66e13dea0e4795c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093931.228443Z-tinygo-p2-proof.log",
+    "bytes": 119,
+    "sha256": "59f4cf9bed515567c40250742b77e533e8b243459f9c9321f0304912730ae470",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093932.613103Z-compile-go-harness.json",
+    "bytes": 571,
+    "sha256": "25c3d2eb69597426f93c1018bd943e89ecaf2a4a1a83a995ae862ffbb1d7b404",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093932.613103Z-compile-go-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093932.668306Z-link-go-firmware.json",
+    "bytes": 715,
+    "sha256": "b391780fc8e2ac1286cb646d737279563ebaff1788aaa5c5723c449a8a4aae56",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T093932.668306Z-link-go-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094730.609827Z-tinygo-p2-proof.json",
+    "bytes": 346,
+    "sha256": "20fb1d7b1a1febcf5706bd1587d8e7d0514e8b3c06e1311bd66e13dea0e4795c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094730.609827Z-tinygo-p2-proof.log",
+    "bytes": 119,
+    "sha256": "59f4cf9bed515567c40250742b77e533e8b243459f9c9321f0304912730ae470",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094731.924166Z-compile-c-harness.json",
+    "bytes": 588,
+    "sha256": "6e2d8d3fb273ca4e167f3467ef15c0de01533ed0a73b4daa2fbd4205fb74cc22",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094731.924166Z-compile-c-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094731.985498Z-link-c-firmware.json",
+    "bytes": 649,
+    "sha256": "548b50b23e4e428af023f276ba3961ff9e5f98b6524b12927400adcacf23df2a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094731.985498Z-link-c-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094732.389018Z-compile-go-harness.json",
+    "bytes": 571,
+    "sha256": "25c3d2eb69597426f93c1018bd943e89ecaf2a4a1a83a995ae862ffbb1d7b404",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094732.389018Z-compile-go-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094732.443178Z-link-go-firmware.json",
+    "bytes": 715,
+    "sha256": "b391780fc8e2ac1286cb646d737279563ebaff1788aaa5c5723c449a8a4aae56",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T094732.443178Z-link-go-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095653.193474Z-tinygo-p2-proof.json",
+    "bytes": 346,
+    "sha256": "20fb1d7b1a1febcf5706bd1587d8e7d0514e8b3c06e1311bd66e13dea0e4795c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095653.193474Z-tinygo-p2-proof.log",
+    "bytes": 119,
+    "sha256": "e7b651d397ac398e4a23ad517c75aeecad32b49a3c5459a062538c9b8be7a5c5",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095654.575247Z-compile-c-harness.json",
+    "bytes": 588,
+    "sha256": "6e2d8d3fb273ca4e167f3467ef15c0de01533ed0a73b4daa2fbd4205fb74cc22",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095654.575247Z-compile-c-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095654.632432Z-link-c-firmware.json",
+    "bytes": 649,
+    "sha256": "548b50b23e4e428af023f276ba3961ff9e5f98b6524b12927400adcacf23df2a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095654.632432Z-link-c-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095655.032178Z-compile-go-harness.json",
+    "bytes": 571,
+    "sha256": "25c3d2eb69597426f93c1018bd943e89ecaf2a4a1a83a995ae862ffbb1d7b404",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095655.032178Z-compile-go-harness.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095655.087731Z-link-go-firmware.json",
+    "bytes": 715,
+    "sha256": "b391780fc8e2ac1286cb646d737279563ebaff1788aaa5c5723c449a8a4aae56",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/20260908T095655.087731Z-link-go-firmware.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/container-recreate-attempt-1.log",
+    "bytes": 684,
+    "sha256": "5c22ad30b7b665306912abf59b4b5c18f8feecb0f896515488969263911b4a4a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/docker-dev-image-build.exit",
+    "bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/docker-dev-image-build.log",
+    "bytes": 33722,
+    "sha256": "ef3554c757df9e5486ecef16d9adda62b6d66713f7c94eb1e9e7cf5f38a2d2b0",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/host-container-baseline.json",
+    "bytes": 9605,
+    "sha256": "69170223a183eddc3472432e693c9e19ab72e1cc41699fb057808b1fc42015c4",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-fetch-go.exit",
+    "bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-fetch-go.wrapper.log",
+    "bytes": 98,
+    "sha256": "664326726458e580fb2a792753a655615f47d55e7649759897aea8959bc274d2",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-fetch.exit",
+    "bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-fetch.wrapper.log",
+    "bytes": 3996,
+    "sha256": "eb98dffa6ea0d34bfb2e5e292b0d370d4957a6633adef13d1267cbaf52f7da8d",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-host-test-final.exit",
+    "bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-host-test-final.wrapper.log",
+    "bytes": 3287,
+    "sha256": "3dd2e888a5b6e46e1ede59c0ae363eb69343cdc3f51a63493e0ef0a7180bda54",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-host-test.exit",
+    "bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-host-test.wrapper.log",
+    "bytes": 3287,
+    "sha256": "96307f40c4ed6c2d9034b173f33d9a7beeef122ed458d2e6fed59cb2d3baffa6",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-llvm.exit",
+    "bytes": 2,
+    "sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/logs/make-llvm.wrapper.log",
+    "bytes": 350597,
+    "sha256": "a29b84618fb78f046bd88927fceb7c3496e27d72cd87dafbe191619eebffb932",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/mutated/PROVENANCE.txt",
+    "bytes": 86,
+    "sha256": "ecbecf8e04f390ba11f168feb2018d9ff6a06aaad5ae0ba97d1ef305fdd3204f",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/mutated/SHA256.txt",
+    "bytes": 260,
+    "sha256": "1b1cbe91be2b1a6c2b3788c159116886f11f77d4b07ac289ce2e8df047ef1fb2",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/mutated/arith.go",
+    "bytes": 532,
+    "sha256": "e80af5ebed246b0a67e45756e38f316abac614a7119348bf6b7bbf683256f27f",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/mutated/go.elf",
+    "bytes": 195328,
+    "sha256": "8718d6e8feea789729b66bf65c8c9456808eb8cb496e0dc72ebd1dcab133657d",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/mutated/go.json",
+    "bytes": 3192,
+    "sha256": "fca2189cde1b1f8a5f7e1733d4352f49ec13d44055feabe60a58f3bb668e94bf",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/mutated/go.map",
+    "bytes": 138166,
+    "sha256": "8ba2ed4f673991f7a1e064fe2f35ef2a8a3b4a72199c4e23704f0914b1c9c280",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/mutated/go.o",
+    "bytes": 456,
+    "sha256": "e166835251e80de1c92f00f4b53dd424fcb2dae1f0c78fa3c5577dd269329f86",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/mutated/hardware.json",
+    "bytes": 673,
+    "sha256": "ad4da63a840566f377b0140e17e22df19f3a4d47d9aedb6065fd30596acb5242",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/original/SHA256.txt",
+    "bytes": 260,
+    "sha256": "369ee2d1c91978697e5581d0948c6c0208a1031d8d048accf2f5288f39775aca",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/original/arith.go",
+    "bytes": 526,
+    "sha256": "2462b1e4d8df6978dad925b3dfce9ed107fcfc4f5b9649baec41460206d2d192",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/original/go.elf",
+    "bytes": 195320,
+    "sha256": "e474d1b9bfbf1b738060c682ad66395de0eec37803b0fc71ac8572caad618401",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/original/go.json",
+    "bytes": 3192,
+    "sha256": "ef5bb8fceb767eb41c061f8742e0c6ca6918598845d6c6ed4c76b813434e7fae",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/original/go.map",
+    "bytes": 138166,
+    "sha256": "5d466120f8f0b5beecc94e44e962a14facd5f19dbc4edcb126aee0975a0b43c3",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/original/go.o",
+    "bytes": 452,
+    "sha256": "a616147e8ac1062e6d4de300a58d63f7a1687bd203f28a94d32f676989df05ed",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/mutation/restored-SHA256.txt",
+    "bytes": 260,
+    "sha256": "369ee2d1c91978697e5581d0948c6c0208a1031d8d048accf2f5288f39775aca",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/c-control/c-control.o",
+    "bytes": 596,
+    "sha256": "684d7423c3714e41607c55559ca348e6a958495545213a4e8d6438f875df7509",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/c-control/control.json",
+    "bytes": 262,
+    "sha256": "29b179a8fb66baa91cac44a4a52152de0bee26de1745277705a76c4407b79548",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/c-control/disassembly.txt",
+    "bytes": 341,
+    "sha256": "317a9af4742abb90323833fa2dcd706f0471bf9e203f76489c56f299c401b136",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/c-previous-20260908T093431.735503Z.json",
+    "bytes": 2017,
+    "sha256": "5cb4292fb6d167261e05287a75dc09b648d3ecd5cd0e00b9a692e2ca0ab39cab",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/c-previous-20260908T093627.898448Z.json",
+    "bytes": 1985,
+    "sha256": "98dfd43e8c49a645704afb952efe96ba014bbc405a050b7dc583cd3dadf0f0b6",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/c-previous-20260908T094731.924035Z.json",
+    "bytes": 1985,
+    "sha256": "b03901ea9dc37c180b285862f130288940579d4958aeb86e77eb24d85adcf10a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/c-previous-20260908T095654.575120Z.json",
+    "bytes": 1985,
+    "sha256": "d581c44a22510f44705ea2868ab821f61140cba32bc91618719460ad063311f2",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/c.disassembly.txt",
+    "bytes": 1067917,
+    "sha256": "064be6cd9d1b327973f5bd94b32d0ffd4aa973ed75c312a17de3a277bce933b3",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/c.elf",
+    "bytes": 195144,
+    "sha256": "b8ccea0f8768de984a036dfb22e836ac048ab407f8a76433b9ae291f13060de9",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/c.json",
+    "bytes": 1985,
+    "sha256": "d581c44a22510f44705ea2868ab821f61140cba32bc91618719460ad063311f2",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/c.map",
+    "bytes": 137946,
+    "sha256": "d561102154825710af9e9752f9ad38ccecccf919df0020db50a7e688c8352bd2",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/c.o",
+    "bytes": 2852,
+    "sha256": "160fb4cb07c8c883352a2efdb72f28d9b3a3062d53bd0f2f699f0acda7f2b6d1",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go-previous-20260908T093432.194883Z.json",
+    "bytes": 3232,
+    "sha256": "dd8dde1396edcbc21e3bafa866852e0f5e67ba94ef26a30622ea72b7bf0c4162",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go-previous-20260908T093712.363639Z.json",
+    "bytes": 3192,
+    "sha256": "4d05c9bbdae13863d6f716fd001f97a38a43541dde8e0c1a8a81521ba4062ec8",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go-previous-20260908T093853.786107Z.json",
+    "bytes": 3192,
+    "sha256": "ef5bb8fceb767eb41c061f8742e0c6ca6918598845d6c6ed4c76b813434e7fae",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go-previous-20260908T093932.611853Z.json",
+    "bytes": 3192,
+    "sha256": "fca2189cde1b1f8a5f7e1733d4352f49ec13d44055feabe60a58f3bb668e94bf",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go-previous-20260908T094732.387781Z.json",
+    "bytes": 3192,
+    "sha256": "ef5bb8fceb767eb41c061f8742e0c6ca6918598845d6c6ed4c76b813434e7fae",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go-previous-20260908T095655.030963Z.json",
+    "bytes": 3192,
+    "sha256": "151c6c15cd75eec88f6d33aca83768b2c5b85f8162957acf1f85c0215e0bbd9f",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go.disassembly.txt",
+    "bytes": 1068844,
+    "sha256": "8de8814e784635dc9b231bd1b56d024b91bf07d819a1ddd17589b9b1a499db8f",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go.elf",
+    "bytes": 195320,
+    "sha256": "e474d1b9bfbf1b738060c682ad66395de0eec37803b0fc71ac8572caad618401",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go.json",
+    "bytes": 3192,
+    "sha256": "151c6c15cd75eec88f6d33aca83768b2c5b85f8162957acf1f85c0215e0bbd9f",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go.map",
+    "bytes": 138166,
+    "sha256": "5d466120f8f0b5beecc94e44e962a14facd5f19dbc4edcb126aee0975a0b43c3",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/firmware/go.o",
+    "bytes": 2956,
+    "sha256": "7279654e29344ab472bec3e2798e8714c64dfb1dfe33d21a7d953a4c2539d0e0",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/checked.json",
+    "bytes": 829,
+    "sha256": "de6f892a2cec409229486f770a48c80f3c53c09f1c20e6f83601c372b39cc88e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/go.disassembly.txt",
+    "bytes": 801,
+    "sha256": "f7cea2a7c139a979affa44108a3e389d78d373a15ba9444aebeb3317b6cdf6a1",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/go.ll",
+    "bytes": 718,
+    "sha256": "55ea4def519b04251cdc4b7e55d7add849a31262b6c8e62a20fec5e459682a0c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/go.o",
+    "bytes": 452,
+    "sha256": "a616147e8ac1062e6d4de300a58d63f7a1687bd203f28a94d32f676989df05ed",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/go.readobj.txt",
+    "bytes": 1264,
+    "sha256": "ba1286edcd7ce004b2ad35f96dc24b14ebe0d120448a34a45117ff1cad6ecf6a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/go.s",
+    "bytes": 548,
+    "sha256": "9b48cef1ee1701e7d7a29694565fb50692224932a6cede37b92a63a7a9000195",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093852.200275Z/checked.json",
+    "bytes": 829,
+    "sha256": "de6f892a2cec409229486f770a48c80f3c53c09f1c20e6f83601c372b39cc88e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093852.200275Z/go.ll",
+    "bytes": 718,
+    "sha256": "55ea4def519b04251cdc4b7e55d7add849a31262b6c8e62a20fec5e459682a0c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093852.200275Z/go.o",
+    "bytes": 452,
+    "sha256": "a616147e8ac1062e6d4de300a58d63f7a1687bd203f28a94d32f676989df05ed",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093852.200275Z/go.s",
+    "bytes": 548,
+    "sha256": "9b48cef1ee1701e7d7a29694565fb50692224932a6cede37b92a63a7a9000195",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093852.200275Z/probe.json",
+    "bytes": 741,
+    "sha256": "6b8db7047cf3b9e2d0162fb1f99672042475f6a76342d67bc3e2668f4adcf5c3",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093931.215449Z/checked.json",
+    "bytes": 829,
+    "sha256": "6e7b4668841ec12a7d5947b0a3bd717c092972554d86a0ed926d950d1f27da29",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093931.215449Z/go.ll",
+    "bytes": 739,
+    "sha256": "e6a3a918504ad1742902835c839a7a62964d7b49a8d0032c53120cdce0ffa694",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093931.215449Z/go.o",
+    "bytes": 456,
+    "sha256": "e166835251e80de1c92f00f4b53dd424fcb2dae1f0c78fa3c5577dd269329f86",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093931.215449Z/go.s",
+    "bytes": 564,
+    "sha256": "c100f2f9939e90b82171f99b8396b79d195fcc36af94c64dfc77ea6fe3ef8ca3",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T093931.215449Z/probe.json",
+    "bytes": 741,
+    "sha256": "1619006200f4b9f2fe1ca4b3efd95c4e4258de9e8b94f6de2c57a66d0ef6d945",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T094730.596620Z/checked.json",
+    "bytes": 829,
+    "sha256": "de6f892a2cec409229486f770a48c80f3c53c09f1c20e6f83601c372b39cc88e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T094730.596620Z/go.ll",
+    "bytes": 718,
+    "sha256": "55ea4def519b04251cdc4b7e55d7add849a31262b6c8e62a20fec5e459682a0c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T094730.596620Z/go.o",
+    "bytes": 452,
+    "sha256": "a616147e8ac1062e6d4de300a58d63f7a1687bd203f28a94d32f676989df05ed",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T094730.596620Z/go.s",
+    "bytes": 548,
+    "sha256": "9b48cef1ee1701e7d7a29694565fb50692224932a6cede37b92a63a7a9000195",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T094730.596620Z/probe.json",
+    "bytes": 741,
+    "sha256": "6b8db7047cf3b9e2d0162fb1f99672042475f6a76342d67bc3e2668f4adcf5c3",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T095653.180659Z/checked.json",
+    "bytes": 829,
+    "sha256": "de6f892a2cec409229486f770a48c80f3c53c09f1c20e6f83601c372b39cc88e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T095653.180659Z/go.ll",
+    "bytes": 718,
+    "sha256": "55ea4def519b04251cdc4b7e55d7add849a31262b6c8e62a20fec5e459682a0c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T095653.180659Z/go.o",
+    "bytes": 452,
+    "sha256": "a616147e8ac1062e6d4de300a58d63f7a1687bd203f28a94d32f676989df05ed",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T095653.180659Z/go.s",
+    "bytes": 548,
+    "sha256": "9b48cef1ee1701e7d7a29694565fb50692224932a6cede37b92a63a7a9000195",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/previous-20260908T095653.180659Z/probe.json",
+    "bytes": 741,
+    "sha256": "6b8db7047cf3b9e2d0162fb1f99672042475f6a76342d67bc3e2668f4adcf5c3",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe/probe.json",
+    "bytes": 741,
+    "sha256": "6b8db7047cf3b9e2d0162fb1f99672042475f6a76342d67bc3e2668f4adcf5c3",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe-add/checked.json",
+    "bytes": 724,
+    "sha256": "e82eecc8e8bf902305149e6ad5c0be2429dbd528b7309257f616c55f97278c1d",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe-add/go.disassembly.txt",
+    "bytes": 335,
+    "sha256": "d6af7c771d6ef1f7d76c883fa78a6cefc5668664f30b72d392563ba7dfad8fd4",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe-add/go.ll",
+    "bytes": 350,
+    "sha256": "004ba639d7933109bf744bb9781761ed312250878cedab465dcf360d79c137ae",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe-add/go.o",
+    "bytes": 384,
+    "sha256": "bb42950b817a113b1d769dac7e15c2d3d14809aa6b3421ad8e7ae6ebe1f16b8b",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe-add/go.readobj.txt",
+    "bytes": 1114,
+    "sha256": "6ef4c1e1af6c1de8cf495e1c4d942dd89975a02257da33846a793ae3beacee9c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe-add/go.s",
+    "bytes": 256,
+    "sha256": "4a7748cb19e6f8892416a0873d340c83b435e0f87a8fb7c08b4eaf308d7fe2d0",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/out/probe-add/probe.json",
+    "bytes": 726,
+    "sha256": "9cc439a23bcb368ec2af2be1f6a9fccd75eecc88041135b9b089b578ee0a40a4",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/patches/go-llvm-llvm14dev-di-expression.patch",
+    "bytes": 472,
+    "sha256": "a78500a5eedca8b33ceb056e0d3d3d0a163ac0e551c3ea2d87e5f00acdfba4ac",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/patches/libc-time-O1.patch",
+    "bytes": 741,
+    "sha256": "fbd744de254ab921a9d43216e2d2fecc2cbffbba097c0c2d5674ab816ae5c7ba",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/baseline-hardware.json",
+    "bytes": 567,
+    "sha256": "6c056be5eb9b9d8e3f34a24719bd843fcd7186772977d996de20e1b76d03cd01",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/c-rebuild-raw-input.log",
+    "bytes": 884,
+    "sha256": "ec5f739596ca2eb5f5dd5288c9c9c8bdf12a70a90f662a8b96715eca211562da",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/container-inspect-before-serial.json",
+    "bytes": 7534,
+    "sha256": "702bbfd549242541e3404ee65e8d4733f6cb607381a5c8615b27add4de43bbab",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/container-inspect-serial.json",
+    "bytes": 9600,
+    "sha256": "5e988ba39d38f8351d0d3953bf4c368b6093f5622d652eb378200defcbb0ac67",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/container-serial-access.txt",
+    "bytes": 142,
+    "sha256": "66b421bed2471ff696dfb170572087e0b91181e55f7ebed7c8bc84ed1771a93f",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/evidence-refresh.log",
+    "bytes": 68,
+    "sha256": "d37175cd8f3fa86a0717767fa1bdf2106ec626abb44a7f8de59074561c68e39c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/gate4-serial-preflight.json",
+    "bytes": 592,
+    "sha256": "53a168ac5e3fd014de9cc2c0f1bdd3569c599a1721cbce6feb9f2593f9c76d50",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/go-download.json",
+    "bytes": 281,
+    "sha256": "eb1b54d0808bf7bbeb3a0f88979341ec1fa8359873f499ff28d35aca8a6dfe16",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/go-rebuild-raw-input.log",
+    "bytes": 925,
+    "sha256": "766d4633bdcb7f9215c94dad71f2417d59db1ab51d05b307b5dc3bc3be181908",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/independent-hil-replay-checkpoint.json",
+    "bytes": 4600,
+    "sha256": "53e72692169943506b89deff7152430fbe42813d4dc9f0de85aaa907e0863416",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/independent-hil-replay-final.json",
+    "bytes": 10878,
+    "sha256": "18fe94dc96788a8b87d8938cd8050516a7c1548be3fdfc1698da077ca6619368",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/independent-link-provenance-final.json",
+    "bytes": 1190,
+    "sha256": "01a87139b22f6b646503695340a376f60f05f2fd4597922d36ae908f80da8d93",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/independent-mutation-and-pins.json",
+    "bytes": 861,
+    "sha256": "1fa1470522abf5966dcc0ed4b5d96b43c2363fae9612affbb33ebed3500bd51c",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/independent-shared-link-verification.json",
+    "bytes": 607,
+    "sha256": "42b7debaf91c5423e7d5dcbcb9b352fc8f3b95bafcf6764e004ab83edf2a9723",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/llvm.json",
+    "bytes": 355,
+    "sha256": "c9f82a0b66782cce12ec016a6d21858f593a71fb362e646f21ef4805a12d3c7a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/mutation-negative.log",
+    "bytes": 92,
+    "sha256": "d5e28326ec6c79bbcad71ba4df51fa6fef06df50ba8dbbab00aea3560fa56ff7",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/mutation-rebuild-firmware.log",
+    "bytes": 925,
+    "sha256": "766d4633bdcb7f9215c94dad71f2417d59db1ab51d05b307b5dc3bc3be181908",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/mutation-rebuild-probe.log",
+    "bytes": 292,
+    "sha256": "254284a1f9f9497f6ed5b08e197db67a2b0516b8c384a36ad3f0adc4faac659f",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/mutation-restore-rebuild-firmware.log",
+    "bytes": 925,
+    "sha256": "766d4633bdcb7f9215c94dad71f2417d59db1ab51d05b307b5dc3bc3be181908",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/mutation-restore-rebuild-probe.log",
+    "bytes": 292,
+    "sha256": "f3d4eb14c2b26ae1ad55bc27fdd0b1fb5081bc744eccde55681cdde2631d8b75",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/mutation-restored-positive.log",
+    "bytes": 577,
+    "sha256": "0ad1df5ca57e237c5f9d7a24c287dfe0957d419545939194c25905456d08f436",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/parent-final-build-and-hil-success.log",
+    "bytes": 6881,
+    "sha256": "030f17ef4891886735c0b4bbad69c50f08dc25924e69e74ae8e815f1a1a258dd",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/parent-final-build-and-hil.log",
+    "bytes": 4176,
+    "sha256": "c81a2cb372490ea0cf6f17322beec1773d97d04b1a492c43aad0db29717d510e",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/physical-c-baseline-console.log",
+    "bytes": 2336,
+    "sha256": "a14fa9c7fa2820de347477dc8ce102b37f075fd11ed19c4b394aacd7b91b06e2",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/physical-c-baseline-raw-input.log",
+    "bytes": 575,
+    "sha256": "7a699f69982e42dd203a2e0b6d661912119e4158790ab90eb8a853da67fe681d",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/physical-go-load-1.log",
+    "bytes": 577,
+    "sha256": "66ff2d9f8d54d0d4189ad48d791cc52ca91bf53fa9b274cdecd6b58df12af1a7",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/physical-go-load-2.log",
+    "bytes": 577,
+    "sha256": "de6e50b788b97027c49256afed64b4f61ae5e8b8d8fa9ee0d84de71a371a653b",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/physical-go-load-3.log",
+    "bytes": 577,
+    "sha256": "303ee0bcf58e9afb02b1123b50c8493eff3fdfb27c628ca248596ee51d5cab71",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/post-raw-input-build.log",
+    "bytes": 119,
+    "sha256": "b96219342128d615dede29f70983aaff82b90d5a902f34e06404433873b420b1",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/preflight.json",
+    "bytes": 384,
+    "sha256": "538b2da590024ae3bc55164a8b322985b56a0cc126e18262541a12cc625c267a",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": ".work/reports/probe-build-env.json",
+    "bytes": 930,
+    "sha256": "9511021f9368a9b4b5d9af9821452ff3ed03e2c525ed896c64110e16579e53d4",
+    "reason": "historical generated output/evidence; preserved in immutable Phase 1 archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "AGENTS.md",
+    "bytes": 4993,
+    "sha256": "024bff361b5547e73ffcd51ba72abda1258d02b169f6766bc18e9ade9e273ad8",
+    "reason": "agent instructions or nested Git/cache internals; retained only inside sealed archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "CODEX_PROMPT.md",
+    "bytes": 3331,
+    "sha256": "283ed27ca2dfdc1c8f8d3248a474dbd4a037511669fdadda4e3c6919b98ae275",
+    "reason": "agent instructions or nested Git/cache internals; retained only inside sealed archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/CODEX_REPORT.md",
+    "bytes": 8338,
+    "sha256": "ad3f21abb40d9dd6e33c0a11998203cfe3ffd62053a3a447d5a5968efdf6797c",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/author-host-check-1.original.txt",
+    "bytes": 2683,
+    "sha256": "b1f869822ecd889cec7f1618c85175a0e915cb5a2270da2245d2fd581607435f",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/author-host-check-2.original.txt",
+    "bytes": 271,
+    "sha256": "2b59b5634f11a4551cd525add69e8d469319dae7adf1f78a19e566662e179a7f",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/author-host-check-3.original.txt",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/author-host-validation.original.json",
+    "bytes": 1368,
+    "sha256": "fc875677bd0ca7cef4bd87526387e48dae2e269430d304f7bf9efd3b44b26e03",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/authoring-preflight.txt",
+    "bytes": 407,
+    "sha256": "c1922ce1ebdc5bbe995ef1b625c22736a6741e203759de26b12621f853968da8",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/cli-help.txt",
+    "bytes": 408,
+    "sha256": "d12c13807de0890a811993cfb8094bf281770d0c1a2a267f688095ddedf4290c",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/final-host-validation.json",
+    "bytes": 1607,
+    "sha256": "673d920282d6fe747fa804ac6fa6fc40e38a5dd09bd4cc9cb5432343beb2faa3",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/host-check-1.txt",
+    "bytes": 3126,
+    "sha256": "d3e7426ddb84958d1ff2354f9c8585730fc4f2311d6dc7fbea53ff650e552088",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/host-check-2.txt",
+    "bytes": 271,
+    "sha256": "2c599954597e229c97b2ff33f58bd025240bec7e4d9509902bbabea3881317a9",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/host-check-3.txt",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/host-run-console.txt",
+    "bytes": 2954,
+    "sha256": "70f2ca802a4f6cdfed355396c45627363d6bdeb893aede4d206354e708831dd4",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/host-validation-before-final-parent-check.json",
+    "bytes": 1607,
+    "sha256": "eb70e3e08972beb7817c667908a951fc5d8dc2cd89c42e5c5ba053a452ca8059",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/host-validation-final-parent-check.json",
+    "bytes": 1608,
+    "sha256": "efd253be261d34bf1b6f00d059ccb59f9b9a341e12b9473467334ce8e7790004",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/host-validation-supplied.json",
+    "bytes": 1368,
+    "sha256": "fc875677bd0ca7cef4bd87526387e48dae2e269430d304f7bf9efd3b44b26e03",
+    "reason": "historical report/output; retained in baseline archive"
+  },
+  {
+    "archive": "phase1",
+    "path": "reports/host-validation.json",
+    "bytes": 1603,
+    "sha256": "50c8e28310cb393cd346cb690c36cc8a7774506ae157873f56ad404d00c5e458",
+    "reason": "historical report/output; retained in baseline archive"
+  }
+]

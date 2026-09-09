@@ -1,0 +1,16 @@
+{
+  "invocation": "go list -mod=readonly -m -json tinygo.org/x/go-llvm, using recorded workspace GOMODCACHE and GOPROXY=off",
+  "module": {
+    "Path": "tinygo.org/x/go-llvm",
+    "Version": "v0.0.0-20220420140351-512c94c1e71f",
+    "Replace": {
+      "Path": "../go-llvm",
+      "Dir": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/go-llvm",
+      "GoMod": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/go-llvm/go.mod",
+      "GoVersion": "1.14"
+    },
+    "Dir": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/go-llvm",
+    "GoMod": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/go-llvm/go.mod",
+    "GoVersion": "1.14"
+  }
+}

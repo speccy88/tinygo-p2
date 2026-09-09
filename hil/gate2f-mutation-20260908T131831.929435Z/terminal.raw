@@ -1,0 +1,13 @@
+trying /dev/ttyUSB0...
+P2 version G found on serial port /dev/ttyUSB0
+Setting load mode to CHIP
+Setting clock_mode to 12427f8
+Loading fast loader for chip...
+Sending header
+Loading .work/phase2/artifacts/gate2f-mutation-20260908T131809.889528543Z/p2goapp-mutated.elf - 4782 bytes
+chksum: 6b OK
+( Entering terminal mode.  Press Ctrl-] or Ctrl-Z to exit. )
+P2 PHASE2 IMPORT INIT
+P2 PHASE2 INIT
+READY P2E 1
+R E 51a0f00d 1eeebb3f bb8bfbbe 00000001

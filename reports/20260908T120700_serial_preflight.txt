@@ -1,0 +1,8 @@
+device_node /dev/ttyUSB0 mode=660 owner=0:18
+resolved_tty /sys/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/ttyUSB0
+usb_identity
+serial_holders
+sh: 1: lsof: not found
+sh: 1: fuser: not found
+eligible_nodes
+/dev/ttyUSB0

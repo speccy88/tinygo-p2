@@ -1,0 +1,16 @@
+76caa5e037469906be48b7e0a903f9de4259e967007da303fa2bdd61566847a4  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/PROTOCOL.md
+c25ba81088a6db08130119082d95b1003a7b713b18255aa1c176ca3fa42830da  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/SHA256SUMS.txt
+b016c973645856bbf49caaf69e8aed4f6e662791ffbc953b618578fe02b7804c  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/board-profile.json
+02bd81305186490b50368d330bfad51a4709311f31cf10a9883e04bde2793fb2  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/bootpkg.go
+741328cb268aefdd57f51f4617954d439901cc5a9a7bd842d325a9ed03cb9abc  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/build-full.log
+5f34ef8aad444b1d585f0ad6d60c6a60b13feaa3fe889503ae49bf06a26fa0ff  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/core.go
+47a1bd6c557ca780deeb1b3cf2e82ed0eb30317d0206b7ff010a681b9e7d7d30  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/go.mod
+f7cb0bb9521f2244e349d68bed7459800ddb4dd4ae3186e041b641fc68d4c697  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/identity-before.txt
+a247158def1c31039d823d5385a6a975aadcd48ade09708880f21e33fe91a3b5  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/linked-main.o
+c134df0afb2989e971fcd5d5ed3968db4e564c9efd23ae6ed3fdcf46d0fd929c  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/main.go
+a247158def1c31039d823d5385a6a975aadcd48ade09708880f21e33fe91a3b5  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/main.o
+62b499345ea62d0d8c2f174762231aded9326ffb8fa7f3a9445063209174fcd5  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/p2-target.json
+fd6d289405d75f85717c61289ff90e8206cc84e7405a0e637ae3ccfacc305d24  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/p2goapp-final.disassembly.txt
+132b9cf87bc521cf433e8b33e58d24544d0dde3dcf6e13592058b3b1a14416a8  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/p2goapp-final.elf
+15864317fea2c9ccafcbdd8216912d3497e933fce1ffe4a0dbf37d14cbb033d3  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/p2goapp-final.relocations.txt
+50bb8545c70212ce23b14e37858cece4b8db3bb0155e9f04d3f5b60bc2a26a79  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/p2goapp-final.sections-symbols.txt

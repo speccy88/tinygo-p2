@@ -1,0 +1,7 @@
+0e6b00d2c0cf737a977f06be3e9eb202056beec35ffa299e552e6daa36930e28  .work/phase2/src/p2goapp/main.go
+02bd81305186490b50368d330bfad51a4709311f31cf10a9883e04bde2793fb2  .work/phase2/src/p2goapp/bootpkg/bootpkg.go
+62b499345ea62d0d8c2f174762231aded9326ffb8fa7f3a9445063209174fcd5  .work/phase2/src/tinygo/targets/p2.json
+fa1d04e15da525453c0eee1a8a0777f75444d983e78372e61a821df6335296a4  .work/phase2/src/tinygo/targets/p2_start.c
+6ec5422e74bc6c4238de385ba3eb9ad6a132cadf743d8145fbdbedc7687b4c2e  .work/phase2/src/tinygo/targets/p2.ld
+1ab708b1bc77a93c9c390434161d4942c2678eec06cb33f7c3dbcaa3356aa836  .work/phase2/out/p2goapp-phase2.elf
+{"serial_holders": []}

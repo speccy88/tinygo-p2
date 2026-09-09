@@ -1,0 +1,16 @@
+diff --git a/libc/time/CMakeLists.txt b/libc/time/CMakeLists.txt
+index f72fc61..de2ba31 100644
+--- a/libc/time/CMakeLists.txt
++++ b/libc/time/CMakeLists.txt
+@@ -11,4 +11,8 @@ add_library(time OBJECT
+     gettimeofday.c
+ )
+ 
+-target_include_directories(time PRIVATE ${CMAKE_SOURCE_DIR}/include)
+\ No newline at end of file
++target_include_directories(time PRIVATE ${CMAKE_SOURCE_DIR}/include)
++# LLVM P2 r72a9bb1 asserts in LiveVariables for these two functions at -Oz.
++# Keep the target library complete; compile only the crashing translation units
++# at the verified lower optimization level rather than changing the backend.
++set_source_files_properties(strftime.c localtim.c PROPERTIES COMPILE_OPTIONS "-O1")
+\ No newline at end of file

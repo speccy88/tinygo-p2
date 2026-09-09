@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "checked_on": "2026-09-07",
+  "tinygo": {
+    "url": "https://github.com/tinygo-org/tinygo.git",
+    "revision": "cf0b7edc78e42038a0bb522b3f1a5b76928e730e",
+    "tag": "v0.23.0"
+  },
+  "p2llvm": {
+    "url": "https://github.com/ne75/p2llvm.git",
+    "revision": "bdcefcce7860b2232c06f35726fea679a3a7309c"
+  },
+  "llvm": {
+    "url": "https://github.com/ne75/llvm-project.git",
+    "revision": "72a9bb1ef2656d9953d1f41a8196d425ff2ab0b1",
+    "version_family": "14.0.0-git (development snapshot, not final 14.0.0)"
+  },
+  "loadp2": {
+    "url": "https://github.com/ne75/loadp2.git",
+    "revision": "21e074cc7ee6fbd4fb12ef5352544b3457a6729c"
+  },
+  "go": {
+    "version": "go1.18.10",
+    "manifest": "https://go.dev/dl/?mode=json&include=all"
+  },
+  "go_llvm": {
+    "module_version": "v0.0.0-20220420140351-512c94c1e71f",
+    "revision": "512c94c1e71f46c07311e34e8dff3210fb08daa4",
+    "resolution": "Use TinyGo's existing go.mod/go.sum; do not upgrade."
+  }
+}

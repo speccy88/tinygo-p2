@@ -1,0 +1,1 @@
+name=/propeller2 image=local/propeller2-tinygo-dev:0.23.0-p2 privileged=false network=none capadd=null security=["no-new-privileges:true"] devices=[{"PathOnHost":"/dev/ttyUSB0","PathInContainer":"/dev/ttyUSB0","CgroupPermissions":"rw"}] binds=["/DATA/AppData/hopeful_renaud/propeller2:/work/propeller2"]

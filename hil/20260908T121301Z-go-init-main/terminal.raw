@@ -1,0 +1,12 @@
+trying /dev/ttyUSB0...
+P2 version G found on serial port /dev/ttyUSB0
+Setting load mode to CHIP
+Setting clock_mode to 12427f8
+Loading fast loader for chip...
+Sending header
+Loading /work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-phase2.elf - 3280 bytes
+chksum: 6a OK
+( Entering terminal mode.  Press Ctrl-] or Ctrl-Z to exit. )
+P HS2IPR NT
+2PAE NT
+ED 2O

@@ -1,0 +1,33 @@
+{
+  "manifest_sha256": "a41111f2cdece2416c5e419640db48ff3d2a429619ed5616f8fda0f470b9109d",
+  "patches": [
+    {
+      "after_head": "fc868cbb5731eda2886115d93f83655a31fc4745",
+      "before_head": "fc868cbb5731eda2886115d93f83655a31fc4745",
+      "checkout": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/go-llvm",
+      "name": "go-llvm",
+      "patch_sha256": "4a5025531a27ee76f96fcd6cd8d55c91c33ea9831b764690c78996f550a6f5b0",
+      "status": "fresh",
+      "tree_diff_sha256": "dcdcd16aff7bcffd87acb3df8c187a5ec9291cf7ef4569abe90f72fd57225f8f"
+    },
+    {
+      "after_head": "bdcefcce7860b2232c06f35726fea679a3a7309c",
+      "before_head": "bdcefcce7860b2232c06f35726fea679a3a7309c",
+      "checkout": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2llvm",
+      "name": "p2llvm",
+      "patch_sha256": "fbd744de254ab921a9d43216e2d2fecc2cbffbba097c0c2d5674ab816ae5c7ba",
+      "status": "fresh",
+      "tree_diff_sha256": "dfde00de51fa86615e030d39d044c8a5c4c5363234cbc3f0e8ff2bf84a3ffe0c"
+    },
+    {
+      "after_head": "72a9bb1ef2656d9953d1f41a8196d425ff2ab0b1",
+      "before_head": "72a9bb1ef2656d9953d1f41a8196d425ff2ab0b1",
+      "checkout": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/llvm",
+      "name": "llvm",
+      "patch_sha256": "fc7143b8b18e8fc36feffba831ce2e5f7244901c6c9e143c27a81b9690c82515",
+      "status": "fresh",
+      "tree_diff_sha256": "000e20e1723d886a6f192047d4df31ad73bc17f88c09d48bc7379936a5c76456"
+    }
+  ],
+  "status": "PASS"
+}

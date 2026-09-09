@@ -1,0 +1,19 @@
+{
+  "boot": [
+    "P2 PHASE2 IMPORT INIT",
+    "P2 PHASE2 INIT",
+    "READY P2E 1"
+  ],
+  "elf": "/work/propeller2/tinygo-p2-handoff/.work/phase2/artifacts/gate2f-restored-20260908T131856.889558316Z/p2goapp-restored.elf",
+  "elf_sha256": "132b9cf87bc521cf433e8b33e58d24544d0dde3dcf6e13592058b3b1a14416a8",
+  "label": "release-final-serial",
+  "loader_sha256": "39640fe81ca18eb05b5675ed29cfd377af89b96b22058b08f0195918e7d64af0",
+  "malformed_passed": 4,
+  "mode": "gate2f-fresh-RAM-only",
+  "passed": 138,
+  "profile_sha256": "b016c973645856bbf49caaf69e8aed4f6e662791ffbc953b618578fe02b7804c",
+  "scope": "physical-P2-via-USB-serial",
+  "status": "PASS",
+  "total": 138,
+  "unique_ids": 138
+}

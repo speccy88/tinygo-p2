@@ -1,0 +1,24 @@
+{
+  "segments": [
+    {
+      "physical": 0,
+      "file": 4572,
+      "memory": 4572
+    },
+    {
+      "physical": 4572,
+      "file": 184,
+      "memory": 184
+    },
+    {
+      "physical": 4760,
+      "file": 22,
+      "memory": 503144
+    }
+  ],
+  "scope": "independent arithmetic over actual llvm-readobj program headers",
+  "file_backed_bytes": 4778,
+  "end_exclusive_high_water": 507904,
+  "hub_limit": 524288,
+  "headroom": 16384
+}

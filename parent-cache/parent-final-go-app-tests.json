@@ -1,0 +1,7 @@
+{
+  "scope": "native host unit tests, not new P2 execution",
+  "command": "docker exec -w /work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp -e GOROOT=/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10 -e GOCACHE=/work/propeller2/tinygo-p2-handoff/.work/phase2/cache/parent-final-app -e GOPROXY=off -e GOWORK=off propeller2 /work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/bin/go test -count=1 -v ./...",
+  "output": "=== RUN   TestChallengeAgainstIndependentReference\n--- PASS: TestChallengeAgainstIndependentReference (0.00s)\n=== RUN   TestChallengeRejectsMalformed\n--- PASS: TestChallengeRejectsMalformed (0.00s)\nPASS\nok  \texample.com/p2goapp\t0.001s\n?   \texample.com/p2goapp/bootpkg\t[no test files]",
+  "exit_code": 0,
+  "error": null
+}

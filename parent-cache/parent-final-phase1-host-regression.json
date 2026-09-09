@@ -1,0 +1,30 @@
+{
+  "scope": "unchanged Phase1 host tests; not hardware execution; outputs retained only under Phase2/cache",
+  "passed": true,
+  "checks": [
+    {
+      "kind": "python-host",
+      "command": "docker exec -w /work/propeller2/tinygo-p2-handoff -e GOROOT=/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10 -e GOCACHE=/work/propeller2/tinygo-p2-handoff/.work/phase2/cache/parent-final-host -e GOWORK=off -e GOTOOLCHAIN=local -e GOPROXY=off propeller2 python3 -m unittest discover -s tests -v",
+      "passed": true,
+      "output": "test_bad_input_and_overflow (test_host.CIntegration.test_bad_input_and_overflow) ... ok\ntest_c_cannot_pass_as_go (test_host.CIntegration.test_c_cannot_pass_as_go) ... ok\ntest_host_c_through_pty_138_challenges (test_host.CIntegration.test_host_c_through_pty_138_challenges) ... ok\ntest_missing_go_object_fails_link (test_host.CIntegration.test_missing_go_object_fails_link) ... ok\ntest_p2_stdio_flag_access_is_excluded_from_host_build (test_host.CIntegration.test_p2_stdio_flag_access_is_excluded_from_host_build) ... ok\ntest_executable_structure (test_host.ELFChecks.test_executable_structure) ... ok\ntest_hub_boundary (test_host.ELFChecks.test_hub_boundary) ... ok\ntest_missing_exports (test_host.ELFChecks.test_missing_exports) ... ok\ntest_truncated (test_host.ELFChecks.test_truncated) ... ok\ntest_undefined (test_host.ELFChecks.test_undefined) ... ok\ntest_valid_structure_only (test_host.ELFChecks.test_valid_structure_only) ... ok\ntest_wrong_arch (test_host.ELFChecks.test_wrong_arch) ... ok\ntest_wrong_type (test_host.ELFChecks.test_wrong_type) ... ok\ntest_add_only_fixture (test_host.IRChecks.test_add_only_fixture) ... ok\ntest_add_only_is_not_full_support (test_host.IRChecks.test_add_only_is_not_full_support) ... ok\ntest_arm_retarget_guard (test_host.IRChecks.test_arm_retarget_guard) ... ok\ntest_fastcc (test_host.IRChecks.test_fastcc) ... ok\ntest_fixture (test_host.IRChecks.test_fixture) ... ok\ntest_hidden_parameter (test_host.IRChecks.test_hidden_parameter) ... ok\ntest_missing_export (test_host.IRChecks.test_missing_export) ... ok\ntest_no_jumptable_guard (test_host.IRChecks.test_no_jumptable_guard) ... ok\ntest_runtime_call (test_host.IRChecks.test_runtime_call) ... ok\ntest_argument_order (test_host.ProtocolChecks.test_argument_order) ... ok\ntest_count_guard (test_host.ProtocolChecks.test_count_guard) ... ok\ntest_malformed (test_host.ProtocolChecks.test_malformed) ... ok\ntest_response_accepts (test_host.ProtocolChecks.test_response_accepts) ... ok\ntest_vectors (test_host.ProtocolChecks.test_vectors) ... ok\ntest_wrap (test_host.ProtocolChecks.test_wrap) ... ok\ntest_wrong_mode (test_host.ProtocolChecks.test_wrong_mode) ... ok\ntest_wrong_nonce (test_host.ProtocolChecks.test_wrong_nonce) ... ok\ntest_wrong_result (test_host.ProtocolChecks.test_wrong_result) ... ok\ntest_zero (test_host.ProtocolChecks.test_zero) ... ok\ntest_hil_failure_persists_artifact_provenance (test_host.WorkflowGuards.test_hil_failure_persists_artifact_provenance) ... ok\ntest_job_limit (test_host.WorkflowGuards.test_job_limit) ... ok\ntest_missing_probe_not_success (test_host.WorkflowGuards.test_missing_probe_not_success) ... ok\ntest_port_ambiguity (test_host.WorkflowGuards.test_port_ambiguity) ... ok\ntest_ram_requires_opt_in (test_host.WorkflowGuards.test_ram_requires_opt_in) ... ok\ntest_run_log_stem_keeps_fractional_timestamp_and_returncode (test_host.WorkflowGuards.test_run_log_stem_keeps_fractional_timestamp_and_returncode) ... + first\nok\n+ second\nok\nok\ntest_sha_pins (test_host.WorkflowGuards.test_sha_pins) ... ok\n\n----------------------------------------------------------------------\nRan 39 tests in 0.153s\n\nOK",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "kind": "go-reference",
+      "command": "docker exec -w /work/propeller2/tinygo-p2-handoff -e GOROOT=/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10 -e GOCACHE=/work/propeller2/tinygo-p2-handoff/.work/phase2/cache/parent-final-host -e GOWORK=off -e GOTOOLCHAIN=local -e GOPROXY=off propeller2 /work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/bin/go test -count=1 -v ./probe",
+      "passed": true,
+      "output": "=== RUN   TestAdditionEdges\n--- PASS: TestAdditionEdges (0.00s)\n=== RUN   TestDeterministicRandomReference\n--- PASS: TestDeterministicRandomReference (0.00s)\n=== RUN   TestPayloadScope\n--- PASS: TestPayloadScope (0.00s)\nPASS\nok  \texample.com/tinygo-p2-proof/probe\t0.002s",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "kind": "gofmt",
+      "command": "docker exec -w /work/propeller2/tinygo-p2-handoff -e GOROOT=/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10 -e GOCACHE=/work/propeller2/tinygo-p2-handoff/.work/phase2/cache/parent-final-host -e GOWORK=off -e GOTOOLCHAIN=local -e GOPROXY=off propeller2 /work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/bin/gofmt -l probe overlays/tinygo/compiler",
+      "passed": true,
+      "output": "",
+      "exit_code": 0,
+      "error": null
+    }
+  ]
+}

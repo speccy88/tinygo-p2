@@ -1,0 +1,15 @@
+diff --git a/backports.cpp b/backports.cpp
+index 6b7ab30..a36708f 100644
+--- a/backports.cpp
++++ b/backports.cpp
+@@ -80,9 +80,6 @@ LLVMMemoryBufferRef LLVMGoWriteThinLTOBitcodeToMemoryBuffer(LLVMModuleRef M) {
+ 
+ LLVMMetadataRef LLVMGoDIBuilderCreateExpression(LLVMDIBuilderRef Builder,
+                                                 uint64_t *Addr, size_t Length) {
+-#if LLVM_VERSION_MAJOR >= 14
+-  return LLVMDIBuilderCreateExpression(Builder, Addr, Length);
+-#else
++  // This LLVM 14-development fork retains the pre-final signed API.
+   return LLVMDIBuilderCreateExpression(Builder, (int64_t*)Addr, Length);
+-#endif
+ }

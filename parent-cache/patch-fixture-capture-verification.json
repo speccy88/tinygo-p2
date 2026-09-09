@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scope": "capturer reproduces all three real-patch fixtures, not a clean SDK build",
+  "count": 3,
+  "patches": [
+    "go-llvm",
+    "p2llvm",
+    "llvm"
+  ]
+}

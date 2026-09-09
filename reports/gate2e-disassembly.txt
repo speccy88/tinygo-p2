@@ -1,0 +1,610 @@
+
+/work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-gate2e.elf:	file format elf32-p2
+
+Disassembly of section .text:
+
+00000000 <__entry>:
+       0: f8 a1 03 fb  			 rdlong r0, ptra	
+       4: 10 00 80 fd  			 jmp #\16
+		...
+
+00000040 <__start0>:
+      40: f8 a1 03 fb  			 rdlong r0, ptra	
+      44: 00 00 00 ff  			 augs #0
+      48: 50 a0 07 f6  			 mov r0, #80	
+      4c: d0 01 e8 fc  			 coginit #0, r0	
+
+00000050 <__start>:
+      50: f8 a1 03 fb  			 rdlong r0, ptra	
+      54: 29 fe 67 fd  			 setq2 #511
+      58: 01 00 00 ff  			 augs #1
+      5c: 00 00 04 fb  			 rdlong $0x000, #0	
+      60: 80 03 00 ff  			 augs #896
+      64: 00 a0 07 f6  			 mov r0, #0	
+      68: d0 f1 03 f6  			 mov ptra, r0	
+      6c: 09 00 00 ff  			 augs #9
+      70: b0 a0 07 f6  			 mov r0, #176	
+      74: 09 00 00 ff  			 augs #9
+      78: 10 a3 07 f6  			 mov r1, #272	
+      7c: d1 a1 5b f2  			 cmps r0, r1	wcz
+      80: 0c 00 90 ad  		if_z	 jmp #12
+      84: d0 01 48 fc  			 wrbyte #0, r0
+      88: 01 a0 07 f1  			 add r0, #1	
+      8c: ec ff 9f fd  			 jmp #-20
+      90: 03 80 00 ff  			 augs #32771
+      94: f4 a1 07 f6  			 mov r0, #500	
+      98: 03 80 00 ff  			 augs #32771
+      9c: f7 a3 07 f6  			 mov r1, #503	
+      a0: 00 e0 65 fd  			 hubset #240
+      a4: 86 01 80 ff  			 augd #390
+      a8: 1f 80 66 fd  			 waitx #320	
+      ac: 00 a0 63 fd  			 hubset r0
+      b0: 86 01 80 ff  			 augd #390
+      b4: 1f 80 66 fd  			 waitx #320	
+      b8: 00 a2 63 fd  			 hubset r1
+      bc: 3e a0 07 f6  			 mov r0, #62	
+      c0: 7c a2 07 f6  			 mov r1, #124	
+      c4: 00 b6 02 ff  			 augs #177664
+      c8: 07 a4 07 f6  			 mov r2, #7	
+      cc: 40 a0 63 fd  			 dirl r0	
+      d0: d0 a3 03 fc  			 wrpin r1, r0
+      d4: d0 a5 13 fc  			 wxpin r2, r0
+      d8: 41 a0 63 fd  			 dirh r0	
+      dc: 3f a2 07 f6  			 mov r1, #63	
+      e0: 40 a2 63 fd  			 dirl r1	
+      e4: d1 a1 03 fc  			 wrpin r0, r1
+      e8: d1 a5 13 fc  			 wxpin r2, r1
+      ec: 41 a2 63 fd  			 dirh r1	
+      f0: 04 a0 63 fd  			 locknew r0	
+      f4: 09 00 00 ff  			 augs #9
+      f8: 0c a3 07 f6  			 mov r1, #268	
+      fc: d1 a1 63 fc  			 wrlong r0, r1
+     100: d4 0a c0 fd  			 calla #\main
+     104: 1f 02 64 fd  			 waitx #1	
+     108: f8 ff 9f fd  			 jmp #-8
+		...
+
+00000a00 <runtime.lookupPanic>:
+     a00: 28 02 64 fd  			 setq #1
+     a04: 61 a1 67 fc  			 wrlong r0, ptra++
+     a08: 09 00 00 ff  			 augs #9
+     a0c: 1e a0 07 f6  			 mov r0, #30	
+     a10: 12 a2 07 f6  			 mov r1, #18	
+     a14: 18 0a c0 fd  			 calla #\runtime.runtimePanic
+
+00000a18 <runtime.runtimePanic>:
+     a18: 28 06 64 fd  			 setq #3
+     a1c: 61 a1 67 fc  			 wrlong r0, ptra++
+     a20: d1 a5 03 f6  			 mov r2, r1	
+     a24: d0 a7 03 f6  			 mov r3, r0	
+     a28: 08 00 00 ff  			 augs #8
+     a2c: f1 a1 07 f6  			 mov r0, #497	
+     a30: 16 a2 07 f6  			 mov r1, #22	
+     a34: 4c 0a c0 fd  			 calla #\runtime.printstring
+     a38: d3 a1 03 f6  			 mov r0, r3	
+     a3c: d2 a3 03 f6  			 mov r1, r2	
+     a40: 4c 0a c0 fd  			 calla #\runtime.printstring
+     a44: 90 0a c0 fd  			 calla #\runtime.printnl
+     a48: ac 0a c0 fd  			 calla #\runtime.abort
+
+00000a4c <runtime.printstring>:
+     a4c: 61 a1 67 fc  			 wrlong r0, ptra++
+     a50: 28 02 64 fd  			 setq #1
+     a54: 61 a5 67 fc  			 wrlong r2, ptra++
+     a58: d0 a5 03 f6  			 mov r2, r0	
+     a5c: 00 a6 07 f6  			 mov r3, #0	
+     a60: d1 a7 5b f2  			 cmps r3, r1	wcz
+     a64: 18 00 90 3d  		if_nc	 jmp #24
+     a68: d2 a1 03 f6  			 mov r0, r2	
+     a6c: d3 a1 03 f1  			 add r0, r3	
+     a70: d0 a1 c3 fa  			 rdbyte r0, r0	
+     a74: b4 0a c0 fd  			 calla #\runtime.putchar
+     a78: 01 a6 07 f1  			 add r3, #1	
+     a7c: e0 ff 9f fd  			 jmp #-32
+     a80: 28 02 64 fd  			 setq #1
+     a84: 5f a5 07 fb  			 rdlong r2, --ptra	
+     a88: 5f a1 07 fb  			 rdlong r0, --ptra	
+     a8c: 2e 00 64 fd  			 reta	
+
+00000a90 <runtime.printnl>:
+     a90: 61 a1 67 fc  			 wrlong r0, ptra++
+     a94: 0d a0 07 f6  			 mov r0, #13	
+     a98: b4 0a c0 fd  			 calla #\runtime.putchar
+     a9c: 0a a0 07 f6  			 mov r0, #10	
+     aa0: b4 0a c0 fd  			 calla #\runtime.putchar
+     aa4: 5f a1 07 fb  			 rdlong r0, --ptra	
+     aa8: 2e 00 64 fd  			 reta	
+
+00000aac <runtime.abort>:
+     aac: d4 11 c0 fd  			 calla #\p2_halt
+     ab0: f8 ff 9f fd  			 jmp #-8
+
+00000ab4 <runtime.putchar>:
+     ab4: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     ab8: 2e 00 64 fd  			 reta	
+
+00000abc <runtime.nilPanic>:
+     abc: 28 02 64 fd  			 setq #1
+     ac0: 61 a1 67 fc  			 wrlong r0, ptra++
+     ac4: 09 00 00 ff  			 augs #9
+     ac8: 07 a0 07 f6  			 mov r0, #7	
+     acc: 17 a2 07 f6  			 mov r1, #23	
+     ad0: 18 0a c0 fd  			 calla #\runtime.runtimePanic
+
+00000ad4 <main>:
+     ad4: d8 0a c0 fd  			 calla #\runtime.run
+
+00000ad8 <runtime.run>:
+     ad8: e0 0a c0 fd  			 calla #\runtime.initAll
+     adc: 94 0e c0 fd  			 calla #\main.main
+
+00000ae0 <runtime.initAll>:
+     ae0: 28 06 64 fd  			 setq #3
+     ae4: 61 a1 67 fc  			 wrlong r0, ptra++
+     ae8: 08 00 00 ff  			 augs #8
+     aec: dc a1 07 f6  			 mov r0, #476	
+     af0: 15 a2 07 f6  			 mov r1, #21	
+     af4: 4c 0a c0 fd  			 calla #\runtime.printstring
+     af8: 90 0a c0 fd  			 calla #\runtime.printnl
+     afc: 50 a2 07 f6  			 mov r1, #80	
+     b00: d1 a1 03 f6  			 mov r0, r1	
+     b04: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b08: 32 a4 07 f6  			 mov r2, #50	
+     b0c: d2 a1 03 f6  			 mov r0, r2	
+     b10: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b14: 20 a6 07 f6  			 mov r3, #32	
+     b18: d3 a1 03 f6  			 mov r0, r3	
+     b1c: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b20: d1 a1 03 f6  			 mov r0, r1	
+     b24: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b28: 48 a0 07 f6  			 mov r0, #72	
+     b2c: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b30: 41 a0 07 f6  			 mov r0, #65	
+     b34: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b38: 53 a0 07 f6  			 mov r0, #83	
+     b3c: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b40: 45 a0 07 f6  			 mov r0, #69	
+     b44: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b48: d2 a1 03 f6  			 mov r0, r2	
+     b4c: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b50: d3 a1 03 f6  			 mov r0, r3	
+     b54: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b58: 49 a2 07 f6  			 mov r1, #73	
+     b5c: d1 a1 03 f6  			 mov r0, r1	
+     b60: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b64: 4e a0 07 f6  			 mov r0, #78	
+     b68: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b6c: d1 a1 03 f6  			 mov r0, r1	
+     b70: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b74: 54 a0 07 f6  			 mov r0, #84	
+     b78: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b7c: 0d a0 07 f6  			 mov r0, #13	
+     b80: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b84: 0a a0 07 f6  			 mov r0, #10	
+     b88: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     b8c: 28 06 64 fd  			 setq #3
+     b90: 5f a1 07 fb  			 rdlong r0, --ptra	
+     b94: 2e 00 64 fd  			 reta	
+
+00000b98 <main.writeText>:
+     b98: 61 a1 67 fc  			 wrlong r0, ptra++
+     b9c: 28 02 64 fd  			 setq #1
+     ba0: 61 a5 67 fc  			 wrlong r2, ptra++
+     ba4: d0 a5 03 f6  			 mov r2, r0	
+     ba8: 00 a6 07 f6  			 mov r3, #0	
+     bac: d1 a7 5b f2  			 cmps r3, r1	wcz
+     bb0: 24 00 90 3d  		if_nc	 jmp #36
+     bb4: d1 a7 1b f2  			 cmp r3, r1	wcz
+     bb8: 04 00 90 cd  		if_c	 jmp #4
+     bbc: 28 00 90 fd  			 jmp #40
+     bc0: d2 a1 03 f6  			 mov r0, r2	
+     bc4: d3 a1 03 f1  			 add r0, r3	
+     bc8: d0 a1 c3 fa  			 rdbyte r0, r0	
+     bcc: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     bd0: 01 a6 07 f1  			 add r3, #1	
+     bd4: d4 ff 9f fd  			 jmp #-44
+     bd8: 28 02 64 fd  			 setq #1
+     bdc: 5f a5 07 fb  			 rdlong r2, --ptra	
+     be0: 5f a1 07 fb  			 rdlong r0, --ptra	
+     be4: 2e 00 64 fd  			 reta	
+     be8: 00 0a c0 fd  			 calla #\runtime.lookupPanic
+
+00000bec <main.foldWords>:
+     bec: 28 08 64 fd  			 setq #4
+     bf0: 61 a3 67 fc  			 wrlong r1, ptra++
+     bf4: 09 00 00 ff  			 augs #9
+     bf8: f8 a2 07 f6  			 mov r1, #248	
+     bfc: d1 a5 03 fb  			 rdlong r2, r1	
+     c00: 09 00 00 ff  			 augs #9
+     c04: a0 a2 07 f6  			 mov r1, #160	
+     c08: d1 a3 03 fb  			 rdlong r1, r1	
+     c0c: d2 a3 63 f5  			 xor r1, r2	
+     c10: 00 a4 07 f6  			 mov r2, #0	
+     c14: 09 00 00 ff  			 augs #9
+     c18: 80 a6 07 f6  			 mov r3, #128	
+     c1c: 04 a4 1f f2  			 cmp r2, #4	wcz
+     c20: 04 00 90 cd  		if_c	 jmp #4
+     c24: 30 00 90 fd  			 jmp #48
+     c28: d2 a9 03 f6  			 mov r4, r2	
+     c2c: d0 a9 03 f1  			 add r4, r0	
+     c30: 03 a8 07 f5  			 and r4, #3	
+     c34: 02 a8 67 f0  			 shl r4, #2	
+     c38: d3 ab 03 f6  			 mov r5, r3	
+     c3c: d4 ab 03 f1  			 add r5, r4	
+     c40: d5 a9 03 fb  			 rdlong r4, r5	
+     c44: 03 a2 27 f0  			 rol r1, #3	
+     c48: d1 a9 63 f5  			 xor r4, r1	
+     c4c: 01 a4 07 f1  			 add r2, #1	
+     c50: d4 a3 03 f6  			 mov r1, r4	
+     c54: c4 ff 9f fd  			 jmp #-60
+     c58: d1 df 03 f6  			 mov r31, r1	
+     c5c: 28 08 64 fd  			 setq #4
+     c60: 5f a3 07 fb  			 rdlong r1, --ptra	
+     c64: 2e 00 64 fd  			 reta	
+
+00000c68 <main.mixChallenge>:
+     c68: 28 14 64 fd  			 setq #10
+     c6c: 61 a1 67 fc  			 wrlong r0, ptra++
+     c70: d0 a7 03 f6  			 mov r3, r0	
+     c74: d1 a1 03 f6  			 mov r0, r1	
+     c78: d3 a1 63 f5  			 xor r0, r3	
+     c7c: 03 a0 07 f5  			 and r0, #3	
+     c80: 02 a0 67 f0  			 shl r0, #2	
+     c84: 09 00 00 ff  			 augs #9
+     c88: 80 aa 07 f6  			 mov r5, #128	
+     c8c: d5 a9 03 f6  			 mov r4, r5	
+     c90: d0 a9 03 f1  			 add r4, r0	
+     c94: d4 a1 03 fb  			 rdlong r0, r4	
+     c98: d3 a1 03 f1  			 add r0, r3	
+     c9c: ec 0b c0 fd  			 calla #\main.foldWords
+     ca0: ef a9 03 f6  			 mov r4, r31	
+     ca4: ff ff 7f ff  			 augs #8388607
+     ca8: ec a7 5f f2  			 cmps r3, #492	wcz
+     cac: c0 00 90 1d  	if_nc_and_nz	 jmp #192
+     cb0: ff ff 7f ff  			 augs #8388607
+     cb4: ed a1 67 f5  			 xor r0, #493	
+     cb8: 00 ae 07 f6  			 mov r7, #0	
+     cbc: 09 00 00 ff  			 augs #9
+     cc0: f4 a6 07 f6  			 mov r3, #244	
+     cc4: d3 ad 03 fb  			 rdlong r6, r3	
+     cc8: d2 b1 03 f6  			 mov r8, r2	
+     ccc: 0f b0 07 f5  			 and r8, #15	
+     cd0: d8 af 1b f2  			 cmp r7, r8	wcz
+     cd4: 38 00 90 1d  	if_nc_and_nz	 jmp #56
+     cd8: d6 b3 03 f6  			 mov r9, r6	
+     cdc: d7 b3 03 f1  			 add r9, r7	
+     ce0: 03 b2 07 f5  			 and r9, #3	
+     ce4: 02 b2 67 f0  			 shl r9, #2	
+     ce8: d5 b5 03 f6  			 mov r10, r5	
+     cec: d9 b5 03 f1  			 add r10, r9	
+     cf0: da b3 03 fb  			 rdlong r9, r10	
+     cf4: d4 b3 03 f1  			 add r9, r4	
+     cf8: 05 a0 27 f0  			 rol r0, #5	
+     cfc: d4 a1 63 f5  			 xor r0, r4	
+     d00: d7 a1 63 f5  			 xor r0, r7	
+     d04: 01 ae 07 f1  			 add r7, #1	
+     d08: d9 a9 03 f6  			 mov r4, r9	
+     d0c: c0 ff 9f fd  			 jmp #-64
+     d10: 01 ac 07 f1  			 add r6, #1	
+     d14: d3 ad 63 fc  			 wrlong r6, r3
+     d18: d4 a7 03 f6  			 mov r3, r4	
+     d1c: d0 a7 63 f5  			 xor r3, r0	
+     d20: 09 00 00 ff  			 augs #9
+     d24: f8 aa 07 f6  			 mov r5, #248	
+     d28: d5 a7 63 fc  			 wrlong r3, r5
+     d2c: d1 a5 03 f1  			 add r2, r1	
+     d30: d0 a5 03 f1  			 add r2, r0	
+     d34: 09 00 00 ff  			 augs #9
+     d38: a0 a2 07 f6  			 mov r1, #160	
+     d3c: d1 a7 03 fb  			 rdlong r3, r1	
+     d40: d3 a5 03 f1  			 add r2, r3	
+     d44: d1 a5 63 fc  			 wrlong r2, r1
+     d48: 09 00 00 ff  			 augs #9
+     d4c: f0 a2 07 f6  			 mov r1, #240	
+     d50: d1 a5 03 fb  			 rdlong r2, r1	
+     d54: d0 a5 03 f1  			 add r2, r0	
+     d58: d1 a5 63 fc  			 wrlong r2, r1
+     d5c: d4 a5 63 f5  			 xor r2, r4	
+     d60: d2 df 03 f6  			 mov r31, r2	
+     d64: 28 14 64 fd  			 setq #10
+     d68: 5f a1 07 fb  			 rdlong r0, --ptra	
+     d6c: 2e 00 64 fd  			 reta	
+     d70: ff ff 7f ff  			 augs #8388607
+     d74: ee a7 1f f2  			 cmp r3, #494	wcz
+     d78: 08 00 90 cd  		if_c	 jmp #8
+     d7c: d1 a1 03 f1  			 add r0, r1	
+     d80: 34 ff 9f fd  			 jmp #-204
+     d84: d2 d2 52 ff  			 augs #5427922
+     d88: a5 a1 67 f5  			 xor r0, #421	
+     d8c: 28 ff 9f fd  			 jmp #-216
+
+00000d90 <main.parseHex8>:
+     d90: 28 08 64 fd  			 setq #4
+     d94: 61 a5 67 fc  			 wrlong r2, ptra++
+     d98: 2a a2 97 fb  			 tjz r1, #42
+     d9c: d1 01 68 fc  			 wrlong #0, r1
+     da0: 00 a4 07 f6  			 mov r2, #0	
+     da4: 09 00 00 ff  			 augs #9
+     da8: b0 a6 07 f6  			 mov r3, #176	
+     dac: d2 a9 03 f6  			 mov r4, r2	
+     db0: 07 a8 1f f2  			 cmp r4, #7	wcz
+     db4: 7c 00 90 1d  	if_nc_and_nz	 jmp #124
+     db8: d4 ab 03 f6  			 mov r5, r4	
+     dbc: d0 ab 03 f1  			 add r5, r0	
+     dc0: d3 ad 03 f6  			 mov r6, r3	
+     dc4: d5 ad 03 f1  			 add r6, r5	
+     dc8: d6 ad c3 fa  			 rdbyte r6, r6	
+     dcc: d6 ab 03 f6  			 mov r5, r6	
+     dd0: 30 aa 87 f1  			 sub r5, #48	
+     dd4: ff aa 07 f5  			 and r5, #255	
+     dd8: 09 aa 1f f2  			 cmp r5, #9	wcz
+     ddc: 04 00 90 1d  	if_nc_and_nz	 jmp #4
+     de0: 34 00 90 fd  			 jmp #52
+     de4: d6 ab 03 f6  			 mov r5, r6	
+     de8: 61 aa 87 f1  			 sub r5, #97	
+     dec: ff aa 07 f5  			 and r5, #255	
+     df0: 05 aa 1f f2  			 cmp r5, #5	wcz
+     df4: 08 00 90 1d  	if_nc_and_nz	 jmp #8
+     df8: 0a aa 07 f1  			 add r5, #10	
+     dfc: 18 00 90 fd  			 jmp #24
+     e00: 41 ac 87 f1  			 sub r6, #65	
+     e04: ff ac 07 f5  			 and r6, #255	
+     e08: 05 ac 1f f2  			 cmp r6, #5	wcz
+     e0c: 1c 00 90 1d  	if_nc_and_nz	 jmp #28
+     e10: 0a ac 07 f1  			 add r6, #10	
+     e14: d6 ab 03 f6  			 mov r5, r6	
+     e18: 04 a4 67 f0  			 shl r2, #4	
+     e1c: d2 ab 43 f5  			 or r5, r2	
+     e20: 01 a8 07 f1  			 add r4, #1	
+     e24: d5 a5 03 f6  			 mov r2, r5	
+     e28: 84 ff 9f fd  			 jmp #-124
+     e2c: d1 03 68 fc  			 wrlong #1, r1
+     e30: 00 a4 07 f6  			 mov r2, #0	
+     e34: d2 df 03 f6  			 mov r31, r2	
+     e38: 28 08 64 fd  			 setq #4
+     e3c: 5f a5 07 fb  			 rdlong r2, --ptra	
+     e40: 2e 00 64 fd  			 reta	
+     e44: bc 0a c0 fd  			 calla #\runtime.nilPanic
+
+00000e48 <main.writeHex>:
+     e48: 28 0a 64 fd  			 setq #5
+     e4c: 61 a1 67 fc  			 wrlong r0, ptra++
+     e50: d0 a3 03 f6  			 mov r1, r0	
+     e54: 1c a4 07 f6  			 mov r2, #28	
+     e58: 09 00 00 ff  			 augs #9
+     e5c: 70 a6 07 f6  			 mov r3, #112	
+     e60: d2 a9 03 f6  			 mov r4, r2	
+     e64: d1 a1 03 f6  			 mov r0, r1	
+     e68: d4 a1 43 f0  			 shr r0, r4	
+     e6c: 0f a0 07 f5  			 and r0, #15	
+     e70: d3 ab 03 f6  			 mov r5, r3	
+     e74: d0 ab 03 f1  			 add r5, r0	
+     e78: d5 a1 c3 fa  			 rdbyte r0, r5	
+     e7c: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+     e80: 04 a4 87 f1  			 sub r2, #4	
+     e84: f6 a9 9f fb  			 tjnz r4, #502
+     e88: 28 0a 64 fd  			 setq #5
+     e8c: 5f a1 07 fb  			 rdlong r0, --ptra	
+     e90: 2e 00 64 fd  			 reta	
+
+00000e94 <main.main>:
+     e94: 28 36 64 fd  			 setq #27
+     e98: 61 a1 67 fc  			 wrlong r0, ptra++
+     e9c: 04 f0 07 f1  			 add ptra, #4	
+     ea0: 00 a0 07 f6  			 mov r0, #0	
+     ea4: 01 ba 07 f6  			 mov r13, #1	
+     ea8: 0c a0 1f f2  			 cmp r0, #12	wcz
+     eac: 1c 00 90 1d  	if_nc_and_nz	 jmp #28
+     eb0: 01 a0 07 f1  			 add r0, #1	
+     eb4: fc bb 9f fb  			 tjnz r13, #508
+     eb8: 09 00 00 ff  			 augs #9
+     ebc: 3f a0 07 f6  			 mov r0, #63	
+     ec0: 16 a2 07 f6  			 mov r1, #22	
+     ec4: 98 0b c0 fd  			 calla #\main.writeText
+     ec8: fc ff 9f fd  			 jmp #-4
+     ecc: 09 00 00 ff  			 augs #9
+     ed0: 55 a0 07 f6  			 mov r0, #85	
+     ed4: 0d a2 07 f6  			 mov r1, #13	
+     ed8: 98 0b c0 fd  			 calla #\main.writeText
+     edc: 00 bc 07 f6  			 mov r14, #0	
+     ee0: 09 00 00 ff  			 augs #9
+     ee4: b0 be 07 f6  			 mov r15, #176	
+     ee8: df c1 03 f6  			 mov r16, r15	
+     eec: 1c c0 07 f1  			 add r16, #28	
+     ef0: df c3 03 f6  			 mov r17, r15	
+     ef4: 13 c2 07 f1  			 add r17, #19	
+     ef8: df c5 03 f6  			 mov r18, r15	
+     efc: 0a c4 07 f1  			 add r18, #10	
+     f00: df c7 03 f6  			 mov r19, r15	
+     f04: 01 c6 07 f1  			 add r19, #1	
+     f08: 02 a6 07 f6  			 mov r3, #2	
+     f0c: 0b a8 07 f6  			 mov r4, #11	
+     f10: 14 aa 07 f6  			 mov r5, #20	
+     f14: 1d ac 07 f6  			 mov r6, #29	
+     f18: 09 00 00 ff  			 augs #9
+     f1c: fc c8 07 f6  			 mov r20, #252	
+     f20: 09 00 00 ff  			 augs #9
+     f24: 00 cb 07 f6  			 mov r21, #256	
+     f28: 09 00 00 ff  			 augs #9
+     f2c: f0 cc 07 f6  			 mov r22, #240	
+     f30: 09 00 00 ff  			 augs #9
+     f34: 04 cf 07 f6  			 mov r23, #260	
+     f38: 09 00 00 ff  			 augs #9
+     f3c: f4 d0 07 f6  			 mov r24, #244	
+     f40: 09 00 00 ff  			 augs #9
+     f44: 08 d3 07 f6  			 mov r25, #264	
+     f48: 09 00 00 ff  			 augs #9
+     f4c: 90 ae 07 f6  			 mov r7, #144	
+     f50: 04 b0 07 f6  			 mov r8, #4	
+     f54: 20 b2 07 f6  			 mov r9, #32	
+     f58: 09 00 00 ff  			 augs #9
+     f5c: 30 b4 07 f6  			 mov r10, #48	
+     f60: 09 00 00 ff  			 augs #9
+     f64: 62 b6 07 f6  			 mov r11, #98	
+     f68: de a1 03 f6  			 mov r0, r14	
+     f6c: dd a3 03 f6  			 mov r1, r13	
+     f70: 5c 11 c0 fd  			 calla #\raw_p2_uart_getc
+     f74: ef a5 03 f6  			 mov r2, r31	
+     f78: ff a4 07 f5  			 and r2, #255	
+     f7c: 0d a4 5f f2  			 cmps r2, #13	wcz
+     f80: 2c 00 90 ad  		if_z	 jmp #44
+     f84: 0a a4 5f f2  			 cmps r2, #10	wcz
+     f88: 04 00 90 5d  		if_nz	 jmp #4
+     f8c: 20 00 90 fd  			 jmp #32
+     f90: 3f a0 1f f2  			 cmp r0, #63	wcz
+     f94: de a3 03 f6  			 mov r1, r14	
+     f98: d4 ff 9f 1d  	if_nc_and_nz	 jmp #-44
+     f9c: df a3 03 f6  			 mov r1, r15	
+     fa0: d0 a3 03 f1  			 add r1, r0	
+     fa4: d1 df 43 fc  			 wrbyte r31, r1
+     fa8: 01 a0 07 f1  			 add r0, #1	
+     fac: bc ff 9f fd  			 jmp #-68
+     fb0: 01 a2 9f fb  			 tjnz r1, #1
+     fb4: 4c 01 90 fd  			 jmp #332
+     fb8: df d7 c3 fa  			 rdbyte r27, r15	
+     fbc: e0 a3 c3 fa  			 rdbyte r1, r16	
+     fc0: e1 a5 c3 fa  			 rdbyte r2, r17	
+     fc4: e2 b9 c3 fa  			 rdbyte r12, r18	
+     fc8: e3 d5 c3 fa  			 rdbyte r26, r19	
+     fcc: 3f 01 6c fc  			 wrlong #0, ptra[-1]
+     fd0: 25 a0 5f f2  			 cmps r0, #37	wcz
+     fd4: 40 01 90 5d  		if_nz	 jmp #320
+     fd8: ff d6 07 f5  			 and r27, #255	
+     fdc: 43 d6 5f f2  			 cmps r27, #67	wcz
+     fe0: 34 01 90 5d  		if_nz	 jmp #308
+     fe4: ff d4 07 f5  			 and r26, #255	
+     fe8: 20 d4 5f f2  			 cmps r26, #32	wcz
+     fec: 28 01 90 5d  		if_nz	 jmp #296
+     ff0: ff b8 07 f5  			 and r12, #255	
+     ff4: 20 b8 5f f2  			 cmps r12, #32	wcz
+     ff8: 1c 01 90 5d  		if_nz	 jmp #284
+     ffc: ff a4 07 f5  			 and r2, #255	
+    1000: 20 a4 5f f2  			 cmps r2, #32	wcz
+    1004: 10 01 90 5d  		if_nz	 jmp #272
+    1008: ff a2 07 f5  			 and r1, #255	
+    100c: 20 a2 5f f2  			 cmps r1, #32	wcz
+    1010: 04 01 90 5d  		if_nz	 jmp #260
+    1014: f8 a3 03 f6  			 mov r1, ptra	
+    1018: 04 a2 87 f1  			 sub r1, #4	
+    101c: d3 a1 03 f6  			 mov r0, r3	
+    1020: 90 0d c0 fd  			 calla #\main.parseHex8
+    1024: ef d5 03 f6  			 mov r26, r31	
+    1028: 3f a1 07 fb  			 rdlong r0, ptra[-1]	
+    102c: 3b a0 9f fb  			 tjnz r0, #59
+    1030: f8 a3 03 f6  			 mov r1, ptra	
+    1034: 04 a2 87 f1  			 sub r1, #4	
+    1038: d4 a1 03 f6  			 mov r0, r4	
+    103c: 90 0d c0 fd  			 calla #\main.parseHex8
+    1040: ef a5 03 f6  			 mov r2, r31	
+    1044: 3f a1 07 fb  			 rdlong r0, ptra[-1]	
+    1048: 34 a0 9f fb  			 tjnz r0, #52
+    104c: f8 a3 03 f6  			 mov r1, ptra	
+    1050: 04 a2 87 f1  			 sub r1, #4	
+    1054: d5 a1 03 f6  			 mov r0, r5	
+    1058: 90 0d c0 fd  			 calla #\main.parseHex8
+    105c: ef b9 03 f6  			 mov r12, r31	
+    1060: 3f a1 07 fb  			 rdlong r0, ptra[-1]	
+    1064: 2d a0 9f fb  			 tjnz r0, #45
+    1068: f8 a3 03 f6  			 mov r1, ptra	
+    106c: 04 a2 87 f1  			 sub r1, #4	
+    1070: d6 a1 03 f6  			 mov r0, r6	
+    1074: 90 0d c0 fd  			 calla #\main.parseHex8
+    1078: 3f a1 07 fb  			 rdlong r0, ptra[-1]	
+    107c: 01 a0 97 fb  			 tjz r0, #1
+    1080: 98 00 90 fd  			 jmp #152
+    1084: e4 d5 63 fc  			 wrlong r26, r20
+    1088: d2 a1 03 f6  			 mov r0, r2	
+    108c: dc a3 03 f6  			 mov r1, r12	
+    1090: ef a5 03 f6  			 mov r2, r31	
+    1094: 68 0c c0 fd  			 calla #\main.mixChallenge
+    1098: e5 df 63 fc  			 wrlong r31, r21
+    109c: e6 a1 03 fb  			 rdlong r0, r22	
+    10a0: e7 a1 63 fc  			 wrlong r0, r23
+    10a4: e8 a1 03 fb  			 rdlong r0, r24	
+    10a8: e9 a1 63 fc  			 wrlong r0, r25
+    10ac: d7 a1 03 f6  			 mov r0, r7	
+    10b0: d8 a3 03 f6  			 mov r1, r8	
+    10b4: 98 0b c0 fd  			 calla #\main.writeText
+    10b8: e4 a1 03 fb  			 rdlong r0, r20	
+    10bc: 48 0e c0 fd  			 calla #\main.writeHex
+    10c0: d9 a1 03 f6  			 mov r0, r9	
+    10c4: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+    10c8: e5 a1 03 fb  			 rdlong r0, r21	
+    10cc: 48 0e c0 fd  			 calla #\main.writeHex
+    10d0: d9 a1 03 f6  			 mov r0, r9	
+    10d4: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+    10d8: e7 a1 03 fb  			 rdlong r0, r23	
+    10dc: 48 0e c0 fd  			 calla #\main.writeHex
+    10e0: d9 a1 03 f6  			 mov r0, r9	
+    10e4: 30 11 c0 fd  			 calla #\raw_p2_uart_putc
+    10e8: e9 a1 03 fb  			 rdlong r0, r25	
+    10ec: 48 0e c0 fd  			 calla #\main.writeHex
+    10f0: da a1 03 f6  			 mov r0, r10	
+    10f4: d3 a3 03 f6  			 mov r1, r3	
+    10f8: 98 0b c0 fd  			 calla #\main.writeText
+    10fc: de a1 03 f6  			 mov r0, r14	
+    1100: 68 fe 9f fd  			 jmp #-408
+    1104: db a1 03 f6  			 mov r0, r11	
+    1108: d4 a3 03 f6  			 mov r1, r4	
+    110c: 98 0b c0 fd  			 calla #\main.writeText
+    1110: de a1 03 f6  			 mov r0, r14	
+    1114: 54 fe 9f fd  			 jmp #-428
+    1118: 3f 03 6c fc  			 wrlong #1, ptra[-1]
+    111c: db a1 03 f6  			 mov r0, r11	
+    1120: d4 a3 03 f6  			 mov r1, r4	
+    1124: 98 0b c0 fd  			 calla #\main.writeText
+    1128: de a1 03 f6  			 mov r0, r14	
+    112c: 3c fe 9f fd  			 jmp #-452
+
+00001130 <raw_p2_uart_putc>:
+    1130: 28 02 64 fd  			 setq #1
+    1134: 61 a1 67 fc  			 wrlong r0, ptra++
+    1138: 3e a2 07 f6  			 mov r1, #62	
+    113c: d1 a1 23 fc  			 wypin r0, r1
+    1140: 1f 28 64 fd  			 waitx #20	
+    1144: 40 a2 73 fd  			 testp r1	wc
+    1148: 6c a0 63 fd  			 wrc r0
+    114c: fd a1 97 fb  			 tjz r0, #509
+    1150: 28 02 64 fd  			 setq #1
+    1154: 5f a1 07 fb  			 rdlong r0, --ptra	
+    1158: 2e 00 64 fd  			 reta	
+
+0000115c <raw_p2_uart_getc>:
+    115c: 28 02 64 fd  			 setq #1
+    1160: 61 a1 67 fc  			 wrlong r0, ptra++
+    1164: 3f a0 07 f6  			 mov r0, #63	
+    1168: 40 a0 73 fd  			 testp r0	wc
+    116c: 6c a2 63 fd  			 wrc r1
+    1170: fd a3 97 fb  			 tjz r1, #509
+    1174: d0 a1 8b fa  			 rdpin r0, r0	
+    1178: 18 a0 47 f0  			 shr r0, #24	
+    117c: d0 df 03 f6  			 mov r31, r0	
+    1180: 28 02 64 fd  			 setq #1
+    1184: 5f a1 07 fb  			 rdlong r0, --ptra	
+    1188: 2e 00 64 fd  			 reta	
+
+0000118c <p2_lock_acquire>:
+    118c: 28 02 64 fd  			 setq #1
+    1190: 61 a1 67 fc  			 wrlong r0, ptra++
+    1194: 09 00 00 ff  			 augs #9
+    1198: 0c a1 07 f6  			 mov r0, #268	
+    119c: d0 a3 03 fb  			 rdlong r1, r0	
+    11a0: 06 a2 73 fd  			 locktry r1	wc
+    11a4: 6c a2 63 fd  			 wrc r1
+    11a8: fc a3 97 fb  			 tjz r1, #508
+    11ac: 28 02 64 fd  			 setq #1
+    11b0: 5f a1 07 fb  			 rdlong r0, --ptra	
+    11b4: 2e 00 64 fd  			 reta	
+
+000011b8 <p2_lock_release>:
+    11b8: 61 a1 67 fc  			 wrlong r0, ptra++
+    11bc: 09 00 00 ff  			 augs #9
+    11c0: 0c a1 07 f6  			 mov r0, #268	
+    11c4: d0 a1 03 fb  			 rdlong r0, r0	
+    11c8: 07 a0 63 fd  			 lockrel r0	
+    11cc: 5f a1 07 fb  			 rdlong r0, --ptra	
+    11d0: 2e 00 64 fd  			 reta	
+
+000011d4 <p2_halt>:
+    11d4: 1f 02 64 fd  			 waitx #1	
+    11d8: f8 ff 9f fd  			 jmp #-8

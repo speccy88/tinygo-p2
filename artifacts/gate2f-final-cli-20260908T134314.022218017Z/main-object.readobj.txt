@@ -1,0 +1,1394 @@
+
+File: .work/phase2/artifacts/gate2f-final-cli-20260908T134314.022218017Z/linked-inputs/00-main.o
+Format: elf32-p2
+Arch: p2
+AddressSize: 32bit
+LoadName: <Not found>
+ElfHeader {
+  Ident {
+    Magic: (7F 45 4C 46)
+    Class: 32-bit (0x1)
+    DataEncoding: LittleEndian (0x1)
+    FileVersion: 1
+    OS/ABI: SystemV (0x0)
+    ABIVersion: 0
+    Unused: (00 00 00 00 00 00 00)
+  }
+  Type: Relocatable (0x1)
+  Machine: 0x12C
+  Version: 1
+  Entry: 0x0
+  ProgramHeaderOffset: 0x0
+  SectionHeaderOffset: 0x13CC
+  Flags [ (0x0)
+  ]
+  HeaderSize: 52
+  ProgramHeaderEntrySize: 0
+  ProgramHeaderCount: 0
+  SectionHeaderEntrySize: 40
+  SectionHeaderCount: 43
+  StringTableSectionIndex: 1
+}
+Sections [
+  Section {
+    Index: 0
+    Name:  (0)
+    Type: SHT_NULL (0x0)
+    Flags [ (0x0)
+    ]
+    Address: 0x0
+    Offset: 0x0
+    Size: 0
+    Link: 0
+    Info: 0
+    AddressAlignment: 0
+    EntrySize: 0
+  }
+  Section {
+    Index: 1
+    Name: .strtab (583)
+    Type: SHT_STRTAB (0x3)
+    Flags [ (0x0)
+    ]
+    Address: 0x0
+    Offset: 0x1014
+    Size: 951
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 2
+    Name: .text (26)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x34
+    Size: 0
+    Link: 0
+    Info: 0
+    AddressAlignment: 4
+    EntrySize: 0
+  }
+  Section {
+    Index: 3
+    Name: .text.runtime.lookupPanic (497)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x34
+    Size: 24
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 4
+    Name: .rela.text.runtime.lookupPanic (492)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xC30
+    Size: 24
+    Link: 42
+    Info: 3
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 5
+    Name: .text.runtime.runtimePanic (556)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x4C
+    Size: 52
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 6
+    Name: .rela.text.runtime.runtimePanic (551)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xC48
+    Size: 60
+    Link: 42
+    Info: 5
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 7
+    Name: .text.runtime.printstring (325)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x80
+    Size: 68
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 8
+    Name: .rela.text.runtime.printstring (320)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xC84
+    Size: 12
+    Link: 42
+    Info: 7
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 9
+    Name: .text.runtime.printnl (255)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0xC4
+    Size: 28
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 10
+    Name: .rela.text.runtime.printnl (250)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xC90
+    Size: 24
+    Link: 42
+    Info: 9
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 11
+    Name: .text.runtime.abort (63)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0xE0
+    Size: 8
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 12
+    Name: .rela.text.runtime.abort (58)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xCA8
+    Size: 12
+    Link: 42
+    Info: 11
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 13
+    Name: .text.runtime.putchar (147)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0xE8
+    Size: 8
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 14
+    Name: .rela.text.runtime.putchar (142)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xCB4
+    Size: 12
+    Link: 42
+    Info: 13
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 15
+    Name: .text.runtime.nilPanic (528)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0xF0
+    Size: 24
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 16
+    Name: .rela.text.runtime.nilPanic (523)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xCC0
+    Size: 24
+    Link: 42
+    Info: 15
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 17
+    Name: .text.main (218)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x108
+    Size: 4
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 18
+    Name: .rela.text.main (213)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xCD8
+    Size: 12
+    Link: 42
+    Info: 17
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 19
+    Name: .text.runtime.run (174)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x10C
+    Size: 8
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 20
+    Name: .rela.text.runtime.run (169)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xCE4
+    Size: 24
+    Link: 42
+    Info: 19
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 21
+    Name: .text.runtime.initAll (282)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x114
+    Size: 184
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 22
+    Name: .rela.text.runtime.initAll (277)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xCFC
+    Size: 228
+    Link: 42
+    Info: 21
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 23
+    Name: .text.main.writeText (37)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x1CC
+    Size: 84
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 24
+    Name: .rela.text.main.writeText (32)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xDE0
+    Size: 24
+    Link: 42
+    Info: 23
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 25
+    Name: .text.main.foldWords (121)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x220
+    Size: 124
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 26
+    Name: .rela.text.main.foldWords (116)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xDF8
+    Size: 36
+    Link: 42
+    Info: 25
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 27
+    Name: .text.main.mixChallenge (415)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x29C
+    Size: 296
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 28
+    Name: .rela.text.main.mixChallenge (410)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xE1C
+    Size: 72
+    Link: 42
+    Info: 27
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 29
+    Name: .text.main.parseHex8 (637)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x3C4
+    Size: 184
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 30
+    Name: .rela.text.main.parseHex8 (632)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xE64
+    Size: 24
+    Link: 42
+    Info: 29
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 31
+    Name: .text.main.writeHex (6)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x47C
+    Size: 76
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 32
+    Name: .rela.text.main.writeHex (1)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xE7C
+    Size: 24
+    Link: 42
+    Info: 31
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 33
+    Name: .text.main.main (234)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x4C8
+    Size: 668
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 34
+    Name: .rela.text.main.main (229)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0xE94
+    Size: 372
+    Link: 42
+    Info: 33
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 35
+    Name: .rodata (599)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x2)
+      SHF_ALLOC (0x2)
+    ]
+    Address: 0x0
+    Offset: 0x764
+    Size: 145
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 36
+    Name: .data (612)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x3)
+      SHF_ALLOC (0x2)
+      SHF_WRITE (0x1)
+    ]
+    Address: 0x0
+    Offset: 0x7F8
+    Size: 18
+    Link: 0
+    Info: 0
+    AddressAlignment: 8
+    EntrySize: 0
+  }
+  Section {
+    Index: 37
+    Name: .rela.data (607)
+    Type: SHT_RELA (0x4)
+    Flags [ (0x40)
+      SHF_INFO_LINK (0x40)
+    ]
+    Address: 0x0
+    Offset: 0x1008
+    Size: 12
+    Link: 42
+    Info: 36
+    AddressAlignment: 4
+    EntrySize: 12
+  }
+  Section {
+    Index: 38
+    Name: .rodata.cst16 (686)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x12)
+      SHF_ALLOC (0x2)
+      SHF_MERGE (0x10)
+    ]
+    Address: 0x0
+    Offset: 0x80C
+    Size: 32
+    Link: 0
+    Info: 0
+    AddressAlignment: 4
+    EntrySize: 16
+  }
+  Section {
+    Index: 39
+    Name: .bss (91)
+    Type: SHT_NOBITS (0x8)
+    Flags [ (0x3)
+      SHF_ALLOC (0x2)
+      SHF_WRITE (0x1)
+    ]
+    Address: 0x0
+    Offset: 0x82C
+    Size: 92
+    Link: 0
+    Info: 0
+    AddressAlignment: 4
+    EntrySize: 0
+  }
+  Section {
+    Index: 40
+    Name: .rodata.cst4 (732)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x12)
+      SHF_ALLOC (0x2)
+      SHF_MERGE (0x10)
+    ]
+    Address: 0x0
+    Offset: 0x82C
+    Size: 4
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 4
+  }
+  Section {
+    Index: 41
+    Name: .note.GNU-stack (304)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x0)
+    ]
+    Address: 0x0
+    Offset: 0x830
+    Size: 0
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 42
+    Name: .symtab (591)
+    Type: SHT_SYMTAB (0x2)
+    Flags [ (0x0)
+    ]
+    Address: 0x0
+    Offset: 0x830
+    Size: 1024
+    Link: 1
+    Info: 59
+    AddressAlignment: 4
+    EntrySize: 16
+  }
+]
+ProgramHeaders [
+]
+Relocations [
+  Section (4) .rela.text.runtime.lookupPanic {
+    0xC R_P2_AUG20 .rodata 0x42
+    0x14 R_P2_20 .text.runtime.runtimePanic 0x0
+  }
+  Section (6) .rela.text.runtime.runtimePanic {
+    0x14 R_P2_AUG20 .rodata 0x15
+    0x1C R_P2_20 .text.runtime.printstring 0x0
+    0x28 R_P2_20 .text.runtime.printstring 0x0
+    0x2C R_P2_20 .text.runtime.printnl 0x0
+    0x30 R_P2_20 .text.runtime.abort 0x0
+  }
+  Section (8) .rela.text.runtime.printstring {
+    0x28 R_P2_20 .text.runtime.putchar 0x0
+  }
+  Section (10) .rela.text.runtime.printnl {
+    0x8 R_P2_20 .text.runtime.putchar 0x0
+    0x10 R_P2_20 .text.runtime.putchar 0x0
+  }
+  Section (12) .rela.text.runtime.abort {
+    0x0 R_P2_20 p2_halt 0x0
+  }
+  Section (14) .rela.text.runtime.putchar {
+    0x0 R_P2_20 raw_p2_uart_putc 0x0
+  }
+  Section (16) .rela.text.runtime.nilPanic {
+    0xC R_P2_AUG20 .rodata 0x2B
+    0x14 R_P2_20 .text.runtime.runtimePanic 0x0
+  }
+  Section (18) .rela.text.main {
+    0x0 R_P2_20 .text.runtime.run 0x0
+  }
+  Section (20) .rela.text.runtime.run {
+    0x0 R_P2_20 .text.runtime.initAll 0x0
+    0x4 R_P2_20 .text.main.main 0x0
+  }
+  Section (22) .rela.text.runtime.initAll {
+    0xC R_P2_AUG20 .rodata 0x0
+    0x14 R_P2_20 .text.runtime.printstring 0x0
+    0x18 R_P2_20 .text.runtime.printnl 0x0
+    0x24 R_P2_20 raw_p2_uart_putc 0x0
+    0x30 R_P2_20 raw_p2_uart_putc 0x0
+    0x3C R_P2_20 raw_p2_uart_putc 0x0
+    0x44 R_P2_20 raw_p2_uart_putc 0x0
+    0x4C R_P2_20 raw_p2_uart_putc 0x0
+    0x54 R_P2_20 raw_p2_uart_putc 0x0
+    0x5C R_P2_20 raw_p2_uart_putc 0x0
+    0x64 R_P2_20 raw_p2_uart_putc 0x0
+    0x6C R_P2_20 raw_p2_uart_putc 0x0
+    0x74 R_P2_20 raw_p2_uart_putc 0x0
+    0x80 R_P2_20 raw_p2_uart_putc 0x0
+    0x88 R_P2_20 raw_p2_uart_putc 0x0
+    0x90 R_P2_20 raw_p2_uart_putc 0x0
+    0x98 R_P2_20 raw_p2_uart_putc 0x0
+    0xA0 R_P2_20 raw_p2_uart_putc 0x0
+    0xA8 R_P2_20 raw_p2_uart_putc 0x0
+  }
+  Section (24) .rela.text.main.writeText {
+    0x34 R_P2_20 raw_p2_uart_putc 0x0
+    0x50 R_P2_20 .text.runtime.lookupPanic 0x0
+  }
+  Section (26) .rela.text.main.foldWords {
+    0xC R_P2_AUG20 .bss 0x48
+    0x18 R_P2_AUG20 .data 0x8
+    0x2C R_P2_AUG20 .rodata.cst16 0x0
+  }
+  Section (28) .rela.text.main.mixChallenge {
+    0x20 R_P2_AUG20 .rodata.cst16 0x0
+    0x34 R_P2_20 .text.main.foldWords 0x0
+    0x58 R_P2_AUG20 .bss 0x44
+    0xBC R_P2_AUG20 .bss 0x48
+    0xD0 R_P2_AUG20 .data 0x8
+    0xE4 R_P2_AUG20 .bss 0x40
+  }
+  Section (30) .rela.text.main.parseHex8 {
+    0x18 R_P2_AUG20 .bss 0x0
+    0xB4 R_P2_20 .text.runtime.nilPanic 0x0
+  }
+  Section (32) .rela.text.main.writeHex {
+    0x14 R_P2_AUG20 .rodata.cst16 0x10
+    0x34 R_P2_20 raw_p2_uart_putc 0x0
+  }
+  Section (34) .rela.text.main.main {
+    0x28 R_P2_AUG20 .rodata 0x63
+    0x30 R_P2_20 .text.main.writeText 0x0
+    0x3C R_P2_AUG20 .rodata 0x79
+    0x44 R_P2_20 .text.main.writeText 0x0
+    0x50 R_P2_AUG20 .bss 0x0
+    0x88 R_P2_AUG20 .bss 0x4C
+    0x90 R_P2_AUG20 .bss 0x50
+    0x98 R_P2_AUG20 .bss 0x40
+    0xA0 R_P2_AUG20 .bss 0x54
+    0xA8 R_P2_AUG20 .bss 0x44
+    0xB0 R_P2_AUG20 .bss 0x58
+    0xB8 R_P2_AUG20 .rodata.cst4 0x0
+    0xC8 R_P2_AUG20 .rodata 0x54
+    0xD0 R_P2_AUG20 .rodata 0x86
+    0xDC R_P2_20 raw_p2_uart_getc 0x0
+    0x18C R_P2_20 .text.main.parseHex8 0x0
+    0x1A8 R_P2_20 .text.main.parseHex8 0x0
+    0x1C4 R_P2_20 .text.main.parseHex8 0x0
+    0x1E0 R_P2_20 .text.main.parseHex8 0x0
+    0x200 R_P2_20 .text.main.mixChallenge 0x0
+    0x220 R_P2_20 .text.main.writeText 0x0
+    0x228 R_P2_20 .text.main.writeHex 0x0
+    0x230 R_P2_20 raw_p2_uart_putc 0x0
+    0x238 R_P2_20 .text.main.writeHex 0x0
+    0x240 R_P2_20 raw_p2_uart_putc 0x0
+    0x248 R_P2_20 .text.main.writeHex 0x0
+    0x250 R_P2_20 raw_p2_uart_putc 0x0
+    0x258 R_P2_20 .text.main.writeHex 0x0
+    0x264 R_P2_20 .text.main.writeText 0x0
+    0x278 R_P2_20 .text.main.writeText 0x0
+    0x290 R_P2_20 .text.main.writeText 0x0
+  }
+  Section (37) .rela.data {
+    0x0 R_P2_32 .data 0xC
+  }
+]
+Symbols [
+  Symbol {
+    Name:  (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: None (0x0)
+    Other: 0
+    Section: Undefined (0x0)
+  }
+  Symbol {
+    Name: main (245)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: File (0x4)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: .text.runtime.lookupPanic (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.runtime.lookupPanic (0x3)
+  }
+  Symbol {
+    Name: runtime.lookupPanic (503)
+    Value: 0x0
+    Size: 24
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.runtime.lookupPanic (0x3)
+  }
+  Symbol {
+    Name: runtime$string.25 (714)
+    Value: 0x42
+    Size: 18
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: runtime.runtimePanic (562)
+    Value: 0x0
+    Size: 52
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.runtime.runtimePanic (0x5)
+  }
+  Symbol {
+    Name: .text.runtime.runtimePanic (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.runtime.runtimePanic (0x5)
+  }
+  Symbol {
+    Name: runtime$string.23 (763)
+    Value: 0x15
+    Size: 22
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: runtime.printstring (331)
+    Value: 0x0
+    Size: 68
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.runtime.printstring (0x7)
+  }
+  Symbol {
+    Name: runtime.printnl (261)
+    Value: 0x0
+    Size: 28
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.runtime.printnl (0x9)
+  }
+  Symbol {
+    Name: runtime.abort (69)
+    Value: 0x0
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.runtime.abort (0xB)
+  }
+  Symbol {
+    Name: .text.runtime.printstring (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.runtime.printstring (0x7)
+  }
+  Symbol {
+    Name: runtime.putchar (153)
+    Value: 0x0
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.runtime.putchar (0xD)
+  }
+  Symbol {
+    Name: .text.runtime.printnl (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.runtime.printnl (0x9)
+  }
+  Symbol {
+    Name: .text.runtime.abort (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.runtime.abort (0xB)
+  }
+  Symbol {
+    Name: .text.runtime.putchar (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.runtime.putchar (0xD)
+  }
+  Symbol {
+    Name: .text.runtime.nilPanic (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.runtime.nilPanic (0xF)
+  }
+  Symbol {
+    Name: runtime.nilPanic (534)
+    Value: 0x0
+    Size: 24
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.runtime.nilPanic (0xF)
+  }
+  Symbol {
+    Name: runtime$string.24 (745)
+    Value: 0x2B
+    Size: 23
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: runtime.run (180)
+    Value: 0x0
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.runtime.run (0x13)
+  }
+  Symbol {
+    Name: .text.runtime.run (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.runtime.run (0x13)
+  }
+  Symbol {
+    Name: runtime.initAll (288)
+    Value: 0x0
+    Size: 184
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.runtime.initAll (0x15)
+  }
+  Symbol {
+    Name: main.main (240)
+    Value: 0x0
+    Size: 668
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.main.main (0x21)
+  }
+  Symbol {
+    Name: .text.runtime.initAll (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.runtime.initAll (0x15)
+  }
+  Symbol {
+    Name: example.com/p2goapp/bootpkg$string (359)
+    Value: 0x0
+    Size: 21
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: .text.main.writeText (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.main.writeText (0x17)
+  }
+  Symbol {
+    Name: main.writeText (43)
+    Value: 0x0
+    Size: 84
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.main.writeText (0x17)
+  }
+  Symbol {
+    Name: .text.main.foldWords (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.main.foldWords (0x19)
+  }
+  Symbol {
+    Name: main.foldWords (127)
+    Value: 0x0
+    Size: 124
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.main.foldWords (0x19)
+  }
+  Symbol {
+    Name: main.serialState.2 (830)
+    Value: 0x48
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x27)
+  }
+  Symbol {
+    Name: main.challengeSeed (439)
+    Value: 0x8
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .data (0x24)
+  }
+  Symbol {
+    Name: main.challengeWords (96)
+    Value: 0x0
+    Size: 16
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata.cst16 (0x26)
+  }
+  Symbol {
+    Name: .text.main.mixChallenge (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.main.mixChallenge (0x1B)
+  }
+  Symbol {
+    Name: main.mixChallenge (421)
+    Value: 0x0
+    Size: 296
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.main.mixChallenge (0x1B)
+  }
+  Symbol {
+    Name: main.serialState.1 (881)
+    Value: 0x44
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x27)
+  }
+  Symbol {
+    Name: main.serialState.0 (932)
+    Value: 0x40
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x27)
+  }
+  Symbol {
+    Name: .text.main.parseHex8 (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.main.parseHex8 (0x1D)
+  }
+  Symbol {
+    Name: main.parseHex8 (643)
+    Value: 0x0
+    Size: 184
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.main.parseHex8 (0x1D)
+  }
+  Symbol {
+    Name: main.serialLine (394)
+    Value: 0x0
+    Size: 64
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x27)
+  }
+  Symbol {
+    Name: .text.main.writeHex (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.main.writeHex (0x1F)
+  }
+  Symbol {
+    Name: main.writeHex (12)
+    Value: 0x0
+    Size: 76
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.main.writeHex (0x1F)
+  }
+  Symbol {
+    Name: main$string.6 (700)
+    Value: 0x10
+    Size: 16
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata.cst16 (0x26)
+  }
+  Symbol {
+    Name: .text.main.main (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .text.main.main (0x21)
+  }
+  Symbol {
+    Name: main$string.10 (900)
+    Value: 0x63
+    Size: 22
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: main$string.11 (849)
+    Value: 0x79
+    Size: 13
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: main.serialOut.0 (915)
+    Value: 0x4C
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x27)
+  }
+  Symbol {
+    Name: main.serialOut.1 (864)
+    Value: 0x50
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x27)
+  }
+  Symbol {
+    Name: main.serialOut.2 (813)
+    Value: 0x54
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x27)
+  }
+  Symbol {
+    Name: main.serialOut.3 (796)
+    Value: 0x58
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x27)
+  }
+  Symbol {
+    Name: main$string.7 (672)
+    Value: 0x0
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata.cst4 (0x28)
+  }
+  Symbol {
+    Name: main$string.8 (658)
+    Value: 0x54
+    Size: 2
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: main$string.13 (781)
+    Value: 0x86
+    Size: 11
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: .rodata (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: .data (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .data (0x24)
+  }
+  Symbol {
+    Name: .string (351)
+    Value: 0xC
+    Size: 6
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .data (0x24)
+  }
+  Symbol {
+    Name: .rodata.cst16 (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .rodata.cst16 (0x26)
+  }
+  Symbol {
+    Name: .bss (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .bss (0x27)
+  }
+  Symbol {
+    Name: .rodata.cst4 (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: Section (0x3)
+    Other: 0
+    Section: .rodata.cst4 (0x28)
+  }
+  Symbol {
+    Name: main$string.9 (618)
+    Value: 0x56
+    Size: 13
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x23)
+  }
+  Symbol {
+    Name: p2_halt (83)
+    Value: 0x0
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: Undefined (0x0)
+  }
+  Symbol {
+    Name: raw_p2_uart_putc (458)
+    Value: 0x0
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: Undefined (0x0)
+  }
+  Symbol {
+    Name: main (245)
+    Value: 0x0
+    Size: 4
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text.main (0x11)
+  }
+  Symbol {
+    Name: raw_p2_uart_getc (475)
+    Value: 0x0
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: Undefined (0x0)
+  }
+  Symbol {
+    Name: runtime.buildVersion (192)
+    Value: 0x0
+    Size: 8
+    Binding: Global (0x1)
+    Type: Object (0x1)
+    Other: 0
+    Section: .data (0x24)
+  }
+]

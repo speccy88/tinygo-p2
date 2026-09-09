@@ -1,0 +1,45 @@
+{
+  "scope": "static-object-to-ELF-NOT-physical-execution",
+  "status": "PASS",
+  "source_sha256": "2462b1e4d8df6978dad925b3dfce9ed107fcfc4f5b9649baec41460206d2d192",
+  "object_sha256": "a616147e8ac1062e6d4de300a58d63f7a1687bd203f28a94d32f676989df05ed",
+  "go_elf_sha256": "e474d1b9bfbf1b738060c682ad66395de0eec37803b0fc71ac8572caad618401",
+  "c_elf_sha256": "b8ccea0f8768de984a036dfb22e836ac048ab407f8a76433b9ae291f13060de9",
+  "go_bodies": {
+    "p2_add": {
+      "bytes": 20,
+      "sha256": "addc17e019ee0f7ee0ce005e1dd07c09186b02b12ce30357d7f0a1b7aea3a83d",
+      "object_bytes_identical_to_linked_bytes": true
+    },
+    "p2_mix": {
+      "bytes": 44,
+      "sha256": "33749bed9a313d041c56d2146a38bf16da6039371306dc3692be7a4084d714b6",
+      "object_bytes_identical_to_linked_bytes": true
+    }
+  },
+  "go_load_segments": [
+    {
+      "address": 0,
+      "filesz": 105136,
+      "memsz": 105136
+    },
+    {
+      "address": 105136,
+      "filesz": 62372,
+      "memsz": 62372
+    },
+    {
+      "address": 167508,
+      "filesz": 564,
+      "memsz": 340396
+    }
+  ],
+  "ir": {
+    "exports": [
+      "p2_add",
+      "p2_mix"
+    ],
+    "target": "p2",
+    "runtime_calls": 0
+  }
+}

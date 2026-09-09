@@ -1,0 +1,638 @@
+
+File: /work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-gate2e.elf
+Format: elf32-p2
+Arch: p2
+AddressSize: 32bit
+LoadName: <Not found>
+Symbols [
+  Symbol {
+    Name:  (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: None (0x0)
+    Other: 0
+    Section: Undefined (0x0)
+  }
+  Symbol {
+    Name: main (1)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: File (0x4)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: runtime.lookupPanic (6)
+    Value: 0xA00
+    Size: 24
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime$string.25 (26)
+    Value: 0x121E
+    Size: 18
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: runtime.runtimePanic (44)
+    Value: 0xA18
+    Size: 52
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime$string.23 (65)
+    Value: 0x11F1
+    Size: 22
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: runtime.printstring (83)
+    Value: 0xA4C
+    Size: 68
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.printnl (103)
+    Value: 0xA90
+    Size: 28
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.abort (119)
+    Value: 0xAAC
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.putchar (133)
+    Value: 0xAB4
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.nilPanic (149)
+    Value: 0xABC
+    Size: 24
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime$string.24 (166)
+    Value: 0x1207
+    Size: 23
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: runtime.run (184)
+    Value: 0xAD8
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.initAll (196)
+    Value: 0xAE0
+    Size: 184
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main.main (212)
+    Value: 0xE94
+    Size: 668
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: example.com/p2goapp/bootpkg$string (222)
+    Value: 0x11DC
+    Size: 21
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main.writeText (257)
+    Value: 0xB98
+    Size: 84
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main.foldWords (272)
+    Value: 0xBEC
+    Size: 124
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main.serialState.2 (287)
+    Value: 0x12F8
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: main.challengeSeed (306)
+    Value: 0x12A0
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: main.challengeWords (325)
+    Value: 0x1280
+    Size: 16
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main.mixChallenge (345)
+    Value: 0xC68
+    Size: 296
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main.serialState.1 (363)
+    Value: 0x12F4
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: main.serialState.0 (382)
+    Value: 0x12F0
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: main.parseHex8 (401)
+    Value: 0xD90
+    Size: 184
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main.serialLine (416)
+    Value: 0x12B0
+    Size: 64
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: main.writeHex (432)
+    Value: 0xE48
+    Size: 76
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main$string.6 (446)
+    Value: 0x1270
+    Size: 16
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main$string.10 (460)
+    Value: 0x123F
+    Size: 22
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main$string.11 (475)
+    Value: 0x1255
+    Size: 13
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main.serialOut.0 (490)
+    Value: 0x12FC
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: main.serialOut.1 (507)
+    Value: 0x1300
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: main.serialOut.2 (524)
+    Value: 0x1304
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: main.serialOut.3 (541)
+    Value: 0x1308
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: main$string.7 (558)
+    Value: 0x1290
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main$string.8 (572)
+    Value: 0x1230
+    Size: 2
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main$string.13 (586)
+    Value: 0x1262
+    Size: 11
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: .string (601)
+    Value: 0x12A4
+    Size: 6
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: main$string.9 (609)
+    Value: 0x1232
+    Size: 13
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: p2_start.c (623)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: File (0x4)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: p2_lock (634)
+    Value: 0x130C
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: p2_halt (642)
+    Value: 0x11D4
+    Size: 8
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: raw_p2_uart_putc (650)
+    Value: 0x1130
+    Size: 44
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main (667)
+    Value: 0xAD4
+    Size: 4
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: raw_p2_uart_getc (672)
+    Value: 0x115C
+    Size: 48
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.buildVersion (689)
+    Value: 0x1298
+    Size: 8
+    Binding: Global (0x1)
+    Type: Object (0x1)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: p2_lock_acquire (710)
+    Value: 0x118C
+    Size: 44
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: p2_lock_release (726)
+    Value: 0x11B8
+    Size: 28
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: __entry (742)
+    Value: 0x0
+    Size: 8
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: __start0 (750)
+    Value: 0x40
+    Size: 16
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: __start (759)
+    Value: 0x50
+    Size: 188
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: _stack_bottom (767)
+    Value: 0x70000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+  Symbol {
+    Name: _bss_start (781)
+    Value: 0x12B0
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: _bss_end (792)
+    Value: 0x1310
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: _data_start (801)
+    Value: 0x1298
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: HEAP_SIZE (813)
+    Value: 0xC000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: STACK_SIZE (823)
+    Value: 0xC000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: _heap_end (834)
+    Value: 0xD310
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .heap (0x5)
+  }
+  Symbol {
+    Name: _stack_top (844)
+    Value: 0x7C000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+  Symbol {
+    Name: _data_end (855)
+    Value: 0x12AA
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _init_array_start (865)
+    Value: 0x12AE
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _init_array_end (883)
+    Value: 0x12AE
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _fini_array_start (899)
+    Value: 0x12AE
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _fini_array_end (917)
+    Value: 0x12AE
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _globals_start (933)
+    Value: 0x1298
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _globals_end (948)
+    Value: 0x1310
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: _heap_start (961)
+    Value: 0x1310
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .heap (0x5)
+  }
+  Symbol {
+    Name: __heap_start (973)
+    Value: 0x1310
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .heap (0x5)
+  }
+  Symbol {
+    Name: __stack (986)
+    Value: 0x70000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+  Symbol {
+    Name: _end (994)
+    Value: 0x7C000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+]

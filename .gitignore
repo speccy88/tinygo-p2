@@ -1,0 +1,17 @@
+# Packaging outputs and developer-local state
+/.work/
+/.cache/
+/logs/
+/.env
+/.env.*
+/.secrets/
+/src/tinygo/build/
+/src/tinygo/llvm-project/
+/fresh-final.elf
+/src/*/.git/
+**/__pycache__/
+*.pyc
+*.lock
+.DS_Store
+# Historical logs/compact binary fixtures are selected explicitly from the
+# sealed inventory, never through a blanket add of a build directory.

@@ -1,0 +1,12 @@
+trying /dev/ttyUSB0...
+P2 version G found on serial port /dev/ttyUSB0
+Setting load mode to CHIP
+Setting clock_mode to 12427f8
+Loading fast loader for chip...
+Sending header
+Loading .work/phase2/artifacts/gate2f-panic-20260908T131933.458767181Z/p2panic.elf - 3196 bytes
+chksum: 77 OK
+( Entering terminal mode.  Press Ctrl-] or Ctrl-Z to exit. )
+P2 GO BOUNDS ARMED
+P2 GO BOUNDS TRIGGER
+panic: runtime error: index out of range

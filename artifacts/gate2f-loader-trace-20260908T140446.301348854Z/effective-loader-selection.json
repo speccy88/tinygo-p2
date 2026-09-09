@@ -1,0 +1,756 @@
+{
+  "schema": "tinygo-p2-effective-loader-selection-v1",
+  "llvm_target": "p2",
+  "goos": "linux",
+  "goarch": "arm",
+  "build_tags": [
+    "p2",
+    "baremetal",
+    "scheduler.none",
+    "gc.none",
+    "tinygo",
+    "math_big_pure_go",
+    "gc.none",
+    "scheduler.none",
+    "serial.none",
+    "go1.1",
+    "go1.2",
+    "go1.3",
+    "go1.4",
+    "go1.5",
+    "go1.6",
+    "go1.7",
+    "go1.8",
+    "go1.9",
+    "go1.10",
+    "go1.11",
+    "go1.12",
+    "go1.13",
+    "go1.14",
+    "go1.15",
+    "go1.16",
+    "go1.17",
+    "go1.18"
+  ],
+  "loader_policy": "loader parses GoFiles and CgoFiles only; SFiles are recorded as ignored and are not parsed/lowered by loader",
+  "packages": [
+    {
+      "import_path": "example.com/p2goapp",
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp/core.go",
+          "sha256": "5f34ef8aad444b1d585f0ad6d60c6a60b13feaa3fe889503ae49bf06a26fa0ff",
+          "bytes": 2656
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp/main.go",
+          "sha256": "c134df0afb2989e971fcd5d5ed3968db4e564c9efd23ae6ed3fdcf46d0fd929c",
+          "bytes": 2006
+        }
+      ],
+      "ignored_go_assembly": null,
+      "listed_c_files": null
+    },
+    {
+      "import_path": "example.com/p2goapp/bootpkg",
+      "dir": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp/bootpkg",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/p2goapp/bootpkg/bootpkg.go",
+          "sha256": "02bd81305186490b50368d330bfad51a4709311f31cf10a9883e04bde2793fb2",
+          "bytes": 245
+        }
+      ],
+      "ignored_go_assembly": null,
+      "listed_c_files": null
+    },
+    {
+      "import_path": "internal/task",
+      "dir": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/internal/task",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/internal/task/gc_stack_noop.go",
+          "sha256": "732785c9802ff7952ee72b4fefcd68bf7d67431cd71af989e9ad093118df527e",
+          "bytes": 151
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/internal/task/queue.go",
+          "sha256": "c13e91a0f95b718208b3d468731fc8822ff4a72a12695888e8570ca5633d5b4b",
+          "bytes": 2510
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/internal/task/task.go",
+          "sha256": "3faf121664f963347e5604eed52414a111f7668e1a7f2c7789bbeaaa3a2ed4c2",
+          "bytes": 746
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/internal/task/task_none.go",
+          "sha256": "726e668e381aa71b33a2f13e0bdbc588eafd1071b8373546908cf12b9ceef9f2",
+          "bytes": 701
+        }
+      ],
+      "ignored_go_assembly": null,
+      "listed_c_files": null
+    },
+    {
+      "import_path": "math",
+      "dir": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/abs.go",
+          "sha256": "9c6e0e05869a13393de185b2df4571c52810ef3f15cce1542844627f2b09e21d",
+          "bytes": 363
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/acosh.go",
+          "sha256": "9d162ccb3b48f3ffde74c888691c29c1ccfedebdec6cdbf5737d6ff78094fe11",
+          "bytes": 1746
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/asin.go",
+          "sha256": "2137d59b77d3a1801db0484026460f9ad5511f33f2c772e618a2e1eef323ccbb",
+          "bytes": 1109
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/asinh.go",
+          "sha256": "7afd74b3a9e7751a9d7d4eb1b7b209b89c4a8fc4bd623dd8e4d12ea6af4e4f12",
+          "bytes": 1965
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/atan.go",
+          "sha256": "6b60524c065b093d9ad7f4a555175bf6a2e8a3abbbd49f92ab24bd8b643ffdd7",
+          "bytes": 3106
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/atan2.go",
+          "sha256": "aa9029f3bcf26b45220f35d05a8d72552ceacd334e504481e7f32e9eaf0dc017",
+          "bytes": 1557
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/atanh.go",
+          "sha256": "b2cf7673569dd3216674fff669be43d2dcd1c8558633a973c2d413f4e9cce7b9",
+          "bytes": 2039
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/bits.go",
+          "sha256": "7ce9ae4edf25a4fb01a4622a8f45f140559511a265e8d2e27f6f65b62068feed",
+          "bytes": 1911
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/cbrt.go",
+          "sha256": "ea558ab0115bbd4e4176181ed5e5a723e85224dc714df3e740e1ebace3e1195f",
+          "bytes": 2363
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/const.go",
+          "sha256": "31a51c6e2625ca57a2f5928daab5d1a63b969709a29cb272fff797e2a31fc7aa",
+          "bytes": 2391
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/copysign.go",
+          "sha256": "77b97f09e8480ef3dc7f646e43556ca5026b4f6c8cbcfcaf54b52a598d34135a",
+          "bytes": 378
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/dim.go",
+          "sha256": "fd0089cbdf33fc3f8c2f36dcc7244650afb7e59d1c48ce7e67a6b67451cec3b8",
+          "bytes": 1716
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/dim_noasm.go",
+          "sha256": "6443e140ff0507ff4436a2ed9d8bca1608677547fab5b784d430403ab6072963",
+          "bytes": 410
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/erf.go",
+          "sha256": "0f527b769b6ca15aed62e01830afadc9a98e1d0dc76915b0caa42705c16df161",
+          "bytes": 11779
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/erfinv.go",
+          "sha256": "b9718a6bf4976c38efbf0b91485e879840e3a56309a180272aeede9ad10ae529",
+          "bytes": 3442
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/exp.go",
+          "sha256": "0db004d6e2c06aec7dc260f45717b166cffb2b67bc217aec77b6ad6efed488f9",
+          "bytes": 5497
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/exp2_noasm.go",
+          "sha256": "8a037bde7dd6ed536dc2e6a2375dfc47de92ad6890920d1b10b4a951231fa888",
+          "bytes": 284
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/exp_noasm.go",
+          "sha256": "80d98066834cfe358d3c2e7fee40cf5039e098034e3bea8d950a617dbb11abcc",
+          "bytes": 302
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/expm1.go",
+          "sha256": "dfd7becf5b98c48cdcd36613ff774f30e3f87b43dade1406d1fb67184a0095a1",
+          "bytes": 8091
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/floor.go",
+          "sha256": "0117d7d757fea8060b542598d76bb7e91429bf9f54aa15eeab752bd8b960350f",
+          "bytes": 3355
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/floor_noasm.go",
+          "sha256": "a5280d23bf08a273cf0bb1392aebda347346b2c2b216915bf8dbc16a2ee461b8",
+          "bytes": 531
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/fma.go",
+          "sha256": "2b7c1e8edc7c1b1e088f8f2800927a72c2e04dd82df91adeca60cc4491695309",
+          "bytes": 4565
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/frexp.go",
+          "sha256": "15a1301d66d22b51e58e0f4000288104c84fc90b353d0f3fbfac1e5dd5100f0b",
+          "bytes": 926
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/gamma.go",
+          "sha256": "e2451665195afec6e359d9deb301c9b87b9dd292df4470422251281c582967a4",
+          "bytes": 5655
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/hypot.go",
+          "sha256": "d3e52e5423cd1ca52d700edddfbf1cff752c3f8de68fe6df30327d904c648068",
+          "bytes": 845
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/hypot_noasm.go",
+          "sha256": "ea186403dd7a55eb45513049920cc7663ebffe80588d43aa6081b2602005531a",
+          "bytes": 297
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/j0.go",
+          "sha256": "0d86ddd4aa8777df2d789b5ebcaf93cbcbfdab9f460c2e16d389fde49971fbd7",
+          "bytes": 13925
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/j1.go",
+          "sha256": "ee9cdcfa0a894a91a2412ec6268d7e0c3b363c711722d2d06828ae89370e94ae",
+          "bytes": 13617
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/jn.go",
+          "sha256": "4a81ea37c3d26284ecaf4ad37c621424fb2c2106e708fc5b023b5a3c05a40d85",
+          "bytes": 7345
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/ldexp.go",
+          "sha256": "9db6a58772bf77a610ee1380358327f20f94d9e2dc4100d2630ff977f059c938",
+          "bytes": 1072
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/lgamma.go",
+          "sha256": "a70defeeb051f7548a2c3fbf7dc5dd18e5ff0f7d7d24bb27a825116436745da3",
+          "bytes": 11285
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/log.go",
+          "sha256": "0e690db3cccf86be434e3d9abdc9723e794e752290a778f5106ddde1123b3adf",
+          "bytes": 3950
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/log10.go",
+          "sha256": "df187895b9aeb8e91dca46d51702bdad89c7b35072b10d95c70bc2a0d6ad4164",
+          "bytes": 869
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/log1p.go",
+          "sha256": "da357e898b64682e22e7a849c126221e28929cd3aa3a6bd1d47ac4cbaa261371",
+          "bytes": 6492
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/log_stub.go",
+          "sha256": "c945334a77924e23b19533d80e156e0286bbf55fe4e189f33a0866f9440f689b",
+          "bytes": 292
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/logb.go",
+          "sha256": "412736a63552c6cf48acc659277ec0e12cc13e4818c671ed9052662f8a6a1c8c",
+          "bytes": 1014
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/mod.go",
+          "sha256": "77633612c2e5326885ead9db205663517a3b9044e5543ea4d9ced4fc59423bb8",
+          "bytes": 900
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/modf.go",
+          "sha256": "0e07966c12b15e89ceaf7b5a4a6a0ee737dbd49124d92e118c0e667aec3a8c0d",
+          "bytes": 910
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/modf_noasm.go",
+          "sha256": "8f378c67590a1ddb59ede073c6328faf0852ba750f73358ce5c6180b2c6aaaab",
+          "bytes": 326
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/nextafter.go",
+          "sha256": "d7c7c52349b9580a9875765d89a9bdcd23a786b1d83fd4456a5821aad0df9704",
+          "bytes": 1233
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/pow.go",
+          "sha256": "762fb5a3889064814d4844491d5d767fe89598607962d9c836cf6f66551c2e6e",
+          "bytes": 3297
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/pow10.go",
+          "sha256": "0d212830791a92a5811c517bd0d4c449c91b173612eb3934ef5739b27c7317cc",
+          "bytes": 1266
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/remainder.go",
+          "sha256": "0db6f774959a73d9ef97237f06c8f394f63eda9e54b83875f4493fd75b7ef6bc",
+          "bytes": 2089
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/signbit.go",
+          "sha256": "f2a9103555eadab80b9d0ca293de87577fab5f3c4cdf0d817648afff480fa24d",
+          "bytes": 302
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/sin.go",
+          "sha256": "f2a0fb4a159a5a9fe22b3326f012617cd2fb03b7dd137c7a7fef029306b0bd52",
+          "bytes": 6499
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/sincos.go",
+          "sha256": "1aa792a8edfadc2a62fedf40152332a76995d38b7e45818dbf88cb4cb96e3857",
+          "bytes": 1797
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/sinh.go",
+          "sha256": "d97d8cdf67d6f1bc1a8d9be8b7e6f971849bd22ac764f1f431446474121e7c01",
+          "bytes": 1727
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/sqrt.go",
+          "sha256": "1004f1530acbe3d2e081f2607824ba51934cc08fd64f9174839b1004349bdf7a",
+          "bytes": 5017
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/sqrt_asm.go",
+          "sha256": "7d973b2c13192311d10920d419e9787fa8f02285d0115391f114adb37266c1d5",
+          "bytes": 341
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/stubs.go",
+          "sha256": "191ed067c7368ec75c25d1f7298720e14bbe7280230aa4d6ae5f791a77452015",
+          "bytes": 2634
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/tan.go",
+          "sha256": "6f51de1c66475204887c434180d53d50fc10d6ea8efbff2b2ae7f92b67efb176",
+          "bytes": 3761
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/tanh.go",
+          "sha256": "4322e021e9602155762fa78502095c1890103310a21cc9605a55d138e3bd0e26",
+          "bytes": 2718
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/trig_reduce.go",
+          "sha256": "8f4e1b2269d48b23f36bda79044aa7b694f035a75890ddc0e909c897ac3c5f81",
+          "bytes": 3413
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/unsafe.go",
+          "sha256": "2f5efa6bba4c9b01402a159a2687607820c80b101c12b056a0a96c446946d8d1",
+          "bytes": 1298
+        }
+      ],
+      "ignored_go_assembly": [
+        {
+          "kind": "SFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/sqrt_arm.s",
+          "sha256": "dc0c3521b90deaf8570a55f0cc01009da949aec2db3f4195e1f89959dce84baf",
+          "bytes": 529
+        }
+      ],
+      "listed_c_files": null
+    },
+    {
+      "import_path": "math/bits",
+      "dir": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/bits",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/bits/bits.go",
+          "sha256": "121d188fd775bf690d0237fa362cea0f8a3e4de67830b80632934571d7891c01",
+          "bytes": 17909
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/bits/bits_errors.go",
+          "sha256": "5da8ee8b63c2324d0eed2a30f61d3ebc9481d4831a569be823f9ac989fd83ca7",
+          "bytes": 398
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/math/bits/bits_tables.go",
+          "sha256": "c4cb4a05dab6d395d9d51720893a42f0a9d1cdf8a0c2383d87268e49acb73f7f",
+          "bytes": 4791
+        }
+      ],
+      "ignored_go_assembly": null,
+      "listed_c_files": null
+    },
+    {
+      "import_path": "reflect",
+      "dir": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/reflect",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/reflect/deepequal.go",
+          "sha256": "da246ac8896090d769fe807213b4a3ae6a26828f86d02e8f9322da66a1ab460a",
+          "bytes": 6337
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/reflect/makefunc.go",
+          "sha256": "3b11b55a92797748b54c7ed85ca2db844110a7a7f6b1ca97bcec1d96483bc0d2",
+          "bytes": 136
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/reflect/sidetables.go",
+          "sha256": "1936ba7abcaf47a8e97866f7e6e98d88f8e84c22c185d9c49a687f5c92a49fc0",
+          "bytes": 1871
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/reflect/strconv.go",
+          "sha256": "2acfa0d965d7b463f0175a1758d167c2df5cee04a5c8cdf853c2d923891b5c44",
+          "bytes": 5339
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/reflect/swapper.go",
+          "sha256": "88c55bd45fdd6b65406cbec367f766f95e56e02d7fe0b696e429c92bc3a0d467",
+          "bytes": 1089
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/reflect/type.go",
+          "sha256": "f2ae99503786bb42a8e9bea8a169dc3799801b48cdeeecc592b70358ffe266c8",
+          "bytes": 24270
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/reflect/value.go",
+          "sha256": "a2357570fd5353d6ebe4b971afeb03793265a0932006565084c4a934a75d2bfc",
+          "bytes": 23270
+        }
+      ],
+      "ignored_go_assembly": null,
+      "listed_c_files": null
+    },
+    {
+      "import_path": "runtime",
+      "dir": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/algorithm.go",
+          "sha256": "478e8d5b07da341d3b6384cb5f1b45b3d277f17b380d41a2b97c1da997cf705e",
+          "bytes": 1522
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/chan.go",
+          "sha256": "c745c0fda1ae872c9e7ded558015f5f3f42671c0211b38886ca0f0abc20e6ba4",
+          "bytes": 17718
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/complex.go",
+          "sha256": "5b1e59a5b7554d628728d31c7165a72d281c3e4369be54c9989d0eea147ec397",
+          "bytes": 1751
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/cond_nosched.go",
+          "sha256": "9cb24db807c211c337274ed2a9d55efb88d317aead66b0ac26b654dd18276d4d",
+          "bytes": 893
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/debug.go",
+          "sha256": "f5e918e9bc8ad3a1d35338547c10e3fe80632bfeaf98f50228f38f0c91ea321d",
+          "bytes": 499
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/defer.go",
+          "sha256": "82828260e6ec55bd3e62e97c037ae9f81f2412c18e3402fbe5c9517db60a90dc",
+          "bytes": 180
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/env_linux.go",
+          "sha256": "4dd1f9e83c3b443edf4002f44b1c52a9a5db9c7a8714a5a051e93d43b31a7783",
+          "bytes": 1060
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/error.go",
+          "sha256": "379371191f3ee2397214102230101195c2f62e894f2163e905058445e865a9fa",
+          "bytes": 118
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/extern.go",
+          "sha256": "e6fe554281a99969c00f4ade3453d746808a94b879b750f9d07217e2a9448daa",
+          "bytes": 443
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/float.go",
+          "sha256": "cd7712e8d9b6f513567eb30319c89ab57868156c299b866ac23b8d0ac1cc77cd",
+          "bytes": 1382
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/func.go",
+          "sha256": "e558cab80fa29b24aed0dead7c293959f80aa762bdb971dad1843cfac47f2499",
+          "bytes": 1031
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/gc_none.go",
+          "sha256": "4bb72291ad3769ae9de223b7bd88bf8db1114ee41ed1353b7e602402cccb14f9",
+          "bytes": 850
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/hashmap.go",
+          "sha256": "8e08a3305bd6527dbdc7aecad5fe9130cfd15b3bdb5bae68236ef9ed52701791",
+          "bytes": 18122
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/interface.go",
+          "sha256": "594364f2bdaa02441390b647964f8279099a0dac0c284c8fcf10da6a4d6ec498",
+          "bytes": 4313
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/nonhosted.go",
+          "sha256": "4f9daf7f1519c4ae528333fad2102dcc94e6a8af5f2a3f889db806063b27ad2a",
+          "bytes": 1290
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/os_linux.go",
+          "sha256": "8af8ad3328f3773396ff2d0b2a929912b08c388ac3aaef9c8b577e5471ea5dcf",
+          "bytes": 425
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/panic.go",
+          "sha256": "ac9fb087355bde6a640d1eb51e549a1b92ea272ca845c419b1e6d6518f15e05e",
+          "bytes": 1906
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/poll.go",
+          "sha256": "a59dd2db545b2b132907e8328a904460cd09c96584bdf78ae73f1bb6bb3a95fb",
+          "bytes": 698
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/print.go",
+          "sha256": "86a2827ca2c06935b4f8fb1b621908d0df10a8f788a5ac8b273c8486ef985d4b",
+          "bytes": 6078
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/runtime.go",
+          "sha256": "b4f31751431b78f5f844b8d3c6ac62e32b90506884f45e11de1c36ff6b9eb7eb",
+          "bytes": 2418
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/runtime_p2.go",
+          "sha256": "cb491df8c6c274a7b73a53ab8bcd61d3a75917cc13cbefc1e2cd730180f2e989",
+          "bytes": 1579
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/scheduler.go",
+          "sha256": "05931531e253b0fe991a1436ce2237df8f5c351d08d8e00adebde7be12f8a305",
+          "bytes": 4984
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/scheduler_none.go",
+          "sha256": "51cf88d6aeb04e2781b24b4901b20222dd8cb8c1ca6c37c89cb95a39a8ff95b9",
+          "bytes": 635
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/slice.go",
+          "sha256": "a29eae60a3a4eb24cbb601815101c94f20956a71c99d2e97e2b43fa023248e76",
+          "bytes": 1582
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/stack.go",
+          "sha256": "912277cab026a4dfd8df9a21533c3057fb30f2785bfe749d759e5c8f273fc9bb",
+          "bytes": 360
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/string.go",
+          "sha256": "c7a40f98fb31a9f77454e1f2bfdc4e6514a0497f41eb22667547d1aca348d2e2",
+          "bytes": 7424
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/symtab.go",
+          "sha256": "6573da66244a5339d81ee8f1f6a4863f0675451f0d0e32131230b11970d5c4f3",
+          "bytes": 263
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/sync.go",
+          "sha256": "f0116fcb36b939330279fd03623143351e1f3da0b20d804f3e6cf3a69ebe6c21",
+          "bytes": 319
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/wait_other.go",
+          "sha256": "5997a3638ec6d59359a41dee7244f300bfd59d5a7630785bd3f81cd314618a7c",
+          "bytes": 158
+        }
+      ],
+      "ignored_go_assembly": [
+        {
+          "kind": "SFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/runtime_nintendoswitch.s",
+          "sha256": "22d3046b14f4b0dc451dbdf5f3b0e501d51f0b4c8ac309a508e25451e775ac66",
+          "bytes": 609
+        }
+      ],
+      "listed_c_files": null
+    },
+    {
+      "import_path": "runtime/interrupt",
+      "dir": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/interrupt",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/interrupt/interrupt.go",
+          "sha256": "5f591d374fcc88c26ec23b025ae3c075e168975811646a75719dc7092921a122",
+          "bytes": 1547
+        },
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/runtime/interrupt/interrupt_p2.go",
+          "sha256": "bf61a813037d9cc8f4984c7a5f7b709790648abe6b9e09e3a6d611bfeb5ceaeb",
+          "bytes": 839
+        }
+      ],
+      "ignored_go_assembly": null,
+      "listed_c_files": null
+    },
+    {
+      "import_path": "unicode/utf8",
+      "dir": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/unicode/utf8",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/unicode/utf8/utf8.go",
+          "sha256": "dea2582e42e26dd7bb54b97bf7e4541d9a3895439bbaa84975f3c3b47dd702b8",
+          "bytes": 16581
+        }
+      ],
+      "ignored_go_assembly": null,
+      "listed_c_files": null
+    },
+    {
+      "import_path": "unsafe",
+      "dir": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/unsafe",
+      "parsed_go_or_cgo": [
+        {
+          "kind": "GoFiles",
+          "path": "/home/propeller/.cache/tinygo/goroot-d8500c11a4b3938fdb95777bdc3cc0f04b87ebf8c7479e07272cf36a1ba31d55/src/unsafe/unsafe.go",
+          "sha256": "41b3c716a643189163fb9749ea55f6eae5633b53df822c84747c15de99c1c297",
+          "bytes": 10474
+        }
+      ],
+      "ignored_go_assembly": null,
+      "listed_c_files": null
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+trying /dev/ttyUSB0...
+P2 version G found on serial port /dev/ttyUSB0
+Setting load mode to CHIP
+Setting clock_mode to 12427f8
+Loading fast loader for chip...
+Sending header
+Loading /work/propeller2/tinygo-p2-handoff/.work/phase2/out/gate2a-scalar-regression/firmware/go.elf - 168072 bytes
+chksum: 48 OK
+( Entering terminal mode.  Press Ctrl-] or Ctrl-Z to exit. )
+READY G 1
+R G 4bc90172 00000000 00000000
+R G 8e55a50f 00000003 0000005f
+R G 5dfca3ea 00000000 ffffffdd
+R G ffde0b51 fffffffe 00000000
+R G 31bc263f 80000000 7fffffcd
+R G dd297380 00000000 00000000
+R G d569e2ff ffffffff 00000000
+R G bff14a6f 99999999 34f1be89
+R G 975d124e ffffffff 55555554
+R G 1754ff58 0000000a 00000084
+R G c57ac6f7 dd6075e2 db1983f0
+R G 86d812e4 476175f2 79518812
+R G f2a102cc db92ac8c c9bc2346
+R G 24317549 e0703703 c5a2bf70
+R G 0506a41a bc1e69e0 ce6281c2
+R G 03fca977 3047ff1c 89d562fd
+R G 0e4e5bee 39200f52 0d38dacc
+R G c66aa1ea f1fb8c56 6c3cf330

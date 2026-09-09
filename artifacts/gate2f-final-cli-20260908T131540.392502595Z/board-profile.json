@@ -1,0 +1,12 @@
+{
+  "name": "P2-EC32MB Rev B, external 20 MHz TCXO",
+  "xtal_hz": 20000000,
+  "xosc": 1,
+  "target_mhz": 160,
+  "serial_baud": 115200,
+  "loader_baud": 115200,
+  "serial_port_hint": "/dev/cu.usbserial-P97cvdxp",
+  "source": "Previously identified user hardware; serial name is historical, not a current detection.",
+  "validation": "UNTESTED here. Verify physical board, external clock, TX/RX and reset wiring before --allow-ram-reset.",
+  "scope": "Internal HUB RAM only; no PSRAM, SD card, SPI flash, or non-console GPIO."
+}

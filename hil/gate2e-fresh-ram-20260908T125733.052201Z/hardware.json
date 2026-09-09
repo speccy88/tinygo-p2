@@ -1,0 +1,12 @@
+{
+  "elf_sha256": "132b9cf87bc521cf433e8b33e58d24544d0dde3dcf6e13592058b3b1a14416a8",
+  "error": "ProtocolError: boot marker mismatch: b'trying /dev/ttyUSB0...' != b'P2 PHASE2 IMPORT INIT'",
+  "loader_sha256": "39640fe81ca18eb05b5675ed29cfd377af89b96b22058b08f0195918e7d64af0",
+  "malformed_passed": 0,
+  "mode": "gate2e-fresh-RAM-only",
+  "passed": 0,
+  "profile_sha256": "b016c973645856bbf49caaf69e8aed4f6e662791ffbc953b618578fe02b7804c",
+  "scope": "physical-P2-via-USB-serial",
+  "status": "FAIL",
+  "total": 138
+}

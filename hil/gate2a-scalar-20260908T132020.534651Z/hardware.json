@@ -1,0 +1,12 @@
+{
+  "elf_sha256": "e474d1b9bfbf1b738060c682ad66395de0eec37803b0fc71ac8572caad618401",
+  "expected_mode": "G",
+  "loader_sha256": "39640fe81ca18eb05b5675ed29cfd377af89b96b22058b08f0195918e7d64af0",
+  "mode": "go-unchanged-scalar-regression",
+  "passed": 18,
+  "port": "/dev/ttyUSB0",
+  "profile_sha256": "b016c973645856bbf49caaf69e8aed4f6e662791ffbc953b618578fe02b7804c",
+  "scope": "physical-P2-via-USB-serial",
+  "status": "PASS",
+  "total": 18
+}

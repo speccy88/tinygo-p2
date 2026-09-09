@@ -1,0 +1,12 @@
+{
+  "record": {
+    "output": "{\n  \"boot\": [\n    \"P2 PHASE2 IMPORT INIT\",\n    \"P2 PHASE2 INIT\",\n    \"READY P2E 1\"\n  ],\n  \"elf_sha256\": \"132b9cf87bc521cf433e8b33e58d24544d0dde3dcf6e13592058b3b1a14416a8\",\n  \"final_state\": {\n    \"count\": 138,\n    \"fold\": 3593281299,\n    \"seed\": 1780835010,\n    \"sum\": 3462277242\n  },\n  \"malformed_responses\": 4,\n  \"raw_validated\": 138,\n  \"record\": \"/opt/data/propeller2/tinygo-p2-handoff/.work/phase2/hil/gate2e-fresh-ram-20260908T125801.065772Z\",\n  \"scope\": \"offline corroboration of existing physical Gate2E evidence\",\n  \"status\": \"PASS\",\n  \"unique_ids\": 138\n}",
+    "exit_code": 0,
+    "error": null
+  },
+  "tests": {
+    "output": "test_corrupt_raw (__main__.Gate2EReplayTests.test_corrupt_raw) ... ok\ntest_duplicate_boot (__main__.Gate2EReplayTests.test_duplicate_boot) ... ok\ntest_duplicate_id (__main__.Gate2EReplayTests.test_duplicate_id) ... ok\ntest_real_record (__main__.Gate2EReplayTests.test_real_record) ... ok\ntest_wrong_image (__main__.Gate2EReplayTests.test_wrong_image) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.092s\n\nOK",
+    "exit_code": 0,
+    "error": null
+  }
+}

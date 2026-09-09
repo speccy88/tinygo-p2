@@ -1,0 +1,238 @@
+
+/work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-phase2.elf:	file format elf32-p2
+
+Disassembly of section .text:
+
+00000000 <__entry>:
+       0: f8 a1 03 fb  			 rdlong r0, ptra	
+       4: 10 00 80 fd  			 jmp #\16
+		...
+
+00000040 <__start0>:
+      40: f8 a1 03 fb  			 rdlong r0, ptra	
+      44: 00 00 00 ff  			 augs #0
+      48: 50 a0 07 f6  			 mov r0, #80	
+      4c: d0 01 e8 fc  			 coginit #0, r0	
+
+00000050 <__start>:
+      50: f8 a1 03 fb  			 rdlong r0, ptra	
+      54: 29 fe 67 fd  			 setq2 #511
+      58: 01 00 00 ff  			 augs #1
+      5c: 00 00 04 fb  			 rdlong $0x000, #0	
+      60: 80 03 00 ff  			 augs #896
+      64: 00 a0 07 f6  			 mov r0, #0	
+      68: d0 f1 03 f6  			 mov ptra, r0	
+      6c: 06 00 00 ff  			 augs #6
+      70: d0 a0 07 f6  			 mov r0, #208	
+      74: 06 00 00 ff  			 augs #6
+      78: d4 a2 07 f6  			 mov r1, #212	
+      7c: d1 a1 5b f2  			 cmps r0, r1	wcz
+      80: 0c 00 90 ad  		if_z	 jmp #12
+      84: d0 01 48 fc  			 wrbyte #0, r0
+      88: 01 a0 07 f1  			 add r0, #1	
+      8c: ec ff 9f fd  			 jmp #-20
+      90: 03 80 00 ff  			 augs #32771
+      94: f4 a1 07 f6  			 mov r0, #500	
+      98: 03 80 00 ff  			 augs #32771
+      9c: f7 a3 07 f6  			 mov r1, #503	
+      a0: 00 e0 65 fd  			 hubset #240
+      a4: 86 01 80 ff  			 augd #390
+      a8: 1f 80 66 fd  			 waitx #320	
+      ac: 00 a0 63 fd  			 hubset r0
+      b0: 86 01 80 ff  			 augd #390
+      b4: 1f 80 66 fd  			 waitx #320	
+      b8: 00 a2 63 fd  			 hubset r1
+      bc: 3e a0 07 f6  			 mov r0, #62	
+      c0: 7c a2 07 f6  			 mov r1, #124	
+      c4: 00 b6 02 ff  			 augs #177664
+      c8: 07 a4 07 f6  			 mov r2, #7	
+      cc: 40 a0 63 fd  			 dirl r0	
+      d0: d0 a3 03 fc  			 wrpin r1, r0
+      d4: d0 a5 13 fc  			 wxpin r2, r0
+      d8: 41 a0 63 fd  			 dirh r0	
+      dc: 04 a0 63 fd  			 locknew r0	
+      e0: 06 00 00 ff  			 augs #6
+      e4: d0 a2 07 f6  			 mov r1, #208	
+      e8: d1 a1 63 fc  			 wrlong r0, r1
+      ec: a4 0a c0 fd  			 calla #\main
+      f0: 1f 02 64 fd  			 waitx #1	
+      f4: f8 ff 9f fd  			 jmp #-8
+		...
+
+00000a00 <runtime.runtimePanic>:
+     a00: 28 02 64 fd  			 setq #1
+     a04: 61 a1 67 fc  			 wrlong r0, ptra++
+     a08: 06 00 00 ff  			 augs #6
+     a0c: 65 a0 07 f6  			 mov r0, #101	
+     a10: 16 a2 07 f6  			 mov r1, #22	
+     a14: 30 0a c0 fd  			 calla #\runtime.printstring
+     a18: 06 00 00 ff  			 augs #6
+     a1c: 7b a0 07 f6  			 mov r0, #123	
+     a20: 17 a2 07 f6  			 mov r1, #23	
+     a24: 30 0a c0 fd  			 calla #\runtime.printstring
+     a28: 74 0a c0 fd  			 calla #\runtime.printnl
+     a2c: 90 0a c0 fd  			 calla #\runtime.abort
+
+00000a30 <runtime.printstring>:
+     a30: 61 a1 67 fc  			 wrlong r0, ptra++
+     a34: 28 02 64 fd  			 setq #1
+     a38: 61 a5 67 fc  			 wrlong r2, ptra++
+     a3c: d0 a5 03 f6  			 mov r2, r0	
+     a40: 00 a6 07 f6  			 mov r3, #0	
+     a44: d1 a7 5b f2  			 cmps r3, r1	wcz
+     a48: 18 00 90 3d  		if_nc	 jmp #24
+     a4c: d2 a1 03 f6  			 mov r0, r2	
+     a50: d3 a1 03 f1  			 add r0, r3	
+     a54: d0 a1 c3 fa  			 rdbyte r0, r0	
+     a58: 98 0a c0 fd  			 calla #\runtime.putchar
+     a5c: 01 a6 07 f1  			 add r3, #1	
+     a60: e0 ff 9f fd  			 jmp #-32
+     a64: 28 02 64 fd  			 setq #1
+     a68: 5f a5 07 fb  			 rdlong r2, --ptra	
+     a6c: 5f a1 07 fb  			 rdlong r0, --ptra	
+     a70: 2e 00 64 fd  			 reta	
+
+00000a74 <runtime.printnl>:
+     a74: 61 a1 67 fc  			 wrlong r0, ptra++
+     a78: 0d a0 07 f6  			 mov r0, #13	
+     a7c: 98 0a c0 fd  			 calla #\runtime.putchar
+     a80: 0a a0 07 f6  			 mov r0, #10	
+     a84: 98 0a c0 fd  			 calla #\runtime.putchar
+     a88: 5f a1 07 fb  			 rdlong r0, --ptra	
+     a8c: 2e 00 64 fd  			 reta	
+
+00000a90 <runtime.abort>:
+     a90: 48 0c c0 fd  			 calla #\p2_halt
+     a94: f8 ff 9f fd  			 jmp #-8
+
+00000a98 <runtime.putchar>:
+     a98: d8 0b c0 fd  			 calla #\raw_p2_uart_putc
+     a9c: 2e 00 64 fd  			 reta	
+
+00000aa0 <runtime.nilPanic>:
+     aa0: 00 0a c0 fd  			 calla #\runtime.runtimePanic
+
+00000aa4 <main>:
+     aa4: a8 0a c0 fd  			 calla #\runtime.run
+
+00000aa8 <runtime.run>:
+     aa8: b0 0a c0 fd  			 calla #\runtime.initAll
+     aac: 30 0b c0 fd  			 calla #\main.main
+
+00000ab0 <runtime.initAll>:
+     ab0: 28 02 64 fd  			 setq #1
+     ab4: 61 a1 67 fc  			 wrlong r0, ptra++
+     ab8: 06 00 00 ff  			 augs #6
+     abc: 50 a0 07 f6  			 mov r0, #80	
+     ac0: 15 a2 07 f6  			 mov r1, #21	
+     ac4: 30 0a c0 fd  			 calla #\runtime.printstring
+     ac8: 74 0a c0 fd  			 calla #\runtime.printnl
+     acc: 06 00 00 ff  			 augs #6
+     ad0: 92 a0 07 f6  			 mov r0, #146	
+     ad4: 0e a2 07 f6  			 mov r1, #14	
+     ad8: 30 0a c0 fd  			 calla #\runtime.printstring
+     adc: 74 0a c0 fd  			 calla #\runtime.printnl
+     ae0: 28 02 64 fd  			 setq #1
+     ae4: 5f a1 07 fb  			 rdlong r0, --ptra	
+     ae8: 2e 00 64 fd  			 reta	
+
+00000aec <main.nested>:
+     aec: 28 02 64 fd  			 setq #1
+     af0: 61 a1 67 fc  			 wrlong r0, ptra++
+     af4: 01 a0 9f fb  			 tjnz r0, #1
+     af8: 30 00 90 fd  			 jmp #48
+     afc: d0 a3 03 fb  			 rdlong r1, r0	
+     b00: 40 a2 87 f1  			 sub r1, #64	
+     b04: d0 a3 63 fc  			 wrlong r1, r0
+     b08: 04 a0 07 f1  			 add r0, #4	
+     b0c: d0 a3 03 fb  			 rdlong r1, r0	
+     b10: 01 a2 07 f1  			 add r1, #1	
+     b14: d0 a3 63 fc  			 wrlong r1, r0
+     b18: ff ff 7f ff  			 augs #8388607
+     b1c: c0 df 07 f6  			 mov r31, #448	
+     b20: 28 02 64 fd  			 setq #1
+     b24: 5f a1 07 fb  			 rdlong r0, --ptra	
+     b28: 2e 00 64 fd  			 reta	
+     b2c: a0 0a c0 fd  			 calla #\runtime.nilPanic
+
+00000b30 <main.main>:
+     b30: 28 04 64 fd  			 setq #2
+     b34: 61 a1 67 fc  			 wrlong r0, ptra++
+     b38: 08 f0 07 f1  			 add ptra, #8	
+     b3c: 00 a0 07 f6  			 mov r0, #0	
+     b40: 00 a2 07 f6  			 mov r1, #0	
+     b44: f8 ed 03 f6  			 mov pa, ptra	
+     b48: 08 ec 87 f1  			 sub pa, #8	
+     b4c: 28 02 64 fd  			 setq #1
+     b50: f6 a1 63 fc  			 wrlong r0, pa
+     b54: f8 a1 03 f6  			 mov r0, ptra	
+     b58: 08 a0 87 f1  			 sub r0, #8	
+     b5c: ec 0a c0 fd  			 calla #\main.nested
+     b60: 00 a4 07 f6  			 mov r2, #0	
+     b64: 01 a0 07 f6  			 mov r0, #1	
+     b68: d2 a3 03 f6  			 mov r1, r2	
+     b6c: 0c a2 1f f2  			 cmp r1, #12	wcz
+     b70: 0c 00 90 1d  	if_nc_and_nz	 jmp #12
+     b74: d1 a5 03 f6  			 mov r2, r1	
+     b78: 01 a4 07 f1  			 add r2, #1	
+     b7c: fa a1 9f fb  			 tjnz r0, #506
+     b80: f8 a1 03 f6  			 mov r0, ptra	
+     b84: 08 a0 87 f1  			 sub r0, #8	
+     b88: 0d a2 1f f2  			 cmp r1, #13	wcz
+     b8c: 34 00 90 cd  		if_c	 jmp #52
+     b90: 3e a3 07 fb  			 rdlong r1, ptra[-2]	
+     b94: d1 df 5b f2  			 cmps r31, r1	wcz
+     b98: 28 00 90 5d  		if_nz	 jmp #40
+     b9c: 04 a0 07 f1  			 add r0, #4	
+     ba0: d0 a1 03 fb  			 rdlong r0, r0	
+     ba4: 01 a0 5f f2  			 cmps r0, #1	wcz
+     ba8: 18 00 90 5d  		if_nz	 jmp #24
+     bac: 06 00 00 ff  			 augs #6
+     bb0: ad a0 07 f6  			 mov r0, #173	
+     bb4: 0a a2 07 f6  			 mov r1, #10	
+     bb8: 30 0a c0 fd  			 calla #\runtime.printstring
+     bbc: 74 0a c0 fd  			 calla #\runtime.printnl
+     bc0: fc ff 9f fd  			 jmp #-4
+     bc4: 06 00 00 ff  			 augs #6
+     bc8: b7 a0 07 f6  			 mov r0, #183	
+     bcc: 14 a2 07 f6  			 mov r1, #20	
+     bd0: 30 0a c0 fd  			 calla #\runtime.printstring
+     bd4: e4 ff 9f fd  			 jmp #-28
+
+00000bd8 <raw_p2_uart_putc>:
+     bd8: 28 02 64 fd  			 setq #1
+     bdc: 61 a1 67 fc  			 wrlong r0, ptra++
+     be0: 3e a2 07 f6  			 mov r1, #62	
+     be4: d1 a1 23 fc  			 wypin r0, r1
+     be8: 40 a2 73 fd  			 testp r1	wc
+     bec: 6c a0 63 fd  			 wrc r0
+     bf0: fd a1 97 fb  			 tjz r0, #509
+     bf4: 28 02 64 fd  			 setq #1
+     bf8: 5f a1 07 fb  			 rdlong r0, --ptra	
+     bfc: 2e 00 64 fd  			 reta	
+
+00000c00 <p2_lock_acquire>:
+     c00: 28 02 64 fd  			 setq #1
+     c04: 61 a1 67 fc  			 wrlong r0, ptra++
+     c08: 06 00 00 ff  			 augs #6
+     c0c: d0 a0 07 f6  			 mov r0, #208	
+     c10: d0 a3 03 fb  			 rdlong r1, r0	
+     c14: 06 a2 73 fd  			 locktry r1	wc
+     c18: 6c a2 63 fd  			 wrc r1
+     c1c: fc a3 97 fb  			 tjz r1, #508
+     c20: 28 02 64 fd  			 setq #1
+     c24: 5f a1 07 fb  			 rdlong r0, --ptra	
+     c28: 2e 00 64 fd  			 reta	
+
+00000c2c <p2_lock_release>:
+     c2c: 61 a1 67 fc  			 wrlong r0, ptra++
+     c30: 06 00 00 ff  			 augs #6
+     c34: d0 a0 07 f6  			 mov r0, #208	
+     c38: d0 a1 03 fb  			 rdlong r0, r0	
+     c3c: 07 a0 63 fd  			 lockrel r0	
+     c40: 5f a1 07 fb  			 rdlong r0, --ptra	
+     c44: 2e 00 64 fd  			 reta	
+
+00000c48 <p2_halt>:
+     c48: 1f 02 64 fd  			 waitx #1	
+     c4c: f8 ff 9f fd  			 jmp #-8

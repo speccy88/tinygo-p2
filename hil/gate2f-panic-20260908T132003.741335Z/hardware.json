@@ -1,0 +1,12 @@
+{
+  "armed": true,
+  "elf_sha256": "ed833d8e7621b926d49f9281959f716a5004ef5c89fc40bc19e447ecfac6f793",
+  "forbidden_continuation": false,
+  "go_panic_marker": true,
+  "loader_sha256": "39640fe81ca18eb05b5675ed29cfd377af89b96b22058b08f0195918e7d64af0",
+  "profile_sha256": "b016c973645856bbf49caaf69e8aed4f6e662791ffbc953b618578fe02b7804c",
+  "raw_bytes": 428,
+  "raw_sha256": "41132d7bf0cd7b56cb35cbecf2c7e166294f3c27266f2dbf23e2c3e8e80fa1b6",
+  "status": "PASS",
+  "trigger_marker": true
+}

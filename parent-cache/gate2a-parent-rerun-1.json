@@ -1,0 +1,12 @@
+{
+  "real_patch_regressions": {
+    "output": "test_patch_bytes_must_match_declared_identity (__main__.RealPatchAcceptance.test_patch_bytes_must_match_declared_identity) ... ok\ntest_preimage_drift_outside_hunk_is_rejected_atomically (__main__.RealPatchAcceptance.test_preimage_drift_outside_hunk_is_rejected_atomically) ... ok\ntest_real_three_patches_fresh_and_idempotent (__main__.RealPatchAcceptance.test_real_three_patches_fresh_and_idempotent) ... ok\ntest_wrong_revision_is_rejected_before_any_write (__main__.RealPatchAcceptance.test_wrong_revision_is_rejected_before_any_write) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 1.698s\n\nOK",
+    "exit_code": 0,
+    "error": null
+  },
+  "replay_regressions": {
+    "output": "test_corrupted_raw_arithmetic_is_rejected (__main__.ReplayAcceptance.test_corrupted_raw_arithmetic_is_rejected) ... ok\ntest_forbidden_loader_flag_is_rejected (__main__.ReplayAcceptance.test_forbidden_loader_flag_is_rejected) ... ok\ntest_immutable_real_archive_passes (__main__.ReplayAcceptance.test_immutable_real_archive_passes) ... ok\ntest_missing_image_loader_profile_identities_are_rejected (__main__.ReplayAcceptance.test_missing_image_loader_profile_identities_are_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 1.001s\n\nOK",
+    "exit_code": 0,
+    "error": null
+  }
+}

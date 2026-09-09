@@ -1,0 +1,2 @@
+destination must be absent: /opt/data/go-llvm-cold.yQRu35/go-llvm
+PASS unexpected-existing-destination rejected

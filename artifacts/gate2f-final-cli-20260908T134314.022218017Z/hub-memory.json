@@ -1,0 +1,41 @@
+{
+  "bootstrap_layout": {
+    "cog_reserved_bytes": "0x000-0x200",
+    "hub_text_start": "0xa00",
+    "lut_reserved_bytes": "0x200-0xa00"
+  },
+  "elf": ".work/phase2/artifacts/gate2f-final-cli-20260908T134314.022218017Z/p2goapp-final.elf",
+  "file_backed_load_bytes": 4778,
+  "hub_address_limit": 524288,
+  "interpretation": "PT_LOAD MemSiz includes .bss/.heap/.stack reservations; maximum is the end-exclusive highest address, not ELF file size or .text.",
+  "load_segments": [
+    {
+      "end": 4572,
+      "file_bytes": 4572,
+      "memory_bytes": 4572,
+      "offset": 4096,
+      "paddr": 0,
+      "vaddr": 0
+    },
+    {
+      "end": 4756,
+      "file_bytes": 184,
+      "memory_bytes": 184,
+      "offset": 8668,
+      "paddr": 4572,
+      "vaddr": 4572
+    },
+    {
+      "end": 507904,
+      "file_bytes": 22,
+      "memory_bytes": 503144,
+      "offset": 8856,
+      "paddr": 4760,
+      "vaddr": 4760
+    }
+  ],
+  "maximum_loaded_or_reserved_hub_address": 507904,
+  "remaining_unallocated_hub_bytes": 16384,
+  "schema": "p2-hub-accounting-v1",
+  "status": "PASS"
+}

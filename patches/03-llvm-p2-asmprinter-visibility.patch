@@ -1,0 +1,15 @@
+diff --git a/llvm/lib/Target/P2/P2AsmPrinter.cpp b/llvm/lib/Target/P2/P2AsmPrinter.cpp
+index 0fbcd9f21..4069de10f 100644
+--- a/llvm/lib/Target/P2/P2AsmPrinter.cpp
++++ b/llvm/lib/Target/P2/P2AsmPrinter.cpp
+@@ -143,6 +143,8 @@ void P2AsmPrinter::emitFunctionBodyEnd() {}
+ void P2AsmPrinter::emitStartOfAsmFile(Module &M) {}
+ 
+ // Force static initialization.
+-extern "C" void LLVMInitializeP2AsmPrinter() {
++// Match the other target initializers: clang's dependency scanner calls this
++// through libLLVM, so it must remain visible from the shared LLVM dylib.
++extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitializeP2AsmPrinter() {
+     llvm::RegisterAsmPrinter<llvm::P2AsmPrinter> X(getTheP2Target());
+ }
+\ No newline at end of file

@@ -1,0 +1,882 @@
+tinygo_version
+tinygo version 0.23.0 linux/amd64 (using go version go1.18.10 and LLVM version 14.0.0git)
+go_version
+go version go1.18.10 linux/amd64
+llvm_config
+14.0.0git
+X86 P2
+elf_hash
+36fdf4b4cc9d074e7c3a7db408b047cb9cca22017280b7d5f691ca0a8c207690  /work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-phase2.elf
+elf_size
+9412 /work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-phase2.elf
+sections_and_symbols
+
+File: /work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-phase2.elf
+Format: elf32-p2
+Arch: p2
+AddressSize: 32bit
+LoadName: <Not found>
+ElfHeader {
+  Ident {
+    Magic: (7F 45 4C 46)
+    Class: 32-bit (0x1)
+    DataEncoding: LittleEndian (0x1)
+    FileVersion: 1
+    OS/ABI: SystemV (0x0)
+    ABIVersion: 0
+    Unused: (00 00 00 00 00 00 00)
+  }
+  Type: Executable (0x2)
+  Machine: 0x12C
+  Version: 1
+  Entry: 0x0
+  ProgramHeaderOffset: 0x34
+  SectionHeaderOffset: 0x230C
+  Flags [ (0x0)
+  ]
+  HeaderSize: 52
+  ProgramHeaderEntrySize: 32
+  ProgramHeaderCount: 4
+  SectionHeaderEntrySize: 40
+  SectionHeaderCount: 11
+  StringTableSectionIndex: 9
+}
+Sections [
+  Section {
+    Index: 0
+    Name:  (0)
+    Type: SHT_NULL (0x0)
+    Flags [ (0x0)
+    ]
+    Address: 0x0
+    Offset: 0x0
+    Size: 0
+    Link: 0
+    Info: 0
+    AddressAlignment: 0
+    EntrySize: 0
+  }
+  Section {
+    Index: 1
+    Name: .text (1)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x6)
+      SHF_ALLOC (0x2)
+      SHF_EXECINSTR (0x4)
+    ]
+    Address: 0x0
+    Offset: 0x1000
+    Size: 3152
+    Link: 0
+    Info: 0
+    AddressAlignment: 4
+    EntrySize: 0
+  }
+  Section {
+    Index: 2
+    Name: .rodata (7)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x2)
+      SHF_ALLOC (0x2)
+    ]
+    Address: 0xC50
+    Offset: 0x1C50
+    Size: 123
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 3
+    Name: .data (15)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x2)
+      SHF_ALLOC (0x2)
+    ]
+    Address: 0xCCB
+    Offset: 0x1CCB
+    Size: 4
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 4
+    Name: .bss (21)
+    Type: SHT_NOBITS (0x8)
+    Flags [ (0x3)
+      SHF_ALLOC (0x2)
+      SHF_WRITE (0x1)
+    ]
+    Address: 0xCD0
+    Offset: 0x1CD0
+    Size: 4
+    Link: 0
+    Info: 0
+    AddressAlignment: 4
+    EntrySize: 0
+  }
+  Section {
+    Index: 5
+    Name: .heap (26)
+    Type: SHT_NOBITS (0x8)
+    Flags [ (0x3)
+      SHF_ALLOC (0x2)
+      SHF_WRITE (0x1)
+    ]
+    Address: 0xCD4
+    Offset: 0x1CD0
+    Size: 49152
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 6
+    Name: .stack (32)
+    Type: SHT_NOBITS (0x8)
+    Flags [ (0x3)
+      SHF_ALLOC (0x2)
+      SHF_WRITE (0x1)
+    ]
+    Address: 0x70000
+    Offset: 0x1CD0
+    Size: 49152
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 7
+    Name: .comment (39)
+    Type: SHT_PROGBITS (0x1)
+    Flags [ (0x30)
+      SHF_MERGE (0x10)
+      SHF_STRINGS (0x20)
+    ]
+    Address: 0x0
+    Offset: 0x1CD0
+    Size: 125
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 1
+  }
+  Section {
+    Index: 8
+    Name: .symtab (48)
+    Type: SHT_SYMTAB (0x2)
+    Flags [ (0x0)
+    ]
+    Address: 0x0
+    Offset: 0x1D50
+    Size: 768
+    Link: 10
+    Info: 21
+    AddressAlignment: 4
+    EntrySize: 16
+  }
+  Section {
+    Index: 9
+    Name: .shstrtab (56)
+    Type: SHT_STRTAB (0x3)
+    Flags [ (0x0)
+    ]
+    Address: 0x0
+    Offset: 0x2050
+    Size: 74
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+  Section {
+    Index: 10
+    Name: .strtab (66)
+    Type: SHT_STRTAB (0x3)
+    Flags [ (0x0)
+    ]
+    Address: 0x0
+    Offset: 0x209A
+    Size: 625
+    Link: 0
+    Info: 0
+    AddressAlignment: 1
+    EntrySize: 0
+  }
+]
+Symbols [
+  Symbol {
+    Name:  (0)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: None (0x0)
+    Other: 0
+    Section: Undefined (0x0)
+  }
+  Symbol {
+    Name: main (1)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: File (0x4)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: runtime.runtimePanic (6)
+    Value: 0xA00
+    Size: 48
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime$string.23 (27)
+    Value: 0xC65
+    Size: 22
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: runtime.printstring (45)
+    Value: 0xA30
+    Size: 68
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime$string.24 (65)
+    Value: 0xC7B
+    Size: 23
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: runtime.printnl (83)
+    Value: 0xA74
+    Size: 28
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.abort (99)
+    Value: 0xA90
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.putchar (113)
+    Value: 0xA98
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.nilPanic (129)
+    Value: 0xAA0
+    Size: 4
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.run (146)
+    Value: 0xAA8
+    Size: 8
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: runtime.initAll (158)
+    Value: 0xAB0
+    Size: 60
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main.main (174)
+    Value: 0xB30
+    Size: 168
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: example.com/p2goapp/bootpkg$string (184)
+    Value: 0xC50
+    Size: 21
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main$string.3 (219)
+    Value: 0xC92
+    Size: 14
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main.nested (233)
+    Value: 0xAEC
+    Size: 68
+    Binding: Local (0x0)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main$string.7 (245)
+    Value: 0xCAD
+    Size: 10
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main$string.8 (259)
+    Value: 0xCB7
+    Size: 20
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: main$string.6 (273)
+    Value: 0xCA0
+    Size: 13
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .rodata (0x2)
+  }
+  Symbol {
+    Name: p2_start.c (287)
+    Value: 0x0
+    Size: 0
+    Binding: Local (0x0)
+    Type: File (0x4)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: p2_lock (298)
+    Value: 0xCD0
+    Size: 4
+    Binding: Local (0x0)
+    Type: Object (0x1)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: p2_halt (306)
+    Value: 0xC48
+    Size: 8
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: raw_p2_uart_putc (314)
+    Value: 0xBD8
+    Size: 40
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: main (331)
+    Value: 0xAA4
+    Size: 4
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: p2_lock_acquire (336)
+    Value: 0xC00
+    Size: 44
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: p2_lock_release (352)
+    Value: 0xC2C
+    Size: 28
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: __entry (368)
+    Value: 0x0
+    Size: 8
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: __start0 (376)
+    Value: 0x40
+    Size: 16
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: __start (385)
+    Value: 0x50
+    Size: 160
+    Binding: Global (0x1)
+    Type: Function (0x2)
+    Other: 0
+    Section: .text (0x1)
+  }
+  Symbol {
+    Name: _stack_bottom (393)
+    Value: 0x70000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+  Symbol {
+    Name: _bss_start (407)
+    Value: 0xCD0
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: _bss_end (418)
+    Value: 0xCD4
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: _data_start (427)
+    Value: 0xCCB
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: HEAP_SIZE (439)
+    Value: 0xC000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: STACK_SIZE (449)
+    Value: 0xC000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: Absolute (0xFFF1)
+  }
+  Symbol {
+    Name: _heap_end (460)
+    Value: 0xCCD4
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .heap (0x5)
+  }
+  Symbol {
+    Name: _stack_top (470)
+    Value: 0x7C000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+  Symbol {
+    Name: _data_end (481)
+    Value: 0xCCB
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _init_array_start (491)
+    Value: 0xCCF
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _init_array_end (509)
+    Value: 0xCCF
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _fini_array_start (525)
+    Value: 0xCCF
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _fini_array_end (543)
+    Value: 0xCCF
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _globals_start (559)
+    Value: 0xCCB
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .data (0x3)
+  }
+  Symbol {
+    Name: _globals_end (574)
+    Value: 0xCD4
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .bss (0x4)
+  }
+  Symbol {
+    Name: _heap_start (587)
+    Value: 0xCD4
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .heap (0x5)
+  }
+  Symbol {
+    Name: __heap_start (599)
+    Value: 0xCD4
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .heap (0x5)
+  }
+  Symbol {
+    Name: __stack (612)
+    Value: 0x70000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+  Symbol {
+    Name: _end (620)
+    Value: 0x7C000
+    Size: 0
+    Binding: Global (0x1)
+    Type: None (0x0)
+    Other: 0
+    Section: .stack (0x6)
+  }
+]
+disassembly
+
+/work/propeller2/tinygo-p2-handoff/.work/phase2/out/p2goapp-phase2.elf:	file format elf32-p2
+
+Disassembly of section .text:
+
+00000000 <__entry>:
+       0: f8 a1 03 fb  			 rdlong r0, ptra	
+       4: 10 00 80 fd  			 jmp #\16
+		...
+
+00000040 <__start0>:
+      40: f8 a1 03 fb  			 rdlong r0, ptra	
+      44: 00 00 00 ff  			 augs #0
+      48: 50 a0 07 f6  			 mov r0, #80	
+      4c: d0 01 e8 fc  			 coginit #0, r0	
+
+00000050 <__start>:
+      50: f8 a1 03 fb  			 rdlong r0, ptra	
+      54: 29 fe 67 fd  			 setq2 #511
+      58: 01 00 00 ff  			 augs #1
+      5c: 00 00 04 fb  			 rdlong $0x000, #0	
+      60: 80 03 00 ff  			 augs #896
+      64: 00 a0 07 f6  			 mov r0, #0	
+      68: d0 f1 03 f6  			 mov ptra, r0	
+      6c: 06 00 00 ff  			 augs #6
+      70: d0 a0 07 f6  			 mov r0, #208	
+      74: 06 00 00 ff  			 augs #6
+      78: d4 a2 07 f6  			 mov r1, #212	
+      7c: d1 a1 5b f2  			 cmps r0, r1	wcz
+      80: 0c 00 90 ad  		if_z	 jmp #12
+      84: d0 01 48 fc  			 wrbyte #0, r0
+      88: 01 a0 07 f1  			 add r0, #1	
+      8c: ec ff 9f fd  			 jmp #-20
+      90: 00 e0 65 fd  			 hubset #240
+      94: 86 01 80 ff  			 augd #390
+      98: 1f 80 66 fd  			 waitx #320	
+      9c: 03 80 80 ff  			 augd #32771
+      a0: 00 e8 67 fd  			 hubset #500
+      a4: 86 01 80 ff  			 augd #390
+      a8: 1f 80 66 fd  			 waitx #320	
+      ac: 03 80 80 ff  			 augd #32771
+      b0: 00 ee 67 fd  			 hubset #503
+      b4: 3e a0 07 f6  			 mov r0, #62	
+      b8: 7c a2 07 f6  			 mov r1, #124	
+      bc: 00 b6 02 ff  			 augs #177664
+      c0: 07 a4 07 f6  			 mov r2, #7	
+      c4: 40 a0 63 fd  			 dirl r0	
+      c8: d0 a3 03 fc  			 wrpin r1, r0
+      cc: d0 a5 13 fc  			 wxpin r2, r0
+      d0: 41 a0 63 fd  			 dirh r0	
+      d4: 04 a0 63 fd  			 locknew r0	
+      d8: 06 00 00 ff  			 augs #6
+      dc: d0 a2 07 f6  			 mov r1, #208	
+      e0: d1 a1 63 fc  			 wrlong r0, r1
+      e4: a4 0a c0 fd  			 calla #\main
+      e8: 1f 02 64 fd  			 waitx #1	
+      ec: f8 ff 9f fd  			 jmp #-8
+		...
+
+00000a00 <runtime.runtimePanic>:
+     a00: 28 02 64 fd  			 setq #1
+     a04: 61 a1 67 fc  			 wrlong r0, ptra++
+     a08: 06 00 00 ff  			 augs #6
+     a0c: 65 a0 07 f6  			 mov r0, #101	
+     a10: 16 a2 07 f6  			 mov r1, #22	
+     a14: 30 0a c0 fd  			 calla #\runtime.printstring
+     a18: 06 00 00 ff  			 augs #6
+     a1c: 7b a0 07 f6  			 mov r0, #123	
+     a20: 17 a2 07 f6  			 mov r1, #23	
+     a24: 30 0a c0 fd  			 calla #\runtime.printstring
+     a28: 74 0a c0 fd  			 calla #\runtime.printnl
+     a2c: 90 0a c0 fd  			 calla #\runtime.abort
+
+00000a30 <runtime.printstring>:
+     a30: 61 a1 67 fc  			 wrlong r0, ptra++
+     a34: 28 02 64 fd  			 setq #1
+     a38: 61 a5 67 fc  			 wrlong r2, ptra++
+     a3c: d0 a5 03 f6  			 mov r2, r0	
+     a40: 00 a6 07 f6  			 mov r3, #0	
+     a44: d1 a7 5b f2  			 cmps r3, r1	wcz
+     a48: 18 00 90 3d  		if_nc	 jmp #24
+     a4c: d2 a1 03 f6  			 mov r0, r2	
+     a50: d3 a1 03 f1  			 add r0, r3	
+     a54: d0 a1 c3 fa  			 rdbyte r0, r0	
+     a58: 98 0a c0 fd  			 calla #\runtime.putchar
+     a5c: 01 a6 07 f1  			 add r3, #1	
+     a60: e0 ff 9f fd  			 jmp #-32
+     a64: 28 02 64 fd  			 setq #1
+     a68: 5f a5 07 fb  			 rdlong r2, --ptra	
+     a6c: 5f a1 07 fb  			 rdlong r0, --ptra	
+     a70: 2e 00 64 fd  			 reta	
+
+00000a74 <runtime.printnl>:
+     a74: 61 a1 67 fc  			 wrlong r0, ptra++
+     a78: 0d a0 07 f6  			 mov r0, #13	
+     a7c: 98 0a c0 fd  			 calla #\runtime.putchar
+     a80: 0a a0 07 f6  			 mov r0, #10	
+     a84: 98 0a c0 fd  			 calla #\runtime.putchar
+     a88: 5f a1 07 fb  			 rdlong r0, --ptra	
+     a8c: 2e 00 64 fd  			 reta	
+
+00000a90 <runtime.abort>:
+     a90: 48 0c c0 fd  			 calla #\p2_halt
+     a94: f8 ff 9f fd  			 jmp #-8
+
+00000a98 <runtime.putchar>:
+     a98: d8 0b c0 fd  			 calla #\raw_p2_uart_putc
+     a9c: 2e 00 64 fd  			 reta	
+
+00000aa0 <runtime.nilPanic>:
+     aa0: 00 0a c0 fd  			 calla #\runtime.runtimePanic
+
+00000aa4 <main>:
+     aa4: a8 0a c0 fd  			 calla #\runtime.run
+
+00000aa8 <runtime.run>:
+     aa8: b0 0a c0 fd  			 calla #\runtime.initAll
+     aac: 30 0b c0 fd  			 calla #\main.main
+
+00000ab0 <runtime.initAll>:
+     ab0: 28 02 64 fd  			 setq #1
+     ab4: 61 a1 67 fc  			 wrlong r0, ptra++
+     ab8: 06 00 00 ff  			 augs #6
+     abc: 50 a0 07 f6  			 mov r0, #80	
+     ac0: 15 a2 07 f6  			 mov r1, #21	
+     ac4: 30 0a c0 fd  			 calla #\runtime.printstring
+     ac8: 74 0a c0 fd  			 calla #\runtime.printnl
+     acc: 06 00 00 ff  			 augs #6
+     ad0: 92 a0 07 f6  			 mov r0, #146	
+     ad4: 0e a2 07 f6  			 mov r1, #14	
+     ad8: 30 0a c0 fd  			 calla #\runtime.printstring
+     adc: 74 0a c0 fd  			 calla #\runtime.printnl
+     ae0: 28 02 64 fd  			 setq #1
+     ae4: 5f a1 07 fb  			 rdlong r0, --ptra	
+     ae8: 2e 00 64 fd  			 reta	
+
+00000aec <main.nested>:
+     aec: 28 02 64 fd  			 setq #1
+     af0: 61 a1 67 fc  			 wrlong r0, ptra++
+     af4: 01 a0 9f fb  			 tjnz r0, #1
+     af8: 30 00 90 fd  			 jmp #48
+     afc: d0 a3 03 fb  			 rdlong r1, r0	
+     b00: 40 a2 87 f1  			 sub r1, #64	
+     b04: d0 a3 63 fc  			 wrlong r1, r0
+     b08: 04 a0 07 f1  			 add r0, #4	
+     b0c: d0 a3 03 fb  			 rdlong r1, r0	
+     b10: 01 a2 07 f1  			 add r1, #1	
+     b14: d0 a3 63 fc  			 wrlong r1, r0
+     b18: ff ff 7f ff  			 augs #8388607
+     b1c: c0 df 07 f6  			 mov r31, #448	
+     b20: 28 02 64 fd  			 setq #1
+     b24: 5f a1 07 fb  			 rdlong r0, --ptra	
+     b28: 2e 00 64 fd  			 reta	
+     b2c: a0 0a c0 fd  			 calla #\runtime.nilPanic
+
+00000b30 <main.main>:
+     b30: 28 04 64 fd  			 setq #2
+     b34: 61 a1 67 fc  			 wrlong r0, ptra++
+     b38: 08 f0 07 f1  			 add ptra, #8	
+     b3c: 00 a0 07 f6  			 mov r0, #0	
+     b40: 00 a2 07 f6  			 mov r1, #0	
+     b44: f8 ed 03 f6  			 mov pa, ptra	
+     b48: 08 ec 87 f1  			 sub pa, #8	
+     b4c: 28 02 64 fd  			 setq #1
+     b50: f6 a1 63 fc  			 wrlong r0, pa
+     b54: f8 a1 03 f6  			 mov r0, ptra	
+     b58: 08 a0 87 f1  			 sub r0, #8	
+     b5c: ec 0a c0 fd  			 calla #\main.nested
+     b60: 00 a4 07 f6  			 mov r2, #0	
+     b64: 01 a0 07 f6  			 mov r0, #1	
+     b68: d2 a3 03 f6  			 mov r1, r2	
+     b6c: 0c a2 1f f2  			 cmp r1, #12	wcz
+     b70: 0c 00 90 1d  	if_nc_and_nz	 jmp #12
+     b74: d1 a5 03 f6  			 mov r2, r1	
+     b78: 01 a4 07 f1  			 add r2, #1	
+     b7c: fa a1 9f fb  			 tjnz r0, #506
+     b80: f8 a1 03 f6  			 mov r0, ptra	
+     b84: 08 a0 87 f1  			 sub r0, #8	
+     b88: 0d a2 1f f2  			 cmp r1, #13	wcz
+     b8c: 34 00 90 cd  		if_c	 jmp #52
+     b90: 3e a3 07 fb  			 rdlong r1, ptra[-2]	
+     b94: d1 df 5b f2  			 cmps r31, r1	wcz
+     b98: 28 00 90 5d  		if_nz	 jmp #40
+     b9c: 04 a0 07 f1  			 add r0, #4	
+     ba0: d0 a1 03 fb  			 rdlong r0, r0	
+     ba4: 01 a0 5f f2  			 cmps r0, #1	wcz
+     ba8: 18 00 90 5d  		if_nz	 jmp #24
+     bac: 06 00 00 ff  			 augs #6
+     bb0: ad a0 07 f6  			 mov r0, #173	
+     bb4: 0a a2 07 f6  			 mov r1, #10	
+     bb8: 30 0a c0 fd  			 calla #\runtime.printstring
+     bbc: 74 0a c0 fd  			 calla #\runtime.printnl
+     bc0: fc ff 9f fd  			 jmp #-4
+     bc4: 06 00 00 ff  			 augs #6
+     bc8: b7 a0 07 f6  			 mov r0, #183	
+     bcc: 14 a2 07 f6  			 mov r1, #20	
+     bd0: 30 0a c0 fd  			 calla #\runtime.printstring
+     bd4: e4 ff 9f fd  			 jmp #-28
+
+00000bd8 <raw_p2_uart_putc>:
+     bd8: 28 02 64 fd  			 setq #1
+     bdc: 61 a1 67 fc  			 wrlong r0, ptra++
+     be0: 3e a2 07 f6  			 mov r1, #62	
+     be4: d1 a1 23 fc  			 wypin r0, r1
+     be8: 40 a2 73 fd  			 testp r1	wc
+     bec: 6c a0 63 fd  			 wrc r0
+     bf0: fd a1 97 fb  			 tjz r0, #509
+     bf4: 28 02 64 fd  			 setq #1
+     bf8: 5f a1 07 fb  			 rdlong r0, --ptra	
+     bfc: 2e 00 64 fd  			 reta	
+
+00000c00 <p2_lock_acquire>:
+     c00: 28 02 64 fd  			 setq #1
+     c04: 61 a1 67 fc  			 wrlong r0, ptra++
+     c08: 06 00 00 ff  			 augs #6
+     c0c: d0 a0 07 f6  			 mov r0, #208	
+     c10: d0 a3 03 fb  			 rdlong r1, r0	
+     c14: 06 a2 73 fd  			 locktry r1	wc
+     c18: 6c a2 63 fd  			 wrc r1
+     c1c: fc a3 97 fb  			 tjz r1, #508
+     c20: 28 02 64 fd  			 setq #1
+     c24: 5f a1 07 fb  			 rdlong r0, --ptra	
+     c28: 2e 00 64 fd  			 reta	
+
+00000c2c <p2_lock_release>:
+     c2c: 61 a1 67 fc  			 wrlong r0, ptra++
+     c30: 06 00 00 ff  			 augs #6
+     c34: d0 a0 07 f6  			 mov r0, #208	
+     c38: d0 a1 03 fb  			 rdlong r0, r0	
+     c3c: 07 a0 63 fd  			 lockrel r0	
+     c40: 5f a1 07 fb  			 rdlong r0, --ptra	
+     c44: 2e 00 64 fd  			 reta	
+
+00000c48 <p2_halt>:
+     c48: 1f 02 64 fd  			 waitx #1	
+     c4c: f8 ff 9f fd  			 jmp #-8

@@ -1,0 +1,45 @@
+{
+  "build_log": ".work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/build-full.log",
+  "elf": ".work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/p2goapp-final.elf",
+  "elf_sha256": "132b9cf87bc521cf433e8b33e58d24544d0dde3dcf6e13592058b3b1a14416a8",
+  "limitations": "Static provenance only: it proves the retained inputs relink byte-identically with pinned LLD; it does not prove source-to-object compiler reproducibility.",
+  "linked_inputs": [
+    {
+      "bytes": 6788,
+      "link_path": "/tmp/tinygo1404374256/main.o",
+      "portable_path": "linked-inputs/00-main.o",
+      "sha256": "a247158def1c31039d823d5385a6a975aadcd48ade09708880f21e33fe91a3b5"
+    },
+    {
+      "bytes": 1624,
+      "link_path": "/home/propeller/.cache/tinygo/obj-a33b747d165f053659737f15fd9aa269ea8b97c6e23477be70c12a05.o",
+      "portable_path": "linked-inputs/01-obj-a33b747d165f053659737f15fd9aa269ea8b97c6e23477be70c12a05.o",
+      "sha256": "8aeccbb82646cded38c26f05d340491b11a0808ef8f3bac40f9d02a2b808eb73"
+    }
+  ],
+  "parsed_link_command": [
+    "/work/propeller2/tinygo-p2-handoff/.work/build/llvm/bin/ld.lld",
+    "--gc-sections",
+    "-L",
+    "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/tinygo",
+    "-T",
+    "/work/propeller2/tinygo-p2-handoff/.work/phase2/src/tinygo/targets/p2.ld",
+    "-o",
+    "/tmp/tinygo1404374256/main",
+    "/tmp/tinygo1404374256/main.o",
+    "/home/propeller/.cache/tinygo/obj-a33b747d165f053659737f15fd9aa269ea8b97c6e23477be70c12a05.o"
+  ],
+  "pinned_lld_replay": "byte-identical",
+  "relocation_types": {
+    "/home/propeller/.cache/tinygo/obj-a33b747d165f053659737f15fd9aa269ea8b97c6e23477be70c12a05.o": [
+      "R_P2_20",
+      "R_P2_AUG20"
+    ],
+    "/tmp/tinygo1404374256/main.o": [
+      "R_P2_20",
+      "R_P2_32",
+      "R_P2_AUG20"
+    ]
+  },
+  "schema": "p2-link-provenance-v1"
+}

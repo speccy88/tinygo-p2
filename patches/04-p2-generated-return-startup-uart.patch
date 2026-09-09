@@ -1,0 +1,20 @@
+diff --git a/src/runtime/atomics_critical.go b/src/runtime/atomics_critical.go
+index 615426a..2e96d69 100644
+--- a/src/runtime/atomics_critical.go
++++ b/src/runtime/atomics_critical.go
+@@ -1,8 +1,13 @@
+-//go:build baremetal && !tinygo.wasm
+-// +build baremetal,!tinygo.wasm
++//go:build baremetal && !tinygo.wasm && !p2
++// +build baremetal,!tinygo.wasm,!p2
+ 
+ // Automatically generated file. DO NOT EDIT.
+ // This file implements standins for non-native atomics using critical sections.
++//
++// P2 is deliberately excluded. The P2 backend's RetCC supports scalar returns
++// only, while these helpers generate tuple returns (old,new). A P2 target must
++// either provide a real lock/interrupt implementation with a compatible ABI or
++// reject atomic use; it must not pretend that interrupt masking is a no-op.
+ 
+ package runtime
+ 

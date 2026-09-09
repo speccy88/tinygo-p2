@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-09-08T10:44:07.006169+00:00",
+  "status": "PASS",
+  "host_go": "go version go1.18.10 linux/amd64",
+  "execution_host": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.13.15 (main, Aug 10 2026, 21:10:14) [GCC 14.2.0]"
+  },
+  "checks": [
+    {
+      "command": [
+        "/usr/local/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "command": [
+        "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/bin/go",
+        "test",
+        "-count=1",
+        "-v",
+        "./probe"
+      ],
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "command": [
+        "/work/propeller2/tinygo-p2-handoff/.work/toolchains/go1.18.10/bin/gofmt",
+        "-l",
+        "probe",
+        "overlays/tinygo/compiler"
+      ],
+      "returncode": 0,
+      "passed": true
+    }
+  ],
+  "tested": [
+    "standard-Go arithmetic reference (10000 randomized pairs plus edges)",
+    "host C serial protocol through a pseudo-terminal (138 challenges)",
+    "malformed-input, provenance/scope, ELF/IR and safety guards",
+    "syntax/format of the Go compiler overlay"
+  ],
+  "not_tested": [
+    "TinyGo overlay typecheck/link with pinned custom LLVM",
+    "P2 LLVM backend object generation",
+    "real USB serial connection, board clock profile, or execution on a Propeller 2"
+  ],
+  "limitation": "This is a Linux x86_64 host-only report. It does not establish TinyGo/P2 compilation, linking, or physical hardware execution."
+}

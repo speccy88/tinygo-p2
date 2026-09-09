@@ -1,0 +1,26 @@
+{
+  "current_and_saved_source_restored_byte_identically": true,
+  "exact_single_go_mutation": true,
+  "no_forbidden_continuation_in_captured_window": true,
+  "normal_expected": [
+    1369501709,
+    518961982,
+    3146513342,
+    1
+  ],
+  "predicted_and_observed_mutated": [
+    1369501709,
+    518961983,
+    3146513342,
+    1
+  ],
+  "qualification": "Historical panic helper had a filename-substring false-positive bug; this verifier instead requires the exact target diagnostic. Corrected live helper and duration/EOF rejection tests are separate release checks.",
+  "real_target_panic_lines": [
+    "P2 GO BOUNDS ARMED",
+    "P2 GO BOUNDS TRIGGER",
+    "panic: runtime error: index out of range"
+  ],
+  "restored_elf_sha256": "132b9cf87bc521cf433e8b33e58d24544d0dde3dcf6e13592058b3b1a14416a8",
+  "scope": "offline corroboration of existing physical controls; not a new hardware run",
+  "status": "PASS"
+}

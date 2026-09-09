@@ -1,0 +1,9 @@
+76caa5e037469906be48b7e0a903f9de4259e967007da303fa2bdd61566847a4  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/PROTOCOL.md
+b016c973645856bbf49caaf69e8aed4f6e662791ffbc953b618578fe02b7804c  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/board-profile.json
+02bd81305186490b50368d330bfad51a4709311f31cf10a9883e04bde2793fb2  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/bootpkg.go
+5f34ef8aad444b1d585f0ad6d60c6a60b13feaa3fe889503ae49bf06a26fa0ff  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/core.go
+47a1bd6c557ca780deeb1b3cf2e82ed0eb30317d0206b7ff010a681b9e7d7d30  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/go.mod
+77f6b182a1a455be90212e8521c3818d09ec4ab1b33e7a753c68903a88916bb4  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/identity-before.txt
+c134df0afb2989e971fcd5d5ed3968db4e564c9efd23ae6ed3fdcf46d0fd929c  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/main.go
+62b499345ea62d0d8c2f174762231aded9326ffb8fa7f3a9445063209174fcd5  .work/phase2/artifacts/gate2f-final-cli-20260908T131540.392502595Z/p2-target.json
+tinygo version 0.23.0 linux/amd64 (using go version go1.18.10 and LLVM version 14.0.0git)

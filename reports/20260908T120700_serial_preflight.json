@@ -1,0 +1,15 @@
+{
+  "tty": "/dev/ttyUSB0",
+  "tty_sysfs": "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/ttyUSB0",
+  "usb": {
+    "idVendor": "0403",
+    "idProduct": "6001",
+    "serial": "A500507h",
+    "manufacturer": "FTDI",
+    "product": "FT232R USB UART"
+  },
+  "eligible": [
+    "/dev/ttyUSB0"
+  ],
+  "holders": []
+}
