@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import hashlib, importlib.util, json, os, shutil, subprocess, sys, tempfile, unittest
+import hashlib, importlib.util, json, os, shlex, shutil, subprocess, sys, tempfile, unittest
 from pathlib import Path
 PHASE2=Path(os.environ.get('PHASE2_ROOT',Path(__file__).resolve().parents[1])).resolve()
 BASELINE=Path(os.environ['P2_BASELINE_ROOT']).resolve()
@@ -38,19 +38,32 @@ class RestoreTrapTests(unittest.TestCase):
    records=list(art.glob('gate2f-mutation-*/source-restored.sha256')); self.assertEqual(len(records),1)
    self.assertEqual(records[0].read_text().split()[0],hashlib.sha256(before).hexdigest())
 class ProvenanceTests(unittest.TestCase):
+ def build_log(self, artifact, path):
+  # The Git publication intentionally omits the historical absolute build log.
+  # Reconstruct the exact retained linker invocation from corrected metadata so
+  # these tests remain portable after extraction or a remote clone.
+  record=json.loads((artifact/'metadata.corrected.json').read_text())
+  argv=record['parsed_link_command']
+  path.write_text(' '.join(shlex.quote(x) for x in argv)+'\n')
+  return path
+ def base(self, artifact, log):
+  tool=SCRIPTS/'capture_link_provenance.py'
+  return ['python3',str(tool),'--build-log',str(log),'--elf',str(artifact/'p2goapp-loader-trace.elf'),'--artifact-dir',str(artifact),'--readobj',str(ROOT/'.work/build/llvm/bin/llvm-readobj'),'--lld',str(ROOT/'.work/build/llvm/bin/ld.lld')]
  def test_real_relink_and_nonreloc_mutation_rejected(self):
-  a=FINAL; tool=SCRIPTS/'capture_link_provenance.py'; base=['python3',str(tool),'--build-log',str(a/'build-full.log'),'--elf',str(a/'p2goapp-loader-trace.elf'),'--artifact-dir',str(a),'--readobj',str(ROOT/'.work/build/llvm/bin/llvm-readobj'),'--lld',str(ROOT/'.work/build/llvm/bin/ld.lld')]
-  self.assertEqual(subprocess.run(base+['--mode','verify'],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True).returncode,0)
+  a=FINAL
   with tempfile.TemporaryDirectory() as td:
-   td=Path(td); altered=td/'main.o'; shutil.copyfile(a/'linked-inputs/00-main.o',altered); b=bytearray(altered.read_bytes()); b[0x100]^=1; altered.write_bytes(b)
-   log=td/'build.log'; old='/tmp/tinygo1578978653/main.o'; log.write_text((a/'build-full.log').read_text().replace(old,str(altered)))
-   bad=base.copy(); bad[bad.index('--build-log')+1]=str(log)
+   td=Path(td); log=self.build_log(a,td/'build.log'); base=self.base(a,log)
+   self.assertEqual(subprocess.run(base+['--mode','verify'],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True).returncode,0)
+   altered=td/'main.o'; shutil.copyfile(a/'linked-inputs/00-main.o',altered); b=bytearray(altered.read_bytes()); b[0x100]^=1; altered.write_bytes(b)
+   mutated_log=td/'mutated-build.log'; mutated_log.write_text(log.read_text().replace('/tmp/tinygo1578978653/main.o',str(altered)))
+   bad=base.copy(); bad[bad.index('--build-log')+1]=str(mutated_log)
    self.assertNotEqual(subprocess.run(bad+['--mode','verify'],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True).returncode,0)
  def test_wrong_relocation_target_rejected_by_pinned_lld(self):
-  a=FINAL; tool=SCRIPTS/'capture_link_provenance.py'; base=['python3',str(tool),'--build-log',str(a/'build-full.log'),'--elf',str(a/'p2goapp-loader-trace.elf'),'--artifact-dir',str(a),'--readobj',str(ROOT/'.work/build/llvm/bin/llvm-readobj'),'--lld',str(ROOT/'.work/build/llvm/bin/ld.lld')]
+  a=FINAL
   with tempfile.TemporaryDirectory() as td:
-   td=Path(td); wrong=td/'main.o'; data=(a/'linked-inputs/00-main.o').read_bytes(); self.assertEqual(data.count(b'raw_p2_uart_getc'),1); wrong.write_bytes(data.replace(b'raw_p2_uart_getc',b'bad_p2_uart_getc'))
-   log=td/'build.log'; log.write_text((a/'build-full.log').read_text().replace('/tmp/tinygo1578978653/main.o',str(wrong)))
-   bad=base.copy(); bad[bad.index('--build-log')+1]=str(log)
+   td=Path(td); log=self.build_log(a,td/'build.log'); base=self.base(a,log)
+   wrong=td/'main.o'; data=(a/'linked-inputs/00-main.o').read_bytes(); self.assertEqual(data.count(b'raw_p2_uart_getc'),1); wrong.write_bytes(data.replace(b'raw_p2_uart_getc',b'bad_p2_uart_getc'))
+   wrong_log=td/'wrong-build.log'; wrong_log.write_text(log.read_text().replace('/tmp/tinygo1578978653/main.o',str(wrong)))
+   bad=base.copy(); bad[bad.index('--build-log')+1]=str(wrong_log)
    self.assertNotEqual(subprocess.run(bad+['--mode','verify'],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True).returncode,0)
 if __name__=='__main__': unittest.main(verbosity=2)
