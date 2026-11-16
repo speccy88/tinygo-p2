@@ -62,11 +62,24 @@ def main():
     try:
         release = api("/releases/tags/" + urllib.parse.quote(args.tag, safe=""))
     except urllib.error.HTTPError as error:
-        if error.code != 404 or args.action != "stage":
+        if error.code != 404:
             raise
-        release = api("/releases", "POST", {"tag_name": args.tag,
-            "target_commitish": args.commit, "name": "TinyGo for Propeller 2 v0.1.0 — eight cogs, ready to try",
-            "body": args.notes.read_text(encoding="utf-8"), "draft": True, "prerelease": False})
+        # GitHub's tag endpoint omits drafts, even for their owner. The releases
+        # collection includes them for an authenticated user with write access.
+        release = None
+        page = 1
+        while release is None:
+            candidates = api(f"/releases?per_page=100&page={page}")
+            release = next((item for item in candidates if item["tag_name"] == args.tag), None)
+            if len(candidates) < 100:
+                break
+            page += 1
+        if release is None:
+            if args.action != "stage":
+                raise RuntimeError(f"No release exists for {args.tag}") from None
+            release = api("/releases", "POST", {"tag_name": args.tag,
+                "target_commitish": args.commit, "name": "TinyGo for Propeller 2 v0.1.0 — eight cogs, ready to try",
+                "body": args.notes.read_text(encoding="utf-8"), "draft": True, "prerelease": False})
     if release["target_commitish"] != args.commit:
         raise ValueError("Release target does not match the supplied commit")
     if args.action != "verify" and not release["draft"]:
