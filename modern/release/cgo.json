@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "suite": "cgo",
+  "scope": "physical-P2-modern",
+  "timestamp_utc": "20261116T174623.977050Z",
+  "nonce": 105933367,
+  "image": {
+    "file": "release-sdk-cgo.elf",
+    "sha256": "660b4a0a5b1a6daecd28645b6f162970eae64254b693f01a530db22b4cb8550c",
+    "format": "elf32-p2",
+    "file_bytes": 23305,
+    "segments": [
+      {
+        "offset": 4096,
+        "address": 0,
+        "file_bytes": 21872,
+        "memory_bytes": 21872
+      },
+      {
+        "offset": 25968,
+        "address": 21872,
+        "file_bytes": 1432,
+        "memory_bytes": 1432
+      },
+      {
+        "offset": 27400,
+        "address": 23304,
+        "file_bytes": 1,
+        "memory_bytes": 484600
+      }
+    ],
+    "bss_policy": "firmware-startup"
+  },
+  "observed": [
+    "READY P2CGO1",
+    "BEGIN 105933367",
+    "CGO 284996431 3808124859 834278359145187858 1976870162096358662 621 464878349 0 128",
+    "CGOCOPY 7812933552312686335 284996431 3808124859 834278359145187858",
+    "CGOLAYOUT 16 4 12 611469333 454980347212430152 895703300 2459565876492509772",
+    "DONE P2CGO1 105933367"
+  ],
+  "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+  "loader_sha256": "d74de6b1e4d28e34d9ba00882d0b0b03fd41ca0c12d7c0d4c67548c9e3e73e45",
+  "port": {
+    "transport": "USB serial",
+    "baud": 115200
+  },
+  "rom": "Prop_Ver G",
+  "download": {
+    "loaded_bytes": 23308,
+    "checksum": "12a27da6",
+    "checksum_ack": ".",
+    "checksum_prefix": "",
+    "load_mode": "ROM-base64-RAM-only"
+  }
+}

@@ -59,6 +59,24 @@ def main():
     actual_go = subprocess.check_output([str(work / "go/bin/go"), "version"], text=True)
     if f"go{go['version']} " not in actual_go:
         raise RuntimeError(f"Unexpected Go installation: {actual_go.strip()}")
+    # Release source archives contain complete, already patched source trees.
+    # Verify every supplied input before using this offline path (no Git needed).
+    prepared = work / "prepared-source-manifest.json"
+    if prepared.is_file():
+        manifest = json.loads(prepared.read_text())
+        if manifest["toolchain"] != LOCK:
+            raise RuntimeError("Prepared sources use a different toolchain lock")
+        expected = hashlib.sha256((BUNDLE / "source-manifest.json").read_bytes()).hexdigest()
+        if manifest["patch_bundle_sha256"] != expected:
+            raise RuntimeError("Prepared sources use a different patch bundle")
+        for relative, digest in manifest["files"].items():
+            source = (work / relative).resolve()
+            if not source.is_relative_to(work) or not source.is_file():
+                raise RuntimeError(f"Invalid or missing prepared source: {relative}")
+            if hashlib.sha256(source.read_bytes()).hexdigest() != digest:
+                raise RuntimeError(f"Prepared source changed: {relative}")
+        print(f"Verified {len(manifest['files'])} prepared source files")
+        return
     checkout("p2llvm", work / "p2llvm")
     checkout("llvm", work / "p2llvm/llvm15")
     checkout("tinygo", work / "tinygo")

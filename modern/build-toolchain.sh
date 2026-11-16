@@ -45,10 +45,13 @@ export CGO_LDFLAGS="\"-L$llvm_build/lib\" \"-Wl,-rpath,$llvm_build/lib\""
 export LD_LIBRARY_PATH="$llvm_build/lib"
 export TINYGOROOT="$work/tinygo"
 export GOMAXPROCS="$jobs"
-clang_resource=$("$llvm_build/bin/clang" -print-resource-dir)
+if [ -d "$work/gomodcache" ]; then
+    export GOMODCACHE="$work/gomodcache"
+fi
+# Let libclang find its headers relative to TINYGOROOT in relocatable SDKs.
+mkdir -p "$work/tinygo/lib/clang"
+cp -a "$("$llvm_build/bin/clang" -print-resource-dir)/." "$work/tinygo/lib/clang/"
 cd "$work/tinygo"
-go build -p "$jobs" -tags llvm15 \
-    -ldflags "-X 'github.com/tinygo-org/tinygo/goenv.clangResourceDir=$clang_resource'" \
-    -o build/tinygo .
+go build -p "$jobs" -trimpath -tags llvm15 -o build/tinygo .
 ./build/tinygo version
 go test -p "$jobs" -tags llvm15 ./compileopts ./goenv

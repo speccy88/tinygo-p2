@@ -76,6 +76,7 @@ if (Test-Path Env:GOEXPERIMENT) { $goExperiment = $env:GOEXPERIMENT }
 & wsl.exe -d $Distro --cd $linuxCwd --exec env `
     "PATH=$WorkRoot/llvm15-build/bin:$WorkRoot/go/bin:/usr/local/bin:/usr/bin:/bin" `
     "TINYGOROOT=$toolRoot" `
+    "GOROOT=$WorkRoot/go" `
     "XDG_CACHE_HOME=$cacheRoot" `
     "GOEXPERIMENT=$goExperiment" `
     "LD_LIBRARY_PATH=$WorkRoot/llvm15-build/lib" `

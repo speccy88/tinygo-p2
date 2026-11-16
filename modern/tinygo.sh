@@ -4,6 +4,7 @@ work=${TINYGO_P2_WORK:-"$HOME/tinygo-p2-work"}
 export PATH="$work/llvm15-build/bin:$work/go/bin:/usr/local/bin:/usr/bin:/bin"
 export LD_LIBRARY_PATH="$work/llvm15-build/lib"
 export TINYGOROOT="$work/tinygo"
+export GOROOT="$work/go"
 # LLVM backend changes can retain the same version string. Separate cached
 # objects by the complete patched-source bundle, including its target profiles.
 bundle=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)

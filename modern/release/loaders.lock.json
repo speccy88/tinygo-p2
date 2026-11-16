@@ -1,0 +1,11 @@
+{
+  "loadp2": {
+    "url": "https://github.com/totalspectrum/loadp2.git",
+    "revision": "c20afedd4253d09da449fa740f8d4304481fc560"
+  },
+  "spin2cpp": {
+    "url": "https://github.com/totalspectrum/spin2cpp.git",
+    "tag": "v7.8.0",
+    "revision": "6d371da09a7680cec7ace00d85672d6d3e5b1e42"
+  }
+}

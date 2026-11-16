@@ -17,8 +17,11 @@ import struct
 import sys
 import time
 
-import serial
-from serial.tools import list_ports
+try:
+    import serial
+    from serial.tools import list_ports
+except ImportError:
+    serial = None  # Image conversion works without the optional serial package.
 
 HUB_SIZE = 512 * 1024
 
@@ -73,6 +76,8 @@ def read_image(path: Path) -> tuple[bytes, dict]:
 
 class P2Serial:
     def __init__(self, port: str, baud: int = 115200, raw_log: Path | None = None):
+        if serial is None:
+            raise RuntimeError("Install pyserial first: python -m pip install pyserial==3.5")
         self.serial = serial.Serial(port=None, baudrate=baud, timeout=.05, write_timeout=5)
         self.serial.dtr = False
         self.serial.rts = False

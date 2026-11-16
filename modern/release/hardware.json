@@ -1,0 +1,226 @@
+{
+  "timestamp_utc": "2026-11-16T17:45:11.080842+00:00",
+  "scope": "release-RAM-only",
+  "checks": [
+    {
+      "name": "demo-hello",
+      "image": "hello.binary",
+      "sha256": "c576b992bea63d5053cbbbf323742fd208ceb52b2f2ed206e473394f81261700",
+      "lines": [
+        "TinyGo 0.44.0 on Propeller 2",
+        "Available cogs: 8",
+        "Worker 0 ran on cog 1 checksum 1068819344",
+        "Worker 1 ran on cog 2 checksum 1068819344",
+        "Worker 2 ran on cog 3 checksum 1068819344",
+        "Worker 3 ran on cog 4 checksum 1068819344",
+        "Worker 4 ran on cog 5 checksum 1068819344",
+        "Worker 5 ran on cog 6 checksum 1068819344",
+        "Worker 6 ran on cog 7 checksum 1068819344",
+        "Worker 7 ran on cog 0 checksum 1068819344",
+        "Alive 1",
+        "Alive 2"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 18252,
+        "checksum": "75a7a261",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "demo-blink",
+      "image": "blink.binary",
+      "sha256": "797520caadcbf9014ff86822079d6b737ecd2267c77fb1c47694abd92f7a5cf4",
+      "lines": [
+        "LED on",
+        "LED off",
+        "LED on",
+        "LED off"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 18732,
+        "checksum": "47cf7b13",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "demo-channels",
+      "image": "channels.binary",
+      "sha256": "fe14012ed33b6a36717e2f706af0570ddc7d8d4720fcbfda26943ca42894e94a",
+      "lines": [
+        "Cog 1 sum 50005000",
+        "Cog 4 sum 50005000",
+        "Cog 5 sum 50005000",
+        "Cog 3 sum 50005000",
+        "Cog 6 sum 50005000",
+        "Cog 7 sum 50005000",
+        "Cog 0 sum 50005000",
+        "Cog 2 sum 50005000",
+        "All eight workers finished!"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 18364,
+        "checksum": "b664164c",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "demo-psram-store",
+      "image": "psram-store.binary",
+      "sha256": "5a54b2b09fa82db4661a9f798e0e518bee08fc054a7f609992f1e49aca8394f2",
+      "lines": [
+        "External memory bytes: 33554432",
+        "Hello from 32 MiB of PSRAM!"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 22316,
+        "checksum": "72ef225f",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "README-hello",
+      "image": "app.elf",
+      "sha256": "7db35effe6971023ba311fef8a9ee1ecbf8306f453089b4c9a6e858feaa2c4c9",
+      "lines": [
+        "Hello, Propeller 2!",
+        "Tick 1",
+        "Tick 2"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 15324,
+        "checksum": "beee3c76",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "README-blink",
+      "image": "app.elf",
+      "sha256": "a7f900c04df9308cb5a0ccbf20b79d382fb36f5791f2d9045c0005d105f49dce",
+      "lines": [
+        "LED on",
+        "LED off",
+        "LED on",
+        "LED off"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 18732,
+        "checksum": "47cf7b13",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "README-channels",
+      "image": "app.elf",
+      "sha256": "21155b3aeff7b4c8f8ad288183ff0fa02abf4c27c13ff93626e8da63ae1465b3",
+      "lines": [
+        "Cog 1 sum 50005000",
+        "Cog 4 sum 50005000",
+        "Cog 5 sum 50005000",
+        "Cog 3 sum 50005000",
+        "Cog 6 sum 50005000",
+        "Cog 7 sum 50005000",
+        "Cog 0 sum 50005000",
+        "Cog 2 sum 50005000",
+        "All eight workers finished!"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 18364,
+        "checksum": "b664164c",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "README-psram",
+      "image": "app.elf",
+      "sha256": "d7777f19d6cb7c3d1ef51f9d22384d620bc1d5c7d51fd562664cabe11ac3c33d",
+      "lines": [
+        "External memory bytes: 33554432",
+        "Hello from 32 MiB of PSRAM!"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 22316,
+        "checksum": "72ef225f",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "README-echo",
+      "image": "app.elf",
+      "sha256": "663e8949a14822db81500142133a00af24d9053da4a0387114befa207db78906",
+      "lines": [
+        "Type something:",
+        "3fa88269efa53c2114152b177e71c3aa"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 12504,
+        "checksum": "e7f83e5f",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "Windows-loadp2-single-stage",
+      "status": "PASS",
+      "loader_sha256": "e5820614ad86d1b5ddf935461ad32c1fb0431e7e3f7f74484534fad8f6a41d93",
+      "output": "",
+      "lines": [
+        "Alive 2"
+      ]
+    },
+    {
+      "name": "Windows-loadp2-two-stage",
+      "status": "PASS",
+      "loader_sha256": "e5820614ad86d1b5ddf935461ad32c1fb0431e7e3f7f74484534fad8f6a41d93",
+      "output": "",
+      "lines": [
+        "TinyGo 0.44.0 on Propeller 2",
+        "Available cogs: 8",
+        "Worker 0 ran on cog 1 checksum 1068819344",
+        "Worker 1 ran on cog 2 checksum 1068819344",
+        "Worker 2 ran on cog 3 checksum 1068819344",
+        "Worker 3 ran on cog 4 checksum 1068819344",
+        "Worker 4 ran on cog 5 checksum 1068819344",
+        "Worker 5 ran on cog 6 checksum 1068819344",
+        "Worker 6 ran on cog 7 checksum 1068819344",
+        "Worker 7 ran on cog 0 checksum 1068819344",
+        "Alive 1"
+      ]
+    }
+  ],
+  "status": "PASS"
+}

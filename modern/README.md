@@ -5,6 +5,12 @@ source patches, runtime sources, examples, and physical-board test harness.
 The historical TinyGo 0.23 sources and evidence elsewhere in this repository
 remain a separate baseline.
 
+For a first project, start with the [main tutorial](../README.md). The
+[v0.1.0 release](https://github.com/speccy88/tinygo-p2/releases/tag/v0.1.0) includes
+a compiler SDK, a complete source archive, and demo images with RAM/flash/SD
+instructions. [Build from source](release/SOURCE-BUILD.md) or read the
+[release validation](release/VALIDATION.md).
+
 The port has been built natively and exercised on a P2-EC32MB through the
 ROM serial loader. See [VALIDATION.md](VALIDATION.md) for the exact hardware
 coverage, toolchain identities, result receipts, and remaining limits.
