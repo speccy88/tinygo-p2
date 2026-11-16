@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "tinygo": {
+    "url": "https://github.com/tinygo-org/tinygo.git",
+    "tag": "v0.44.0",
+    "revision": "344590c7152e620f3b5369fc289e5d91caf9649d"
+  },
+  "go": {
+    "version": "1.27.4",
+    "linux_amd64_url": "https://go.dev/dl/go1.27.4.linux-amd64.tar.gz",
+    "linux_amd64_sha256": "7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840"
+  },
+  "llvm": {
+    "url": "https://github.com/llvm/llvm-project.git",
+    "tag": "llvmorg-15.0.7",
+    "revision": "8dfdcc7b7bf66834a761bd8de445840ef68e4d1a"
+  },
+  "p2llvm": {
+    "url": "https://github.com/ne75/p2llvm.git",
+    "revision": "b914b1baa8a2055feb52c801b5c3564eda6a9abc"
+  }
+}

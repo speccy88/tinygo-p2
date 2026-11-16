@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "date": "2026-11-16",
+  "scope": "host-and-native-compiler",
+  "toolchain": {"tinygo": "0.44.0", "go": "1.27.4", "llvm": "15.0.7", "target": "p2"},
+  "commands": [
+    {"command": "bash modern/build-toolchain.sh <work>", "status": "PASS", "coverage": "Pinned sources, LLVM tools, 48 builtin build steps, native TinyGo CLI and configuration tests"},
+    {"command": "bash modern/verify-host.sh <work>", "status": "PASS", "coverage": "379 instruction encodings; 32 driver/integration tests; 153 LLVM MC/codegen tests; 10,100 multiplication cases; six linked runtime assembly files; 6,048 memory-model cases; 8,200 scanner-length/range/guard cases; six PSRAM API tests; TinyGo P2 ABI/type sizes, compileopts, goenv and atomic-generator tests"},
+    {"command": "python -m unittest discover -s modern/hil -p test_p2ram.py -v", "status": "PASS", "tests": 10},
+    {"command": "modern/hil/test_wrapper.ps1", "status": "PASS"},
+    {"command": "modern/hil/test_flash.ps1", "status": "PASS"}
+  ],
+  "p2_lut_bytes": 1776,
+  "p2_lut_capacity_bytes": 2048,
+  "builtin_archive_sha256": "be8a69defc7bfdfac10718be70b2d2b1f6229071cb2a1bda741ebc0b288c33ec",
+  "clean_source_rebuild": {
+    "status": "PASS",
+    "pinned_source_checkouts": 3,
+    "restored_overlays": 30,
+    "rebuilt_cli": true,
+    "rebuilt_builtins_identical": true,
+    "new_application_cache": true,
+    "llvm_binary_reused": true
+  },
+  "note": "Host/model checks are distinct from the physical-board records in acceptance.json. Source identities are recorded in ../source-manifest.json."
+}

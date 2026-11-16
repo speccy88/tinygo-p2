@@ -1,0 +1,44 @@
+{
+  "llvm-target": "p2",
+  "goos": "linux",
+  "goarch": "arm",
+  "build-tags": [
+    "p2",
+    "baremetal",
+    "task.stack"
+  ],
+  "gc": "conservative",
+  "scheduler": "cores",
+  "serial": "uart",
+  "panic-unwind": "none",
+  "linker": "ld.lld",
+  "rtlib": "",
+  "libc": "",
+  "automatic-stack-size": false,
+  "default-stack-size": 8192,
+  "binary-format": "elf",
+  "linkerscript": "targets/p2.ld",
+  "extra-files": [
+    "targets/p2_boot.S",
+    "targets/p2_start.c",
+    "src/runtime/runtime_p2.S",
+    "src/runtime/p2_memory.S",
+    "src/runtime/gc_p2.S",
+    "src/runtime/p2_psram.c",
+    "src/runtime/p2_psram.S",
+    "src/internal/task/task_stack_p2.S"
+  ],
+  "cflags": [
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-jump-tables",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-ffunction-sections",
+    "-fdata-sections"
+  ],
+  "ldflags": [
+    "--gc-sections",
+    "-L{root}/lib/p2"
+  ]
+}

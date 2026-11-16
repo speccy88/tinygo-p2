@@ -1,0 +1,911 @@
+diff --git a/builder/build.go b/builder/build.go
+index 266179b..b15f532 100644
+--- a/builder/build.go
++++ b/builder/build.go
+@@ -780,7 +780,16 @@ func Build(pkgName, outpath, tmpdir string, config *compileopts.Config) (BuildRe
+ 		dependencies: []*compileJob{programJob},
+ 		result:       objfile,
+ 		run: func(*compileJob) error {
+-			llvmBuf := llvm.WriteThinLTOBitcodeToMemoryBuffer(mod)
++			var llvmBuf llvm.MemoryBuffer
++			if config.Triple() == "p2" {
++				var err error
++				llvmBuf, err = machine.EmitToMemoryBuffer(mod, llvm.ObjectFile)
++				if err != nil {
++					return err
++				}
++			} else {
++				llvmBuf = llvm.WriteThinLTOBitcodeToMemoryBuffer(mod)
++			}
+ 			err := os.WriteFile(objfile, llvmBuf.Bytes(), 0666)
+ 			llvmBuf.Dispose()
+ 			// Only the stack size analysis in the link job reads the module
+@@ -955,6 +964,9 @@ func Build(pkgName, outpath, tmpdir string, config *compileopts.Config) (BuildRe
+ 				}
+ 				ldflags = append(ldflags, linkerInput)
+ 			}
++			if config.Triple() == "p2" {
++				ldflags = append(ldflags, "-lcompiler_builtins")
++			}
+ 			ldflags = append(ldflags, "-mllvm", "-mcpu="+config.CPU())
+ 			ldflags = append(ldflags, "-mllvm", "-mattr="+config.Features()) // needed for MIPS softfloat
+ 			switch config.LinkerFlavor() {
+diff --git a/builder/cc.go b/builder/cc.go
+index d63a1a9..e2c5bab 100644
+--- a/builder/cc.go
++++ b/builder/cc.go
+@@ -14,6 +14,7 @@ import (
+ 	"os"
+ 	"path"
+ 	"path/filepath"
++	"slices"
+ 	"sort"
+ 	"strings"
+ 	"unicode"
+@@ -133,8 +134,11 @@ func compileAndCacheCFile(abspath, tmpdir string, cflags []string, compileConfig
+ 		return "", err
+ 	}
+ 	depTmpFile.Close()
+-	flags := append([]string{}, cflags...)                                                 // copy cflags
+-	flags = append(flags, "-MD", "-MV", "-MTdeps", "-MF", depTmpFile.Name(), "-flto=thin") // autogenerate dependencies
++	flags := append([]string{}, cflags...)
++	flags = append(flags, "-MD", "-MV", "-MTdeps", "-MF", depTmpFile.Name())
++	if !slices.Contains(cflags, "--target=p2") {
++		flags = append(flags, "-flto=thin")
++	}
+ 	// Match cmd/go/internal/work/exec.go's ccompile directory in both modes.
+ 	workingDir := filepath.Dir(abspath)
+ 	flags = append(flags, "-working-directory="+workingDir)
+diff --git a/compileopts/config.go b/compileopts/config.go
+index 944322e..a8cf51a 100644
+--- a/compileopts/config.go
++++ b/compileopts/config.go
+@@ -267,7 +267,7 @@ func (c *Config) PanicUnwind() string {
+ func (c *Config) SupportsExplicitUnwind() bool {
+ 	arch, _, _ := strings.Cut(c.Triple(), "-")
+ 	switch arch {
+-	case "wasm32", "riscv64", "xtensa":
++	case "wasm32", "riscv64", "xtensa", "p2":
+ 		return true
+ 	default:
+ 		return false
+diff --git a/compiler/calls.go b/compiler/calls.go
+index 84eae10..41dcb67 100644
+--- a/compiler/calls.go
++++ b/compiler/calls.go
+@@ -19,10 +19,12 @@ const maxFieldsPerParam = 3
+ // paramInfo contains some information collected about a function parameter,
+ // useful while declaring or defining a function.
+ type paramInfo struct {
+-	llvmType llvm.Type
+-	name     string     // name, possibly with suffixes for e.g. struct fields
+-	elemSize uint64     // size of pointer element type, or 0 if this isn't a pointer
+-	flags    paramFlags // extra flags for this parameter
++	llvmType  llvm.Type
++	byvalType llvm.Type
++	sretType  llvm.Type
++	name      string     // name, possibly with suffixes for e.g. struct fields
++	elemSize  uint64     // size of pointer element type, or 0 if this isn't a pointer
++	flags     paramFlags // extra flags for this parameter
+ }
+ 
+ // paramFlags identifies parameter attributes for flags. Most importantly, it
+@@ -88,6 +90,19 @@ func (b *builder) createCall(fnType llvm.Type, fn llvm.Value, args []llvm.Value,
+ 	expanded := b.expandFormalParams(args)
+ 	call := b.CreateCall(fnType, fn, expanded, name)
+ 	if !fn.IsAFunction().IsNil() {
++		// ABI attributes must agree at the declaration and every call site.
++		for i := range fnType.ParamTypes() {
++			for _, name := range []string{"byval", "sret"} {
++				attr := fn.GetEnumAttributeAtIndex(i+1, llvm.AttributeKindID(name))
++				if !attr.IsNil() {
++					call.AddCallSiteAttribute(i+1, attr)
++					align := fn.GetEnumAttributeAtIndex(i+1, llvm.AttributeKindID("align"))
++					if !align.IsNil() {
++						call.AddCallSiteAttribute(i+1, align)
++					}
++				}
++			}
++		}
+ 		if cc := fn.FunctionCallConv(); cc != llvm.CCallConv {
+ 			// Set a different calling convention if needed.
+ 			// This is needed for GetModuleHandleExA on Windows, for example.
+@@ -546,6 +561,9 @@ func (b *builder) isUnwindRuntime() bool {
+ 		return false
+ 	}
+ 	switch b.fn.Name() {
++	case "currentCPU", "currentTask":
++		// Reading unwind state and defer frames must not query unwind state again.
++		return true
+ 	case "startUnwind", "currentDeferFrame", "unwindPending", "clearUnwind",
+ 		"getUnwindSignal", "setUnwindSignal", "savePanicReplay",
+ 		"panicRewindData", "panicRewindStackPointer",
+diff --git a/compiler/compiler.go b/compiler/compiler.go
+index 421a9b7..5b62403 100644
+--- a/compiler/compiler.go
++++ b/compiler/compiler.go
+@@ -314,9 +314,10 @@ func Sizes(machine llvm.TargetMachine) types.Sizes {
+ 	defer ctx.Dispose()
+ 	complex128Type := ctx.StructType([]llvm.Type{ctx.DoubleType(), ctx.DoubleType()}, false)
+ 	return &stdSizes{
+-		IntSize:  int64(intWidth / 8),
+-		PtrSize:  int64(targetData.PointerSize()),
+-		MaxAlign: int64(targetData.ABITypeAlignment(complex128Type)),
++		IntSize:    int64(intWidth / 8),
++		PtrSize:    int64(targetData.PointerSize()),
++		MaxAlign:   int64(targetData.ABITypeAlignment(complex128Type)),
++		Int64Align: int64(targetData.ABITypeAlignment(ctx.Int64Type())),
+ 	}
+ }
+ 
+@@ -2478,14 +2479,16 @@ func (b *builder) createFunctionCall(instr *ssa.CallCommon) (llvm.Value, error)
+ 		params = append(params, invokeTypecode)
+ 	}
+ 
+-	if !exported {
+-		if abi.indirectResult {
+-			result := b.createIndirectStorage(abi.resultType, "call.result")
+-			params = append([]llvm.Value{result}, params...)
++	if abi.indirectResult {
++		result := b.createIndirectStorage(abi.resultType, "call.result")
++		params = append([]llvm.Value{result}, params...)
++		if !exported {
+ 			params = append(params, context)
+-			b.createInvoke(calleeType, callee, params, "", instr)
+-			return result, nil
+ 		}
++		b.createInvoke(calleeType, callee, params, "", instr)
++		return result, nil
++	}
++	if !exported {
+ 		// This function takes a context parameter.
+ 		// Add it to the end of the parameter list.
+ 		params = append(params, context)
+diff --git a/compiler/func.go b/compiler/func.go
+index 517d585..30f25e6 100644
+--- a/compiler/func.go
++++ b/compiler/func.go
+@@ -7,6 +7,7 @@ import (
+ 	"fmt"
+ 	"go/types"
+ 	"sort"
++	"strings"
+ 
+ 	"golang.org/x/tools/go/ssa"
+ 	"tinygo.org/x/go-llvm"
+@@ -23,12 +24,14 @@ const maxFunctionParams = 1000
+ type functionABIParam struct {
+ 	llvmType  llvm.Type
+ 	indirect  bool
++	byval     bool
+ 	leafCount uint64
+ }
+ 
+ type functionABI struct {
+ 	resultType     llvm.Type
+ 	indirectResult bool
++	sretResult     bool
+ 	params         []functionABIParam
+ }
+ 
+@@ -66,7 +69,9 @@ func (c *compilerContext) getFunctionABIWithReceiver(sig *types.Signature, expor
+ 	abi := functionABI{}
+ 	abi.resultType, abi.indirectResult = c.hasIndirectResult(sig)
+ 	if exported {
+-		abi.indirectResult = false
++		abi.sretResult = strings.Split(c.Triple, "-")[0] == "p2" &&
++			(abi.resultType.TypeKind() == llvm.StructTypeKind || abi.resultType.TypeKind() == llvm.ArrayTypeKind)
++		abi.indirectResult = abi.sretResult
+ 	}
+ 
+ 	for i, param := range getParams(sig) {
+@@ -78,9 +83,13 @@ func (c *compilerContext) getFunctionABIWithReceiver(sig *types.Signature, expor
+ 		if exceeded {
+ 			leafCount = maxFunctionParams + 1
+ 		}
++		// Clang's P2 C ABI passes aggregate arguments in inline stack copies.
++		byval := exported && strings.Split(c.Triple, "-")[0] == "p2" &&
++			(llvmType.TypeKind() == llvm.StructTypeKind || llvmType.TypeKind() == llvm.ArrayTypeKind)
+ 		abi.params = append(abi.params, functionABIParam{
+ 			llvmType:  llvmType,
+-			indirect:  !exported && c.isIndirectAggregate(llvmType),
++			indirect:  byval || (!exported && c.isIndirectAggregate(llvmType)),
++			byval:     byval,
+ 			leafCount: leafCount,
+ 		})
+ 	}
+diff --git a/compiler/intrinsics.go b/compiler/intrinsics.go
+index a31359a..ba7b41d 100644
+--- a/compiler/intrinsics.go
++++ b/compiler/intrinsics.go
+@@ -197,6 +197,10 @@ var mathToLLVMMapping = map[string]string{
+ // beneficial on architectures where 64-bit floating point operations are (much)
+ // more expensive than 32-bit ones.
+ func (b *builder) defineMathOp() bool {
++	// P2 has no FPU or libm. Use the portable Go implementations.
++	if b.archFamily() == "p2" {
++		return false
++	}
+ 	llvmName, ok := mathToLLVMMapping[b.fn.RelString(nil)]
+ 	if !ok {
+ 		return false
+diff --git a/compiler/p2_cabi_test.go b/compiler/p2_cabi_test.go
+new file mode 100644
+index 0000000..dda4cd4
+--- /dev/null
++++ b/compiler/p2_cabi_test.go
+@@ -0,0 +1,117 @@
++package compiler
++
++import (
++	"go/types"
++	"testing"
++
++	"github.com/tinygo-org/tinygo/compileopts"
++	"tinygo.org/x/go-llvm"
++)
++
++func TestP2AggregateCABI(t *testing.T) {
++	if _, err := llvm.GetTargetFromTriple("p2"); err != nil {
++		t.Skip("LLVM was built without the P2 target")
++	}
++	mod, errs := testCompilePackage(t, &compileopts.Options{Target: "p2"}, "p2-cabi.go")
++	defer mod.Dispose()
++	for _, err := range errs {
++		t.Error(err)
++	}
++	if len(errs) != 0 {
++		return
++	}
++	if err := llvm.VerifyModule(mod, llvm.ReturnStatusAction); err != nil {
++		t.Fatal(err)
++	}
++	byvalKind := llvm.AttributeKindID("byval")
++	for _, name := range []string{"p2_import_pair", "p2_export_pair"} {
++		fn := mod.NamedFunction(name)
++		if fn.IsNil() {
++			t.Fatalf("missing function %s", name)
++		}
++		params := fn.GlobalValueType().ParamTypes()
++		if len(params) != 2 || params[0].TypeKind() != llvm.PointerTypeKind || params[1].TypeKind() != llvm.IntegerTypeKind {
++			t.Fatalf("%s has incorrect C ABI: %s", name, fn.String())
++		}
++		byval := fn.GetEnumAttributeAtIndex(1, byvalKind)
++		if byval.IsNil() || byval.GetTypeValue().TypeKind() != llvm.StructTypeKind {
++			t.Fatalf("%s is missing typed byval", name)
++		}
++		align := fn.GetEnumAttributeAtIndex(1, llvm.AttributeKindID("align"))
++		if align.IsNil() || align.GetEnumValue() != 4 {
++			t.Fatalf("%s has incorrect byval alignment", name)
++		}
++		foundCall := false
++		for use := fn.FirstUse(); !use.IsNil(); use = use.NextUse() {
++			call := use.User()
++			if call.IsACallInst().IsNil() {
++				continue
++			}
++			foundCall = true
++			attr := call.GetCallSiteEnumAttribute(1, byvalKind)
++			if attr.IsNil() || attr.GetTypeValue() != byval.GetTypeValue() {
++				t.Errorf("%s call is missing matching byval: %s", name, call.String())
++			}
++		}
++		if !foundCall {
++			t.Errorf("missing call to %s", name)
++		}
++	}
++	for _, name := range []string{"p2_import_result", "p2_export_result"} {
++		fn := mod.NamedFunction(name)
++		if fn.IsNil() || fn.GlobalValueType().ReturnType().TypeKind() != llvm.VoidTypeKind {
++			t.Fatalf("%s must return through sret", name)
++		}
++		attr := fn.GetEnumAttributeAtIndex(1, llvm.AttributeKindID("sret"))
++		if attr.IsNil() || attr.GetTypeValue().TypeKind() != llvm.StructTypeKind {
++			t.Fatalf("%s is missing typed sret", name)
++		}
++		foundCall := false
++		for use := fn.FirstUse(); !use.IsNil(); use = use.NextUse() {
++			call := use.User()
++			if call.IsACallInst().IsNil() {
++				continue
++			}
++			foundCall = true
++			callAttr := call.GetCallSiteEnumAttribute(1, llvm.AttributeKindID("sret"))
++			if callAttr.IsNil() || callAttr.GetTypeValue() != attr.GetTypeValue() {
++				t.Errorf("%s call is missing matching sret: %s", name, call.String())
++			}
++		}
++		if !foundCall {
++			t.Errorf("missing call to %s", name)
++		}
++	}
++}
++
++func TestP2TypeSizes(t *testing.T) {
++	machine, err := NewTargetMachine(&Config{Triple: "p2"})
++	if err != nil {
++		t.Skip("LLVM was built without the P2 target")
++	}
++	defer machine.Dispose()
++	sizes := Sizes(machine)
++	for _, test := range []struct {
++		kind  types.BasicKind
++		align int64
++	}{
++		{types.Int64, 4}, {types.Uint64, 4}, {types.Float64, 8}, {types.Complex128, 8},
++	} {
++		if got := sizes.Alignof(types.Typ[test.kind]); got != test.align {
++			t.Errorf("%s alignment=%d, want %d", types.Typ[test.kind], got, test.align)
++		}
++	}
++	fields := []*types.Var{
++		types.NewVar(0, nil, "head", types.Typ[types.Uint32]),
++		types.NewVar(0, nil, "middle", types.Typ[types.Uint64]),
++		types.NewVar(0, nil, "tail", types.Typ[types.Uint32]),
++	}
++	for i, offset := range sizes.Offsetsof(fields) {
++		if want := []int64{0, 4, 12}[i]; offset != want {
++			t.Errorf("field %d offset=%d, want %d", i, offset, want)
++		}
++	}
++	if size := sizes.Sizeof(types.NewStruct(fields, nil)); size != 16 {
++		t.Errorf("struct size=%d, want 16", size)
++	}
++}
+diff --git a/compiler/sizes.go b/compiler/sizes.go
+index 4556649..4d7205a 100644
+--- a/compiler/sizes.go
++++ b/compiler/sizes.go
+@@ -11,9 +11,10 @@ import (
+ //     https://golang.org/LICENSE
+ 
+ type stdSizes struct {
+-	IntSize  int64
+-	PtrSize  int64
+-	MaxAlign int64
++	IntSize    int64
++	PtrSize    int64
++	MaxAlign   int64
++	Int64Align int64
+ }
+ 
+ func (s *stdSizes) Alignof(T types.Type) int64 {
+@@ -40,6 +41,10 @@ func (s *stdSizes) Alignof(T types.Type) int64 {
+ 		// in which each element has size WordSize.
+ 		return s.PtrSize
+ 	case *types.Basic:
++		// Integer and floating-point 64-bit alignments can differ.
++		if (t.Kind() == types.Int64 || t.Kind() == types.Uint64) && s.Int64Align != 0 {
++			return s.Int64Align
++		}
+ 		// Strings are like slices and interfaces.
+ 		if t.Info()&types.IsString != 0 {
+ 			return s.PtrSize
+diff --git a/compiler/symbol.go b/compiler/symbol.go
+index d3a80b4..1324cd0 100644
+--- a/compiler/symbol.go
++++ b/compiler/symbol.go
+@@ -85,21 +85,30 @@ func (c *compilerContext) getFunction(fn *ssa.Function) (llvm.Type, llvm.Value)
+ 
+ 	var paramInfos []paramInfo
+ 	if abi.indirectResult {
+-		paramInfos = append(paramInfos, paramInfo{
++		resultInfo := paramInfo{
+ 			llvmType: c.dataPtrType,
+ 			name:     "return",
+ 			elemSize: c.targetData.TypeAllocSize(retType),
+-		})
++		}
++		if abi.sretResult {
++			resultInfo.sretType = retType
++		}
++		paramInfos = append(paramInfos, resultInfo)
+ 		retType = c.ctx.VoidType()
+ 	}
+ 	for i, param := range getParams(fn.Signature) {
+ 		if abi.params[i].indirect {
+-			paramInfos = append(paramInfos, paramInfo{
++			paramInfo := paramInfo{
+ 				llvmType: c.dataPtrType,
+ 				name:     param.Name(),
+ 				elemSize: c.targetData.TypeAllocSize(abi.params[i].llvmType),
+ 				flags:    paramIsGoParam | paramIsReadonly | paramIsIndirect,
+-			})
++			}
++			if abi.params[i].byval {
++				paramInfo.byvalType = abi.params[i].llvmType
++				paramInfo.flags &^= paramIsReadonly
++			}
++			paramInfos = append(paramInfos, paramInfo)
+ 		} else {
+ 			paramInfos = append(paramInfos, c.expandDirectFormalParamType(abi.params[i].llvmType, param.Name(), param.Type())...)
+ 		}
+@@ -147,6 +156,15 @@ func (c *compilerContext) getFunction(fn *ssa.Function) (llvm.Type, llvm.Value)
+ 
+ 	dereferenceableOrNullKind := llvm.AttributeKindID("dereferenceable_or_null")
+ 	for i, paramInfo := range paramInfos {
++		if !paramInfo.byvalType.IsNil() {
++			llvmFn.AddAttributeAtIndex(i+1, c.ctx.CreateTypeAttribute(llvm.AttributeKindID("byval"), paramInfo.byvalType))
++			llvmFn.AddAttributeAtIndex(i+1, c.ctx.CreateEnumAttribute(llvm.AttributeKindID("align"), uint64(c.targetData.ABITypeAlignment(paramInfo.byvalType))))
++		}
++		if !paramInfo.sretType.IsNil() {
++			llvmFn.AddAttributeAtIndex(i+1, c.ctx.CreateTypeAttribute(llvm.AttributeKindID("sret"), paramInfo.sretType))
++			llvmFn.AddAttributeAtIndex(i+1, c.ctx.CreateEnumAttribute(llvm.AttributeKindID("align"), uint64(c.targetData.ABITypeAlignment(paramInfo.sretType))))
++			llvmFn.AddAttributeAtIndex(i+1, c.ctx.CreateEnumAttribute(llvm.AttributeKindID("noalias"), 0))
++		}
+ 		if paramInfo.elemSize != 0 {
+ 			dereferenceableOrNull := c.ctx.CreateEnumAttribute(dereferenceableOrNullKind, paramInfo.elemSize)
+ 			llvmFn.AddAttributeAtIndex(i+1, dereferenceableOrNull)
+diff --git a/compiler/testdata/p2-cabi.go b/compiler/testdata/p2-cabi.go
+new file mode 100644
+index 0000000..34186b1
+--- /dev/null
++++ b/compiler/testdata/p2-cabi.go
+@@ -0,0 +1,32 @@
++package main
++
++type p2Pair struct {
++	A uint32
++	B uint32
++	C uint64
++}
++
++//export p2_import_pair
++func p2ImportPair(value p2Pair, salt uint32) uint64
++
++//export p2_export_pair
++func p2ExportPair(value p2Pair, salt uint32) uint64 {
++	return value.C ^ uint64(value.A)<<32 ^ uint64(value.B) ^ uint64(salt)
++}
++
++func p2CallPair(value p2Pair, salt uint32) uint64 {
++	return p2ImportPair(value, salt) + p2ExportPair(value, salt)
++}
++
++//export p2_import_result
++func p2ImportResult(seed uint32) p2Pair
++
++//export p2_export_result
++func p2ExportResult(seed uint32) p2Pair {
++	return p2Pair{A: seed, B: seed + 1, C: uint64(seed)<<32 | uint64(seed)}
++}
++
++func p2CallResult(seed uint32) uint64 {
++	a, b := p2ImportResult(seed), p2ExportResult(seed)
++	return a.C ^ b.C
++}
+diff --git a/src/internal/task/futex-cores.go b/src/internal/task/futex-cores.go
+index 70c48f9..9055fbf 100644
+--- a/src/internal/task/futex-cores.go
++++ b/src/internal/task/futex-cores.go
+@@ -19,6 +19,14 @@ type Futex struct {
+ // to sleep. Return true if we were definitely awoken by a call to Wake or
+ // WakeAll, and false if we can't be sure of that.
+ func (f *Futex) Wait(cmp uint32) (awoken bool) {
++	// Scheduler timer callbacks have no goroutine to enqueue or suspend.
++	if Current() == nil {
++		for f.Uint32.Load() == cmp {
++			spinLoopWait()
++		}
++		return false
++	}
++
+ 	mask := lockFutex()
+ 
+ 	if f.Uint32.Load() != cmp {
+@@ -64,3 +72,6 @@ func lockFutex() interrupt.State
+ 
+ //go:linkname unlockFutex runtime.unlockFutex
+ func unlockFutex(interrupt.State)
++
++//go:linkname spinLoopWait runtime.spinLoopWait
++func spinLoopWait()
+diff --git a/src/internal/task/task_stack.go b/src/internal/task/task_stack.go
+index 7a86c8f..b13c378 100644
+--- a/src/internal/task/task_stack.go
++++ b/src/internal/task/task_stack.go
+@@ -22,7 +22,7 @@ type state struct {
+ 	// problem to store this value as uintptr.
+ 	sp uintptr
+ 
+-	// canaryPtr points to the top word of the stack (the lowest address).
++	// canaryPtr points to the stack boundary opposite its growth origin.
+ 	// This is used to detect stack overflows.
+ 	// When initializing the goroutine, the stackCanary constant is stored there.
+ 	// If the stack overflowed, the word will likely no longer equal stackCanary.
+@@ -41,18 +41,7 @@ func (s *state) initialize(fn uintptr, args unsafe.Pointer, stackSize uintptr) {
+ 	// Create a stack.
+ 	stack := runtime_alloc(stackSize, gclayout.Conservative.AsPtr())
+ 
+-	// Set up the stack canary, a random number that should be checked when
+-	// switching from the task back to the scheduler. The stack canary pointer
+-	// points to the first word of the stack. If it has changed between now and
+-	// the next stack switch, there was a stack overflow.
+-	s.canaryPtr = (*uintptr)(stack)
+-	*s.canaryPtr = stackCanary
+-
+-	// Get a pointer to the top of the stack, where the initial register values
+-	// are stored. They will be popped off the stack on the first stack switch
+-	// to the goroutine, and will start running tinygo_startTask (this setup
+-	// happens in archInit).
+-	r := (*calleeSavedRegs)(unsafe.Add(stack, stackSize-unsafe.Sizeof(calleeSavedRegs{})))
++	r := s.initializeStack(stack, stackSize)
+ 
+ 	// Invoke architecture-specific initialization.
+ 	s.archInit(r, fn, args)
+diff --git a/src/internal/task/task_stack_arm.go b/src/internal/task/task_stack_arm.go
+index c9b4a9a..9b1480a 100644
+--- a/src/internal/task/task_stack_arm.go
++++ b/src/internal/task/task_stack_arm.go
+@@ -1,4 +1,4 @@
+-//go:build scheduler.tasks && arm && !cortexm && !avr && !xtensa && !tinygo.riscv
++//go:build scheduler.tasks && arm && !cortexm && !avr && !xtensa && !tinygo.riscv && !p2
+ 
+ package task
+ 
+diff --git a/src/internal/task/task_stack_onsystemstack.go b/src/internal/task/task_stack_onsystemstack.go
+index 8ff9e2c..be58499 100644
+--- a/src/internal/task/task_stack_onsystemstack.go
++++ b/src/internal/task/task_stack_onsystemstack.go
+@@ -1,4 +1,4 @@
+-//go:build (scheduler.tasks || scheduler.cores) && !tinygo.riscv
++//go:build (scheduler.tasks || scheduler.cores) && !tinygo.riscv && !p2
+ 
+ package task
+ 
+diff --git a/src/runtime/atomics_critical.go b/src/runtime/atomics_critical.go
+index 202e3dc..cbd58a2 100644
+--- a/src/runtime/atomics_critical.go
++++ b/src/runtime/atomics_critical.go
+@@ -55,7 +55,11 @@ func __sync_val_compare_and_swap_2(ptr *uint16, expected, desired uint16) uint16
+ func __atomic_compare_exchange_2(ptr, expected *uint16, desired uint16, successOrder, failureOrder uintptr) bool {
+ 	exp := *expected
+ 	old := doAtomicCAS16(ptr, exp, desired)
+-	return old == exp
++	if old != exp {
++		*expected = old
++		return false
++	}
++	return true
+ }
+ 
+ //go:inline
+@@ -200,7 +204,11 @@ func __sync_val_compare_and_swap_4(ptr *uint32, expected, desired uint32) uint32
+ func __atomic_compare_exchange_4(ptr, expected *uint32, desired uint32, successOrder, failureOrder uintptr) bool {
+ 	exp := *expected
+ 	old := doAtomicCAS32(ptr, exp, desired)
+-	return old == exp
++	if old != exp {
++		*expected = old
++		return false
++	}
++	return true
+ }
+ 
+ //go:inline
+@@ -345,7 +353,11 @@ func __sync_val_compare_and_swap_8(ptr *uint64, expected, desired uint64) uint64
+ func __atomic_compare_exchange_8(ptr, expected *uint64, desired uint64, successOrder, failureOrder uintptr) bool {
+ 	exp := *expected
+ 	old := doAtomicCAS64(ptr, exp, desired)
+-	return old == exp
++	if old != exp {
++		*expected = old
++		return false
++	}
++	return true
+ }
+ 
+ //go:inline
+diff --git a/src/runtime/chan.go b/src/runtime/chan.go
+index bcad567..e1db9eb 100644
+--- a/src/runtime/chan.go
++++ b/src/runtime/chan.go
+@@ -253,16 +253,16 @@ func chanSend(ch *channel, value unsafe.Pointer, op *channelOp) {
+ 	}
+ 	ch.checkSynctest("send on")
+ 
+-	mask := interrupt.Disable()
+ 	ch.lock.Lock()
++	mask := interrupt.Disable()
+ 
+ 	// See whether we can proceed immediately, and if so, return early.
+ 	if sent, wake := ch.trySend(value); sent {
++		interrupt.Restore(mask)
+ 		ch.lock.Unlock()
+ 		if wake != nil {
+ 			scheduleTask(wake)
+ 		}
+-		interrupt.Restore(mask)
+ 		return
+ 	}
+ 
+@@ -273,11 +273,11 @@ func chanSend(ch *channel, value unsafe.Pointer, op *channelOp) {
+ 	op.index = 0
+ 	op.value = value
+ 	ch.senders.push(op)
++	interrupt.Restore(mask)
+ 	if synctestIsEnabled() && ch.synctest != nil {
+ 		synctestTaskBlock(t)
+ 	}
+ 	ch.lock.Unlock()
+-	interrupt.Restore(mask)
+ 
+ 	// Wait until this goroutine is resumed.
+ 	// It might be resumed after Unlock() and before Pause(). In that case,
+@@ -337,15 +337,15 @@ func chanRecv(ch *channel, value unsafe.Pointer, op *channelOp) bool {
+ 	}
+ 	ch.checkSynctest("receive on")
+ 
+-	mask := interrupt.Disable()
+ 	ch.lock.Lock()
++	mask := interrupt.Disable()
+ 
+ 	if received, ok, wake := ch.tryRecv(value); received {
++		interrupt.Restore(mask)
+ 		ch.lock.Unlock()
+ 		if wake != nil {
+ 			scheduleTask(wake)
+ 		}
+-		interrupt.Restore(mask)
+ 		return ok
+ 	}
+ 
+@@ -357,11 +357,11 @@ func chanRecv(ch *channel, value unsafe.Pointer, op *channelOp) bool {
+ 	op.task = t
+ 	op.index = 0
+ 	ch.receivers.push(op)
++	interrupt.Restore(mask)
+ 	if synctestIsEnabled() && ch.synctest != nil {
+ 		synctestTaskBlock(t)
+ 	}
+ 	ch.lock.Unlock()
+-	interrupt.Restore(mask)
+ 
+ 	// Wait until the goroutine is resumed.
+ 	task.Pause()
+@@ -378,16 +378,16 @@ func chanTrySend(ch *channel, value unsafe.Pointer) bool {
+ 	}
+ 	ch.checkSynctest("send on")
+ 
+-	mask := interrupt.Disable()
+ 	ch.lock.Lock()
++	mask := interrupt.Disable()
+ 
+ 	sent, wake := ch.trySend(value)
+ 
++	interrupt.Restore(mask)
+ 	ch.lock.Unlock()
+ 	if wake != nil {
+ 		scheduleTask(wake)
+ 	}
+-	interrupt.Restore(mask)
+ 
+ 	return sent
+ }
+@@ -403,16 +403,16 @@ func chanTryRecv(ch *channel, value unsafe.Pointer) (received, ok bool) {
+ 	}
+ 	ch.checkSynctest("receive on")
+ 
+-	mask := interrupt.Disable()
+ 	ch.lock.Lock()
++	mask := interrupt.Disable()
+ 
+ 	received, ok, wake := ch.tryRecv(value)
+ 
++	interrupt.Restore(mask)
+ 	ch.lock.Unlock()
+ 	if wake != nil {
+ 		scheduleTask(wake)
+ 	}
+-	interrupt.Restore(mask)
+ 
+ 	return received, ok
+ }
+@@ -426,13 +426,13 @@ func chanClose(ch *channel) {
+ 	}
+ 	ch.checkSynctest("close of")
+ 
+-	mask := interrupt.Disable()
+ 	ch.lock.Lock()
++	mask := interrupt.Disable()
+ 
+ 	if ch.closed {
+ 		// Not allowed by the language spec.
+-		ch.lock.Unlock()
+ 		interrupt.Restore(mask)
++		ch.lock.Unlock()
+ 		runtimePanic(errCloseClosedChannel)
+ 	}
+ 
+@@ -478,6 +478,7 @@ func chanClose(ch *channel) {
+ 	}
+ 
+ 	ch.closed = true
++	interrupt.Restore(mask)
+ 	ch.lock.Unlock()
+ 
+ 	// Wake waiters only after releasing the channel lock.
+@@ -487,7 +488,6 @@ func chanClose(ch *channel) {
+ 		scheduleTask(wake.task)
+ 	}
+ 
+-	interrupt.Restore(mask)
+ }
+ 
+ // We currently use a global select lock to avoid deadlocks while locking each
+@@ -530,7 +530,6 @@ func unlockAllStates(states []chanSelectState) {
+ // chanSelect implements blocking or non-blocking select operations.
+ // The 'ops' slice must be set if (and only if) this is a blocking select.
+ func chanSelect(recvbuf unsafe.Pointer, states []chanSelectState, ops []channelOp) (uint32, bool) {
+-	mask := interrupt.Disable()
+ 	var currentBubble unsafe.Pointer
+ 	var synctestDurable bool
+ 	if synctestIsEnabled() {
+@@ -538,9 +537,10 @@ func chanSelect(recvbuf unsafe.Pointer, states []chanSelectState, ops []channelO
+ 		synctestDurable = currentBubble != nil
+ 	}
+ 
+-	// Lock everything.
++	// Blocking locks must be acquired before masking interrupts.
+ 	chanSelectLock.Lock()
+ 	lockAllStates(states)
++	mask := interrupt.Disable()
+ 
+ 	const selectNoIndex = ^uint32(0)
+ 	selectIndex := selectNoIndex
+@@ -557,9 +557,9 @@ func chanSelect(recvbuf unsafe.Pointer, states []chanSelectState, ops []channelO
+ 		}
+ 		if synctestIsEnabled() {
+ 			if state.ch.synctest != nil && state.ch.synctest != currentBubble {
++				interrupt.Restore(mask)
+ 				unlockAllStates(states)
+ 				chanSelectLock.Unlock()
+-				interrupt.Restore(mask)
+ 				runtimeFatal("select on synctest channel from outside bubble")
+ 			}
+ 			if state.ch.synctest == nil {
+@@ -587,12 +587,12 @@ func chanSelect(recvbuf unsafe.Pointer, states []chanSelectState, ops []channelO
+ 	// return early.
+ 	blocking := len(ops) != 0
+ 	if selectIndex != selectNoIndex || !blocking {
++		interrupt.Restore(mask)
+ 		unlockAllStates(states)
+ 		chanSelectLock.Unlock()
+ 		if wake != nil {
+ 			scheduleTask(wake)
+ 		}
+-		interrupt.Restore(mask)
+ 		return selectIndex, selectOk
+ 	}
+ 
+@@ -619,6 +619,7 @@ func chanSelect(recvbuf unsafe.Pointer, states []chanSelectState, ops []channelO
+ 			state.ch.senders.push(op)
+ 		}
+ 	}
++	interrupt.Restore(mask)
+ 	if synctestDurable {
+ 		synctestTaskBlock(t)
+ 	}
+@@ -626,7 +627,6 @@ func chanSelect(recvbuf unsafe.Pointer, states []chanSelectState, ops []channelO
+ 	// Now we wait until one of the send/receive operations can proceed.
+ 	unlockAllStates(states)
+ 	chanSelectLock.Unlock()
+-	interrupt.Restore(mask)
+ 	task.Pause()
+ 
+ 	// Resumed, so one channel operation must have progressed.
+diff --git a/src/runtime/gc_blocks.go b/src/runtime/gc_blocks.go
+index 734994e..735b2f8 100644
+--- a/src/runtime/gc_blocks.go
++++ b/src/runtime/gc_blocks.go
+@@ -668,7 +668,7 @@ func runGC() (freeBytes uintptr) {
+ 
+ // markRoots reads all pointers from start to end (exclusive) and if they look
+ // like a heap pointer and are unmarked, marks them and scans that object as
+-// well (recursively). The starting address must be valid and aligned.
++// well (recursively). The starting address must be valid and target-aligned.
+ func markRoots(start, end uintptr) {
+ 	if gcDebug {
+ 		println("mark from", start, "to", end, int(end-start))
+@@ -677,7 +677,7 @@ func markRoots(start, end uintptr) {
+ 		if start >= end {
+ 			runtimeFatal("gc: unexpected range to mark")
+ 		}
+-		if start%unsafe.Alignof(start) != 0 {
++		if GOARCH != "p2" && start%unsafe.Alignof(start) != 0 {
+ 			runtimeFatal("gc: unaligned start pointer")
+ 		}
+ 	}
+@@ -687,8 +687,30 @@ func markRoots(start, end uintptr) {
+ }
+ 
+ // scanConservative scans all possible pointer locations in a range and marks referenced heap allocations.
+-// The starting address must be valid and pointer-aligned.
++// P2 permits byte-aligned spill roots; other targets require pointer alignment.
+ func scanConservative(addr, len uintptr) {
++	if GOARCH == "p2" {
++		if len < 4 {
++			return
++		}
++		// The collector holds gcLock, so the same bounds as isOnHeap stay fixed.
++		heapBegin, heapLimit := heapStart, uintptr(metadataStart)
++		// PTRA is byte-aligned at calls. Slide a four-byte little-endian window.
++		bytes := (*[4]byte)(unsafe.Pointer(addr))
++		root := uintptr(bytes[0]) | uintptr(bytes[1])<<8 | uintptr(bytes[2])<<16 | uintptr(bytes[3])<<24
++		for {
++			if root >= heapBegin && root < heapLimit {
++				markRoot(addr, root)
++			}
++			if len == 4 {
++				return
++			}
++			root = root>>8 | uintptr(*(*byte)(unsafe.Pointer(addr + 4)))<<24
++			addr++
++			len--
++		}
++	}
++
+ 	for len >= unsafe.Sizeof(addr) {
+ 		root := *(*uintptr)(unsafe.Pointer(addr))
+ 		markRoot(addr, root)
+diff --git a/src/runtime/gc_stack_cores.go b/src/runtime/gc_stack_cores.go
+index c32653f..2dfb272 100644
+--- a/src/runtime/gc_stack_cores.go
++++ b/src/runtime/gc_stack_cores.go
+@@ -1,4 +1,4 @@
+-//go:build scheduler.cores && (gc.conservative || gc.precise || gc.boehm)
++//go:build scheduler.cores && (gc.conservative || gc.precise || gc.boehm) && !p2
+ 
+ package runtime
+ 
+diff --git a/src/runtime/gc_stack_raw.go b/src/runtime/gc_stack_raw.go
+index 95d4b0a..4135da9 100644
+--- a/src/runtime/gc_stack_raw.go
++++ b/src/runtime/gc_stack_raw.go
+@@ -1,4 +1,4 @@
+-//go:build (gc.conservative || gc.precise || gc.boehm) && !tinygo.wasm && !scheduler.threads && !scheduler.cores
++//go:build (gc.conservative || gc.precise || gc.boehm) && !tinygo.wasm && !scheduler.threads && !scheduler.cores && !p2
+ 
+ package runtime
+ 
+diff --git a/src/runtime/runtime.go b/src/runtime/runtime.go
+index 85684dd..cda654d 100644
+--- a/src/runtime/runtime.go
++++ b/src/runtime/runtime.go
+@@ -28,6 +28,9 @@ func callMain()
+ 
+ func GOMAXPROCS(n int) int {
+ 	// Note: setting GOMAXPROCS is ignored.
++	if hasParallelism {
++		return NumCPU()
++	}
+ 	return 1
+ }
+ 
+diff --git a/src/runtime/wait_other.go b/src/runtime/wait_other.go
+index 24fbd62..b067db2 100644
+--- a/src/runtime/wait_other.go
++++ b/src/runtime/wait_other.go
+@@ -1,4 +1,4 @@
+-//go:build !tinygo.riscv && !cortexm && !(linux && !baremetal && !tinygo.wasm && !nintendoswitch) && !darwin && !wasip1 && !uefi
++//go:build !tinygo.riscv && !cortexm && !(linux && !baremetal && !tinygo.wasm && !nintendoswitch) && !darwin && !wasip1 && !uefi && !p2
+ 
+ package runtime
+ 
+diff --git a/tools/gen-critical-atomics/gen-critical-atomics.go b/tools/gen-critical-atomics/gen-critical-atomics.go
+index 44062b5..2416b6d 100644
+--- a/tools/gen-critical-atomics/gen-critical-atomics.go
++++ b/tools/gen-critical-atomics/gen-critical-atomics.go
+@@ -75,7 +75,11 @@ func __sync_val_compare_and_swap_{{.}}(ptr *uint{{$bits}}, expected, desired uin
+ func __atomic_compare_exchange_{{.}}(ptr, expected *uint{{$bits}}, desired uint{{$bits}}, successOrder, failureOrder uintptr) bool {
+ 	exp := *expected
+ 	old := doAtomicCAS{{$bits}}(ptr, exp, desired)
+-	return old == exp
++	if old != exp {
++		*expected = old
++		return false
++	}
++	return true
+ }
+ {{end}}
+ {{- define "swap"}}{{$bits := mul . 8 -}}

@@ -1,0 +1,11 @@
+{
+  "inherits": [
+    "p2"
+  ],
+  "scheduler": "tasks",
+  "ldflags": [
+    "--defsym=__p2_secondary_stack_bytes=0"
+  ],
+  "panic-unwind": "none",
+  "gc": "leaking"
+}

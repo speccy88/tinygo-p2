@@ -1,0 +1,393 @@
+diff --git a/docs/llvm15-port.md b/docs/llvm15-port.md
+new file mode 100644
+index 0000000..2006ade
+--- /dev/null
++++ b/docs/llvm15-port.md
+@@ -0,0 +1,89 @@
++# LLVM 15 port
++
++The P2 backend can be applied to upstream LLVM 15.0.7 (commit
++`8dfdcc7b7bf66834a761bd8de445840ef68e4d1a`). LLVM 15 is the oldest LLVM release
++supported by TinyGo 0.44.0. Using this supported baseline limits unrelated
++compiler changes while preserving the current P2 ABI and hardware helper code.
++
++Create an LLVM 15 checkout or worktree at `llvm15`, then apply the matching
++`llvm15-p2.patch` generated from this port. Do not apply the patch to the legacy
++`llvm-project` checkout: the patch base is the upstream LLVM 15 commit above.
++
++Build in a separate directory. On a modern Linux host with Clang, CMake, Ninja,
++and LLD available, use:
++
++```sh
++cmake -G Ninja -S llvm15/llvm -B ../llvm15-build \
++  -DCMAKE_BUILD_TYPE=Release \
++  -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ \
++  -DCMAKE_C_FLAGS_RELEASE=-O1 -DCMAKE_CXX_FLAGS_RELEASE=-O1 \
++  -DLLVM_ENABLE_PROJECTS='clang;lld' \
++  -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=P2 \
++  -DLLVM_ENABLE_ASSERTIONS=ON \
++  -DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_LINK_LLVM_DYLIB=ON \
++  -DLLVM_USE_LINKER=lld -DLLVM_PARALLEL_LINK_JOBS=1 \
++  -DLLVM_ENABLE_TERMINFO=OFF -DLLVM_ENABLE_LIBXML2=OFF \
++  -DLLVM_ENABLE_ZSTD=OFF -DLLVM_ENABLE_BINDINGS=OFF \
++  -DCLANG_ENABLE_ARCMT=OFF -DCLANG_ENABLE_STATIC_ANALYZER=OFF \
++  -DCLANG_LINK_CLANG_DYLIB=OFF
++ninja -C ../llvm15-build -j4 LLVM libclang clang lld llc llvm-config \
++  llvm-ar llvm-ranlib llvm-nm llvm-objdump llvm-objcopy llvm-readelf \
++  llvm-as llvm-dis llvm-mc llvm-symbolizer llvm-addr2line opt FileCheck not count split-file
++```
++
++The host `-O1` option limits bootstrap time and memory. It does not change the
++optimization level requested when compiling P2 programs. X86 is included for
++TinyGo's host target initialization and host tests. P2 is an experimental LLVM
++target because it is not included in upstream LLVM.
++
++## Target contracts
++
++- Native objects use individual function and data sections, so `--gc-sections`
++  can remove unused runtime exports without LTO. Explicit LUT/cog sections remain
++  as declared. Clang searches its resource headers and the P2 SDK, not host libc.
++- P2 is a 32-bit little-endian target. Hub pointers are byte addresses; cog and
++  LUT instruction locations retain their P2-specific addressing rules.
++- Clang and LLVM agree that 64-bit integers have four-byte natural alignment;
++  double retains eight-byte alignment. C aggregate arguments use inline stack
++  copies marked `byval`, including at calls made from Go. C aggregate results
++  use explicit `sret` pointers before optimization, so C and Go declarations agree.
++- R31 returns a scalar word; R30:R31 returns a scalar double word. Multi-value
++  results that do not fit those registers use LLVM's hidden result pointer.
++- P2 has hardware locks but no hub-memory atomic read/modify/write instruction.
++  LLVM's atomic expansion pass therefore emits runtime calls. The runtime must
++  implement both sized `__atomic_*_N` and generic byte-range `__atomic_*` entry
++  points. In particular, an i64 object aligned to four bytes can select the
++  generic ABI. Fences call `__sync_synchronize`.
++- Stack-save and stack-restore intrinsics copy the upward-growing PTRA byte
++  pointer. Variable-sized stack allocation remains explicitly unsupported.
++- Promoted boolean conditions have zero upper bits, so branches and selects
++  test the low bit after integer-to-i1 truncation. Boolean memory values use
++  byte loads with the requested extension. Paired
++  unsigned 64-bit division and remainder share one `__udivmoddi4` runtime call.
++- Native REV and ABS instructions implement their 32-bit LLVM operations.
++  Unsigned QMUL implements the low/high product; signed-high multiplication
++  requires the corresponding sign corrections. CLZ must handle zero before
++  relying on ENCOD.
++- Inline assembly in Clang implicitly clobbers the status register `sw`. This
++  prevents a C comparison from being reused across assembly that changes C/Z.
++- STALLI, ALLOWI, SETINT1/2/3, COGATN, and RETI1 are accepted by the assembler.
++  The fixed interrupt instructions reject inappropriate WC/WZ suffixes.
++- `llvm.returnaddress(0)` reads the existing CALLA frame word and removes
++  saved condition flags. Cog entry points and unsupported ancestor depths return
++  null; the backend does not invent a frame chain.
++- `llvm.trap` uses LLVM's `abort` libcall. A freestanding runtime must provide
++  its own non-returning `abort` implementation.
++
++## Validation
++
++Use the source tree corresponding to the actual build, rather than the legacy
++LLVM submodule:
++
++```sh
++python3 tests/run.py --build-dir ../llvm15-build --llvm-source llvm15
++```
++
++The instruction matrix checks encodings against the independent Rev B
++instruction table. Code-generation and assembler tests establish compiler
++behavior; physical board fixtures are still required to establish execution
++correctness, multicore ordering, and timing.
+diff --git a/libp2/lib/builtins/CMakeLists.txt b/libp2/lib/builtins/CMakeLists.txt
+index b1f5631..a7b9baa 100644
+--- a/libp2/lib/builtins/CMakeLists.txt
++++ b/libp2/lib/builtins/CMakeLists.txt
+@@ -1,3 +1,6 @@
++# The P2 source language has no __int128 type. Clang accepts this helper as IR.
++set_source_files_properties(multi3.ll PROPERTIES LANGUAGE C COMPILE_FLAGS "-x ir")
++
+ add_library(builtins OBJECT
+     adddf3.c
+     addsf3.c
+@@ -36,9 +39,11 @@ add_library(builtins OBJECT
+     muldf3.c
+     mulsf3.c
+     muldi3.c
++    multi3.ll
+     negdi2.c
+     subdf3.c
+     subsf3.c
++    truncdfsf2.c
+     udivdi3.c
+     udivmoddi4.c
+     umoddi3.c
+diff --git a/libp2/lib/builtins/multi3.ll b/libp2/lib/builtins/multi3.ll
+new file mode 100644
+index 0000000..97c764b
+--- /dev/null
++++ b/libp2/lib/builtins/multi3.ll
+@@ -0,0 +1,47 @@
++; Software low 128-bit product for legalizer-generated __multi3 calls.
++; P2 C has no __int128 source type, so express this ABI helper in LLVM IR.
++; All actual multiplications are 64 bits or narrower; never call ourselves.
++; The target legalizer selects the normal P2 hidden-result-pointer ABI.
++
++target triple = "p2"
++
++define i128 @__multi3(i128 %a, i128 %b) nounwind {
++entry:
++  %al = trunc i128 %a to i64
++  %bl = trunc i128 %b to i64
++  %ahs = lshr i128 %a, 64
++  %bhs = lshr i128 %b, 64
++  %ah = trunc i128 %ahs to i64
++  %bh = trunc i128 %bhs to i64
++  %a0 = and i64 %al, 4294967295
++  %a1 = lshr i64 %al, 32
++  %b0 = and i64 %bl, 4294967295
++  %b1 = lshr i64 %bl, 32
++  %p00 = mul i64 %a0, %b0
++  %p01 = mul i64 %a0, %b1
++  %p10 = mul i64 %a1, %b0
++  %p11 = mul i64 %a1, %b1
++  %p00h = lshr i64 %p00, 32
++  %p01l = and i64 %p01, 4294967295
++  %p10l = and i64 %p10, 4294967295
++  %carry0 = add i64 %p00h, %p01l
++  %carry1 = add i64 %carry0, %p10l
++  %carryh = lshr i64 %carry1, 32
++  %p01h = lshr i64 %p01, 32
++  %p10h = lshr i64 %p10, 32
++  %h0 = add i64 %p11, %p01h
++  %h1 = add i64 %h0, %p10h
++  %h2 = add i64 %h1, %carryh
++  %cross0 = mul i64 %ah, %bl
++  %cross1 = mul i64 %al, %bh
++  %h3 = add i64 %h2, %cross0
++  %hi = add i64 %h3, %cross1
++  %p00l = and i64 %p00, 4294967295
++  %carrylo = shl i64 %carry1, 32
++  %lo = or i64 %p00l, %carrylo
++  %lo128 = zext i64 %lo to i128
++  %hi128 = zext i64 %hi to i128
++  %high = shl i128 %hi128, 64
++  %result = or i128 %lo128, %high
++  ret i128 %result
++}
+diff --git a/tests/codegen/c-aggregate-layout.c b/tests/codegen/c-aggregate-layout.c
+new file mode 100644
+index 0000000..b6006cf
+--- /dev/null
++++ b/tests/codegen/c-aggregate-layout.c
+@@ -0,0 +1,25 @@
++// RUN: %clang -O0 -S -emit-llvm %s -o - | FileCheck %s
++// RUN: %clang -O2 -mllvm -verify-machineinstrs -c %s -o %t.o
++
++typedef unsigned long long u64;
++struct integer_pair { unsigned a; u64 b; };
++struct float_pair { unsigned a; double b; };
++_Static_assert(_Alignof(u64) == 4, "i64 must match the LLVM data layout");
++_Static_assert(__builtin_offsetof(struct integer_pair, b) == 4, "integer field offset");
++_Static_assert(sizeof(struct integer_pair) == 12, "integer struct size");
++_Static_assert(_Alignof(double) == 8, "f64 keeps its LLVM natural alignment");
++_Static_assert(__builtin_offsetof(struct float_pair, b) == 8, "float field offset");
++_Static_assert(sizeof(struct float_pair) == 16, "float struct size");
++
++u64 fold_integer(struct integer_pair value, unsigned salt) {
++    return value.b ^ value.a ^ salt;
++}
++// CHECK-LABEL: define{{.*}} @fold_integer(
++// CHECK-SAME: byval(%struct.integer_pair) align 4
++
++unsigned call_integer(unsigned a, u64 b, unsigned salt) {
++    struct integer_pair value = { a, b };
++    return fold_integer(value, salt);
++}
++// CHECK-LABEL: define{{.*}} @call_integer(
++// CHECK: call i64 @fold_integer({{.*}}byval(%struct.integer_pair) align 4
+\ No newline at end of file
+diff --git a/tests/codegen/gc-sections.ll b/tests/codegen/gc-sections.ll
+new file mode 100644
+index 0000000..0f0c018
+--- /dev/null
++++ b/tests/codegen/gc-sections.ll
+@@ -0,0 +1,20 @@
++; RUN: %llc -filetype=obj %s -o %t.o
++; RUN: %bin/ld.lld --gc-sections -e live %t.o -o %t.elf
++; RUN: %bin/llvm-nm %t.elf | FileCheck %s
++; CHECK-NOT: missing_unused_callee
++; CHECK: T live
++; CHECK-NOT: missing_unused_callee
++; CHECK: D used_global
++; CHECK-NOT: missing_unused_callee
++; CHECK-NOT: unused_global
++@used_global = global i32 1
++@unused_global = global i32 0
++declare void @missing_unused_callee()
++define i32 @live() {
++  %v = load volatile i32, ptr @used_global
++  ret i32 %v
++}
++define void @dead() {
++  call void @missing_unused_callee()
++  ret void
++}
+diff --git a/tests/codegen/varargs.c b/tests/codegen/varargs.c
+index fe0c619..6237e8b 100644
+--- a/tests/codegen/varargs.c
++++ b/tests/codegen/varargs.c
+@@ -2,8 +2,8 @@
+ // RUN: %clang -O2 -mllvm -verify-machineinstrs -c %s -o %t.O2.o
+ // RUN: %clang -Os -mllvm -verify-machineinstrs -c %s -o %t.Os.o
+ // RUN: %clang -O0 -S -emit-llvm %s -o - | FileCheck %s --check-prefix=ABI
+-// ABI: getelementptr inbounds i8, i8* {{.*}}, i32 -8
+-// ABI: getelementptr inbounds i8, i8* {{.*}}, i32 -5
++// ABI: getelementptr inbounds i8, {{(i8\*|ptr)}} {{.*}}, i32 -8
++// ABI: getelementptr inbounds i8, {{(i8\*|ptr)}} {{.*}}, i32 -5
+ typedef __builtin_va_list va_list;
+ struct pair { int a, b; };
+ __attribute__((noinline)) int sum(int n, ...) {
+diff --git a/tests/driver/runtime-multi3.test b/tests/driver/runtime-multi3.test
+new file mode 100644
+index 0000000..c9cea31
+--- /dev/null
++++ b/tests/driver/runtime-multi3.test
+@@ -0,0 +1,4 @@
++# RUN: %clang -O2 -x ir -S %root/libp2/lib/builtins/multi3.ll -o - | FileCheck %s
++# RUN: %clang -Oz -x ir -c %root/libp2/lib/builtins/multi3.ll -o %t.o
++# CHECK-LABEL: __multi3:
++# CHECK-NOT: calla #\__multi3
+diff --git a/tests/driver/runtime-negate.test b/tests/driver/runtime-negate.test
+index 275da0f..55e19df 100644
+--- a/tests/driver/runtime-negate.test
++++ b/tests/driver/runtime-negate.test
+@@ -13,7 +13,7 @@
+ # RUN: FileCheck %s --check-prefix=DRIVER < %t.driver.Os.s
+ # IR-LABEL: define{{.*}} i64 @__negdi2(
+ # IR: %[[RESULT:[^ ]+]] = {{.*}}call i64 asm sideeffect
+-# IR-SAME: "=&{r30_r31},r,~{cc}"
++# IR-SAME: "=&{r30_r31},r,~{cc}{{(,~\{sw\})?}}"
+ # IR: ret i64 %[[RESULT]]
+ # ASM-LABEL: __negdi2:
+ # ASM-NOT: calla
+diff --git a/tests/run.py b/tests/run.py
+index 4d60242..f718049 100644
+--- a/tests/run.py
++++ b/tests/run.py
+@@ -12,6 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--build-dir', type=Path, default=ROOT / 'build/phase0-llvm')
++    parser.add_argument('--llvm-source', type=Path, default=ROOT / 'llvm-project',
++                        help='LLVM monorepo source tree corresponding to the build')
+     parser.add_argument('--suite', choices=['all', 'integration', 'llvm', 'instructions'], default='all')
+     parser.add_argument('-j', '--jobs', type=int, default=4)
+     parser.add_argument('--filter', help='lit test-name regular expression')
+@@ -19,19 +21,19 @@ def main():
+     build = args.build_dir.resolve()
+     out = build / 'p2-test-results'
+     out.mkdir(parents=True, exist_ok=True)
+-    lit = ROOT / 'llvm-project/llvm/utils/lit/lit.py'
++    source = args.llvm_source.resolve() / 'llvm'
++    lit = source / 'utils/lit/lit.py'
+     env = dict(os.environ, PATH=str(build / 'bin') + os.pathsep + os.environ.get('PATH', ''))
+     failed = False
+     if args.suite in ('all', 'instructions'):
+         command = [sys.executable, str(ROOT / 'tests/tools/instruction_matrix.py'),
+-                   '--bin-dir', str(build / 'bin'), '--output', str(out / 'instructions.json')]
++                   '--bin-dir', str(build / 'bin'), '--llvm-source', str(args.llvm_source.resolve()), '--output', str(out / 'instructions.json')]
+         failed |= subprocess.run(command, cwd=ROOT, env=env).returncode != 0
+     suites = []
+     if args.suite in ('all', 'integration'):
+         suites.append(('integration', [ROOT / 'tests']))
+     if args.suite in ('all', 'llvm'):
+-        suites.append(('llvm', [ROOT / 'llvm-project/llvm/test/MC/P2',
+-                               ROOT / 'llvm-project/llvm/test/CodeGen/P2']))
++        suites.append(('llvm', [source / 'test/MC/P2', source / 'test/CodeGen/P2']))
+     for name, paths in suites:
+         suite_lit = build / 'bin/llvm-lit' if name == 'llvm' else lit
+         command = [sys.executable, str(suite_lit), '-sv', '-j', str(args.jobs),
+diff --git a/tests/tools/check_multi3.py b/tests/tools/check_multi3.py
+new file mode 100644
+index 0000000..1542cc7
+--- /dev/null
++++ b/tests/tools/check_multi3.py
+@@ -0,0 +1,67 @@
++#!/usr/bin/env python3
++"""Check the portable 128-bit multiplication algorithm on a native host.
++
++This verifies the IR arithmetic, not the P2 calling convention or hardware.
++Hardware coverage also needs a target-side wide multiply fixture.
++"""
++import argparse
++from pathlib import Path
++import subprocess
++import tempfile
++
++SOURCE = Path(__file__).resolve().parents[2] / 'libp2/lib/builtins/multi3.ll'
++CASES = r'''
++#include <stdint.h>
++#include <stdio.h>
++typedef unsigned __int128 u128;
++extern u128 __multi3(u128, u128);
++static uint64_t seed = UINT64_C(0xb73d28c4fa193e65);
++static uint64_t next(void) {
++    seed ^= seed << 13;
++    seed ^= seed >> 7;
++    seed ^= seed << 17;
++    return seed;
++}
++static int check(u128 a, u128 b) {
++    u128 got = __multi3(a, b);
++    u128 want = a * b;
++    if (got != want) {
++        fputs("128-bit multiply mismatch\n", stderr);
++        return 1;
++    }
++    return 0;
++}
++int main(void) {
++    const u128 edges[] = {
++        0, 1, 2, ((u128)1 << 31)-1, (u128)1 << 32,
++        ((u128)1 << 64)-1, (u128)1 << 64, (u128)1 << 127,
++        ~(u128)0, ~(u128)1,
++    };
++    for (unsigned i=0; i<sizeof(edges)/sizeof(edges[0]); ++i)
++        for (unsigned j=0; j<sizeof(edges)/sizeof(edges[0]); ++j)
++            if (check(edges[i], edges[j])) return 1;
++    for (unsigned i=0; i<10000; ++i) {
++        u128 a = ((u128)next() << 64) | next();
++        u128 b = ((u128)next() << 64) | next();
++        if (check(a, b)) return 1;
++    }
++    puts("__multi3 host arithmetic: 10100 cases passed");
++    return 0;
++}
++'''
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--host-clang', default='clang')
++    args = parser.parse_args()
++    with tempfile.TemporaryDirectory(prefix='p2-multi3-') as name:
++        directory = Path(name)
++        cases = directory / 'cases.c'
++        binary = directory / 'check'
++        cases.write_text(CASES)
++        subprocess.run([args.host_clang, '-O2', '-Wno-override-module',
++                        str(cases), str(SOURCE), '-o', str(binary)], check=True)
++        subprocess.run([str(binary)], check=True)
++
++if __name__ == '__main__':
++    main()
+diff --git a/tests/tools/instruction_matrix.py b/tests/tools/instruction_matrix.py
+index 503e9f2..a13636f 100644
+--- a/tests/tools/instruction_matrix.py
++++ b/tests/tools/instruction_matrix.py
+@@ -97,9 +97,10 @@ def make_case(name, record, references):
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--bin-dir', type=Path, required=True)
++    parser.add_argument('--llvm-source', type=Path, default=ROOT / 'llvm-project')
+     parser.add_argument('--output', type=Path, required=True)
+     args = parser.parse_args()
+-    source = ROOT / 'llvm-project/llvm'
++    source = args.llvm_source.resolve() / 'llvm'
+     command = [str(args.bin_dir / 'llvm-tblgen'), '-dump-json', '-I', str(source / 'include'),
+                '-I', str(source / 'lib/Target/P2'), str(source / 'lib/Target/P2/P2.td')]
+     data = json.loads(subprocess.check_output(command))

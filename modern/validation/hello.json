@@ -1,0 +1,79 @@
+{
+  "scope": "physical-P2-modern-hello",
+  "timestamp_utc": "20261116T171706.372177Z",
+  "image": {
+    "file": "hello.elf",
+    "sha256": "0a9bcc97d1a6c3c6437acb3ad5c53e7f99400beeb491b332eae8d2fa3d6bbfc5",
+    "format": "elf32-p2",
+    "file_bytes": 18249,
+    "segments": [
+      {
+        "offset": 4096,
+        "address": 0,
+        "file_bytes": 16776,
+        "memory_bytes": 16776
+      },
+      {
+        "offset": 20880,
+        "address": 16784,
+        "file_bytes": 1464,
+        "memory_bytes": 1464
+      },
+      {
+        "offset": 22344,
+        "address": 18248,
+        "file_bytes": 1,
+        "memory_bytes": 489656
+      }
+    ],
+    "bss_policy": "firmware-startup"
+  },
+  "status": "PASS",
+  "observed": [
+    "TinyGo 0.44.0 on Propeller 2",
+    "Available cogs: 8",
+    "Worker 0 ran on cog 1 checksum 1068819344",
+    "Worker 1 ran on cog 2 checksum 1068819344",
+    "Worker 2 ran on cog 3 checksum 1068819344",
+    "Worker 3 ran on cog 4 checksum 1068819344",
+    "Worker 4 ran on cog 5 checksum 1068819344",
+    "Worker 5 ran on cog 6 checksum 1068819344",
+    "Worker 6 ran on cog 7 checksum 1068819344",
+    "Worker 7 ran on cog 0 checksum 1068819344",
+    "Alive 1",
+    "Alive 2",
+    "Alive 3"
+  ],
+  "harness_sha256": "c5d30e458999db6b801dbaf1f3d183e692ecd9d6929713dc4eff3a53737c94aa",
+  "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+  "build_profile": {
+    "target": "p2",
+    "scheduler": "cores",
+    "gc": "conservative",
+    "panic_unwind": "none"
+  },
+  "port": {
+    "device": "COM12",
+    "usb_vid_pid": "0403:6001"
+  },
+  "rom": "Prop_Ver G",
+  "download": {
+    "loaded_bytes": 18252,
+    "checksum": "75a7a261",
+    "checksum_ack": ".",
+    "checksum_prefix": "",
+    "load_mode": "ROM-base64-RAM-only"
+  },
+  "workers": {
+    "count": 8,
+    "cog_mask": 255,
+    "checksum": 1068819344
+  },
+  "heartbeats_observed": 3,
+  "observed_after_reopen": "Alive 4",
+  "left_running_in_ram": true,
+  "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+  "source_bundle_reproduction": false,
+  "local_record": "hil/results/20261116T171706.372177Z-hello-final/result.json",
+  "original_record_sha256": "87fcd6301138cb740a396cb7e26769612848e3c3f22ea53e66b694671cd567fc"
+}

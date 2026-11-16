@@ -1,0 +1,7 @@
+{
+  "inherits": [
+    "p2"
+  ],
+  "gc": "conservative",
+  "panic-unwind": "none"
+}

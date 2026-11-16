@@ -1,0 +1,421 @@
+{
+  "schema": 1,
+  "board": "Parallax P2-EC32MB Edge",
+  "port": "COM12",
+  "system_clock_hz": 160000000,
+  "scope": "physical-P2-modern",
+  "flash_programmed": false,
+  "records": [
+    {
+      "id": "language",
+      "suite": "language",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171544.622245Z",
+      "build_profile": {
+        "target": "p2",
+        "scheduler": "cores",
+        "gc": "conservative",
+        "panic_unwind": "none"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "81ef46310af3db735ec1283e4417dd4ddd67597052c9145ef82b18d7d6cb0a9f",
+      "firmware": {
+        "file": "repro-release-conformance.elf",
+        "sha256": "45988d6daff921016ae74fcc3a2233c2f0f8b747331f0fd68041efa5259d7596",
+        "elf_bytes": 76444
+      },
+      "nonce": 1357159609,
+      "observed": [
+        "READY P2CONF1",
+        "BEGIN 1357159609",
+        "ARITH 145259074469720 20920 12757192381069900184",
+        "MUL64 18446744073709551614 1 1541470449315538659 4920166284094018736 2714319219 12617787924717502465",
+        "LANG 479435024 479437120 910182692 1357159609 127",
+        "FLOAT 137028",
+        "MATH 186 -187 -186 -186 7",
+        "TIME 2037",
+        "CORES 255 255 8 8000 800",
+        "UNBOUND 255 8 3358824448",
+        "DONE P2CONF1 1357159609"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 47176,
+        "checksum": "dbbbefc5",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171544.622245Z-language/result.json",
+      "original_record_sha256": "f05e45ab85ce633a816ad3e175a2c584f13e2323900308fe1b9aa2270cdcd528"
+    },
+    {
+      "id": "gc_default",
+      "suite": "gcstress",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171254.889846Z",
+      "build_profile": {
+        "target": "p2",
+        "scheduler": "cores",
+        "gc": "conservative",
+        "panic_unwind": "none"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "462cd1689bb792860d6cf43c1c81405fbed53c49cdd771333607823526bf3f7d",
+      "firmware": {
+        "file": "gcstress-prefilter-default.elf",
+        "sha256": "0f6e67fcc14fd5b5cf511b7047351185bef0cdca3fb7e4f8b1fd801b43865391",
+        "elf_bytes": 132416
+      },
+      "nonce": 3183346445,
+      "observed": [
+        "READY P2GC1",
+        "BEGIN 3183346445",
+        "GCSTRESS 255 66769124 209 1651624 1555",
+        "DONE P2GC1 3183346445"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 83620,
+        "checksum": "08dcf1a0",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171254.889846Z-gcstress/result.json",
+      "original_record_sha256": "07f35d2dba7d3a3a081db5d9334be2c40de714f855856b5a5cf2e4d90603d75f",
+      "gc": {
+        "collections": 209,
+        "allocated_bytes": 1651624,
+        "freed_objects": 1555
+      }
+    },
+    {
+      "id": "gc_recover",
+      "suite": "gcstress",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171330.806820Z",
+      "build_profile": {
+        "target": "p2-recover",
+        "scheduler": "cores",
+        "gc": "conservative",
+        "panic_unwind": "explicit"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "462cd1689bb792860d6cf43c1c81405fbed53c49cdd771333607823526bf3f7d",
+      "firmware": {
+        "file": "gcstress-prefilter-recover.elf",
+        "sha256": "2bd9592e80d0804d8bd33a44556639289a0a49b65647aeb884a1d004697a1cfa",
+        "elf_bytes": 178164
+      },
+      "nonce": 2710063141,
+      "observed": [
+        "READY P2GC1",
+        "BEGIN 2710063141",
+        "GCSTRESS 255 3019793907 249 1651624 1544",
+        "DONE P2GC1 2710063141"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 119988,
+        "checksum": "0eed6b38",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171330.806820Z-gcstress/result.json",
+      "original_record_sha256": "07b0f39731377cbc475623842a696cd8792cbc05fb53accb94828e3e69a199f0",
+      "gc": {
+        "collections": 249,
+        "allocated_bytes": 1651624,
+        "freed_objects": 1544
+      }
+    },
+    {
+      "id": "memory",
+      "suite": "memory",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171505.515214Z",
+      "build_profile": {
+        "target": "p2",
+        "scheduler": "cores",
+        "gc": "conservative",
+        "panic_unwind": "none"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "9abcf0a373cfd381e1aac37d2ad93a0ba6d1d0a9bdf88d01e839554bc0234ca6",
+      "firmware": {
+        "file": "memory.elf",
+        "sha256": "2216bb03455edecd225782d7359d4dc39a478f38439c2a47301c238a9fa3c52d",
+        "elf_bytes": 50372
+      },
+      "nonce": 3638483395,
+      "observed": [
+        "READY P2MEMORY1",
+        "BEGIN 3638483395",
+        "MEMORY 2288 16080317 203 47013",
+        "DONE P2MEMORY1 3638483395"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 23308,
+        "checksum": "49b897e9",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171505.515214Z-memory/result.json",
+      "original_record_sha256": "7395ea62d3b3e0a9398fc2a5130e67e15bd3e5f6c8350382487e32f47823ebb0"
+    },
+    {
+      "id": "psram",
+      "suite": "psram",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171518.560301Z",
+      "build_profile": {
+        "target": "p2",
+        "scheduler": "cores",
+        "gc": "conservative",
+        "panic_unwind": "none"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "d7910f3b7e91eebca2306a30b69005d65a100e25840ca62b07f4ee1729fdc172",
+      "firmware": {
+        "file": "psram.elf",
+        "sha256": "2a80dbb4c0af2bbd1ca258a8d27d35c625ed710b25560c05ec774aad000beaf6",
+        "elf_bytes": 97748
+      },
+      "nonce": 415374454,
+      "observed": [
+        "READY P2PSRAM1",
+        "BEGIN 415374454",
+        "ID 0 13 93 82 213 181 87 74 115",
+        "ID 1 13 93 82 213 181 88 123 173",
+        "ID 2 13 93 82 213 181 88 127 181",
+        "ID 3 13 93 82 213 181 88 118 181",
+        "PSRAM 2590 4186116769 214",
+        "DONE P2PSRAM1 415374454"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 60620,
+        "checksum": "8c682984",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171518.560301Z-psram/result.json",
+      "original_record_sha256": "3d87cdf1bc86a58f7ac2d11e0dd442990c6a3692a2c0b1256e37ef09c32e070d"
+    },
+    {
+      "id": "recovery",
+      "suite": "recovery",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171526.259736Z",
+      "build_profile": {
+        "target": "p2-recover",
+        "scheduler": "cores",
+        "gc": "conservative",
+        "panic_unwind": "explicit"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "41910dbce0a6b51d1bbfd6fb6e67dc585895af23633600f360e824441ee3767d",
+      "firmware": {
+        "file": "recovery.elf",
+        "sha256": "2518db321d542568d1cd9a53b59696d10ccbbbc48d37930e862c28cf44c4ebce",
+        "elf_bytes": 105396
+      },
+      "nonce": 114565947,
+      "observed": [
+        "READY P2RECOVER1",
+        "BEGIN 114565947",
+        "RECOVER 114565947 255 123",
+        "DONE P2RECOVER1 114565947"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 62176,
+        "checksum": "da5c10ae",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171526.259736Z-recovery/result.json",
+      "original_record_sha256": "139599334d68290e2b2d7eaed64097de2f6659b3f911286b5090d754d10962a5"
+    },
+    {
+      "id": "gc_odd_stack",
+      "suite": "gcoddstack",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171533.982171Z",
+      "build_profile": {
+        "target": "p2",
+        "scheduler": "cores",
+        "gc": "conservative",
+        "panic_unwind": "none"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "fb6b4f7c4c99a1aeae59bebb625fadef0df293862751e04f6d93db0fff4b58b9",
+      "firmware": {
+        "file": "gcoddstack.elf",
+        "sha256": "04ce0a49301ddba81fa95203d7a39b68960e59ed137f0d04da534fc6976d3f05",
+        "elf_bytes": 41984
+      },
+      "nonce": 764237331,
+      "observed": [
+        "READY P2GCODD1",
+        "BEGIN 764237331",
+        "ODDGC 1916394864 32",
+        "DONE P2GCODD1 764237331"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 16404,
+        "checksum": "2d6f66c3",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171533.982171Z-gcoddstack/result.json",
+      "original_record_sha256": "015fc9f15dd0da8b5e91bc4813eabfd41d1714c7fbc4d98f90a0b19e6188b9ae"
+    },
+    {
+      "id": "cgo",
+      "suite": "cgo",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171539.051572Z",
+      "build_profile": {
+        "target": "p2",
+        "scheduler": "cores",
+        "gc": "conservative",
+        "panic_unwind": "none"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "edfb199f425bba2204c435791f019d260240ace3ed53e8b5bdd81f26de093edf",
+      "firmware": {
+        "file": "cgo.elf",
+        "sha256": "105e17f1f970c3279e7f9a7ff27af7786011d6fe0a6460cf282841de9a9d5fb6",
+        "elf_bytes": 50048
+      },
+      "nonce": 2246885724,
+      "observed": [
+        "READY P2CGO1",
+        "BEGIN 2246885724",
+        "CGO 2321448132 1858902280 10326899956385391451 364501366907191703 402 1766396998 0 192",
+        "CGOCOPY 16840094008975507488 2321448132 1858902280 10326899956385391451",
+        "CGOLAYOUT 16 4 12 2815353726 9650300704962499181 3068129903 2459565876461051906",
+        "DONE P2CGO1 2246885724"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 23308,
+        "checksum": "12a27da6",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171539.051572Z-cgo/result.json",
+      "original_record_sha256": "a0b80b1b03fbbe102674acfc39db91d320be0e57b62622f6c266db4f08e558ff"
+    },
+    {
+      "id": "cgo_clean_restore",
+      "suite": "cgo",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171542.227014Z",
+      "build_profile": {
+        "target": "p2-tasks",
+        "scheduler": "tasks",
+        "gc": "leaking",
+        "panic_unwind": "none"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "edfb199f425bba2204c435791f019d260240ace3ed53e8b5bdd81f26de093edf",
+      "firmware": {
+        "file": "repro-release-cgo.elf",
+        "sha256": "ca1dc9add2aac03b4da428f43ef8999a2a1ae5092f2e6d414004b838e4313d9e",
+        "elf_bytes": 40528
+      },
+      "nonce": 912541212,
+      "observed": [
+        "READY P2CGO1",
+        "BEGIN 912541212",
+        "CGO 1112427908 1792865736 6615523440721481755 1837822692541946199 594 1704357956 0 64",
+        "CGOCOPY 6822719243760686816 1112427908 1792865736 6615523440721481755",
+        "CGOLAYOUT 16 4 12 340157502 3919334662991075117 89617711 2459565877031477762",
+        "DONE P2CGO1 912541212"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 16648,
+        "checksum": "7230a182",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171542.227014Z-cgo/result.json",
+      "original_record_sha256": "b0911630f32ad5b4a4546b1e8a8f16b45aed0aa42de2f210af7f0ef048199136"
+    },
+    {
+      "id": "stdlib",
+      "suite": "stdlib",
+      "status": "PASS",
+      "timestamp_utc": "20261116T171600.240420Z",
+      "build_profile": {
+        "target": "p2",
+        "scheduler": "cores",
+        "gc": "conservative",
+        "panic_unwind": "none"
+      },
+      "source_manifest_sha256": "4242783310b432859e8ae464768271041f4438a3aa7411c63b903c6e45f7ef90",
+      "example_source_sha256": "00ee665aa06ead605552e6a41c9b8af609ce5d325d7f12c5dc444ea06504b244",
+      "firmware": {
+        "file": "stdlib.elf",
+        "sha256": "478d2e37bf833a75aa8ef3a9d025f9bd8d6b5d15755e83c5f6c776c08120d94c",
+        "elf_bytes": 461920
+      },
+      "nonce": 2180181354,
+      "observed": [
+        "READY P2STDLIB1",
+        "BEGIN 2180181354",
+        "FMT p2:81f2ed6a:-2114785942:9363807615388698831",
+        "JSON {\"seed\":2180181354,\"label\":\"p2:81f2ed6a:-2114785942:9363807615388698831\\\"\\\\\\n\",\"values\":[-2114785942,2114785941,-17],\"ratio\":6.625}",
+        "STR 81F2ED6A/A/TINYGO/P2/Z",
+        "SORT -9 0 42 33266 60778",
+        "BIN 6aedf28181f2ed6a245748cf2085fcad0da8d180",
+        "SHA256 ea30d565120671ac645fbcf2e31ed1f182894485c10153fb54f2f34231eb97f3",
+        "BITS 1571639358 17 0 1",
+        "DONE P2STDLIB1 2180181354"
+      ],
+      "rom": "Prop_Ver G",
+      "download": {
+        "loaded_bytes": 329620,
+        "checksum": "1075f25e",
+        "checksum_ack": ".",
+        "checksum_prefix": "",
+        "load_mode": "ROM-base64-RAM-only"
+      },
+      "harness_sha256": "96937a08fadf08e4ca4ea4a7bc326317c2884169de0d0af55248e14d1e134232",
+      "loader_sha256": "9e83913de290506ddcbfdacd2700620de6100d7bffc249b0d294bb814bacecc8",
+      "local_record": "hil/results/20261116T171600.240420Z-stdlib/result.json",
+      "original_record_sha256": "817ef14349ad5011e125b6ad1623d5c6d7629ba719be5a121d17c12c3e88acb2"
+    }
+  ]
+}

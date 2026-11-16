@@ -1,0 +1,4 @@
+{
+  "inherits": ["p2-gc"],
+  "panic-unwind": "explicit"
+}

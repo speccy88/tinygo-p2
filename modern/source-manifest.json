@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "upstream": {
+    "schema": 1,
+    "tinygo": {
+      "url": "https://github.com/tinygo-org/tinygo.git",
+      "tag": "v0.44.0",
+      "revision": "344590c7152e620f3b5369fc289e5d91caf9649d"
+    },
+    "go": {
+      "version": "1.27.4",
+      "linux_amd64_url": "https://go.dev/dl/go1.27.4.linux-amd64.tar.gz",
+      "linux_amd64_sha256": "7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840"
+    },
+    "llvm": {
+      "url": "https://github.com/llvm/llvm-project.git",
+      "tag": "llvmorg-15.0.7",
+      "revision": "8dfdcc7b7bf66834a761bd8de445840ef68e4d1a"
+    },
+    "p2llvm": {
+      "url": "https://github.com/ne75/p2llvm.git",
+      "revision": "b914b1baa8a2055feb52c801b5c3564eda6a9abc"
+    }
+  },
+  "sha256": {
+    "patches/llvm15-p2.patch": "ef20925ea64d7e9633e2457c6d47658808491ec47e9a0bddbafd44bec5a09e51",
+    "patches/p2llvm-tools.patch": "efcc82d4c9e021092050282bf3f375d0994e8b73eb83fa01e3fefaa271ed2b88",
+    "patches/tinygo-p2.patch": "223f86ee6a334dfb1157589680cd8b5eb6c4ff66c5947d5d2f89645c9f620d11",
+    "overlays/tinygo/src/internal/task/task_stack_down.go": "48355544472e4b65a0c98128775da09aff36ef81731e51ffbba2be85241de511",
+    "overlays/tinygo/src/internal/task/task_stack_p2.S": "5609a3478bf77068ae2f691bc91cfe51032ecc29b0759aafaf15927e823f6476",
+    "overlays/tinygo/src/internal/task/task_stack_p2.go": "70c83d27e28974efac9ab1b34504ed70c1565c6ab1abffd0e87c484907cd95d1",
+    "overlays/tinygo/src/machine/machine_p2.go": "75995424d6643efad79479bf3fc5b52d79f94f4f1f3ba7710a2add56d290acad",
+    "overlays/tinygo/src/machine/machine_p2_gpio_cores.go": "f9f46475177207525001d970520de4218e1b791006754a542160faae27517d96",
+    "overlays/tinygo/src/machine/machine_p2_gpio_unicore.go": "5b029f1daed07fa1100fb0657bed5cf6481f7698f3d4ba9b51fe780e49580740",
+    "overlays/tinygo/src/machine/machine_p2_psram.go": "dc5b06ac886009f5c50fe36a39ce2f1aab225dded97fa65acc979fd8f78657a1",
+    "overlays/tinygo/src/runtime/atomics_p2.go": "e15d8b7b45ed841221be1a14b309f3187ad75f84cfe058e2a0be8f5b02e9a471",
+    "overlays/tinygo/src/runtime/atomics_p2_generic.go": "11de7993e680d074e03935bc5b394cff74571dae41446b981a29d415b151a957",
+    "overlays/tinygo/src/runtime/gc_p2.S": "e59788b8aa2d45908157778c2063208268e02bf04ce04075cbb4897800f4bdec",
+    "overlays/tinygo/src/runtime/gc_p2_cores.go": "42a6117765cd3be4390ec537364a64ce57a0296becf64d0250ed5aea26382e7d",
+    "overlays/tinygo/src/runtime/gc_p2_none.go": "9adad0162a5008f0d3a57c98483bfadc4555d072570b82d0f3fb11ffa6557c95",
+    "overlays/tinygo/src/runtime/gc_p2_unicore.go": "149971a5d184d2649ace6d5ce0f0d85b52dd4077eb63c1dfab69566e9f93bc4b",
+    "overlays/tinygo/src/runtime/interrupt/interrupt_p2.go": "c03a5fbc19e85712210a3e6987334f7d1d6715ac352cb27aa3cfbbc15461e77e",
+    "overlays/tinygo/src/runtime/p2_memory.S": "dd3a7e7c3f61680293858203ff045320f45e4f2034dd6ac170e4dd6bdc9b22b0",
+    "overlays/tinygo/src/runtime/p2_psram.S": "88dd0e4569224d5ed86a44691ce40a1c898ccb0fd4c90bb9bd2ec4fbd89fd34a",
+    "overlays/tinygo/src/runtime/p2_psram.c": "7310122903eb8add2869433423f34489afb697b6d5509b1aa8aadcd8c411b060",
+    "overlays/tinygo/src/runtime/runtime_p2.S": "447e7ded103bc132e6a692d6813b6d098a947db38b52dcbd9d4638489336f8e8",
+    "overlays/tinygo/src/runtime/runtime_p2.go": "46410f9e30e278b7af43b3fb15912370e445fcc9c8782c0a7a6841c17541a6c8",
+    "overlays/tinygo/src/runtime/runtime_p2_cores.go": "7d5c93946c75118b8dbac9b4f6a478092803aba42fd83057737c563cca526e81",
+    "overlays/tinygo/src/runtime/runtime_p2_unicore.go": "df5c62bbd96550eca5958e737c2ebecb03f9060c56845076524b0fe148893c7b",
+    "overlays/tinygo/targets/p2-gc.json": "d1d25aabc2a1481dedd74e5c2d39c8e9b07cd1371802653883d11a8ab4881cc9",
+    "overlays/tinygo/targets/p2-minimal.json": "cef0481844a4025e61b507bdb72650d628b64f621bc8dffaafba8e99a87745a1",
+    "overlays/tinygo/targets/p2-recover.json": "67331b1f36edbf247bb5a6387795a0f97c9432fcade462613d52b7e7ce7082a7",
+    "overlays/tinygo/targets/p2-tasks.json": "ab9f3f9acb94d6b8431a15c2a1ab8cce24eb8fc2cfb3467d8adf063ba77276b4",
+    "overlays/tinygo/targets/p2.json": "21ff230a0027b76493bc4f9308e5d03f43f5d7401a64c9d542eb7c0a59f263ad",
+    "overlays/tinygo/targets/p2.ld": "833990e65a5d0e63ef96c03e46820cd8357a4e46082cb3596d8aac53d09b8c8c",
+    "overlays/tinygo/targets/p2_boot.S": "58b512072f8486bbd26280fe12cbea28a9b73de1abd6b019e810e4bc6b0af470",
+    "overlays/tinygo/targets/p2_start.c": "61769ec494dbd3b83e9300713778d00d1a37ffcceb1439df45c96cbffb065cc2",
+    "overlays/tinygo/tools/gen-critical-atomics/gen-critical-atomics_test.go": "9820164d036b1a1d6c4619309def201ecac23a3c4b72ac79e42162b5141ced87"
+  }
+}
